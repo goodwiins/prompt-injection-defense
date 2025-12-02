@@ -1,0 +1,7 @@
+detection:
+  fast_model: "all-MiniLM-L6-v2"
+  deep_model: "deberta-v3-base-prompt-injection"
+  threshold: 0.85
+response:
+  circuit_breaker_limit: 10
+  quarantine_timeout: 300

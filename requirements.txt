@@ -1,0 +1,12 @@
+torch
+transformers
+sentence-transformers
+xgboost
+scikit-learn
+fastapi
+uvicorn
+pydantic
+datasets
+pytest
+structlog
+pyyaml
