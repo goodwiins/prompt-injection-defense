@@ -337,8 +337,131 @@ src/
 ├── response/
 │   └── circuit_breaker.py     # Tiered alerts + correlation (ENHANCED)
 └── utils/
-    ├── metrics.py
-    └── dataset_loader.py
+    ├── metrics.py             # Performance metrics
+    ├── dataset_loader.py      # Dataset loading utilities
+    ├── evaluation.py          # TIVS evaluation framework (NEW)
+    └── kpi_evaluator.py       # Real-time KPI tracking (NEW)
+```
+
+## Datasets
+
+### Public Benchmark Datasets
+
+The framework can be evaluated against these established datasets:
+
+| Dataset | Size | Type | Source | Use Case |
+|---------|------|------|--------|----------|
+| **deepset/prompt-injections** | 662 samples | Binary classification | [HuggingFace](https://huggingface.co/datasets/deepset/prompt-injections) | First public prompt injection dataset |
+| **SaTML CTF 2024** | 137k+ chats | Multi-turn attacks | [IEEE SaTML](https://ctf.spylab.ai) | Adaptive attack conversations |
+| **LLMail-Inject** | 208,095 prompts | Indirect attacks | Microsoft Research | Email-based injection scenarios |
+| **imoxto/prompt_injection_cleaned** | 535,105 prompts | Malicious/benign | [HuggingFace](https://huggingface.co/datasets/imoxto/prompt_injection_cleaned) | Comprehensive coverage |
+| **INJECAGENT** | Tool-integrated | Agent-specific | ACL 2024 | First indirect IPI benchmark |
+| **NotInject** | 339 samples | Over-defense eval | Research | Trigger word bias testing |
+
+### Dataset Integration
+
+```python
+from src.utils.dataset_loader import DatasetLoader
+
+# Load a dataset for evaluation
+loader = DatasetLoader()
+data = loader.load_dataset("deepset/prompt-injections")
+
+# Evaluate framework
+from src.coordination.guard_agent import GuardAgent
+from src.utils.evaluation import EvaluationFramework
+
+guard = GuardAgent()
+evaluator = EvaluationFramework(num_agents=1)
+
+for sample in data:
+    result = guard.analyze(sample["prompt"])
+    evaluator.record_prompt(
+        injection_detected=not result["is_safe"],
+        injection_successful=False,  # Framework blocked it
+        policy_violated=False,
+        was_sanitized=len(result["matched_patterns"]) > 0
+    )
+
+# Get TIVS score
+report = evaluator.get_evaluation_report()
+print(f"TIVS: {report['tivs']}")
+print(f"Security Posture: {report['security_posture']}")
+```
+
+### Custom Dataset Format
+
+For custom datasets, use this JSON format:
+
+```json
+[
+  {
+    "prompt": "Your test prompt here",
+    "label": "injection",
+    "category": "direct_override",
+    "severity": "high"
+  }
+]
+```
+
+## Evaluation Metrics
+
+### Core Metrics
+
+| Metric | Formula | Target | Description |
+|--------|---------|--------|-------------|
+| **Accuracy** | (TP + TN) / Total | ≥95% | Overall correctness |
+| **Precision** | TP / (TP + FP) | ≥90% | Accuracy of detections |
+| **Recall** | TP / (TP + FN) | ≥95% | Coverage of attacks |
+| **F1 Score** | 2 × (P × R) / (P + R) | ≥0.92 | Balanced performance |
+| **FPR** | FP / (FP + TN) | ≤5% | False positive rate |
+| **FNR** | FN / (FN + TP) | ≤1% | False negative rate |
+
+### Advanced Metrics
+
+**TIVS (Total Injection Vulnerability Score)**
+```
+TIVS = [(ISR × w₁) + (POF × w₂) - (PSR × w₃) - (CCS × w₄)] / (Nₐ × Σw)
+```
+
+Where:
+- **ISR**: Injection Success Rate (attacks that bypassed all defenses)
+- **POF**: Policy Override Frequency (policy violations)
+- **PSR**: Prompt Sanitization Rate (successful sanitizations)
+- **CCS**: Circuit Breaker Compliance (1 if closed, 0 if open)
+- **Nₐ**: Number of agents
+- **w₁-w₄**: Weights (default 0.25 each)
+
+**Lower TIVS = Better Security** (more negative scores indicate robust defense)
+
+### Using the Evaluation Framework
+
+```python
+from src.utils.evaluation import EvaluationFramework
+from src.utils.kpi_evaluator import KPIEvaluator
+
+# Initialize evaluators
+eval_framework = EvaluationFramework(num_agents=3)
+kpi_evaluator = KPIEvaluator(evaluation_window=3600)
+
+# Record detections
+kpi_evaluator.record_detection(
+    is_true_positive=True,
+    is_false_positive=False,
+    is_false_negative=False,
+    latency_ms=45.2,
+    agent_id="guard_1"
+)
+
+# Get comprehensive report
+kpi_report = kpi_evaluator.get_comprehensive_report()
+print(f"Detection Accuracy: {kpi_report['detection_kpis']['accuracy']:.2%}")
+print(f"Average Latency: {kpi_report['detection_kpis']['avg_latency_ms']:.1f}ms")
+
+# Calculate TIVS
+eval_report = eval_framework.get_evaluation_report()
+print(f"TIVS: {eval_report['tivs']:.3f}")
+print(f"Security Posture: {eval_report['security_posture']}")
 ```
 
 ## Testing
