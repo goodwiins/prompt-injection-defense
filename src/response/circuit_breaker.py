@@ -1,70 +1,304 @@
 import time
-from typing import List
+from typing import List, Dict, Any, Optional
+from enum import Enum
+from dataclasses import dataclass, field
+from datetime import datetime
 import structlog
 
 logger = structlog.get_logger()
 
+class AlertSeverity(Enum):
+    """Tiered alert severity levels."""
+    INFO = "info"
+    LOW = "low"
+    MEDIUM = "medium"
+    HIGH = "high"
+    CRITICAL = "critical"
+
+@dataclass
+class Alert:
+    """Individual alert with metadata for correlation."""
+    timestamp: float
+    severity: AlertSeverity
+    source: str  # Which detector raised this
+    category: str  # e.g., "pattern_match", "embedding_score", "behavioral"
+    details: Dict[str, Any] = field(default_factory=dict)
+    agent_id: Optional[str] = None
+    correlated_alerts: List[str] = field(default_factory=list)
+
 class CircuitBreaker:
     """
-    Circuit breaker pattern to stop processing when attack threshold is exceeded.
+    Enhanced circuit breaker with tiered alerts and alert correlation.
+
+    Based on research recommendations:
+    - Low-confidence anomalies generate informational alerts
+    - High-confidence, high-impact anomalies trigger immediate notifications
+    - Alert correlation groups related alerts for holistic visibility
     """
 
-    def __init__(self, threshold: int = 10, time_window: int = 60):
+    def __init__(self, threshold: int = 10, time_window: int = 60,
+                 critical_threshold: int = 3,
+                 correlation_window: int = 10):
         """
         Args:
             threshold: Number of events allowed within the time window.
             time_window: Time window in seconds.
+            critical_threshold: Number of critical alerts before immediate trip
+            correlation_window: Time window in seconds for correlating related alerts
         """
         self.threshold = threshold
         self.time_window = time_window
-        self.events: List[float] = []
+        self.critical_threshold = critical_threshold
+        self.correlation_window = correlation_window
+
+        self.events: List[float] = []  # Legacy simple events
+        self.alerts: List[Alert] = []  # Enhanced alerts
         self._is_open = False
 
+        # Alert correlation state
+        self.correlated_groups: List[List[Alert]] = []
+
     def record_event(self):
-        """Record a suspicious event."""
+        """Record a suspicious event (legacy method)."""
         current_time = time.time()
         self.events.append(current_time)
         self._cleanup(current_time)
-        
+
         if len(self.events) >= self.threshold:
             if not self._is_open:
-                logger.critical("Circuit breaker tripped!", threshold=self.threshold, window=self.time_window)
+                logger.critical("Circuit breaker tripped!",
+                              threshold=self.threshold,
+                              window=self.time_window)
                 self._is_open = True
+
+    def record_alert(self, severity: AlertSeverity, source: str, category: str,
+                    details: Optional[Dict[str, Any]] = None,
+                    agent_id: Optional[str] = None) -> Alert:
+        """
+        Record a tiered alert with correlation support.
+
+        Args:
+            severity: Alert severity level
+            source: Which component raised this alert
+            category: Alert category for correlation
+            details: Additional context
+            agent_id: Associated agent if applicable
+
+        Returns:
+            Created alert object
+        """
+        current_time = time.time()
+
+        alert = Alert(
+            timestamp=current_time,
+            severity=severity,
+            source=source,
+            category=category,
+            details=details or {},
+            agent_id=agent_id
+        )
+
+        self.alerts.append(alert)
+        self._cleanup_alerts(current_time)
+
+        # Correlate with recent alerts
+        self._correlate_alert(alert)
+
+        # Log based on severity
+        log_data = {
+            "source": source,
+            "category": category,
+            "agent_id": agent_id,
+            "details": details
+        }
+
+        if severity == AlertSeverity.INFO:
+            logger.info("Alert recorded", **log_data)
+        elif severity == AlertSeverity.LOW:
+            logger.info("Low severity alert", **log_data)
+        elif severity == AlertSeverity.MEDIUM:
+            logger.warning("Medium severity alert", **log_data)
+        elif severity == AlertSeverity.HIGH:
+            logger.warning("High severity alert", **log_data)
+        elif severity == AlertSeverity.CRITICAL:
+            logger.error("Critical alert", **log_data)
+
+        # Check if circuit should trip
+        self._check_trip_conditions()
+
+        return alert
+
+    def _correlate_alert(self, new_alert: Alert) -> None:
+        """
+        Correlate new alert with recent alerts to identify patterns.
+
+        Groups alerts that:
+        - Occur within correlation window
+        - Share the same category or agent
+        - Indicate coordinated attack
+        """
+        cutoff_time = new_alert.timestamp - self.correlation_window
+        recent_alerts = [
+            a for a in self.alerts
+            if a.timestamp > cutoff_time and a != new_alert
+        ]
+
+        # Find correlated alerts
+        correlated = []
+        for alert in recent_alerts:
+            # Correlation criteria
+            same_category = alert.category == new_alert.category
+            same_agent = alert.agent_id and alert.agent_id == new_alert.agent_id
+            high_severity = alert.severity in [AlertSeverity.HIGH, AlertSeverity.CRITICAL]
+
+            if same_category or same_agent or high_severity:
+                correlated.append(alert)
+
+        # Create correlation group if multiple related alerts
+        if len(correlated) >= 2:
+            group = correlated + [new_alert]
+            self.correlated_groups.append(group)
+
+            # Update alert with correlation info
+            new_alert.correlated_alerts = [a.source for a in correlated]
+
+            logger.warning("Correlated alert group detected",
+                         group_size=len(group),
+                         categories=list(set(a.category for a in group)),
+                         time_span=new_alert.timestamp - min(a.timestamp for a in group))
+
+    def _check_trip_conditions(self) -> None:
+        """Check if circuit breaker should trip based on alert analysis."""
+        if self._is_open:
+            return
+
+        current_time = time.time()
+        cutoff_time = current_time - self.time_window
+
+        recent_alerts = [a for a in self.alerts if a.timestamp > cutoff_time]
+
+        # Count by severity
+        critical_count = sum(1 for a in recent_alerts if a.severity == AlertSeverity.CRITICAL)
+        high_count = sum(1 for a in recent_alerts if a.severity == AlertSeverity.HIGH)
+
+        # Immediate trip conditions
+        if critical_count >= self.critical_threshold:
+            logger.critical("Circuit breaker tripped due to critical alerts!",
+                          critical_count=critical_count,
+                          threshold=self.critical_threshold)
+            self._is_open = True
+            return
+
+        # Trip on high volume of high-severity alerts
+        if high_count + critical_count * 2 >= self.threshold:
+            logger.critical("Circuit breaker tripped due to high-severity alert volume!",
+                          high_count=high_count,
+                          critical_count=critical_count)
+            self._is_open = True
+            return
+
+        # Trip on total alert volume
+        if len(recent_alerts) >= self.threshold * 1.5:
+            logger.critical("Circuit breaker tripped due to alert volume!",
+                          alert_count=len(recent_alerts),
+                          threshold=self.threshold)
+            self._is_open = True
 
     def is_open(self) -> bool:
         """
         Check if the circuit breaker is open (tripped).
-        
+
         Returns:
             True if open (should stop processing), False otherwise.
         """
-        self._cleanup(time.time())
+        current_time = time.time()
+        self._cleanup(current_time)
+        self._cleanup_alerts(current_time)
         return self._is_open
 
     def reset(self):
         """Reset the circuit breaker manually."""
         self.events = []
+        self.alerts = []
+        self.correlated_groups = []
         self._is_open = False
         logger.info("Circuit breaker reset")
 
+    def get_alert_summary(self) -> Dict[str, Any]:
+        """
+        Get summary of recent alerts grouped by severity and category.
+
+        Returns:
+            Alert summary statistics
+        """
+        current_time = time.time()
+        cutoff_time = current_time - self.time_window
+        recent_alerts = [a for a in self.alerts if a.timestamp > cutoff_time]
+
+        # Group by severity
+        by_severity = {
+            severity: sum(1 for a in recent_alerts if a.severity == severity)
+            for severity in AlertSeverity
+        }
+
+        # Group by category
+        categories = {}
+        for alert in recent_alerts:
+            categories[alert.category] = categories.get(alert.category, 0) + 1
+
+        # Group by agent
+        agents = {}
+        for alert in recent_alerts:
+            if alert.agent_id:
+                agents[alert.agent_id] = agents.get(alert.agent_id, 0) + 1
+
+        return {
+            "total_alerts": len(recent_alerts),
+            "by_severity": {s.value: count for s, count in by_severity.items()},
+            "by_category": categories,
+            "by_agent": agents,
+            "correlated_groups": len(self.correlated_groups),
+            "circuit_status": "open" if self._is_open else "closed"
+        }
+
+    def get_correlated_alerts(self) -> List[List[Dict[str, Any]]]:
+        """
+        Get all correlated alert groups.
+
+        Returns:
+            List of alert groups with correlation details
+        """
+        return [
+            [
+                {
+                    "timestamp": datetime.fromtimestamp(a.timestamp).isoformat(),
+                    "severity": a.severity.value,
+                    "source": a.source,
+                    "category": a.category,
+                    "agent_id": a.agent_id
+                }
+                for a in group
+            ]
+            for group in self.correlated_groups
+        ]
+
     def _cleanup(self, current_time: float):
         """Remove events outside the time window."""
-        # Keep only events within the window
         cutoff = current_time - self.time_window
         self.events = [t for t in self.events if t > cutoff]
-        
-        # If count drops below threshold, we could auto-close, 
-        # but usually circuit breakers require manual reset or cool-down.
-        # For this implementation, we'll keep it open until reset or if we want auto-recovery logic.
-        # Let's implement auto-recovery if no events happen for a while?
-        # The requirement says "Auto-opens when events exceed", doesn't specify auto-close.
-        # I'll stick to manual reset or if the list clears up significantly, 
-        # but standard pattern is usually strict. 
-        # However, if the list is empty, it should probably be closed.
-        
-        if self._is_open and len(self.events) == 0:
-             # Auto-recover if window passes completely? 
-             # Let's keep it simple: if it's open, it stays open until reset 
-             # UNLESS we want a "half-open" state. 
-             # Given the prompt "Auto-shutdown on alert threshold", implies a hard stop.
-             pass
+
+        # Auto-recovery: close circuit if no recent events
+        if self._is_open and len(self.events) == 0 and len(self.alerts) == 0:
+            logger.info("Circuit breaker auto-recovering (no recent events)")
+            self._is_open = False
+
+    def _cleanup_alerts(self, current_time: float):
+        """Remove alerts outside the time window."""
+        cutoff = current_time - self.time_window
+        self.alerts = [a for a in self.alerts if a.timestamp > cutoff]
+
+        # Cleanup correlation groups
+        self.correlated_groups = [
+            group for group in self.correlated_groups
+            if any(a.timestamp > cutoff for a in group)
+        ]
