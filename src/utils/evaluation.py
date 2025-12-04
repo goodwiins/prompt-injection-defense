@@ -187,7 +187,8 @@ class EvaluationFramework:
 
     def get_detailed_metrics(self, predictions: List[bool], 
                            scores: List[float], 
-                           true_labels: List[bool]) -> Dict[str, float]:
+                           true_labels: List[bool],
+                           latencies: Optional[List[float]] = None) -> Dict[str, float]:
         """
         Calculate detailed performance metrics from predictions.
         
@@ -195,9 +196,10 @@ class EvaluationFramework:
             predictions: List of boolean predictions (True=Injection)
             scores: List of confidence scores
             true_labels: List of true labels (True=Injection)
+            latencies: Optional list of latencies in ms
             
         Returns:
-            Dictionary of metrics (Accuracy, Precision, Recall, F1, TIVS)
+            Dictionary of metrics (Accuracy, Precision, Recall, F1, TIVS, Latency)
         """
         tp = sum(1 for p, t in zip(predictions, true_labels) if p and t)
         tn = sum(1 for p, t in zip(predictions, true_labels) if not p and not t)
@@ -219,6 +221,8 @@ class EvaluationFramework:
             roc_auc = roc_auc_score(true_labels, scores) if scores else 0.0
         except Exception:
             roc_auc = 0.0
+            
+        avg_latency = sum(latencies) / len(latencies) if latencies else 0.0
         
         return {
             "accuracy": accuracy,
@@ -228,7 +232,8 @@ class EvaluationFramework:
             "roc_auc": roc_auc,
             "tivs_score": tivs,
             "false_positive_rate": fp / (fp + tn) if (fp + tn) > 0 else 0.0,
-            "false_negative_rate": fn / (fn + tp) if (fn + tp) > 0 else 0.0
+            "false_negative_rate": fn / (fn + tp) if (fn + tp) > 0 else 0.0,
+            "avg_latency_ms": avg_latency
         }
 
     def compare_to_baselines(self, current_metrics: Dict[str, float]) -> Dict[str, Any]:
@@ -327,7 +332,8 @@ class EvaluationFramework:
                 "injection_success_rate": metrics.injection_success_rate,
                 "policy_override_frequency": metrics.policy_override_frequency,
                 "prompt_sanitization_rate": metrics.prompt_sanitization_rate,
-                "circuit_breaker_status": metrics.circuit_breaker_status
+                "circuit_breaker_status": metrics.circuit_breaker_status,
+                "avg_latency_ms": metrics.avg_latency_ms
             },
             "statistics": {
                 "total_prompts": self.total_prompts,
