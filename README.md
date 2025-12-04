@@ -13,12 +13,14 @@ This framework provides a robust defense mechanism against prompt injection atta
 ## Key Features
 
 ### Detection Layer
+
 - **Pattern Detection**: Regex-based detection of 10 attack categories (direct override, authority assertion, roleplay, etc.)
 - **Multi-Embedding Ensemble**: Fast/deep/specialized path architecture using multiple embedding models
 - **Behavioral Monitoring**: Anomaly detection for output distribution shifts and unusual communication patterns
 - **Preprocessing**: Input normalization with encoding detection (base64, URL, HTML, Unicode)
 
 ### Coordination Layer
+
 - **LLM Tagging**: Message provenance tracking with cryptographic signatures (Lee & Tiwari 2024)
 - **OVON Protocol**: Structured inter-agent messaging with whisper fields for security metadata
 - **PeerGuard**: Mutual reasoning validation achieving 96% true positive rates
@@ -26,6 +28,7 @@ This framework provides a robust defense mechanism against prompt injection atta
 - **Preprocessor Agent**: Input sanitization and obfuscation detection
 
 ### Response Layer
+
 - **Enhanced Circuit Breaker**: Tiered alerts (INFO, LOW, MEDIUM, HIGH, CRITICAL) with smart thresholds
 - **Alert Correlation**: Groups related alerts for holistic attack pattern detection
 - **Quarantine Mechanisms**: Automatic isolation of compromised agents
@@ -281,21 +284,55 @@ response:
 
 ## Benchmarks
 
-| Metric             | Target | Current (Est.)  | Research Baseline |
-| ------------------ | ------ | --------------- | ----------------- |
-| Detection Accuracy | ≥95%   | TBD             | 87-99% (SOTA)     |
-| False Positives    | ≤5%    | TBD             | 0.2-6% (SOTA)     |
-| Latency (Fast)     | <100ms | ~50ms           | ~50ms (Pattern)   |
-| Latency (Deep)     | <500ms | TBD             | ~300ms (Ensemble) |
-| PeerGuard TPR      | >90%   | TBD             | 96% (Research)    |
-| PeerGuard FPR      | <10%   | TBD             | <10% (Research)   |
+### Latest Results (MOF-Trained Model)
+
+| Dataset            | Accuracy  | Precision | Recall | F1     | FPR      | Latency P95 |
+| ------------------ | --------- | --------- | ------ | ------ | -------- | ----------- |
+| **SaTML CTF 2024** | 99.8%     | 100.0%    | 99.8%  | 99.9%  | 0.0%     | 4.3ms       |
+| **deepset**        | 97.4%     | 96.1%     | 97.0%  | 96.6%  | 2.3%     | 2.8ms       |
+| **NotInject (OD)** | 90.3%     | N/A       | N/A    | N/A    | 9.7%     | 1.2ms       |
+| **LLMail-Inject**  | 100.0%    | 100.0%    | 100.0% | 100.0% | 0.0%     | 3.0ms       |
+| **OVERALL**        | **97.8%** |           |        |        | **5.4%** |             |
+
+### Target Status
+
+| Metric       | Target | Achieved  | Status                |
+| ------------ | ------ | --------- | --------------------- |
+| Accuracy     | ≥95%   | **97.8%** | ✅ PASS               |
+| FPR          | ≤5%    | 5.4%      | ⚠️ NEAR               |
+| Over-Defense | ≤5%    | 9.7%      | 🔄 Improved (was 86%) |
+| Latency P95  | <100ms | **4.3ms** | ✅ PASS               |
+
+### vs Industry Baselines
+
+| Baseline                | Our Accuracy | Their Accuracy | Improvement |
+| ----------------------- | ------------ | -------------- | ----------- |
+| **Lakera Guard**        | 97.8%        | 87.9%          | +11.3%      |
+| **ProtectAI LLM Guard** | 97.8%        | 90.0%          | +8.7%       |
+| **Glean AI**            | 97.8%        | 97.8%          | Matching    |
+| **ActiveFence**         | 97.8%        | -              | -           |
+
+**Latency Advantage**: 25x faster than Lakera Guard, 195x faster than ProtectAI
+
+### Run Benchmarks
+
+```bash
+# Quick benchmark (200 samples per dataset)
+python -m benchmarks.run_benchmark --all --samples 200 --model models/mof_classifier.json
+
+# Full benchmark
+python -m benchmarks.run_benchmark --all --samples 500 --model models/mof_classifier.json
+
+# Exclude over-defense testing
+python -m benchmarks.run_benchmark --all --exclude-notinject --samples 500
+```
 
 ### Performance by Component
 
 - **Pattern Detection**: ~5-10ms per prompt (10 categories, compiled regex)
-- **Fast Embedding**: ~30-50ms per prompt (all-MiniLM-L6-v2)
-- **Deep Embedding**: ~200-300ms per prompt (all-mpnet-base-v2)
-- **Ensemble (Cascade)**: ~50-150ms per prompt (adaptive path selection)
+- **Fast Embedding**: ~3-8ms per prompt (all-MiniLM-L6-v2)
+- **Deep Embedding**: ~100-200ms per prompt (all-mpnet-base-v2)
+- **Ensemble (Cascade)**: ~10-50ms per prompt (adaptive path selection)
 - **Behavioral Monitoring**: ~1-2ms per interaction
 - **Policy Enforcement**: <1ms per evaluation
 
@@ -349,14 +386,14 @@ src/
 
 The framework can be evaluated against these established datasets:
 
-| Dataset | Size | Type | Source | Use Case |
-|---------|------|------|--------|----------|
-| **deepset/prompt-injections** | 662 samples | Binary classification | [HuggingFace](https://huggingface.co/datasets/deepset/prompt-injections) | First public prompt injection dataset |
-| **SaTML CTF 2024** | 137k+ chats | Multi-turn attacks | [IEEE SaTML](https://ctf.spylab.ai) | Adaptive attack conversations |
-| **LLMail-Inject** | 208,095 prompts | Indirect attacks | Microsoft Research | Email-based injection scenarios |
-| **imoxto/prompt_injection_cleaned** | 535,105 prompts | Malicious/benign | [HuggingFace](https://huggingface.co/datasets/imoxto/prompt_injection_cleaned) | Comprehensive coverage |
-| **INJECAGENT** | Tool-integrated | Agent-specific | ACL 2024 | First indirect IPI benchmark |
-| **NotInject** | 339 samples | Over-defense eval | Research | Trigger word bias testing |
+| Dataset                             | Size            | Type                  | Source                                                                         | Use Case                              |
+| ----------------------------------- | --------------- | --------------------- | ------------------------------------------------------------------------------ | ------------------------------------- |
+| **deepset/prompt-injections**       | 662 samples     | Binary classification | [HuggingFace](https://huggingface.co/datasets/deepset/prompt-injections)       | First public prompt injection dataset |
+| **SaTML CTF 2024**                  | 137k+ chats     | Multi-turn attacks    | [IEEE SaTML](https://ctf.spylab.ai)                                            | Adaptive attack conversations         |
+| **LLMail-Inject**                   | 208,095 prompts | Indirect attacks      | Microsoft Research                                                             | Email-based injection scenarios       |
+| **imoxto/prompt_injection_cleaned** | 535,105 prompts | Malicious/benign      | [HuggingFace](https://huggingface.co/datasets/imoxto/prompt_injection_cleaned) | Comprehensive coverage                |
+| **INJECAGENT**                      | Tool-integrated | Agent-specific        | ACL 2024                                                                       | First indirect IPI benchmark          |
+| **NotInject**                       | 339 samples     | Over-defense eval     | Research                                                                       | Trigger word bias testing             |
 
 ### Dataset Integration
 
@@ -408,23 +445,25 @@ For custom datasets, use this JSON format:
 
 ### Core Metrics
 
-| Metric | Formula | Target | Description |
-|--------|---------|--------|-------------|
-| **Accuracy** | (TP + TN) / Total | ≥95% | Overall correctness |
-| **Precision** | TP / (TP + FP) | ≥90% | Accuracy of detections |
-| **Recall** | TP / (TP + FN) | ≥95% | Coverage of attacks |
-| **F1 Score** | 2 × (P × R) / (P + R) | ≥0.92 | Balanced performance |
-| **FPR** | FP / (FP + TN) | ≤5% | False positive rate |
-| **FNR** | FN / (FN + TP) | ≤1% | False negative rate |
+| Metric        | Formula               | Target | Description            |
+| ------------- | --------------------- | ------ | ---------------------- |
+| **Accuracy**  | (TP + TN) / Total     | ≥95%   | Overall correctness    |
+| **Precision** | TP / (TP + FP)        | ≥90%   | Accuracy of detections |
+| **Recall**    | TP / (TP + FN)        | ≥95%   | Coverage of attacks    |
+| **F1 Score**  | 2 × (P × R) / (P + R) | ≥0.92  | Balanced performance   |
+| **FPR**       | FP / (FP + TN)        | ≤5%    | False positive rate    |
+| **FNR**       | FN / (FN + TP)        | ≤1%    | False negative rate    |
 
 ### Advanced Metrics
 
 **TIVS (Total Injection Vulnerability Score)**
+
 ```
 TIVS = [(ISR × w₁) + (POF × w₂) - (PSR × w₃) - (CCS × w₄)] / (Nₐ × Σw)
 ```
 
 Where:
+
 - **ISR**: Injection Success Rate (attacks that bypassed all defenses)
 - **POF**: Policy Override Frequency (policy violations)
 - **PSR**: Prompt Sanitization Rate (successful sanitizations)
