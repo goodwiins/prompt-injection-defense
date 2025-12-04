@@ -14,7 +14,7 @@ def test_imports():
     from src.coordination.preprocessor import Preprocessor
 
     # Detection modules
-    from src.detection.ensemble_classifier import EnsembleClassifier, DetectionPath
+    from src.detection.ensemble import InjectionDetector, DetectionPath
 
     # Response modules
     from src.response.circuit_breaker import CircuitBreaker, AlertSeverity, Alert
@@ -24,7 +24,7 @@ def test_imports():
     assert PeerGuard is not None
     assert PolicyEnforcer is not None
     assert Preprocessor is not None
-    assert EnsembleClassifier is not None
+    assert InjectionDetector is not None
     assert CircuitBreaker is not None
 
 
@@ -176,12 +176,12 @@ def test_circuit_breaker_alerts():
 
 def test_ensemble_classifier_init():
     """Test ensemble classifier initialization."""
-    from src.detection.ensemble_classifier import EnsembleClassifier
+    from src.detection.ensemble import InjectionDetector
 
     # Just test initialization without loading heavy models
     # In real tests, you would load models and test predictions
-    ensemble = EnsembleClassifier(
-        fast_model="all-MiniLM-L6-v2",
+    ensemble = InjectionDetector(
+        fast_model_name="all-MiniLM-L6-v2",
         use_cascade=True
     )
 

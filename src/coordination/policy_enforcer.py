@@ -353,3 +353,25 @@ class PolicyEnforcer:
                        metadata=metadata)
             return True
         return False
+
+    def get_response_actions(self, recommendation: str, confidence: float) -> List[str]:
+        """
+        Get specific response actions based on recommendation.
+        
+        Args:
+            recommendation: The security recommendation (allow, block, flag_for_review)
+            confidence: The confidence score
+            
+        Returns:
+            List of action strings
+        """
+        actions = []
+        if recommendation == "block":
+            actions.append("block_request")
+        elif recommendation == "flag_for_review":
+            actions.append("flag_for_review")
+            
+        if confidence > 0.95:
+             actions.append("log_high_severity")
+             
+        return actions

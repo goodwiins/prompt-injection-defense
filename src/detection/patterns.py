@@ -11,11 +11,12 @@ class PatternDetector:
 
     PATTERNS = {
         "direct_override": [
-            r"ignore (the )?above instructions",
-            r"ignore (the )?previous instructions",
-            r"forget (the )?previous instructions",
-            r"disregard (the )?previous instructions",
+            r"ignore (the |all )?above instructions",
+            r"ignore (the |all )?previous instructions",
+            r"forget (the |all )?previous instructions",
+            r"disregard (the |all )?previous instructions",
             r"ignore all prior instructions",
+            r"ignore all instructions",
             r"system override",
             r"new instruction:",
         ],
@@ -81,6 +82,26 @@ class PatternDetector:
             r"for research purposes",
             r"just for fun",
             r"hypothetically",
+        ],
+        "heuristic_keywords": [
+            r"ignore previous", 
+            r"ignore all", 
+            r"forget everything",
+            r"system prompt", 
+            r"jailbreak", 
+            r"do anything now",
+            r"override", 
+            r"bypass", 
+            r"restriction", 
+            r"filter", 
+            r"safety",
+            r"pretend you are", 
+            r"roleplay as", 
+            r"no restrictions",
+            r"without ethics", 
+            r"amoral", 
+            r"unfiltered",
+            r"ignore all previous instructions"
         ]
     }
 
@@ -113,17 +134,22 @@ class PatternDetector:
             text: The input prompt to scan.
             
         Returns:
-            Dictionary containing matched patterns, total severity, and detailed matches.
+            Dictionary containing matched patterns, total severity, match ranges, and detailed matches.
         """
         matches = {}
         total_severity = 0.0
         matched_categories = []
+        match_ranges = []  # List of (start, end) tuples for attention analysis
 
         for category, patterns in self.compiled_patterns.items():
             category_matches = []
             for pattern in patterns:
-                if pattern.search(text):
+                match = pattern.search(text)
+                if match:
                     category_matches.append(pattern.pattern)
+                    # Collect all match positions for this pattern
+                    for m in pattern.finditer(text):
+                        match_ranges.append((m.start(), m.end()))
             
             if category_matches:
                 matches[category] = category_matches
@@ -138,6 +164,7 @@ class PatternDetector:
             "is_suspicious": len(matches) > 0,
             "severity": total_severity,
             "matched_categories": matched_categories,
+            "match_ranges": match_ranges,  # For attention tracker
             "details": matches
         }
         
