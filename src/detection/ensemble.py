@@ -13,7 +13,7 @@ import json
 import re
 
 from .patterns import PatternDetector
-from .attention_tracker import AttentionTracker
+from .attention_tracker import AttentionMonitor
 
 logger = structlog.get_logger()
 
@@ -104,7 +104,7 @@ class InjectionDetector:
 
         # Initialize additional detectors
         self.pattern_detector = PatternDetector()
-        self.attention_tracker = AttentionTracker()
+        self.attention_tracker = AttentionMonitor()
 
         self._load_models()
 
@@ -215,6 +215,19 @@ class InjectionDetector:
             
         # Check for immediate safe (Low confidence attack)
         if fast_prob < 0.5 and self.use_cascade:
+             # Heuristic check (Safety Net)
+             # Even if trained, we check heuristics for obvious patterns that the model might miss
+             heuristic_score = self._heuristic_check(text)
+             if heuristic_score >= 0.5:
+                 return {
+                     "score": float(heuristic_score),
+                     "confidence": 0.8,
+                     "is_injection": True,
+                     "latency": (time.time() - start_time) * 1000,
+                     "source_model": "heuristic",
+                     "detection_path": "heuristic"
+                 }
+
              return {
                 "score": float(fast_prob),
                 "confidence": 1.0 - float(fast_prob), # High confidence it's safe
@@ -249,6 +262,28 @@ class InjectionDetector:
             "source_model": source_model,
             "detection_path": path
         }
+
+    def _heuristic_check(self, text: str) -> float:
+        """
+        Simple heuristic check for common injection patterns when models are untrained.
+        """
+        text_lower = text.lower()
+        score = 0.1
+        
+        keywords = [
+            "ignore previous", "ignore all", "forget everything",
+            "system prompt", "jailbreak", "dan", "do anything now",
+            "override", "bypass", "restriction", "filter", "safety",
+            "pretend you are", "roleplay as", "no restrictions",
+            "without ethics", "amoral", "unfiltered",
+            "ignore all previous instructions"
+        ]
+        
+        for keyword in keywords:
+            if keyword in text_lower:
+                score += 0.2
+                
+        return min(score, 0.95)
 
     def predict(self, texts: List[str]) -> List[Dict[str, Any]]:
         """

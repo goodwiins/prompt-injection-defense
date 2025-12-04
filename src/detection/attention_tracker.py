@@ -4,7 +4,7 @@ import structlog
 
 logger = structlog.get_logger()
 
-class AttentionTracker:
+class AttentionMonitor:
     """
     Monitors attention weights to detect 'distraction effects' where
     attention shifts significantly to injected commands.
@@ -15,7 +15,7 @@ class AttentionTracker:
     
     def __init__(self, distraction_threshold: float = 0.6, top_k_heads: int = 5):
         """
-        Initialize the Attention Tracker.
+        Initialize the Attention Monitor.
         
         Args:
             distraction_threshold: Threshold for attention score concentration on injected parts.
