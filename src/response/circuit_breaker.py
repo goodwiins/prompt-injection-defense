@@ -26,27 +26,22 @@ class Alert:
     agent_id: Optional[str] = None
     correlated_alerts: List[str] = field(default_factory=list)
 
-class CircuitBreaker:
+class SafetyCircuit:
     """
-    Enhanced circuit breaker with tiered alerts and alert correlation.
-
-    Based on research recommendations:
-    - Low-confidence anomalies generate informational alerts
-    - High-confidence, high-impact anomalies trigger immediate notifications
-    - Alert correlation groups related alerts for holistic visibility
+    Circuit breaker pattern to stop automated attacks.
+    Tracks failure rates and opens the circuit (blocking all traffic) if threshold is exceeded.
     """
-
-    def __init__(self, threshold: int = 10, time_window: int = 60,
-                 critical_threshold: int = 3,
-                 correlation_window: int = 10):
+    def __init__(self, failure_threshold: int = 3, recovery_timeout: int = 60, time_window: int = 60):
         """
+        Initialize the safety circuit.
+        
         Args:
-            threshold: Number of events allowed within the time window.
-            time_window: Time window in seconds.
-            critical_threshold: Number of critical alerts before immediate trip
-            correlation_window: Time window in seconds for correlating related alerts
+            failure_threshold: Number of failures allowed before opening circuit
+            recovery_timeout: Seconds to wait before attempting recovery (half-open)
+            time_window: Sliding window in seconds for counting failures
         """
-        self.threshold = threshold
+        self.failure_threshold = failure_threshold
+        self.recovery_timeout = recovery_timeout
         self.time_window = time_window
         self.critical_threshold = critical_threshold
         self.correlation_window = correlation_window
@@ -297,8 +292,33 @@ class CircuitBreaker:
         cutoff = current_time - self.time_window
         self.alerts = [a for a in self.alerts if a.timestamp > cutoff]
 
-        # Cleanup correlation groups
         self.correlated_groups = [
             group for group in self.correlated_groups
             if any(a.timestamp > cutoff for a in group)
         ]
+
+    def get_recovery_time(self) -> float:
+        """
+        Get the remaining time in seconds until the circuit breaker recovers.
+        
+        Returns:
+            Remaining seconds, or 0 if not open or ready to recover.
+        """
+        if not self._is_open:
+            return 0.0
+            
+        current_time = time.time()
+        
+        # Find the latest event or alert timestamp
+        last_event_time = max(self.events) if self.events else 0
+        last_alert_time = max((a.timestamp for a in self.alerts), default=0)
+        
+        last_activity = max(last_event_time, last_alert_time)
+        
+        if last_activity == 0:
+            return 0.0
+            
+        recovery_time = last_activity + self.time_window
+        remaining = max(0.0, recovery_time - current_time)
+        
+        return remaining

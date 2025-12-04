@@ -4,31 +4,34 @@ import structlog
 
 logger = structlog.get_logger()
 
-class QuarantineManager:
+class QuarantineProtocol:
     """
-    Manages the isolation of compromised agents.
+    Manages isolation of compromised agents.
+    Prevents agents from communicating until cleared.
     """
-
-    def __init__(self, default_timeout: int = 300):
-        """
-        Args:
-            default_timeout: Default quarantine duration in seconds.
-        """
+    def __init__(self, default_duration: int = 300):
         self.quarantined_agents: Dict[str, float] = {}
-        self.default_timeout = default_timeout
+        self.default_duration = default_duration
+        self.history: Dict[str, List[Dict]] = {}
 
-    def isolate(self, agent_id: str, duration: Optional[int] = None):
+    def isolate_agent(self, agent_id: str, duration: Optional[int] = None) -> None:
         """
-        Place an agent in quarantine.
-        
-        Args:
-            agent_id: ID of the agent to isolate.
-            duration: Duration in seconds. Defaults to default_timeout.
+        Isolate an agent for a specified duration.
         """
-        timeout = duration if duration is not None else self.default_timeout
-        expiry = time.time() + timeout
-        self.quarantined_agents[agent_id] = expiry
-        logger.warning("Agent quarantined", agent_id=agent_id, duration=timeout)
+        duration = duration or self.default_duration
+        release_time = time.time() + duration
+        self.quarantined_agents[agent_id] = release_time
+        logger.warning("Agent quarantined", agent_id=agent_id, duration=duration)
+
+    def peer_guard_check(self, agent_id: str, history: List[Dict]) -> bool:
+        """
+        Triggers a 'Peer Review' where the KPI Evaluator reviews the Guard Agent's recent logs.
+        Returns True if the agent is cleared, False otherwise.
+        """
+        # Placeholder for peer review logic
+        # In a real system, this would analyze the history for anomalies
+        logger.info("Performing peer guard check", agent_id=agent_id)
+        return False # Default to not clearing without explicit review
 
     def release(self, agent_id: str):
         """
