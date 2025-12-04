@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 
 from utils.dataset_loader import DatasetLoader
 from detection.embedding_classifier import EmbeddingClassifier
-from detection.ensemble_classifier import EnsembleClassifier
+from detection.ensemble import InjectionDetector
 import structlog
 
 logger = structlog.get_logger()
@@ -61,7 +61,7 @@ def main():
         if args.ensemble:
             # Train ensemble classifier
             logger.info("Training ensemble classifier...")
-            classifier = EnsembleClassifier(
+            classifier = InjectionDetector(
                 fast_model_name="all-MiniLM-L6-v2",
                 deep_model_name="all-mpnet-base-v2",
                 model_dir=args.model_dir

@@ -1,8 +1,8 @@
 from typing import Dict, Any, Optional
 import structlog
-from .messaging import SecureMessage, OVONContent
+from .messaging import OVONMessage, OVONContent
 from ..detection.ensemble import InjectionDetector
-from ..response.quarantine import QuarantineProtocol
+from ..response.quarantine import QuarantineManager
 
 logger = structlog.get_logger()
 
@@ -17,14 +17,14 @@ class SecureAgent:
         self.quarantine_status = False
         self.logger = logger.bind(agent_id=agent_id, role=role)
 
-    def process(self, message: SecureMessage) -> Optional[SecureMessage]:
+    def process(self, message: OVONMessage) -> Optional[OVONMessage]:
         """Process an incoming message and return a response."""
         raise NotImplementedError
 
     def _create_response(self, target_id: str, content: str, 
-                        security_verified: bool = False, score: float = 0.0) -> SecureMessage:
+                        security_verified: bool = False, score: float = 0.0) -> OVONMessage:
         """Helper to create a secure response message."""
-        msg = SecureMessage(
+        msg = OVONMessage(
             source_agent=self.agent_id,
             destination_agent=target_id,
             content=OVONContent(utterance=content)
@@ -42,7 +42,7 @@ class PreprocessorAgent(SecureAgent):
     Agent responsible for cleaning and normalizing input.
     Performs regex cleaning and encoding checks.
     """
-    def process(self, message: SecureMessage) -> Optional[SecureMessage]:
+    def process(self, message: OVONMessage) -> Optional[OVONMessage]:
         self.logger.info("Preprocessing message")
         # Simple normalization
         cleaned_text = message.content.utterance.strip()
@@ -58,12 +58,12 @@ class GuardAgent(SecureAgent):
     """
     Primary defense agent using InjectionDetector.
     """
-    def __init__(self, agent_id: str, detector: InjectionDetector, quarantine: QuarantineProtocol):
+    def __init__(self, agent_id: str, detector: InjectionDetector, quarantine: QuarantineManager):
         super().__init__(agent_id, "guard")
         self.detector = detector
         self.quarantine = quarantine
 
-    def process(self, message: SecureMessage) -> Optional[SecureMessage]:
+    def process(self, message: OVONMessage) -> Optional[OVONMessage]:
         self.logger.info("Analyzing message for injection")
         
         # Check quarantine
@@ -82,7 +82,7 @@ class GuardAgent(SecureAgent):
         if result["is_injection"]:
             self.logger.warning("Injection detected", score=result["score"])
             # Isolate the sender
-            self.quarantine.isolate_agent(message.sender_id)
+            self.quarantine.isolate(message.sender_id)
             
             return self._create_response(
                 target_id=message.sender_id,
@@ -103,7 +103,7 @@ class PolicyAgent(SecureAgent):
     """
     Agent responsible for verifying output against corporate policy.
     """
-    def process(self, message: SecureMessage) -> Optional[SecureMessage]:
+    def process(self, message: OVONMessage) -> Optional[OVONMessage]:
         self.logger.info("Checking policy compliance")
         # Placeholder for policy check
         return self._create_response(
@@ -116,7 +116,7 @@ class AgentFactory:
     """Factory to spawn secure agents."""
     
     @staticmethod
-    def create_guard(agent_id: str, detector: InjectionDetector, quarantine: QuarantineProtocol) -> GuardAgent:
+    def create_guard(agent_id: str, detector: InjectionDetector, quarantine: QuarantineManager) -> GuardAgent:
         return GuardAgent(agent_id, detector, quarantine)
         
     @staticmethod

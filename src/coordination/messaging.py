@@ -32,7 +32,7 @@ class OVONContent(BaseModel):
         description="Metadata not visible to the user (detection results, security tags, etc.)"
     )
 
-class SecureMessage(BaseModel):
+class OVONMessage(BaseModel):
     """
     OVON-compliant secure message with LLM tagging and integrity checks.
     
@@ -83,6 +83,16 @@ class SecureMessage(BaseModel):
             "source_tag_hash": signature
         }
 
+    def add_llm_tag(self, agent_id: str, agent_type: str, trust_level: float = 1.0, 
+                    security_clearance: str = "standard") -> None:
+        """Add LLM tag to message for provenance tracking."""
+        self.llm_tag = LLMTag(
+            agent_id=agent_id,
+            agent_type=agent_type,
+            trust_level=trust_level,
+            security_clearance=security_clearance
+        )
+
     def is_safe(self) -> bool:
         """Legacy safety check."""
         if self.llm_tag:
@@ -94,6 +104,6 @@ class SecureMessage(BaseModel):
         return self.json()
 
     @classmethod
-    def from_json(cls, json_str: str) -> "SecureMessage":
+    def from_json(cls, json_str: str) -> "OVONMessage":
         """Deserialize from JSON string."""
         return cls.parse_raw(json_str)

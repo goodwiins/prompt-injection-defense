@@ -2,17 +2,19 @@ from typing import Dict, Any, Optional, List
 import time
 import structlog
 from src.detection.embedding_classifier import EmbeddingClassifier
-from src.detection.ensemble_classifier import EnsembleClassifier
+from src.detection.ensemble import InjectionDetector
 from src.detection.patterns import PatternDetector
 from src.response.circuit_breaker import CircuitBreaker, AlertSeverity
-from src.coordination.quarantine import QuarantineManager
+from src.response.quarantine import QuarantineManager
 from src.coordination.policy_enforcer import PolicyEnforcer
 from src.coordination.behavioral_monitor import BehavioralMonitor
 from src.coordination.behavioral_monitor import BehavioralMonitor
 from src.coordination.peerguard import PeerGuard
-from src.coordination.ovon_protocol import OVONMessage
+from src.coordination.messaging import OVONMessage
 
 logger = structlog.get_logger()
+
+from src.utils.redis_client import RedisClient
 
 class GuardAgent:
     """
@@ -23,6 +25,12 @@ class GuardAgent:
     def __init__(self, config: Optional[Dict[str, Any]] = None, agent_id: str = "guard_agent_001"):
         self.config = config or {}
         self.agent_id = agent_id
+        
+        # Initialize Redis for persistence
+        self.redis_client = RedisClient(
+            host=self.config.get("redis", {}).get("host", "localhost"),
+            port=self.config.get("redis", {}).get("port", 6379)
+        )
 
         # Initialize detection components
         self.pattern_detector = PatternDetector()
@@ -33,7 +41,7 @@ class GuardAgent:
         if use_ensemble:
             # Use ensemble classifier for production-grade detection
             model_config = self.config.get("detection", {})
-            self.classifier = EnsembleClassifier(
+            self.classifier = InjectionDetector(
                 fast_model_name=model_config.get("fast_model", "all-MiniLM-L6-v2"),
                 deep_model_name=model_config.get("deep_model", "all-mpnet-base-v2"),
                 specialized_model_name=model_config.get("specialized_model"),
@@ -61,7 +69,8 @@ class GuardAgent:
         )
 
         self.quarantine_manager = QuarantineManager(
-            default_timeout=self.config.get("quarantine", {}).get("default_duration", 300)
+            default_timeout=self.config.get("quarantine", {}).get("default_duration", 300),
+            redis_client=self.redis_client
         )
 
         self.policy_enforcer = PolicyEnforcer()
@@ -109,20 +118,20 @@ class GuardAgent:
         if not message.is_safe():
             logger.warning("Message rejected by protocol safety check", 
                           message_id=message.message_id,
-                          source=message.source_agent)
+                          source=message.sender_id)
             return self._create_block_response("Protocol violation: Invalid signature or trust level")
 
         # 2. Check Quarantine
-        if self.quarantine_manager.is_quarantined(message.source_agent):
+        if self.quarantine_manager.is_quarantined(message.sender_id):
              logger.warning("Message rejected from quarantined agent", 
-                          agent_id=message.source_agent)
-             return self._create_block_response(f"Source agent {message.source_agent} is quarantined")
+                          agent_id=message.sender_id)
+             return self._create_block_response(f"Source agent {message.sender_id} is quarantined")
         
         # 3. Analyze Content
         # Pass message metadata into context
         context = {
             "message_id": message.message_id, 
-            "source_agent": message.source_agent,
+            "source_agent": message.sender_id,
             "llm_tag": message.llm_tag.dict() if message.llm_tag else None
         }
         
@@ -173,7 +182,7 @@ class GuardAgent:
         pattern_result = self.pattern_detector.detect(prompt)
 
         # Phase 2: Advanced Classification
-        if isinstance(self.classifier, EnsembleClassifier):
+        if isinstance(self.classifier, InjectionDetector):
             # Use ensemble for production-grade detection
             ensemble_results = self.classifier.predict([prompt])
             embedding_result = ensemble_results[0]
@@ -201,20 +210,28 @@ class GuardAgent:
         policy_severity = float(policy_result.get("severity_level", 0)) / 4.0
 
         # Phase 4: Behavioral Analysis
-        # For now, use simple behavioral heuristics
         behavior_anomaly = False
         behavior_score = 0.0
+        behavior_result = {}
 
         # Check for repeated patterns in context
         if context and "session_id" in context:
             session_id = context["session_id"]
-            # This would normally use behavioral_monitor to track patterns
-            # For now, skip complex behavioral analysis
-
-        behavior_result = {
-            "is_anomaly": behavior_anomaly,
-            "score": behavior_score
-        }
+            # Use the new injection-aware behavioral analysis
+            behavior_result = self.behavioral_monitor.analyze_behavior(
+                agent_id=session_id,
+                current_prompt=prompt,
+                is_injection=embedding_is_injection
+            )
+            behavior_anomaly = behavior_result["is_anomaly"]
+            behavior_score = behavior_result["score"]
+        else:
+            # Fallback for stateless requests
+            behavior_result = {
+                "is_anomaly": False,
+                "score": 0.0,
+                "reason": "no_session_context"
+            }
 
         # Phase 5: Multi-Agent Peer Validation (if enabled)
         peer_validation = None
@@ -248,6 +265,11 @@ class GuardAgent:
 
         # Compile comprehensive result
         analysis_time = (time.time() - start_time) * 1000
+        
+        # Extract attention analysis from ensemble result if available
+        attention_analysis = None
+        if isinstance(self.classifier, InjectionDetector):
+            attention_analysis = embedding_result.get("attention_analysis")
 
         result = {
             "agent_id": self.agent_id,
@@ -264,6 +286,7 @@ class GuardAgent:
                     "threshold": getattr(self.classifier, 'threshold', 0.85),
                     "detection_path": detection_path
                 },
+                "attention_analysis": attention_analysis,  # New: Attention tracking results
                 "policy_analysis": policy_result,
                 "behavioral_analysis": behavior_result,
                 "peer_validation": peer_validation

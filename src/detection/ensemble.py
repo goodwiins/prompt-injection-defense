@@ -1,5 +1,12 @@
 import time
 import os
+# Force single-threaded execution to prevent deadlocks in Jupyter
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
+os.environ["NUMEXPR_NUM_THREADS"] = "1"
+
 from typing import List, Dict, Optional, Tuple, Union, Any
 from enum import Enum
 from pathlib import Path
@@ -183,15 +190,28 @@ class InjectionDetector:
 
     def scan(self, text: str) -> Dict[str, Any]:
         """
-        Scan text for prompt injection using the ensemble strategy.
+        Scan text for prompt injection using the ensemble strategy with attention tracking.
         
         Args:
             text: The input text to scan.
             
         Returns:
-            DetectionResult dictionary with score, confidence, latency, and source_model.
+            DetectionResult dictionary with score, confidence, latency, source_model, and attention_analysis.
         """
         start_time = time.time()
+        attention_result = None
+        
+        # 0. Pattern Detection (for attention analysis ranges)
+        pattern_result = self.pattern_detector.detect(text)
+        match_ranges = pattern_result.get("match_ranges", [])
+        
+        # 0.1 Attention Analysis (runs in simulation mode without actual weights)
+        if match_ranges:
+            attention_result = self.attention_tracker.analyze_attention(
+                full_text=text,
+                suspected_injection_ranges=match_ranges,
+                attention_weights=None  # Simulation mode
+            )
         
         # 1. Fast Path (MiniLM)
         # Generate embedding
@@ -202,21 +222,32 @@ class InjectionDetector:
             fast_embedding, self.fast_xgb_classifier, self.fast_rf_classifier, "fast"
         )[0][1]
         
+        # Attention boost: If pattern detected AND attention distraction detected, boost confidence
+        attention_boost = 0.0
+        if attention_result and attention_result.get("is_distracted"):
+            attention_boost = attention_result.get("distraction_score", 0) * 0.15
+            logger.info("Attention distraction detected, boosting score", 
+                       distraction_score=attention_result["distraction_score"],
+                       boost=attention_boost)
+        
+        # Apply attention boost to fast_prob
+        boosted_fast_prob = min(fast_prob + attention_boost, 1.0)
+        
         # Check for immediate flag (High confidence attack)
-        if fast_prob > 0.85:
+        if boosted_fast_prob > 0.85:
             return {
-                "score": float(fast_prob),
-                "confidence": float(fast_prob), # High confidence
+                "score": float(boosted_fast_prob),
+                "confidence": float(boosted_fast_prob),
                 "is_injection": True,
                 "latency": (time.time() - start_time) * 1000,
                 "source_model": "fast_path",
-                "detection_path": "fast"
+                "detection_path": "fast",
+                "attention_analysis": attention_result
             }
             
         # Check for immediate safe (Low confidence attack)
-        if fast_prob < 0.5 and self.use_cascade:
+        if boosted_fast_prob < 0.5 and self.use_cascade:
              # Heuristic check (Safety Net)
-             # Even if trained, we check heuristics for obvious patterns that the model might miss
              heuristic_score = self._heuristic_check(text)
              if heuristic_score >= 0.5:
                  return {
@@ -225,16 +256,18 @@ class InjectionDetector:
                      "is_injection": True,
                      "latency": (time.time() - start_time) * 1000,
                      "source_model": "heuristic",
-                     "detection_path": "heuristic"
+                     "detection_path": "heuristic",
+                     "attention_analysis": attention_result
                  }
 
              return {
-                "score": float(fast_prob),
-                "confidence": 1.0 - float(fast_prob), # High confidence it's safe
+                "score": float(boosted_fast_prob),
+                "confidence": 1.0 - float(boosted_fast_prob),
                 "is_injection": False,
                 "latency": (time.time() - start_time) * 1000,
                 "source_model": "fast_path",
-                "detection_path": "fast"
+                "detection_path": "fast",
+                "attention_analysis": attention_result
             }
 
         # 2. Deep Path (MPNet / DeBERTa) - Inconclusive Fast Path
@@ -244,44 +277,46 @@ class InjectionDetector:
                 deep_embedding, self.deep_xgb_classifier, self.deep_rf_classifier, "deep"
             )[0][1]
             
-            # Combine scores (simple average or weighted)
-            # Here we prioritize the deep model for difficult cases
-            final_score = deep_prob
+            # Apply attention boost to deep path as well
+            final_score = min(deep_prob + attention_boost, 1.0)
             source_model = "deep_path"
             path = "deep"
         else:
-            final_score = fast_prob
+            final_score = boosted_fast_prob
             source_model = "fast_path"
             path = "fast"
         
         return {
             "score": float(final_score),
-            "confidence": abs(final_score - 0.5) * 2, # Confidence scales with distance from 0.5
+            "confidence": abs(final_score - 0.5) * 2,
             "is_injection": final_score > self.deep_threshold,
             "latency": (time.time() - start_time) * 1000,
             "source_model": source_model,
-            "detection_path": path
+            "detection_path": path,
+            "attention_analysis": attention_result
         }
 
     def _heuristic_check(self, text: str) -> float:
         """
         Simple heuristic check for common injection patterns when models are untrained.
         """
-        text_lower = text.lower()
         score = 0.1
         
-        keywords = [
-            "ignore previous", "ignore all", "forget everything",
-            "system prompt", "jailbreak", "dan", "do anything now",
-            "override", "bypass", "restriction", "filter", "safety",
-            "pretend you are", "roleplay as", "no restrictions",
-            "without ethics", "amoral", "unfiltered",
-            "ignore all previous instructions"
-        ]
+        # Use the pattern detector to find heuristic keywords
+        # We check specifically for the 'heuristic_keywords' category we just added
+        # or any other suspicious patterns
         
-        for keyword in keywords:
-            if keyword in text_lower:
-                score += 0.2
+        # Quick check using regex from pattern detector
+        result = self.pattern_detector.detect(text)
+        
+        if result["is_suspicious"]:
+            # If any patterns matched, increase score
+            score += 0.4
+            
+            # Check specifically for high-risk keywords
+            details = result.get("details", {})
+            if "heuristic_keywords" in details or "direct_override" in details:
+                score += 0.3
                 
         return min(score, 0.95)
 

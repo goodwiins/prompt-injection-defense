@@ -44,6 +44,10 @@ class BehavioralMonitor:
 
         # Anomaly history
         self.anomalies: deque = deque(maxlen=1000)
+        
+        # Enhanced tracking for injection detection
+        self.recent_prompts: Dict[str, deque] = defaultdict(lambda: deque(maxlen=20))
+        self.injection_history: Dict[str, deque] = defaultdict(lambda: deque(maxlen=50))
 
     def record_interaction(self, agent_id: str,
                           output_length: int,
@@ -328,4 +332,69 @@ class BehavioralMonitor:
         if agent_id:
             events = [e for e in events if e["agent_id"] == agent_id]
 
-        return events[-limit:]
+    def analyze_behavior(self, agent_id: str, current_prompt: str, is_injection: bool = False) -> Dict[str, Any]:
+        """
+        Analyze behavior for specific injection patterns: repetition, escalation, and high injection rate.
+        
+        Args:
+            agent_id: The agent/user identifier
+            current_prompt: The current prompt text
+            is_injection: Whether the current prompt was classified as injection
+            
+        Returns:
+            Dictionary with behavioral analysis results
+        """
+        # Record current interaction
+        self.recent_prompts[agent_id].append(current_prompt)
+        self.injection_history[agent_id].append(1 if is_injection else 0)
+        
+        results = {
+            "is_anomaly": False,
+            "score": 0.0,
+            "reasons": []
+        }
+        
+        # 1. Check Injection Rate (last 10 interactions)
+        history = list(self.injection_history[agent_id])
+        if len(history) >= 5:
+            recent_rate = sum(history[-10:]) / len(history[-10:])
+            if recent_rate > 0.3:  # More than 30% injections
+                results["is_anomaly"] = True
+                results["score"] += recent_rate * 2.0
+                results["reasons"].append(f"high_injection_rate:{recent_rate:.2f}")
+
+        # 2. Check Repetition / Similarity Spikes
+        # Simple Jaccard similarity check against recent prompts
+        if len(self.recent_prompts[agent_id]) > 1:
+            recent = list(self.recent_prompts[agent_id])[:-1] # Exclude current
+            max_sim = 0.0
+            
+            current_tokens = set(current_prompt.lower().split())
+            if not current_tokens:
+                return results
+                
+            for prev_prompt in recent:
+                prev_tokens = set(prev_prompt.lower().split())
+                if not prev_tokens:
+                    continue
+                
+                intersection = len(current_tokens.intersection(prev_tokens))
+                union = len(current_tokens.union(prev_tokens))
+                sim = intersection / union if union > 0 else 0
+                max_sim = max(max_sim, sim)
+            
+            if max_sim > 0.85:
+                results["is_anomaly"] = True
+                results["score"] += 0.5
+                results["reasons"].append(f"high_repetition:{max_sim:.2f}")
+
+        # 3. Detect Escalation (Safe -> Injection)
+        # If user was safe for a while and suddenly sends injection
+        if is_injection and len(history) >= 5:
+            # Check if previous 4 were safe
+            if sum(history[-5:-1]) == 0:
+                results["is_anomaly"] = True
+                results["score"] += 0.8
+                results["reasons"].append("sudden_escalation")
+
+        return results

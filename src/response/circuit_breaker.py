@@ -26,12 +26,13 @@ class Alert:
     agent_id: Optional[str] = None
     correlated_alerts: List[str] = field(default_factory=list)
 
-class SafetyCircuit:
+class CircuitBreaker:
     """
     Circuit breaker pattern to stop automated attacks.
     Tracks failure rates and opens the circuit (blocking all traffic) if threshold is exceeded.
     """
-    def __init__(self, failure_threshold: int = 3, recovery_timeout: int = 60, time_window: int = 60):
+    def __init__(self, failure_threshold: int = 3, recovery_timeout: int = 60, time_window: int = 60,
+                 critical_threshold: int = 2, correlation_window: int = 30, threshold: int = None):
         """
         Initialize the safety circuit.
         
@@ -39,8 +40,16 @@ class SafetyCircuit:
             failure_threshold: Number of failures allowed before opening circuit
             recovery_timeout: Seconds to wait before attempting recovery (half-open)
             time_window: Sliding window in seconds for counting failures
+            critical_threshold: Number of critical alerts before immediate trip
+            correlation_window: Time window for correlating alerts
+            threshold: Alias for failure_threshold (for backwards compatibility)
         """
+        # Support 'threshold' as alias for backwards compatibility
+        if threshold is not None:
+            failure_threshold = threshold
+            
         self.failure_threshold = failure_threshold
+        self.threshold = failure_threshold  # Alias for legacy code
         self.recovery_timeout = recovery_timeout
         self.time_window = time_window
         self.critical_threshold = critical_threshold
