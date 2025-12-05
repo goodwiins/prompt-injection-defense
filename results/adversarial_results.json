@@ -1,0 +1,44 @@
+{
+  "by_technique": {
+    "original": {
+      "total": 9,
+      "detected": 2,
+      "detection_rate": 0.222
+    },
+    "leetspeak": {
+      "total": 9,
+      "detected": 7,
+      "detection_rate": 0.778
+    },
+    "homoglyphs": {
+      "total": 9,
+      "detected": 4,
+      "detection_rate": 0.444
+    },
+    "base64": {
+      "total": 9,
+      "detected": 9,
+      "detection_rate": 1.0
+    },
+    "case": {
+      "total": 9,
+      "detected": 2,
+      "detection_rate": 0.222
+    },
+    "split": {
+      "total": 9,
+      "detected": 9,
+      "detection_rate": 1.0
+    },
+    "zero_width": {
+      "total": 9,
+      "detected": 2,
+      "detection_rate": 0.222
+    }
+  },
+  "overall": {
+    "total": 63,
+    "detected": 35,
+    "detection_rate": 0.556
+  }
+}

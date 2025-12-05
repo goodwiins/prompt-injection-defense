@@ -1,0 +1,278 @@
+{
+  "full_system": {
+    "config": {
+      "name": "full_system",
+      "description": "Complete system (baseline)",
+      "use_pattern_detector": true,
+      "use_embedding_classifier": true,
+      "use_cascade": true,
+      "use_mof_data": true,
+      "fast_path_only": false,
+      "deep_path_only": false
+    },
+    "datasets": {
+      "satml": {
+        "accuracy": 0.995,
+        "precision": 1.0,
+        "recall": 0.995,
+        "f1": 0.9975,
+        "fpr": 0,
+        "latency_p95": 19.05
+      },
+      "deepset": {
+        "accuracy": 0.975,
+        "precision": 0.9798,
+        "recall": 0.97,
+        "f1": 0.9749,
+        "fpr": 0.02,
+        "latency_p95": 4.12
+      },
+      "notinject": {
+        "accuracy": 0.91,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.09,
+        "latency_p95": 1.84
+      },
+      "llmail": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0,
+        "latency_p95": 5.95
+      }
+    }
+  },
+  "no_pattern": {
+    "config": {
+      "name": "no_pattern",
+      "description": "Without pattern detection",
+      "use_pattern_detector": false,
+      "use_embedding_classifier": true,
+      "use_cascade": true,
+      "use_mof_data": true,
+      "fast_path_only": false,
+      "deep_path_only": false
+    },
+    "datasets": {
+      "satml": {
+        "accuracy": 0.995,
+        "precision": 1.0,
+        "recall": 0.995,
+        "f1": 0.9975,
+        "fpr": 0,
+        "latency_p95": 3.27
+      },
+      "deepset": {
+        "accuracy": 0.975,
+        "precision": 0.9798,
+        "recall": 0.97,
+        "f1": 0.9749,
+        "fpr": 0.02,
+        "latency_p95": 3.5
+      },
+      "notinject": {
+        "accuracy": 0.91,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.09,
+        "latency_p95": 0.55
+      },
+      "llmail": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0,
+        "latency_p95": 4.17
+      }
+    }
+  },
+  "no_embedding": {
+    "config": {
+      "name": "no_embedding",
+      "description": "Pattern detection only",
+      "use_pattern_detector": true,
+      "use_embedding_classifier": false,
+      "use_cascade": false,
+      "use_mof_data": true,
+      "fast_path_only": false,
+      "deep_path_only": false
+    },
+    "datasets": {
+      "satml": {
+        "accuracy": 0.31,
+        "precision": 1.0,
+        "recall": 0.31,
+        "f1": 0,
+        "fpr": 0,
+        "latency_p95": 1.0
+      },
+      "deepset": {
+        "accuracy": 0.605,
+        "precision": 1.0,
+        "recall": 0.21,
+        "f1": 0,
+        "fpr": 0.0,
+        "latency_p95": 1.0
+      },
+      "notinject": {
+        "accuracy": 0.79,
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "fpr": 0.21,
+        "latency_p95": 1.0
+      },
+      "llmail": {
+        "accuracy": 0.095,
+        "precision": 1.0,
+        "recall": 0.095,
+        "f1": 0,
+        "fpr": 0,
+        "latency_p95": 1.0
+      }
+    }
+  },
+  "no_cascade": {
+    "config": {
+      "name": "no_cascade",
+      "description": "Always use deep path (no cascade)",
+      "use_pattern_detector": true,
+      "use_embedding_classifier": true,
+      "use_cascade": false,
+      "use_mof_data": true,
+      "fast_path_only": false,
+      "deep_path_only": false
+    },
+    "datasets": {
+      "satml": {
+        "accuracy": 0.995,
+        "precision": 1.0,
+        "recall": 0.995,
+        "f1": 0.9975,
+        "fpr": 0,
+        "latency_p95": 2.94
+      },
+      "deepset": {
+        "accuracy": 0.975,
+        "precision": 0.9798,
+        "recall": 0.97,
+        "f1": 0.9749,
+        "fpr": 0.02,
+        "latency_p95": 2.99
+      },
+      "notinject": {
+        "accuracy": 0.91,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.09,
+        "latency_p95": 0.51
+      },
+      "llmail": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0,
+        "latency_p95": 4.52
+      }
+    }
+  },
+  "fast_only": {
+    "config": {
+      "name": "fast_only",
+      "description": "Fast path only (MiniLM)",
+      "use_pattern_detector": true,
+      "use_embedding_classifier": true,
+      "use_cascade": true,
+      "use_mof_data": true,
+      "fast_path_only": true,
+      "deep_path_only": false
+    },
+    "datasets": {
+      "satml": {
+        "accuracy": 0.995,
+        "precision": 1.0,
+        "recall": 0.995,
+        "f1": 0.9975,
+        "fpr": 0,
+        "latency_p95": 2.63
+      },
+      "deepset": {
+        "accuracy": 0.975,
+        "precision": 0.9798,
+        "recall": 0.97,
+        "f1": 0.9749,
+        "fpr": 0.02,
+        "latency_p95": 8.83
+      },
+      "notinject": {
+        "accuracy": 0.91,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.09,
+        "latency_p95": 0.47
+      },
+      "llmail": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0,
+        "latency_p95": 4.52
+      }
+    }
+  },
+  "no_mof": {
+    "config": {
+      "name": "no_mof",
+      "description": "Without MOF training data",
+      "use_pattern_detector": true,
+      "use_embedding_classifier": true,
+      "use_cascade": true,
+      "use_mof_data": false,
+      "fast_path_only": false,
+      "deep_path_only": false
+    },
+    "datasets": {
+      "satml": {
+        "accuracy": 0.705,
+        "precision": 1.0,
+        "recall": 0.705,
+        "f1": 0.827,
+        "fpr": 0,
+        "latency_p95": 2.64
+      },
+      "deepset": {
+        "accuracy": 0.95,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9474,
+        "fpr": 0.0,
+        "latency_p95": 3.09
+      },
+      "notinject": {
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "latency_p95": 0.53
+      },
+      "llmail": {
+        "accuracy": 0.495,
+        "precision": 1.0,
+        "recall": 0.495,
+        "f1": 0.6622,
+        "fpr": 0,
+        "latency_p95": 4.4
+      }
+    }
+  }
+}
