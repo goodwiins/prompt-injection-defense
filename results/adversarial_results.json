@@ -7,13 +7,13 @@
     },
     "leetspeak": {
       "total": 9,
-      "detected": 7,
-      "detection_rate": 0.778
+      "detected": 8,
+      "detection_rate": 0.889
     },
     "homoglyphs": {
       "total": 9,
-      "detected": 7,
-      "detection_rate": 0.778
+      "detected": 8,
+      "detection_rate": 0.889
     },
     "base64": {
       "total": 9,
@@ -38,7 +38,7 @@
   },
   "overall": {
     "total": 63,
-    "detected": 56,
-    "detection_rate": 0.889
+    "detected": 58,
+    "detection_rate": 0.921
   }
 }
