@@ -2,8 +2,8 @@
   "by_technique": {
     "original": {
       "total": 9,
-      "detected": 2,
-      "detection_rate": 0.222
+      "detected": 8,
+      "detection_rate": 0.889
     },
     "leetspeak": {
       "total": 9,
@@ -12,8 +12,8 @@
     },
     "homoglyphs": {
       "total": 9,
-      "detected": 4,
-      "detection_rate": 0.444
+      "detected": 7,
+      "detection_rate": 0.778
     },
     "base64": {
       "total": 9,
@@ -22,8 +22,8 @@
     },
     "case": {
       "total": 9,
-      "detected": 2,
-      "detection_rate": 0.222
+      "detected": 8,
+      "detection_rate": 0.889
     },
     "split": {
       "total": 9,
@@ -32,13 +32,13 @@
     },
     "zero_width": {
       "total": 9,
-      "detected": 2,
-      "detection_rate": 0.222
+      "detected": 8,
+      "detection_rate": 0.889
     }
   },
   "overall": {
     "total": 63,
-    "detected": 35,
-    "detection_rate": 0.556
+    "detected": 56,
+    "detection_rate": 0.889
   }
 }

@@ -239,6 +239,18 @@ def main():
         labels.append(sample["label"])
     
     print(f"   ✓ Added {len(notinject_samples)} NotInject samples")
+    
+    # Load adversarial training samples (jailbreak patterns)
+    adversarial_path = Path("data/adversarial_training.json")
+    if adversarial_path.exists():
+        print("\n📝 Loading adversarial training samples...")
+        with open(adversarial_path, "r") as f:
+            adversarial_samples = json.load(f)
+        for sample in tqdm(adversarial_samples, desc="Adding adversarial", unit="samples"):
+            texts.append(sample["text"])
+            labels.append(sample["label"])
+        print(f"   ✓ Added {len(adversarial_samples)} adversarial samples")
+    
     print(f"   📊 Total training samples: {len(texts)}")
     
     # Balance check
