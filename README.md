@@ -128,11 +128,55 @@ result = detector.predict(["Ignore all previous instructions"])
 ├── benchmarks/
 │   ├── run_benchmark.py             # Main benchmark runner
 │   └── baselines/                   # TF-IDF, HuggingFace
+├── paper/                           # Academic paper assets
+│   ├── figures/                     # Generated charts (9 PNG)
+│   ├── tables/                      # LaTeX tables (4 TEX)
+│   └── generate_*.py                # Figure generation scripts
 ├── results/                         # All evaluation results
 ├── dashboard.html                   # Interactive visualization
 └── docs/
     └── PROJECT_FEEDBACK_REPORT.md   # Academic feedback
 ```
+
+## 📊 Paper Figures
+
+Generate publication-ready figures:
+
+```bash
+# ROC and PR curves (AUC = 0.9985)
+python paper/generate_roc_curves.py
+
+# Ablation study charts
+python paper/generate_ablation_charts.py
+
+# Latency analysis (CDF, boxplot)
+python paper/generate_latency_charts.py
+
+# MOF over-defense analysis
+python paper/generate_mof_charts.py
+
+# Dataset composition
+python paper/generate_dataset_charts.py
+```
+
+### Generated Assets
+
+| Figure                      | Description                  |
+| --------------------------- | ---------------------------- |
+| `roc_deepset.png`           | ROC curve (AUC=0.9985)       |
+| `pr_deepset.png`            | Precision-Recall curve       |
+| `ablation_accuracy.png`     | Accuracy/F1 by configuration |
+| `ablation_errors.png`       | FPR/FNR comparison           |
+| `latency_cdf.png`           | Latency CDF (P50=1.8ms)      |
+| `overdefense_threshold.png` | MOF vs no-MOF FPR            |
+| `dataset_composition.png`   | Sample distribution          |
+
+| Table                     | Description         |
+| ------------------------- | ------------------- |
+| `ablation_table.tex`      | Ablation metrics    |
+| `baseline_comparison.tex` | Industry comparison |
+| `mof_ablation.tex`        | MOF impact          |
+| `dataset_summary.tex`     | Dataset overview    |
 
 ## 🔬 Run Evaluations
 
