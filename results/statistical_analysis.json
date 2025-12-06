@@ -1,0 +1,33 @@
+{
+  "accuracy": {
+    "mean": 0.98,
+    "lower": 0.968,
+    "upper": 0.992,
+    "std": 0.0061,
+    "confidence_level": 0.95
+  },
+  "precision": {
+    "mean": 0.9933,
+    "lower": 0.9779,
+    "upper": 1.0,
+    "std": 0.0067,
+    "confidence_level": 0.95
+  },
+  "recall": {
+    "mean": 0.9427,
+    "lower": 0.9042,
+    "upper": 0.977,
+    "std": 0.0183,
+    "confidence_level": 0.95
+  },
+  "f1": {
+    "mean": 0.9673,
+    "lower": 0.9451,
+    "upper": 0.9838,
+    "std": 0.0101,
+    "confidence_level": 0.95
+  },
+  "mcnemars_vs_baseline": {
+    "statistic": 112.0763,
+    "p_value": 0.0,
+    "significant": 

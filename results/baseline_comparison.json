@@ -1,0 +1,26 @@
+[
+  {
+    "name": "MOF Model (Ours)",
+    "accuracy": 0.9669,
+    "precision": 0.9947,
+    "recall": 0.931,
+    "f1": 0.9618,
+    "latency_ms": 1.89
+  },
+  {
+    "name": "TF-IDF + SVM",
+    "accuracy": 0.8162,
+    "precision": 0.86,
+    "recall": 0.7049,
+    "f1": 0.7748,
+    "latency_ms": 0.05
+  },
+  {
+    "name": "HuggingFace DeBERTa",
+    "accuracy": 0.9,
+    "precision": 0.8571,
+    "recall": 0.4,
+    "f1": 0.5455,
+    "latency_ms": 48.16
+  }
+]

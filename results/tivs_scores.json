@@ -1,0 +1,38 @@
+{
+  "our_system": {
+    "tivs": -0.1065,
+    "isr": 0.069,
+    "pof": 0.02,
+    "fpr": 0.0,
+    "psr": 0.921,
+    "num_agents": 3,
+    "grade": "D (Needs Improvement)"
+  },
+  "lakera_guard": {
+    "tivs": -0.0597,
+    "isr": 0.12,
+    "pof": 0.05,
+    "fpr": 0.057,
+    "psr": 0.88,
+    "num_agents": 1,
+    "grade": "D (Needs Improvement)"
+  },
+  "protectai_llm_guard": {
+    "tivs": -0.07,
+    "isr": 0.1,
+    "pof": 0.05,
+    "fpr": 0.06,
+    "psr": 0.9,
+    "num_agents": 1,
+    "grade": "D (Needs Improvement)"
+  },
+  "huggingface_deberta": {
+    "tivs": 0.225,
+    "isr": 0.6,
+    "pof": 0.1,
+    "fpr": 0.1,
+    "psr": 0.4,
+    "num_agents": 1,
+    "grade": "F (Vulnerable)"
+  }
+}
