@@ -1,0 +1,17 @@
+\begin{table}[h]
+\centering
+\caption{Per-Dataset Detection Performance}
+\label{tab:per-dataset}
+\begin{tabular}{lccccccr}
+\toprule
+\textbf{Dataset} & \textbf{Acc.} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} & \textbf{FPR} & \textbf{FNR} & \textbf{P95 (ms)} \\
+\midrule
+SaTML CTF & 99.8\% & 100.0\% & 99.8\% & 99.9\% & 0.0\% & 0.2\% & 4.3 \\
+deepset & 97.4\% & 96.1\% & 97.0\% & 96.6\% & 2.3\% & 3.0\% & 2.8 \\
+LLMail & 100.0\% & 100.0\% & 100.0\% & 100.0\% & 0.0\% & 0.0\% & 3.0 \\
+NotInject & 100.0\% & - & - & - & 0.0\% & - & 1.2 \\
+\midrule
+\textbf{Overall} & \textbf{96.7\%} & \textbf{99.3\%} & \textbf{93.1\%} & \textbf{96.7\%} & \textbf{0.5\%} & \textbf{6.9\%} & \textbf{1.9} \\
+\bottomrule
+\end{tabular}
+\end{table}
