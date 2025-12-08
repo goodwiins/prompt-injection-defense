@@ -65,7 +65,7 @@ Examples:
     dataset_group.add_argument(
         "--datasets",
         nargs="+",
-        choices=["satml", "deepset", "notinject", "llmail"],
+        choices=["satml", "deepset", "deepset_injections", "notinject", "notinject_hf", "llmail", "browsesafe"],
         help="Specific datasets to benchmark"
     )
     dataset_group.add_argument(
@@ -165,23 +165,27 @@ def list_datasets():
     sys.exit(0)
 
 
-def load_detector(model_path: str = None, model_type: str = "auto"):
-    """Load detector model."""
+def load_detector(model_path: str = None, model_type: str = "auto", threshold: float = 0.5):
+    """Load detector model with threshold override."""
     from src.detection.embedding_classifier import EmbeddingClassifier
     
-    logger.info("Loading detector model", path=model_path, type=model_type)
+    logger.info("Loading detector model", path=model_path, type=model_type, threshold=threshold)
     
-    detector = EmbeddingClassifier()
+    # Initialize with threshold
+    detector = EmbeddingClassifier(threshold=threshold)
     
     if model_path and Path(model_path).exists():
         detector.load_model(model_path)
-        logger.info("Model loaded from file", path=model_path)
+        # Force override threshold (metadata might have different value)
+        detector.threshold = threshold
+        logger.info("Model loaded from file", path=model_path, threshold=threshold)
     else:
         # Try to find a trained model in models directory
         models_dir = Path("models")
         if models_dir.exists():
-            # Look for comprehensive or production model first
+            # Prioritize BIT model for paper validation
             priority_models = [
+                "bit_xgboost_model.json",
                 "comprehensive_classifier.json",
                 "all-MiniLM-L6-v2_classifier.json",
             ]
@@ -190,7 +194,9 @@ def load_detector(model_path: str = None, model_type: str = "auto"):
                 model_file = models_dir / model_name
                 if model_file.exists():
                     detector.load_model(str(model_file))
-                    logger.info("Auto-loaded model", path=str(model_file))
+                    # Force override threshold
+                    detector.threshold = threshold
+                    logger.info("Auto-loaded model", path=str(model_file), threshold=threshold)
                     break
     
     if not detector.is_trained:
@@ -212,8 +218,8 @@ def main():
     from .reporter import BenchmarkReporter
     from .datasets import load_all_datasets
     
-    # Load detector
-    detector = load_detector(args.model, args.model_type)
+    # Load detector with threshold
+    detector = load_detector(args.model, args.model_type, args.threshold)
     
     # Create runner
     runner = BenchmarkRunner(

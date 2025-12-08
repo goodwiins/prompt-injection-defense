@@ -81,7 +81,8 @@ class EmbeddingClassifier:
             raise
 
     def train_on_dataset(self, dataset, batch_size: int = 1000,
-                        validation_split: bool = True) -> Dict:
+                        validation_split: bool = True,
+                        sample_weights: Optional[List[float]] = None) -> Dict:
         """
         Train the classifier on a HuggingFace dataset with large-scale support.
 
@@ -89,6 +90,7 @@ class EmbeddingClassifier:
             dataset: HuggingFace dataset with 'text' and 'label' columns
             batch_size: Batch size for processing embeddings
             validation_split: Whether to create validation split
+            sample_weights: Optional weights for each sample in the dataset
 
         Returns:
             Training statistics and performance metrics
@@ -96,17 +98,34 @@ class EmbeddingClassifier:
         logger.info("Starting large-scale training", total_samples=len(dataset))
 
         texts = dataset["text"]
-        texts = dataset["text"]
         labels = list(dataset["label"])
+        
+        # Handle weights splitting if provided
+        train_weights = None
+        val_weights = None
+        
+        if sample_weights:
+            if len(sample_weights) != len(texts):
+                logger.warning("Sample weights length mismatch, ignoring weights", 
+                              weights_len=len(sample_weights), data_len=len(texts))
+                sample_weights = None
 
         # Split for validation if requested
         if validation_split and len(dataset) > 1000:
-            train_texts, val_texts, train_labels, val_labels = train_test_split(
-                texts, labels, test_size=0.1, random_state=42, stratify=labels
-            )
+            if sample_weights:
+                train_texts, val_texts, train_labels, val_labels, train_weights, val_weights = train_test_split(
+                    texts, labels, sample_weights, test_size=0.1, random_state=42, stratify=labels
+                )
+            else:
+                train_texts, val_texts, train_labels, val_labels = train_test_split(
+                    texts, labels, test_size=0.1, random_state=42, stratify=labels
+                )
+                train_weights, val_weights = None, None
         else:
             train_texts, train_labels = texts, labels
+            train_weights = sample_weights
             val_texts, val_labels = None, None
+            val_weights = None
 
         # Generate embeddings in batches to handle large datasets
         logger.info("Generating embeddings for training data")
@@ -120,7 +139,9 @@ class EmbeddingClassifier:
         # Train with early stopping
         return self._train_with_validation(
             train_embeddings, train_labels,
-            val_embeddings, val_labels
+            val_embeddings, val_labels,
+            train_weights=train_weights,
+            val_weights=val_weights
         )
 
     def _batch_embed(self, texts: List[str], batch_size: int) -> np.ndarray:
@@ -147,28 +168,40 @@ class EmbeddingClassifier:
 
     def _train_with_validation(self, train_embeddings: np.ndarray, train_labels: List[int],
                              val_embeddings: Optional[np.ndarray] = None,
-                             val_labels: Optional[List[int]] = None) -> Dict:
+                             val_labels: Optional[List[int]] = None,
+                             train_weights: Optional[List[float]] = None,
+                             val_weights: Optional[List[float]] = None) -> Dict:
         """
         Train XGBoost classifier with validation and early stopping.
         """
         logger.info("Training XGBoost classifier",
                    train_samples=len(train_embeddings),
-                   has_validation=val_embeddings is not None)
+                   has_validation=val_embeddings is not None,
+                   has_weights=train_weights is not None)
 
         # Prepare evaluation set for early stopping
         eval_set = [(train_embeddings, train_labels)]
+        # Note: XGBoost sklearn API doesn't support sample_weight for eval_set directly in the tuple
+        # straightforwardly in older versions, but it's fine for the main training.
+        
         if val_embeddings is not None:
             eval_set.append((val_embeddings, val_labels))
 
         # Train with early stopping
         callbacks = [EarlyStopping(rounds=20, save_best=True)]
         self.classifier.set_params(callbacks=callbacks)
-        self.classifier.fit(
-            train_embeddings,
-            train_labels,
-            eval_set=eval_set,
-            verbose=False
-        )
+        
+        fit_params = {
+            "X": train_embeddings,
+            "y": train_labels,
+            "eval_set": eval_set,
+            "verbose": False
+        }
+        
+        if train_weights is not None:
+            fit_params["sample_weight"] = train_weights
+            
+        self.classifier.fit(**fit_params)
 
         self.is_trained = True
 

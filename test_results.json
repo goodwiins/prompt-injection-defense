@@ -1,45 +1,45 @@
 {
   "detection_performance": {
-    "accuracy": 0.5,
-    "precision": 0,
-    "recall": 0.0,
-    "f1": 0,
+    "accuracy": 0.65,
+    "precision": 1.0,
+    "recall": 0.3,
+    "f1": 0.4615384615384615,
     "fpr": 0.0,
-    "p50_latency_ms": 6.831438004155643,
-    "p95_latency_ms": 32.5143642534386,
+    "p50_latency_ms": 6.8101040087640285,
+    "p95_latency_ms": 25.238593448011674,
     "total_samples": 20,
-    "tp": 0,
+    "tp": 3,
     "tn": 10,
     "fp": 0,
-    "fn": 10
+    "fn": 7
   },
   "notinject_levels": {
     "Level 1 (1 trigger word)": {
       "samples": 10,
-      "false_positives": 0,
-      "fpr": 0.0
+      "false_positives": 3,
+      "fpr": 0.3
     },
     "Level 2 (2 trigger words)": {
       "samples": 10,
-      "false_positives": 0,
-      "fpr": 0.0
+      "false_positives": 1,
+      "fpr": 0.1
     },
     "Level 3 (3 trigger words)": {
       "samples": 10,
-      "false_positives": 0,
-      "fpr": 0.0
+      "false_positives": 1,
+      "fpr": 0.1
     },
     "overall": {
       "samples": 30,
-      "false_positives": 0,
-      "fpr": 0.0
+      "false_positives": 5,
+      "fpr": 0.16666666666666666
     }
   },
   "trigger_words": {
     "ignore": {
       "samples": 5,
-      "false_positives": 0,
-      "fpr": 0.0
+      "false_positives": 1,
+      "fpr": 0.2
     },
     "system": {
       "samples": 5,
@@ -58,13 +58,13 @@
     },
     "admin": {
       "samples": 5,
-      "false_positives": 0,
-      "fpr": 0.0
+      "false_positives": 1,
+      "fpr": 0.2
     },
     "jailbreak": {
       "samples": 5,
-      "false_positives": 0,
-      "fpr": 0.0
+      "false_positives": 2,
+      "fpr": 0.4
     },
     "prompt": {
       "samples": 5,
@@ -73,31 +73,32 @@
     },
     "instruction": {
       "samples": 5,
-      "false_positives": 0,
-      "fpr": 0.0
+      "false_positives": 2,
+      "fpr": 0.4
     }
   },
   "injection_accuracy": {
-    "recall": 0.0,
-    "detected": 0,
+    "recall": 0.3,
+    "detected": 3,
     "total": 10
   },
   "latency": {
-    "min_ms": 3.1664579873904586,
-    "p50_ms": 4.2854164930759,
-    "p95_ms": 6.3288083372754045,
-    "p99_ms": 6.850852178176866,
-    "max_ms": 6.93937498726882,
-    "mean_ms": 4.6644166694022715
+    "min_ms": 3.5122919944114983,
+    "p50_ms": 5.132458492880687,
+    "p95_ms": 6.472327094525099,
+    "p99_ms": 6.793883265345359,
+    "max_ms": 7.11229199077934,
+    "mean_ms": 5.02465290017426
   },
   "real_data": {
-    "notinject": {
-      "samples": 100,
-      "fpr": 0.0
+    "deepset": {
+      "recall": 1.0,
+      "fpr": 0.5568513119533528,
+      "samples": 546
     },
-    "injections": {
-      "samples": 100,
-      "recall": 0.0
+    "notinject": {
+      "fpr": 0.0013333333333333333,
+      "samples": 1500
     }
   }
 }

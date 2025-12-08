@@ -289,7 +289,7 @@ class InjectionDetector:
         return {
             "score": float(final_score),
             "confidence": abs(final_score - 0.5) * 2,
-            "is_injection": final_score > self.deep_threshold,
+            "is_injection": final_score > (self.deep_threshold if self.deep_model else self.fast_threshold),
             "latency": (time.time() - start_time) * 1000,
             "source_model": source_model,
             "detection_path": path,

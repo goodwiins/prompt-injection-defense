@@ -32,10 +32,22 @@ AVAILABLE_DATASETS = {
         "description": "Large collection of diverse injection attempts",
         "type": "mixed"
     },
+    "deepset_injections": {
+        "name": "deepset/prompt-injections (Injections Only)",
+        "source": "deepset/prompt-injections",
+        "description": "Deepset dataset filtered to injection samples only (for recall)",
+        "type": "injection_only"
+    },
     "notinject": {
         "name": "NotInject",
         "source": "synthetic",
         "description": "Benign samples enriched with trigger words for over-defense testing",
+        "type": "safe_only"
+    },
+    "notinject_hf": {
+        "name": "NotInject (HuggingFace)",
+        "source": "leolee99/NotInject",
+        "description": "Official NotInject dataset from Liang et al. 2024",
         "type": "safe_only"
     },
     "llmail": {
@@ -43,6 +55,18 @@ AVAILABLE_DATASETS = {
         "source": "microsoft/llmail-inject-challenge",
         "description": "Email-based injection scenarios",
         "type": "injection_only"
+    },
+    "browsesafe": {
+        "name": "BrowseSafe-Bench",
+        "source": "perplexity-ai/browsesafe",
+        "description": "14,719 HTML-embedded attacks for AI browser agents (Dec 2025)",
+        "type": "injection_only"
+    },
+    "tensortrust": {
+        "name": "TensorTrust",
+        "source": "tensortrust/tensortrust-data",
+        "description": "126K+ human-generated adversarial examples",
+        "type": "mixed"
     }
 }
 
@@ -406,7 +430,8 @@ def load_llmail_dataset(limit: Optional[int] = None, streaming: bool = True) -> 
                 sample.get("prompt") or 
                 sample.get("text") or 
                 sample.get("email") or
-                sample.get("content") or
+                sample.get("conte
+                nt") or
                 str(sample)
             )
             
@@ -434,6 +459,151 @@ def load_llmail_dataset(limit: Optional[int] = None, streaming: bool = True) -> 
         )
 
 
+def load_browsesafe_dataset(limit: Optional[int] = None, streaming: bool = True) -> BenchmarkDataset:
+    """
+    Load BrowseSafe-Bench dataset (HTML-embedded attacks).
+    
+    Args:
+        limit: Maximum number of samples to load
+        streaming: Use streaming mode
+        
+    Returns:
+        BenchmarkDataset with HTML-embedded injection samples
+    """
+    logger.info("Loading BrowseSafe dataset", limit=limit)
+    
+    try:
+        from datasets import load_dataset
+        
+        ds = load_dataset(
+            "perplexity-ai/browsesafe",
+            split="test",
+            streaming=streaming
+        )
+        
+        texts = []
+        for i, sample in enumerate(ds):
+            if limit and i >= limit:
+                break
+            
+            # Try different field names
+            text = (
+                sample.get("prompt") or 
+                sample.get("text") or 
+                sample.get("content") or
+                sample.get("injection") or
+                str(sample)
+            )
+            
+            if text and text.strip():
+                texts.append(text)
+        
+        labels = [1] * len(texts)  # All injections
+        
+        logger.info("BrowseSafe dataset loaded", samples=len(texts))
+        
+        return BenchmarkDataset(
+            name="BrowseSafe-Bench",
+            source="perplexity-ai/browsesafe",
+            texts=texts,
+            labels=labels,
+            metadata={"dataset_type": "injection_only", "domain": "web/html"}
+        )
+        
+    except Exception as e:
+        logger.error("Failed to load BrowseSafe dataset", error=str(e))
+        return BenchmarkDataset(
+            name="BrowseSafe-Bench (Failed)",
+            source="perplexity-ai/browsesafe",
+            metadata={"error": str(e)}
+        )
+
+
+def load_notinject_hf_dataset(limit: Optional[int] = None, streaming: bool = False) -> BenchmarkDataset:
+    """
+    Load official NotInject dataset from HuggingFace (Liang et al. 2024).
+    
+    Dataset has 3 splits based on trigger word count:
+    - NotInject_one: 1 trigger word per sentence
+    - NotInject_two: 2 trigger words per sentence  
+    - NotInject_three: 3 trigger words per sentence
+    
+    Args:
+        limit: Maximum number of samples to load (per split, divided by 3)
+        streaming: Use streaming mode
+        
+    Returns:
+        BenchmarkDataset with benign samples containing trigger words (all label=0)
+    """
+    logger.info("Loading NotInject HF dataset", limit=limit)
+    
+    try:
+        from datasets import load_dataset
+        
+        texts = []
+        splits = ["NotInject_one", "NotInject_two", "NotInject_three"]
+        limit_per_split = (limit // 3) if limit else None
+        
+        for split_name in splits:
+            ds = load_dataset(
+                "leolee99/NotInject",
+                split=split_name,
+                streaming=streaming
+            )
+            
+            for i, sample in enumerate(ds):
+                if limit_per_split and i >= limit_per_split:
+                    break
+                
+                text = sample.get("text") or sample.get("prompt") or str(sample)
+                
+                if text and text.strip():
+                    texts.append(text)
+        
+        labels = [0] * len(texts)  # All safe (benign with triggers)
+        
+        logger.info("NotInject HF dataset loaded", samples=len(texts))
+        
+        return BenchmarkDataset(
+            name="NotInject (HuggingFace)",
+            source="leolee99/NotInject",
+            texts=texts,
+            labels=labels,
+            metadata={"dataset_type": "safe_only", "purpose": "over-defense testing"}
+        )
+        
+    except Exception as e:
+        logger.error("Failed to load NotInject HF dataset", error=str(e))
+        return BenchmarkDataset(
+            name="NotInject HF (Failed)",
+            source="leolee99/NotInject",
+            metadata={"error": str(e)}
+        )
+
+
+def load_deepset_injections_only(limit: Optional[int] = None) -> BenchmarkDataset:
+    """
+    Load only the injection samples from deepset (for recall evaluation).
+    
+    This avoids the FPR issue with deepset safe samples.
+    """
+    logger.info("Loading deepset injections only", limit=limit)
+    
+    full_dataset = load_deepset_dataset(
+        limit=limit,
+        include_safe=False,
+        include_injections=True
+    )
+    
+    return BenchmarkDataset(
+        name="deepset (Injections Only)",
+        source="deepset/prompt-injections",
+        texts=full_dataset.texts,
+        labels=full_dataset.labels,
+        metadata={"dataset_type": "injection_only", "filtered": True}
+    )
+
+
 def load_all_datasets(
     limit_per_dataset: Optional[int] = None,
     include_datasets: Optional[List[str]] = None
@@ -453,8 +623,11 @@ def load_all_datasets(
     loaders = {
         "satml": lambda: load_satml_dataset(limit=limit_per_dataset),
         "deepset": lambda: load_deepset_dataset(limit=limit_per_dataset),
+        "deepset_injections": lambda: load_deepset_injections_only(limit=limit_per_dataset),
         "notinject": lambda: load_notinject_dataset(limit=limit_per_dataset),
+        "notinject_hf": lambda: load_notinject_hf_dataset(limit=limit_per_dataset),
         "llmail": lambda: load_llmail_dataset(limit=limit_per_dataset),
+        "browsesafe": lambda: load_browsesafe_dataset(limit=limit_per_dataset),
     }
     
     for name, loader in loaders.items():
