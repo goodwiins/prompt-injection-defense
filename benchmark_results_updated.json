@@ -1,0 +1,127 @@
+{
+  "datasets": {
+    "satml": {
+      "accuracy": 0.8313,
+      "precision": 1.0,
+      "recall": 0.8313,
+      "f1_score": 0.9079,
+      "false_positive_rate": 0,
+      "false_negative_rate": 0.1687,
+      "roc_auc": 0.0,
+      "tivs": 0.0675,
+      "over_defense_rate": 0.0,
+      "latency": {
+        "avg_ms": 2.5,
+        "p50_ms": 2.48,
+        "p95_ms": 4.71,
+        "p99_ms": 4.71,
+        "min_ms": 1.21,
+        "max_ms": 4.71
+      },
+      "counts": {
+        "total": 498,
+        "tp": 414,
+        "tn": 0,
+        "fp": 0,
+        "fn": 84
+      },
+      "dataset_name": "SaTML CTF 2024",
+      "threshold": 0.5
+    },
+    "deepset": {
+      "accuracy": 0.6502,
+      "precision": 0.5152,
+      "recall": 1.0,
+      "f1_score": 0.6801,
+      "false_positive_rate": 0.5569,
+      "false_negative_rate": 0.0,
+      "roc_auc": 0.8673,
+      "tivs": 0.1671,
+      "over_defense_rate": 0.0,
+      "latency": {
+        "avg_ms": 1.82,
+        "p50_ms": 1.79,
+        "p95_ms": 2.85,
+        "p99_ms": 2.85,
+        "min_ms": 0.8,
+        "max_ms": 15.05
+      },
+      "counts": {
+        "total": 546,
+        "tp": 203,
+        "tn": 152,
+        "fp": 191,
+        "fn": 0
+      },
+      "dataset_name": "deepset/prompt-injections",
+      "threshold": 0.5
+    },
+    "notinject": {
+      "accuracy": 0.9676,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "false_positive_rate": 0.0324,
+      "false_negative_rate": 0,
+      "roc_auc": 0.0,
+      "tivs": 0.0097,
+      "over_defense_rate": 0.0324,
+      "latency": {
+        "avg_ms": 0.47,
+        "p50_ms": 0.25,
+        "p95_ms": 1.12,
+        "p99_ms": 1.12,
+        "min_ms": 0.22,
+        "max_ms": 1.12
+      },
+      "counts": {
+        "total": 247,
+        "tp": 0,
+        "tn": 239,
+        "fp": 8,
+        "fn": 0
+      },
+      "dataset_name": "NotInject (Over-Defense Test)",
+      "threshold": 0.5
+    },
+    "llmail": {
+      "accuracy": 0.988,
+      "precision": 1.0,
+      "recall": 0.988,
+      "f1_score": 0.994,
+      "false_positive_rate": 0,
+      "false_negative_rate": 0.012,
+      "roc_auc": 0.0,
+      "tivs": 0.0048,
+      "over_defense_rate": 0.0,
+      "latency": {
+        "avg_ms": 2.7,
+        "p50_ms": 2.67,
+        "p95_ms": 3.02,
+        "p99_ms": 3.3,
+        "min_ms": 2.52,
+        "max_ms": 3.3
+      },
+      "counts": {
+        "total": 500,
+        "tp": 494,
+        "tn": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "dataset_name": "LLMail-Inject",
+      "threshold": 0.5
+    }
+  },
+  "overall": {
+    "accuracy": 0.8386,
+    "fpr": 0.3373,
+    "over_defense_rate": 0.0324
+  },
+  "metadata": {
+    "detector_type": "embedding_classifier",
+    "threshold": 0.5,
+    "batch_size": 32,
+    "timestamp": "2025-12-08 15:53:45"
+  }
+}

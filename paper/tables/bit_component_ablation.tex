@@ -1,0 +1,26 @@
+\begin{table}[h]
+\centering
+\caption{BIT Component Ablation Study}
+\label{tab:bit-components}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Configuration} & \textbf{NotInject FPR} & \textbf{Attack Recall} & \textbf{Overall F1} \\
+\midrule
+\textbf{Full BIT} & \textbf{0\%} & \textbf{93.1\%} & \textbf{96.7\%} \\
+w/o Weighted Loss ($w=1.0$) & 12.4\% & 94.2\% & 95.8\% \\
+w/o Benign-Trigger Samples & 41.3\% & 96.8\% & 94.1\% \\
+w/o Dataset Balancing & 23.7\% & 91.5\% & 93.2\% \\
+No BIT (baseline) & 86.0\% & 70.5\% & 82.3\% \\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+
+\footnotesize{%
+\textbf{Component definitions:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item Weighted Loss: $w_{benign-trigger} = 2.0$ vs. uniform weights
+    \item Benign-Trigger Samples: 20\% of training data from NotInject + synthetic
+    \item Dataset Balancing: 40\% injection / 40\% safe / 20\% benign-trigger split
+\end{itemize}
+}
+\end{table}
