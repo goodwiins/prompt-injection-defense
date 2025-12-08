@@ -430,9 +430,7 @@ def load_llmail_dataset(limit: Optional[int] = None, streaming: bool = True) -> 
                 sample.get("prompt") or 
                 sample.get("text") or 
                 sample.get("email") or
-                sample.get("conte
-                nt") or
-                str(sample)
+                sample.get("content") or
             )
             
             if text and text.strip():
