@@ -1,0 +1,103 @@
+{
+  "detection_performance": {
+    "accuracy": 0.5,
+    "precision": 0,
+    "recall": 0.0,
+    "f1": 0,
+    "fpr": 0.0,
+    "p50_latency_ms": 5.535042000701651,
+    "p95_latency_ms": 121.31680835736935,
+    "total_samples": 20,
+    "tp": 0,
+    "tn": 10,
+    "fp": 0,
+    "fn": 10
+  },
+  "notinject_levels": {
+    "Level 1 (1 trigger word)": {
+      "samples": 10,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "Level 2 (2 trigger words)": {
+      "samples": 10,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "Level 3 (3 trigger words)": {
+      "samples": 10,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "overall": {
+      "samples": 30,
+      "false_positives": 0,
+      "fpr": 0.0
+    }
+  },
+  "trigger_words": {
+    "ignore": {
+      "samples": 5,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "system": {
+      "samples": 5,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "override": {
+      "samples": 5,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "bypass": {
+      "samples": 5,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "admin": {
+      "samples": 5,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "jailbreak": {
+      "samples": 5,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "prompt": {
+      "samples": 5,
+      "false_positives": 0,
+      "fpr": 0.0
+    },
+    "instruction": {
+      "samples": 5,
+      "false_positives": 0,
+      "fpr": 0.0
+    }
+  },
+  "injection_accuracy": {
+    "recall": 0.0,
+    "detected": 0,
+    "total": 10
+  },
+  "latency": {
+    "min_ms": 3.8568330055568367,
+    "p50_ms": 4.756249996717088,
+    "p95_ms": 6.0055018067942,
+    "p99_ms": 6.672864991123791,
+    "max_ms": 7.104999996954575,
+    "mean_ms": 4.890092059795279
+  },
+  "real_data": {
+    "notinject": {
+      "samples": 100,
+      "fpr": 0.0
+    },
+    "injections": {
+      "samples": 100,
+      "recall": 0.0
+    }
+  }
+}
