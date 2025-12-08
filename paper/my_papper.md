@@ -2,7 +2,7 @@
 
 **Abstract**
 
-Large Language Model (LLM) agents are increasingly deployed in multi-agent systems where they interact with untrusted users and other agents. This expands the attack surface for prompt injection, allowing malicious instructions to propagate through the system which is a phenomenon known as "prompt infection." Existing defenses often focus on single-turn interactions or suffer from high false positive rates (over-defense) on benign prompts containing trigger words. We propose a comprehensive three-layer defense framework (Detection, Coordination, Response) designed specifically for multi-agent environments. Our system features an ensemble detector combining semantic embeddings with heuristic patterns, trained using a **Balanced Intent Training (BIT)** strategy to minimize over-defense. We evaluate our approach on four public benchmarks (SaTML, deepset, LLMail, NotInject), achieving **96.7% accuracy**, **0.5% False Positive Rate (FPR)**, and a **P50 latency of 1.9ms**. Crucially, our BIT training strategy reduces over-defense error to **0%** on the NotInject dataset while maintaining **100% recall** on indirect injection attacks.
+Large Language Model (LLM) agents are increasingly deployed in multi-agent systems where they interact with untrusted users and other agents. This expands the attack surface for prompt injection, allowing malicious instructions to propagate through the system which is a phenomenon known as "prompt infection." Existing defenses often focus on single-turn interactions or suffer from high false positive rates (over-defense) on benign prompts containing trigger words. We propose a comprehensive three-layer defense framework (Detection, Coordination, Response) designed specifically for multi-agent environments. Our system features an ensemble detector combining semantic embeddings with heuristic patterns, trained using a **Balanced Intent Training (BIT)** strategy to minimize over-defense. We evaluate our approach on four public benchmarks (SaTML, deepset, LLMail, NotInject), achieving **97.4% accuracy**, **99.3% recall**, and **<5% False Positive Rate (FPR)** on the NotInject over-defense benchmark. Our BIT training strategy effectively reduces over-defense while maintaining high attack detection rates, with latency ranging from **2-5ms** depending on hardware configuration.
 
 ---
 
@@ -158,23 +158,25 @@ This forces the model to learn semantic intent rather than relying on lexical sh
 
 Our system achieves state-of-the-art performance across all datasets (**Table 2**).
 
-| Dataset     | Accuracy  | Precision | Recall    | F1        | FPR      | Latency   |
+| Dataset     | Accuracy  | Precision | Recall    | F1        | FPR      | Latency\* |
 | ----------- | --------- | --------- | --------- | --------- | -------- | --------- |
 | SaTML       | 99.8%     | 100%      | 99.8%     | 99.9%     | 0%       | 4.3ms     |
 | deepset     | 97.4%     | 96.1%     | 97.0%     | 96.6%     | 2.3%     | 2.8ms     |
 | LLMail      | 100%      | 100%      | 100%      | 100%      | 0%       | 3.0ms     |
-| NotInject   | 100%      | -         | -         | -         | 0%       | 1.2ms     |
-| **Overall** | **96.7%** | **99.3%** | **93.1%** | **96.7%** | **0.5%** | **1.9ms** |
+| NotInject   | 96.6%     | -         | -         | -         | <5%      | 1.2ms     |
+| **Overall** | **97.4%** | **89.8%** | **99.3%** | **94.3%** | **3.1%** | **4.8ms** |
 
-Notably, we achieve **0% False Positive Rate** on the challenging NotInject dataset (introduced by Liang et al., 2024), validating the effectiveness of our BIT strategy.
+\*Latency measured on CPU (Apple M-series); GPU deployments typically achieve 1-2ms.
+
+Notably, we achieve **<5% False Positive Rate** on the challenging NotInject dataset (introduced by Liang et al., 2024), validating the effectiveness of our BIT strategy. The model favors high recall (99.3%) over precision (89.8%), which is appropriate for security applications where missing an attack is more costly than false alarms.
 
 ### 7.2 Baseline Comparison
 
 Compared to recent state-of-the-art defenses (**Table 5**), our system offers competitive accuracy with significantly lower latency.
 
-| System              | Type          | Accuracy/ASR | FPR/NotInject | Latency   |
+| System              | Type          | Accuracy/ASR | FPR/NotInject | Latency\* |
 | ------------------- | ------------- | ------------ | ------------- | --------- |
-| **BIT (Ours)**      | Classifier    | **96.7%**    | **0.5%**      | **1.9ms** |
+| **BIT (Ours)**      | Classifier    | **97.4%**    | **<5%**       | **2-5ms** |
 | InjecGuard/PIGuard† | Classifier    | 94.3%        | 2.1%‡         | 12ms      |
 | StruQ†              | Training-time | <2% ASR      | N/A           | N/A       |
 | SecAlign†           | Training-time | ~0% ASR      | N/A           | N/A       |
@@ -184,9 +186,9 @@ Compared to recent state-of-the-art defenses (**Table 5**), our system offers co
 | TF-IDF + SVM        | Classifier    | 81.6%        | 14.0%         | 0.1ms     |
 | Lakera Guard\*      | Commercial    | 87.9%        | 5.7%          | 66ms      |
 
-\*Reported numbers from vendor. †Reported numbers from original papers. ‡Estimated from paper figures.
+\*Reported numbers from vendor. †Reported numbers from original papers. ‡Estimated from paper figures. \*Latency varies by hardware (CPU: 4-5ms, GPU: 1-2ms).
 
-**Key Differentiators:** While StruQ/SecAlign achieve near-zero ASR, they require model retraining and are evaluated primarily on optimization-based attacks. DefensiveToken and PromptArmor add inference overhead. Our BIT approach offers the best latency-accuracy trade-off for classifier-based detection, achieving comparable over-defense mitigation to InjecGuard while being **6x faster**.
+**Key Differentiators:** While StruQ/SecAlign achieve near-zero ASR, they require model retraining and are evaluated primarily on optimization-based attacks. DefensiveToken and PromptArmor add inference overhead. Our BIT approach offers a strong latency-accuracy trade-off for classifier-based detection, achieving comparable over-defense mitigation to InjecGuard while being **2-6x faster** depending on hardware. Notably, our system achieves **99.3% recall** (higher than most baselines), trading off some precision for comprehensive attack coverage.
 
 ### 7.3 Ablation Study
 
@@ -515,7 +517,9 @@ While our system achieves strong results, we acknowledge important limitations r
 
 ## 9. Conclusion
 
-We introduced a multi-layer defense system for multi-agent LLMs that effectively mitigates prompt injection and infection. By combining ensemble detection with Balanced Intent Training (BIT), we achieved **96.7% accuracy** and **0% over-defense** with minimal latency (1.9ms P50). Our BIT strategy offers a distinct approach to over-defense mitigation compared to InjecGuard's MOF, achieving comparable results with 6x lower latency through explicit weighted loss optimization rather than implicit bias deamplification.
+We introduced a multi-layer defense system for multi-agent LLMs that effectively mitigates prompt injection and infection. By combining ensemble detection with Balanced Intent Training (BIT), we achieved **97.4% accuracy** and **<5% over-defense** (FPR on NotInject) with latency ranging from 2-5ms depending on hardware. Our system prioritizes **high recall (99.3%)** to ensure comprehensive attack coverage, with a trade-off in precision (89.8%) that is acceptable for security applications where missing an attack is more costly than false alarms.
+
+Our BIT strategy offers a distinct approach to over-defense mitigation compared to InjecGuard's MOF, achieving comparable results with 2-6x lower latency through explicit weighted loss optimization rather than implicit bias deamplification.
 
 While training-time defenses like StruQ and SecAlign achieve stronger theoretical guarantees by modifying the LLM itself, our classifier-based approach offers practical advantages: compatibility with any LLM (including API-only services), CPU-only deployment, and interpretable feature importance. Our work provides a robust foundation for securing the next generation of autonomous AI agents, with clear directions for future improvement including multilingual support, adversarial robustness, and true multi-agent evaluation.
 
