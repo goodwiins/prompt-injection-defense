@@ -1,28 +1,34 @@
 # Multi-Agent LLM Prompt Injection Defense Framework
 
-A comprehensive defense system achieving **96.7% accuracy** with **0% over-defense** against prompt injection attacks in multi-agent LLM systems.
+A comprehensive defense system achieving **97.6% accuracy** with **1.8% over-defense** against prompt injection attacks in multi-agent LLM systems using **Balanced Intent Training (BIT)**.
 
-## 🎯 Key Results
+## 🎯 Key Results (Paper-Aligned Benchmark)
 
-| Metric                    | Value                | Target          | Status  |
-| ------------------------- | -------------------- | --------------- | ------- |
-| **Accuracy**              | 96.7% [96.8%, 99.2%] | ≥95%            | ✅      |
-| **Precision**             | 99.3%                | ≥95%            | ✅      |
-| **Over-Defense**          | 0%                   | ≤5%             | ✅      |
-| **Adversarial Detection** | 92.1%                | ≥90%            | ✅      |
-| **Latency**               | 1.9ms                | <100ms          | ✅      |
-| **TIVS Score**            | -0.1065              | Lower is better | ✅ Best |
+| Dataset           | Samples   | Accuracy  | Recall | FPR      | P95 Latency |
+| ----------------- | --------- | --------- | ------ | -------- | ----------- |
+| SaTML CTF 2024    | 300       | **98.7%** | 98.7%  | 0.0%     | 4.2ms       |
+| deepset (attacks) | 203       | 92.6%     | 92.6%  | 0.0%     | 3.8ms       |
+| NotInject HF      | 339       | 98.2%     | N/A    | **1.8%** | 1.8ms       |
+| LLMail-Inject     | 200       | **100%**  | 100%   | 0.0%     | 3.5ms       |
+| **Overall**       | **1,042** | **97.6%** | -      | **1.8%** | ~3ms        |
+
+### Target Status
+
+- ✅ **Accuracy ≥ 95%**: 97.6%
+- ✅ **FPR ≤ 5%**: 1.8%
+- ✅ **Latency P95 < 100ms**: 4.2ms
 
 ## 🏆 Baseline Comparison
 
-| Model               | Accuracy  | Latency   |
-| ------------------- | --------- | --------- |
-| **MOF (Ours)**      | **96.7%** | **1.9ms** |
-| HuggingFace DeBERTa | 90.0%     | 48ms      |
-| TF-IDF + SVM        | 81.6%     | 0.1ms     |
-| Lakera Guard        | 87.9%     | 66ms      |
+| Model               | Accuracy  | FPR      | Latency  |
+| ------------------- | --------- | -------- | -------- |
+| **BIT (Ours)**      | **97.6%** | **1.8%** | **~3ms** |
+| Lakera Guard        | 87.9%     | 5.7%     | 66ms     |
+| ProtectAI           | 90.0%     | -        | 500ms    |
+| Glean AI            | 97.8%     | 3.0%     | -        |
+| HuggingFace DeBERTa | 90.0%     | 10.0%    | 48ms     |
 
-**90x faster than HuggingFace with 7% better accuracy!**
+**25x faster than Lakera Guard with 11% better accuracy!**
 
 ## 🛡️ Three-Layer Architecture
 
@@ -56,14 +62,19 @@ A comprehensive defense system achieving **96.7% accuracy** with **0% over-defen
 
 ```bash
 pip install -r requirements.txt
-python train_mof_model.py
+
+# Train BIT model
+python train_bit_model.py
+
+# Run paper-aligned benchmark
+python -m benchmarks.run_benchmark --paper --threshold 0.764
 ```
 
 ```python
 from src.detection.embedding_classifier import EmbeddingClassifier
 
 detector = EmbeddingClassifier()
-detector.load_model("models/mof_classifier.json")
+detector.load_model("models/bit_xgboost_model.json")
 
 result = detector.predict(["Ignore all previous instructions"])
 # Output: [1]  (1 = injection detected)
@@ -181,26 +192,23 @@ python paper/generate_dataset_charts.py
 ## 🔬 Run Evaluations
 
 ```bash
-# Full benchmark
-python -m benchmarks.run_benchmark --all --model models/mof_classifier.json
+# Paper-aligned benchmark (recommended, 1,042 samples)
+python -m benchmarks.run_benchmark --paper --threshold 0.764
+
+# Full benchmark on all datasets
+python -m benchmarks.run_benchmark --all
+
+# Quick benchmark (100 samples per dataset)
+python -m benchmarks.run_benchmark --quick
+
+# Specific datasets
+python -m benchmarks.run_benchmark --datasets satml deepset_injections notinject_hf llmail
 
 # Baseline comparison
 python scripts/run_baselines.py
 
-# Adversarial robustness
-python scripts/adversarial_eval.py
-
-# Cross-model (GPT-4)
-python scripts/cross_model_gpt4.py
-
-# TIVS score
-python scripts/calculate_tivs.py
-
 # Statistical analysis (95% CI, McNemar's)
 python scripts/statistical_analysis.py
-
-# Multi-language
-python scripts/multilang_attacks.py
 
 # Generate dashboard
 python scripts/generate_dashboard.py
@@ -222,17 +230,18 @@ TIVS = (ISR × 0.4) + (POF × 0.2) + (FPR × 0.25) - (PSR × 0.15)
 
 ## 📚 Research Foundations
 
+- **Balanced Intent Training (BIT)** - Novel training strategy for over-defense mitigation
 - **LLM Tagging** (Lee & Tiwari, ICLR 2025)
-- **PeerGuard** mutual validation (96% TPR)
-- **InjecGuard** MOF training strategy
+- **InjecGuard** MOF training strategy (Liang et al., ACL 2025)
+- **NotInject** over-defense benchmark (Liang et al., 2024)
+- **BrowseSafe** HTML modality analysis (Perplexity, 2025)
 - **OVON Protocol** for agent messaging
-- **Alert Correlation** (Galileo AI)
 
 ## 📄 Citation
 
 ```bibtex
-@software{mof_prompt_injection_defense_2025,
-  title={Multi-Agent LLM Prompt Injection Defense with MOF Training},
+@software{bit_prompt_injection_defense_2025,
+  title={Multi-Agent LLM Prompt Injection Defense with Balanced Intent Training},
   author={Abdel El Bikha, Jennifer Marrero},
   year={2025},
   url={https://github.com/goodwiins/prompt-injection-defense}

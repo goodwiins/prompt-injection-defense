@@ -15,6 +15,7 @@ import argparse
 import sys
 import os
 from pathlib import Path
+from datetime import datetime
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -61,6 +62,11 @@ Examples:
         "--all", 
         action="store_true",
         help="Run benchmarks on all available datasets"
+    )
+    dataset_group.add_argument(
+        "--paper",
+        action="store_true",
+        help="Paper-aligned benchmark: SaTML(300), deepset_attacks(203), NotInject(339), LLMail(200)"
     )
     dataset_group.add_argument(
         "--datasets",
@@ -245,6 +251,44 @@ def main():
         # Filter out notinject if excluded
         if args.exclude_notinject and "notinject" in results.results:
             del results.results["notinject"]
+    elif getattr(args, 'paper', False):
+        # Paper-aligned benchmark with statistically valid sample counts
+        logger.info("Running PAPER-ALIGNED benchmark (1,042 total samples)")
+        logger.info("  SaTML: 300, deepset_attacks: 203, NotInject: 339, LLMail: 200")
+        
+        # Paper-specific sample limits
+        paper_config = {
+            "satml": 300,
+            "deepset_injections": 203,  # Attacks only for recall
+            "notinject_hf": 339,        # Full HF dataset
+            "llmail": 200               # Phase 1
+        }
+        
+        from .datasets import load_all_datasets
+        all_results = {}
+        
+        for dataset_name, limit in paper_config.items():
+            datasets = load_all_datasets(
+                include_datasets=[dataset_name],
+                limit_per_dataset=limit
+            )
+            if datasets:
+                for ds_name, ds in datasets.items():
+                    if len(ds.texts) > 0:  # Only run if we got data
+                        metrics = runner.run(ds, verbose=not args.quiet)
+                        all_results[ds_name] = metrics
+        
+        # Create combined result
+        from .runner import BenchmarkResults
+        results = BenchmarkResults(
+            results=all_results,
+            metadata={
+                "timestamp": datetime.now().isoformat(),
+                "detector_name": type(detector).__name__,
+                "threshold": args.threshold,
+                "paper_aligned": True
+            }
+        )
     elif args.datasets:
         datasets_to_run = args.datasets
         if args.exclude_notinject:

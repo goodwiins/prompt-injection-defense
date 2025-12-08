@@ -23,7 +23,7 @@ AVAILABLE_DATASETS = {
     "satml": {
         "name": "SaTML CTF 2024",
         "source": "ethz-spylab/ctf-satml24",
-        "description": "Real adversarial attacks from SaTML 2024 CTF competition",
+        "description": "Real adversarial attacks from SaTML 2024 CTF competition (300 samples)",
         "type": "injection_only"
     },
     "deepset": {
@@ -35,7 +35,7 @@ AVAILABLE_DATASETS = {
     "deepset_injections": {
         "name": "deepset/prompt-injections (Injections Only)",
         "source": "deepset/prompt-injections",
-        "description": "Deepset dataset filtered to injection samples only (for recall)",
+        "description": "Deepset dataset filtered to injection samples only (518 samples for recall)",
         "type": "injection_only"
     },
     "notinject": {
@@ -47,19 +47,25 @@ AVAILABLE_DATASETS = {
     "notinject_hf": {
         "name": "NotInject (HuggingFace)",
         "source": "leolee99/NotInject",
-        "description": "Official NotInject dataset from Liang et al. 2024",
+        "description": "Official NotInject dataset (339 samples) from Liang et al. 2024",
         "type": "safe_only"
     },
     "llmail": {
         "name": "LLMail-Inject",
         "source": "microsoft/llmail-inject-challenge",
-        "description": "Email-based injection scenarios",
+        "description": "Email-based indirect injection scenarios (200 samples)",
         "type": "injection_only"
     },
     "browsesafe": {
         "name": "BrowseSafe-Bench",
-        "source": "perplexity-ai/browsesafe",
-        "description": "14,719 HTML-embedded attacks for AI browser agents (Dec 2025)",
+        "source": "perplexity-ai/browsesafe-bench",
+        "description": "14,719 HTML-embedded attacks for AI browser agents (Perplexity Dec 2025)",
+        "type": "mixed"
+    },
+    "agentdojo": {
+        "name": "AgentDojo",
+        "source": "ethz-spylab/agentdojo",
+        "description": "97 multi-agent workflow injection scenarios (NeurIPS 2024)",
         "type": "injection_only"
     },
     "tensortrust": {
@@ -431,6 +437,7 @@ def load_llmail_dataset(limit: Optional[int] = None, streaming: bool = True) -> 
                 sample.get("text") or 
                 sample.get("email") or
                 sample.get("content") or
+                str(sample)
             )
             
             if text and text.strip():
@@ -474,45 +481,70 @@ def load_browsesafe_dataset(limit: Optional[int] = None, streaming: bool = True)
         from datasets import load_dataset
         
         ds = load_dataset(
-            "perplexity-ai/browsesafe",
+            "perplexity-ai/browsesafe-bench",
             split="test",
             streaming=streaming
         )
         
+        # HTML text extraction helper
+        def extract_text_from_html(html: str) -> str:
+            try:
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(html, 'html.parser')
+                for script in soup(["script", "style"]):
+                    script.decompose()
+                text = soup.get_text(separator=' ')
+                text = ' '.join(text.split())
+                if len(text) < 50 and len(html) > 100:
+                    text = html[:500] + " [TEXT]: " + text
+                return text
+            except Exception:
+                import re
+                text = re.sub(r'<[^>]+>', ' ', html)
+                return ' '.join(text.split())
+        
         texts = []
+        labels = []
         for i, sample in enumerate(ds):
             if limit and i >= limit:
                 break
             
-            # Try different field names
-            text = (
-                sample.get("prompt") or 
-                sample.get("text") or 
+            # BrowseSafe has 'content' field for HTML
+            html = (
                 sample.get("content") or
-                sample.get("injection") or
+                sample.get("html") or
+                sample.get("text") or
                 str(sample)
             )
             
+            # Extract text from HTML for fair comparison with training
+            text = extract_text_from_html(html)
+            
+            # Get label (1 for injection, 0 for safe)
+            label = sample.get("label", 1)
+            if isinstance(label, str):
+                label = 1 if label.lower() in ["yes", "1", "true", "malicious"] else 0
+            
             if text and text.strip():
                 texts.append(text)
+                labels.append(int(label))
         
-        labels = [1] * len(texts)  # All injections
-        
-        logger.info("BrowseSafe dataset loaded", samples=len(texts))
+        logger.info("BrowseSafe dataset loaded", samples=len(texts), 
+                   injections=sum(labels), safe=len(labels)-sum(labels))
         
         return BenchmarkDataset(
             name="BrowseSafe-Bench",
-            source="perplexity-ai/browsesafe",
+            source="perplexity-ai/browsesafe-bench",
             texts=texts,
             labels=labels,
-            metadata={"dataset_type": "injection_only", "domain": "web/html"}
+            metadata={"dataset_type": "mixed", "domain": "web/html", "preprocessed": "text_extracted"}
         )
         
     except Exception as e:
         logger.error("Failed to load BrowseSafe dataset", error=str(e))
         return BenchmarkDataset(
             name="BrowseSafe-Bench (Failed)",
-            source="perplexity-ai/browsesafe",
+            source="perplexity-ai/browsesafe-bench",
             metadata={"error": str(e)}
         )
 

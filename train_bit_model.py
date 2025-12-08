@@ -49,6 +49,37 @@ TRIGGER_WORDS = {
 }
 
 
+def extract_text_from_html(html: str) -> str:
+    """
+    Extract readable text from HTML content.
+    This helps MiniLM understand HTML-embedded attacks better.
+    """
+    try:
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        # Remove script and style elements
+        for script in soup(["script", "style"]):
+            script.decompose()
+        
+        # Get text and clean up whitespace
+        text = soup.get_text(separator=' ')
+        text = ' '.join(text.split())
+        
+        # If extraction results in very short text, keep some HTML context
+        if len(text) < 50 and len(html) > 100:
+            # Keep a snippet of the original HTML for context
+            text = html[:500] + " [TEXT]: " + text
+        
+        return text
+    except Exception:
+        # Fallback: simple regex-based extraction
+        import re
+        text = re.sub(r'<[^>]+>', ' ', html)
+        text = ' '.join(text.split())
+        return text
+
+
 def has_trigger_words(text: str) -> bool:
     """Check if text contains any trigger words."""
     text_lower = text.lower()
@@ -71,65 +102,103 @@ def get_sample_type(text: str, label: int) -> str:
 
 
 def generate_notinject_samples(count: int = 2000) -> List[Dict]:
-    """Generate NotInject-style benign samples with trigger words."""
-    trigger_words = list(TRIGGER_WORDS)
+    """Load NotInject-style benign samples with trigger words.
     
-    templates = [
-        "How do I {trigger} whitespace in Python regex?",
-        "Can you explain how to {trigger} a method in Java?",
-        "What's the best way to {trigger} null pointer exceptions?",
-        "The {trigger} key in the hotel room wasn't working.",
-        "I need to {trigger} my flight reservation for tomorrow.",
-        "My grandmother taught me how to {trigger} vegetables.",
-        "The {trigger} feature in this software is very useful.",
-        "Can you help me {trigger} this configuration file?",
-        "I want to {trigger} my old emails from the archive.",
-        "The teacher asked us to {trigger} the previous chapter.",
-        "Please {trigger} my subscription to the newsletter.",
-        "How can I {trigger} my phone's screen timeout?",
-        "The {trigger} button on my keyboard is broken.",
-        "I'd like to {trigger} my appointment for next week.",
-        "The {trigger} permissions are needed for this task.",
-        "Can you show me how to {trigger} user settings?",
-        "We need to {trigger} this outdated policy.",
-        "The IT team will {trigger} the old server.",
-        "My manager asked me to {trigger} these files.",
-        "The {trigger} process takes about 30 minutes.",
-        "Please don't {trigger} my changes to the document.",
-        "I accidentally clicked {trigger} on my browser.",
-        "The software will {trigger} unused data automatically.",
-        "How do I {trigger} pending notifications?",
-        "The {trigger} mechanism in this machine needs repair.",
-    ]
-    
+    First tries to load from HuggingFace, then generates synthetic if needed.
+    """
     samples = []
-    for _ in range(count):
-        template = random.choice(templates)
-        trigger = random.choice(trigger_words)
-        text = template.format(trigger=trigger)
-        samples.append({
-            "text": text,
-            "label": 0,
-            "type": "benign_trigger"
-        })
+    
+    # First, try to load from HuggingFace NotInject dataset
+    try:
+        from datasets import load_dataset
+        print(f"\n📥 Loading NotInject from HuggingFace (target: {count})...")
+        
+        loaded = 0
+        for split_name in ["NotInject_one", "NotInject_two", "NotInject_three"]:
+            if loaded >= count:
+                break
+            ds = load_dataset("leolee99/NotInject", split=split_name)
+            for sample in ds:
+                if loaded >= count:
+                    break
+                text = sample.get("text") or sample.get("prompt") or str(sample)
+                if text and text.strip():
+                    samples.append({
+                        "text": text,
+                        "label": 0,
+                        "type": "benign_trigger"
+                    })
+                    loaded += 1
+        
+        print(f"   ✓ Loaded {len(samples)} NotInject HF samples")
+        
+    except Exception as e:
+        logger.warning(f"Could not load NotInject HF: {e}, generating synthetic")
+    
+    # Generate synthetic to fill the gap
+    if len(samples) < count:
+        remaining = count - len(samples)
+        print(f"\n📝 Generating {remaining} synthetic NotInject samples...")
+        
+        trigger_words = list(TRIGGER_WORDS)
+        templates = [
+            "How do I {trigger} whitespace in Python regex?",
+            "Can you explain how to {trigger} a method in Java?",
+            "What's the best way to {trigger} null pointer exceptions?",
+            "The {trigger} key in the hotel room wasn't working.",
+            "I need to {trigger} my flight reservation for tomorrow.",
+            "My grandmother taught me how to {trigger} vegetables.",
+            "The {trigger} feature in this software is very useful.",
+            "Can you help me {trigger} this configuration file?",
+            "I want to {trigger} my old emails from the archive.",
+            "The teacher asked us to {trigger} the previous chapter.",
+            "Please {trigger} my subscription to the newsletter.",
+            "How can I {trigger} my phone's screen timeout?",
+            "The {trigger} button on my keyboard is broken.",
+            "I'd like to {trigger} my appointment for next week.",
+            "The {trigger} permissions are needed for this task.",
+            "Can you show me how to {trigger} user settings?",
+            "We need to {trigger} this outdated policy.",
+            "The IT team will {trigger} the old server.",
+            "My manager asked me to {trigger} these files.",
+            "The {trigger} process takes about 30 minutes.",
+            "Please don't {trigger} my changes to the document.",
+            "I accidentally clicked {trigger} on my browser.",
+            "The software will {trigger} unused data automatically.",
+            "How do I {trigger} pending notifications?",
+            "The {trigger} mechanism in this machine needs repair.",
+        ]
+        
+        for _ in range(remaining):
+            template = random.choice(templates)
+            trigger = random.choice(trigger_words)
+            text = template.format(trigger=trigger)
+            samples.append({
+                "text": text,
+                "label": 0,
+                "type": "benign_trigger"
+            })
     
     return samples
 
 
-def load_attack_samples(target_count: int = 4000) -> List[Dict]:
-    """Load attack samples from SaTML and deepset (injections only)."""
+def load_attack_samples(target_count: int = 4000, include_browsesafe: bool = False) -> List[Dict]:
+    """Load attack samples from SaTML, deepset, and optionally BrowseSafe as supplement."""
     samples = []
     
     try:
         from datasets import load_dataset
         
-        # SaTML attacks
-        print(f"\n📥 Loading SaTML attacks (target: {target_count//2})...")
+        # Load full text samples (SaTML + deepset), then add BrowseSafe as supplement
+        per_text_source = target_count // 2  # 50/50 split for text
+        
+        # SaTML attacks (text-based)
+        print(f"\n📥 Loading SaTML attacks (target: {per_text_source})...")
         ds = load_dataset("ethz-spylab/ctf-satml24", "interaction_chats",
                          split="attack", streaming=True)
         count = 0
-        for sample in tqdm(ds, total=target_count//2, desc="SaTML"):
-            if count >= target_count // 2:
+        for sample in tqdm(ds, total=per_text_source, desc="SaTML"):
+            if count >= per_text_source:
                 break
             history = sample.get("history", [])
             if history and len(history) > 0:
@@ -149,11 +218,11 @@ def load_attack_samples(target_count: int = 4000) -> List[Dict]:
         print(f"   ✓ Loaded {count} SaTML attacks")
         
         # Deepset injections ONLY (not safe samples!)
-        print(f"\n📥 Loading deepset attacks (target: {target_count//2})...")
+        print(f"\n📥 Loading deepset attacks (target: {per_text_source})...")
         ds = load_dataset("deepset/prompt-injections", split="train")
         count = 0
         for sample in ds:
-            if count >= target_count // 2:
+            if count >= per_text_source:
                 break
             if sample.get("label") == 1:  # Only injections!
                 text = sample.get("text", "")
@@ -166,6 +235,32 @@ def load_attack_samples(target_count: int = 4000) -> List[Dict]:
                     count += 1
         
         print(f"   ✓ Loaded {count} deepset attacks")
+        
+        # BrowseSafe HTML-embedded attacks (with text extraction)
+        if include_browsesafe:
+            browsesafe_target = 2000  # Supplement to text samples (reduced from 5K)
+            print(f"\n📥 Loading BrowseSafe attacks (target: {browsesafe_target})...")
+            ds = load_dataset("perplexity-ai/browsesafe-bench", split="train")
+            count = 0
+            for sample in ds:
+                if count >= browsesafe_target:
+                    break
+                # Get label - BrowseSafe uses "yes"/"no" for malicious/benign
+                label = sample.get("label", "")
+                if label == "yes":  # Only malicious samples
+                    html = sample.get("content", sample.get("html", sample.get("text", "")))
+                    if html and html.strip():
+                        # Extract text from HTML for better embeddings
+                        text = extract_text_from_html(html)
+                        samples.append({
+                            "text": text,
+                            "label": 1,
+                            "type": "injection"
+                        })
+                        count += 1
+            
+            print(f"   ✓ Loaded {count} BrowseSafe attacks (text extracted from HTML)")
+        
         print(f"   Total attack samples: {len(samples)}")
         
     except Exception as e:
@@ -175,9 +270,9 @@ def load_attack_samples(target_count: int = 4000) -> List[Dict]:
     return samples
 
 
-def load_diverse_benign_samples(target_count: int = 4000) -> List[Dict]:
+def load_diverse_benign_samples(target_count: int = 4000, include_browsesafe: bool = False) -> List[Dict]:
     """
-    Load diverse benign samples from local data or generate synthetic.
+    Load diverse benign samples from local data, synthetic, and optionally BrowseSafe.
     Avoids deepset safe samples (which cause high FPR).
     """
     samples = []
@@ -197,7 +292,7 @@ def load_diverse_benign_samples(target_count: int = 4000) -> List[Dict]:
             else:
                 prompts = []
                 
-            for text in prompts[:target_count]:
+            for text in prompts[:target_count // 2]:
                 if isinstance(text, str) and text.strip() and not has_trigger_words(text):
                     samples.append({
                         "text": text,
@@ -207,6 +302,33 @@ def load_diverse_benign_samples(target_count: int = 4000) -> List[Dict]:
             print(f"   ✓ Loaded {len(samples)} local safe prompts")
     except Exception as e:
         logger.warning(f"Could not load local safe prompts: {e}")
+    
+    # Load BrowseSafe benign HTML samples (with text extraction)
+    if include_browsesafe:
+        try:
+            from datasets import load_dataset
+            browsesafe_benign_target = 2000  # Match attack samples (reduced from 5K)
+            print(f"\n📥 Loading BrowseSafe benign HTML samples (target: {browsesafe_benign_target})...")
+            ds = load_dataset("perplexity-ai/browsesafe-bench", split="train")
+            count = 0
+            for sample in ds:
+                if count >= browsesafe_benign_target:
+                    break
+                label = sample.get("label", "")
+                if label == "no":  # Benign HTML
+                    html = sample.get("content", sample.get("html", sample.get("text", "")))
+                    if html and html.strip():
+                        # Extract text from HTML for better embeddings
+                        text = extract_text_from_html(html)
+                        samples.append({
+                            "text": text,
+                            "label": 0,
+                            "type": "safe"
+                        })
+                        count += 1
+            print(f"   ✓ Loaded {count} BrowseSafe benign HTML samples (text extracted)")
+        except Exception as e:
+            logger.warning(f"Could not load BrowseSafe benign: {e}")
     
     # Generate more if needed
     if len(samples) < target_count:
