@@ -41,7 +41,7 @@ class InjectionDetector:
                  deep_model_name: Optional[str] = "all-mpnet-base-v2",
                  specialized_model_name: Optional[str] = None,
                  fast_threshold: float = 0.5,
-                 deep_threshold: float = 0.85,
+                 deep_threshold: float = 0.95,
                  use_cascade: bool = True,
                  model_dir: str = "models",
                  use_rf_ensemble: bool = True):

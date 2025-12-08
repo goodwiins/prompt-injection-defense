@@ -20,7 +20,7 @@ class EmbeddingClassifier:
     to detect prompt injections with support for large-scale training.
     """
 
-    def __init__(self, model_name: str = "all-MiniLM-L6-v2", threshold: float = 0.85,
+    def __init__(self, model_name: str = "all-MiniLM-L6-v2", threshold: float = 0.95,
                  model_dir: str = "models"):
         """
         Initialize the embedding classifier.
