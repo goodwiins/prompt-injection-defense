@@ -59,18 +59,25 @@ InjecGuard's MOF operates by **implicit bias deamplification** during fine-tunin
 
 ### 2.5 Positioning Our Work: BIT vs. MOF
 
-Our Balanced Intent Training (BIT) strategy addresses the same over-defense problem but through fundamentally different mechanisms:
+InjecGuard's MOF and our BIT address the same over-defense problem using the same NotInject dataset. We clarify similarities and differences:
 
-| Aspect               | InjecGuard MOF                                      | Our BIT                                   |
-| -------------------- | --------------------------------------------------- | ----------------------------------------- |
-| **Model Type**       | Fine-tuned transformer (DeBERTa)                    | Ensemble (XGBoost + MiniLM embeddings)    |
-| **Mechanism**        | Implicit bias deamplification via data augmentation | Explicit weighted loss optimization       |
-| **Training Data**    | Augmented with trigger-word samples                 | Curated 40/40/20 split with class weights |
-| **Latency**          | ~12ms                                               | **1.9ms** (6x faster)                     |
-| **Interpretability** | Black-box neural network                            | Feature importance via XGBoost            |
-| **Deployment**       | Requires GPU for inference                          | CPU-only deployment possible              |
+**Similarities:**
 
-We evaluate on the NotInject dataset introduced by InjecGuard to enable direct comparison, achieving **0% FPR** compared to their reported 2.1%. Our work also complements PeerGuard's mutual reasoning approach but prioritizes sub-millisecond latency constraints unsuitable for LLM-based verification.
+- Both use NotInject-style samples to reduce keyword bias
+- Both target low FPR on trigger-heavy benign prompts
+- Both achieve FPR <5% on NotInject
+
+**Differences:**
+
+| Aspect               | InjecGuard MOF                                       | Our BIT                                        |
+| -------------------- | ---------------------------------------------------- | ---------------------------------------------- |
+| **Mechanism**        | Implicit bias deamplification in DeBERTa fine-tuning | Explicit weighted loss optimization in XGBoost |
+| **Model Type**       | Transformer (DeBERTa-v3)                             | Ensemble (XGBoost + MiniLM embeddings)         |
+| **Latency**          | ~12ms (requires GPU)                                 | **2-5ms** (CPU-only possible)                  |
+| **Interpretability** | Black-box neural network                             | Feature importance via XGBoost                 |
+| **NotInject FPR**    | 2.1% (reported)                                      | 1.4% [95% CI: 0.9-2.1%]                        |
+
+**Honest assessment:** Our primary advantage is **latency and deployability** (2-6x faster, CPU-only), not FPR performance. The difference in FPR (1.4% vs 2.1%) is not statistically significant given confidence intervals. This work is **complementary** to InjecGuard rather than strictly superior.
 
 ## 3. Threat Model
 
@@ -207,7 +214,9 @@ Compared to recent state-of-the-art defenses (**Table 5**), our system offers co
 | TF-IDF + SVM        | Classifier    | 81.6%        | 14.0%         | 0.1ms     |
 | Lakera Guard\*      | Commercial    | 87.9%        | 5.7%          | 66ms      |
 
-\*Reported numbers from vendor. †Reported numbers from original papers. ‡Estimated from paper figures. \*Latency varies by hardware (CPU: 4-5ms, GPU: 1-2ms).
+\*Reported numbers from vendor. †Reported numbers from original papers. ‡Estimated from paper figures.
+
+> **Note on comparison**: Metrics and datasets vary across methods. StruQ/SecAlign report ASR on synthetic attack sets; our system reports accuracy on multi-source benchmark average; PromptArmor reports FNR. Direct comparison is approximate. For classifier-based methods, we report F1 on merged SaTML+deepset+LLMail where available.
 
 **Key Differentiators:** While StruQ/SecAlign achieve near-zero ASR, they require model retraining and are evaluated primarily on optimization-based attacks. DefensiveToken and PromptArmor add inference overhead. Our BIT approach offers a strong latency-accuracy trade-off for classifier-based detection, achieving better over-defense mitigation than InjecGuard (1.4% vs 2.1% FPR) while being **2-6x faster**. Notably, our system achieves **100% recall** with optimized threshold (τ=0.95), ensuring no attacks are missed.
 
@@ -429,9 +438,25 @@ The OVON protocol uses "whisper" fields for security metadata. We validate these
 
 **Attack attempts on whisper fields:**
 
-- Injecting `"trust_level": 10` → Rejected (trust levels verified against registry)
-- Injecting `"security_scan": "bypassed"` → Ignored (scan performed by Guard, not sender)
-- Injecting executable code in whisper → Whisper fields are never executed, only logged
+| Attack Vector       | Mechanism                         | Test Method         | Result    |
+| ------------------- | --------------------------------- | ------------------- | --------- |
+| Direct injection    | `{"trust_level": 10}`             | Schema validation   | ✓ Blocked |
+| Base64 encoding     | `{"trust_level": "MTA="}`         | Type checking       | ✓ Blocked |
+| Nested injection    | `{"whisper": {"whisper": {...}}}` | Depth limit (max 2) | ✓ Blocked |
+| Null byte injection | `{"trust_level": "10\x00admin"}`  | Sanitization        | ✓ Blocked |
+| Executable code     | `{"cmd": "$(rm -rf /)"}`          | No execution        | ✓ Blocked |
+
+**Cumulative Bypass Probability (Guard Agent multi-turn):**
+
+At 8.5% per-message bypass rate (from Table 10), cumulative probability over N messages:
+
+| Messages | Attack Success (Without Guard) | Attack Success (With Guard) |
+| -------- | ------------------------------ | --------------------------- |
+| 10       | 56.0%                          | 1-(1-0.085)^10 = 55.8%      |
+| 25       | 56.0%                          | 1-(1-0.085)^25 = 87.5%      |
+| 50       | 56.0%                          | 1-(1-0.085)^50 = 99.2%      |
+
+> **Warning**: Guard Agent becomes ineffective over long workflows. For N>25 messages, cumulative bypass approaches certainty. **Mitigation**: Periodic re-validation every 20 messages and stateful attack pattern tracking (not currently implemented).
 
 #### 7.5.5 Quarantine Protocol Effectiveness
 
@@ -531,18 +556,99 @@ While our system achieves strong results, we acknowledge important limitations r
 
 **General Limitations:**
 
-1. **Language Coverage:** Our model is optimized for English. Evaluation on a multi-language dataset showed 61% detection rate, indicating need for multilingual training data.
-2. **Adversarial Robustness:** We have not evaluated against adversarial examples specifically crafted to evade our classifier. Recent work shows embedding-based classifiers can be fooled by small perturbations.
-3. **Novel Attack Generalization:** Our system may underperform on attack categories not represented in our training data (e.g., multi-modal injections, chain-of-thought exploits).
-4. **Multi-Agent Specificity:** While our coordination layer addresses multi-agent scenarios, our core detection benchmarks use single-turn datasets. Evaluation on true multi-agent attack propagation remains future work.
+#### 8.1.1 Adversarial Robustness
+
+Our system has **NOT** been evaluated against gradient-based adaptive attacks (GCG, AutoDAN, Checkpoint-GCG). Recent research (Zhan et al., NAACL 2025) demonstrates that all tested prompt injection defenses achieve >50% Attack Success Rate (ASR) when facing adaptive attacks, even defenses with <5% ASR against non-adaptive attacks.
+
+**Specific vulnerabilities of our architecture:**
+
+1. **Embedding space attacks**: MiniLM embeddings are continuous 384-dimensional vectors, making them susceptible to ℓ∞-bounded adversarial perturbations that preserve semantic meaning
+2. **XGBoost decision boundary attacks**: Tree-based models can be fooled by small perturbations targeting decision boundaries
+3. **Semantic reformulation**: AutoDAN generates human-readable adversarial prompts that preserve malicious intent while evading lexical detection
+
+**Expected impact**: We estimate our system would achieve 40-60% ASR against adaptive attacks, consistent with other embedding-based classifiers in the literature.
+
+**Mitigation (future work)**: Adversarial training on GCG-generated samples, certified robust tree training, ensemble with rule-based detection for defense-in-depth.
+
+#### 8.1.2 Evaluation Scope
+
+Our evaluation uses curated benchmarks totaling ~2,500 samples (SaTML: 300, deepset: 662, LLMail: 200, NotInject: 1,500). We do not evaluate on:
+
+- **BrowseSafe-Bench** (Perplexity, 2025): 14,719 realistic HTML-embedded prompt injections for AI browser agents
+- **InjecAgent** (2024): 1,054 agent-specific attack scenarios
+
+BrowseSafe tests challenges our system may not handle: attacks embedded in visible HTML, indirect/hypothetical instructions, multi-turn hidden instructions, and distractors (accessibility attributes, form fields).
+
+#### 8.1.3 Multi-Turn Attack Chains
+
+Our detection processes each message **independently**, missing:
+
+- Gradual intent shifts across multiple turns (TopicAttack achieves >90% ASR)
+- Attack chains that build context before injection (Prompt-Guided Semantic Injection)
+- Transitional prompts benign in isolation but malicious in context
+
+Future work should implement conversation-level anomaly detection with sliding window analysis.
+
+#### 8.1.4 Denial-of-Service Attacks
+
+Our system does not address DoS attacks targeting the detection layer:
+
+1. High-volume benign messages exhausting detection resources
+2. Semantically-similar messages triggering behavioral monitor false positives
+3. Memory exhaustion via long conversation windows
+
+**Mitigation**: Rate limiting and circuit breaker per agent (not currently implemented).
+
+#### 8.1.5 Language Coverage
+
+Our model is optimized for English (MiniLM-L6-v2 trained primarily on English text). Evaluation on a multi-language dataset showed **61% detection rate**.
+
+**Root cause**: Cross-lingual transfer is weak for semantic intent differences in non-English prompts.
+
+**Attacks leveraging this**: Chinese characters, Arabic script, code-switching (mixing languages) can evade English pattern matchers.
+
+**Proposed solutions**: Multilingual embedding model (e.g., `multilingual-e5-large`), separate detectors for high-risk languages.
+
+#### 8.1.6 Novel Attack Generalization
+
+Our system may underperform on attack categories not represented in training data, including multi-modal injections, chain-of-thought exploits, and screenshot-based injection (demonstrated against Perplexity Comet).
+
+### 8.2 Model Drift and Continuous Learning
+
+**Challenge**: Prompt injection attack patterns evolve rapidly. Our detector was trained on 2024-2025 datasets; performance on novel attacks emerging in 2026+ is unknown.
+
+**Monitoring recommendations**:
+
+- Track FPR trend on flagged-for-review samples over time
+- Monitor precision-recall on new injection datasets as they emerge
+- Detect embedding distribution shift via KL divergence between training and production data
+
+**Retraining strategy**:
+
+- Monthly retraining cycles on new attack samples
+- Maintain BIT training constraints (weighted loss) during updates
+- A/B test new model versions on 10% of traffic before full rollout
+
+**Open questions**:
+
+- How to obtain high-quality benign-trigger samples (NotInject-style) at scale?
+- What is the computational cost of retraining XGBoost + MiniLM pipeline? (Estimated: <1 hour on single GPU)
+- Can online learning be implemented, or is batch retraining required?
 
 ## 9. Conclusion
 
-We introduced a multi-layer defense system for multi-agent LLMs that effectively mitigates prompt injection and infection. By combining ensemble detection with Balanced Intent Training (BIT) and optimized classification threshold (τ=0.95), we achieved **98.7% accuracy** [95% CI: 98.0-99.1%], **100% recall** [92.9-100%], and **1.4% over-defense** [0.9-2.1%] (FPR on NotInject, n=1500) with latency ranging from 2-5ms depending on hardware. Our system ensures no missed attacks while maintaining acceptable precision [70.4%, CI: 59.0-79.8%].
+We introduced a multi-layer defense system for multi-agent LLMs that mitigates prompt injection and infection. By combining ensemble detection with Balanced Intent Training (BIT) and optimized classification threshold (τ=0.95), we achieved **98.7% accuracy** [95% CI: 98.0-99.1%], **100% recall** [92.9-100%], and **1.4% over-defense** [0.9-2.1%] (FPR on NotInject, n=1500) with latency of 2-5ms.
 
-Our BIT strategy combined with threshold optimization achieves superior over-defense mitigation compared to InjecGuard's MOF (1.4% vs 2.1% FPR), while being 2-6x faster through explicit weighted loss optimization.
+**Key contributions**:
 
-While training-time defenses like StruQ and SecAlign achieve stronger theoretical guarantees by modifying the LLM itself, our classifier-based approach offers practical advantages: compatibility with any LLM (including API-only services), CPU-only deployment, and interpretable feature importance. Our work provides a robust foundation for securing the next generation of autonomous AI agents, with clear directions for future improvement including multilingual support, adversarial robustness, and true multi-agent evaluation.
+1. **BIT strategy** effectively reduces over-defense on trigger-heavy benign prompts
+2. **2-6x latency advantage** over comparable classifiers, enabling CPU-only deployment
+3. **Interpretable detection** via XGBoost feature importance
+4. **Multi-agent coordination** with OVON-based messaging and quarantine protocols
+
+**Honest limitations**: Our system has NOT been evaluated against adaptive attacks (GCG/AutoDAN), which likely achieve >40% bypass. The precision of 70.4% reflects a trade-off for 100% recall. Guard Agent effectiveness degrades over long workflows (>25 messages). These limitations are discussed in detail in Section 8.1.
+
+Our work is **complementary** to InjecGuard's MOF, offering a latency-optimized alternative rather than strictly superior performance. Future work should address adversarial robustness, multilingual support, and true multi-agent attack propagation evaluation.
 
 **Resources:** The code, datasets, and pretrained models are available at [github.com/goodwiins/prompt-injection-defense](https://github.com/goodwiins/prompt-injection-defense).
 
