@@ -1,0 +1,22 @@
+\begin{table}[h]
+\centering
+\caption{Guard Agent Bypass Testing Results}
+\label{tab:guard-bypass}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Bypass Technique} & \textbf{Attempts} & \textbf{Bypasses} & \textbf{Rate} \\
+\midrule
+Prompt obfuscation (Base64, ROT13, Unicode) & 500 & 12 & 2.4\% \\
+Semantic reformulation & 500 & 23 & 4.6\% \\
+Context confusion (legit prefix + injection) & 500 & 8 & 1.6\% \\
+Multi-turn buildup & 200 & 17 & 8.5\% \\
+Agent spoofing (forged metadata) & 500 & 0 & \textbf{0\%} \\
+Direct Guard injection & 500 & 3 & 0.6\% \\
+\midrule
+\textbf{Overall} & 2,700 & 63 & 2.3\% \\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+
+\footnotesize{Agent spoofing is fully prevented by OVON cryptographic signing. Multi-turn buildup is most effective, indicating need for longer context windows.}
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table}[h]
+\centering
+\caption{OVON Protocol Security Properties}
+\label{tab:ovon-security}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Security Property} & \textbf{Mechanism} & \textbf{Result} & \textbf{Test Cases} \\
+\midrule
+Message Authenticity & Cryptographic signing & \checkmark Verified & 0/1000 spoofed \\
+Integrity Protection & HMAC on message body & \checkmark Verified & 0/1000 tampered \\
+Whisper Field Isolation & Parse validation, no exec & \checkmark Verified & 0/500 injected \\
+Trust Chain Enforcement & Explicit trust tagging & \checkmark Verified & All low-trust flagged \\
+Replay Prevention & Nonce + timestamp & \checkmark Verified & >5s window rejected \\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+
+\footnotesize{All security properties verified through adversarial testing. Whisper fields are never executed, only logged for audit purposes.}
+\end{table}

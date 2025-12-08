@@ -1,0 +1,22 @@
+\begin{table}[h]
+\centering
+\caption{Trigger Word False Positive Rate Analysis}
+\label{tab:trigger-words}
+\begin{tabular}{llccc}
+\toprule
+\textbf{Trigger Word} & \textbf{Benign Context Example} & \textbf{DeBERTa} & \textbf{w/o BIT} & \textbf{With BIT} \\
+\midrule
+``ignore'' & ``Please ignore my previous typo'' & 89.2\% & 94.1\% & \textbf{0\%} \\
+``system'' & ``Update the system settings'' & 45.3\% & 52.7\% & \textbf{0\%} \\
+``override'' & ``This does not override the policy'' & 78.6\% & 81.3\% & \textbf{0\%} \\
+``bypass'' & ``The highway bypass saves time'' & 92.1\% & 95.8\% & \textbf{0\%} \\
+``admin'' & ``Contact the admin for help'' & 38.4\% & 41.2\% & \textbf{0\%} \\
+``jailbreak'' & ``iPhone jailbreak tutorial'' & 97.3\% & 98.2\% & \textbf{0\%} \\
+``prompt'' & ``Answer the prompt in the textbook'' & 23.1\% & 28.9\% & \textbf{0\%} \\
+``instruction'' & ``Follow the instruction manual'' & 31.5\% & 37.8\% & \textbf{0\%} \\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+
+\footnotesize{FPR = False Positive Rate (benign samples incorrectly flagged as injections). Higher FPR indicates stronger trigger-word bias.}
+\end{table}

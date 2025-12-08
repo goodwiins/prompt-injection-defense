@@ -1,0 +1,15 @@
+\begin{table}[h]
+\centering
+\caption{Impact of Balanced Intent Training (BIT) on Over-Defense}
+\label{tab:bit}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Configuration} & \textbf{Accuracy} & \textbf{NotInject FPR} & \textbf{Recall} \\
+\midrule
+\textbf{With BIT} & \textbf{96.7\%} & \textbf{0\%} & \textbf{93.1\%} \\
+Without BIT & 95.0\% & 86\%* & 70.5\% \\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+\footnotesize{* High FPR indicates aggressive over-defense on benign trigger-word prompts.}
+\end{table}

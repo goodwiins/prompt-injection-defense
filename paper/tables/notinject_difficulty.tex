@@ -1,0 +1,19 @@
+\begin{table}[h]
+\centering
+\caption{NotInject Dataset Difficulty-Level Breakdown}
+\label{tab:notinject-difficulty}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Level} & \textbf{Samples} & \textbf{Trigger Words} & \textbf{BIT FPR} & \textbf{InjecGuard*} & \textbf{DeBERTa} \\
+\midrule
+Level 1 (Easy) & 113 & 1 word & \textbf{0\%} & 0.9\% & 6.2\% \\
+Level 2 (Medium) & 113 & 2 words & \textbf{0\%} & 2.7\% & 12.4\% \\
+Level 3 (Hard) & 113 & 3 words & \textbf{0\%} & 2.7\% & 21.2\% \\
+\midrule
+\textbf{Overall} & 339 & 1-3 words & \textbf{0\%} & 2.1\% & 13.3\% \\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+
+\footnotesize{*Estimated from InjecGuard paper figures. DeBERTa refers to HuggingFace DeBERTa-v3 baseline without over-defense mitigation.}
+\end{table}

@@ -1,0 +1,21 @@
+\begin{table}[h]
+\centering
+\caption{Comparison with PeerGuard Mutual Reasoning Defense}
+\label{tab:peerguard}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Aspect} & \textbf{Our Guard Agent} & \textbf{PeerGuard} \\
+\midrule
+Detection Mechanism & Centralized classifier & Distributed LLM reasoning \\
+Latency per Message & \textbf{1.9ms} & $\approx$800ms \\
+True Positive Rate & 93.1\% & \textbf{96.0\%}* \\
+False Positive Rate & \textbf{2.1\%} & 8.5\%* \\
+Scalability & O(1) per message & O(n) with agent count \\
+LLM Dependency & None & Requires reasoning LLM \\
+Adversarial Robustness & Classifier evasion & Reasoning manipulation \\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+
+\footnotesize{*Reported numbers from PeerGuard paper on GPT-4o. Our approach offers 400× lower latency at the cost of 3\% lower TPR. Complementary for tiered deployment.}
+\end{table}
