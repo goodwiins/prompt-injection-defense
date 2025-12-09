@@ -1,0 +1,11 @@
+{
+  "fast_model_name": "all-MiniLM-L6-v2",
+  "deep_model_name": "all-mpnet-base-v2",
+  "specialized_model_name": null,
+  "fast_threshold": 0.5,
+  "deep_threshold": 0.85,
+  "use_cascade": true,
+  "use_rf_ensemble": true,
+  "is_trained": true,
+  "training_stats": {}
+}

@@ -1,6 +1,6 @@
 \begin{table}[h]
 \centering
-\caption{Ablation Study Results}
+\caption{Ablation Study Results (General Performance on deepset)}
 \label{tab:ablation}
 \begin{tabular}{lcccc}
 \toprule
@@ -11,7 +11,9 @@ w/o Pattern Detector & 97.5\% & 97.5\% & 2.0\% & 3.0\% \\
 w/o Embedding & 60.5\% & 0.0\% & 0.0\% & 79.0\% \\
 no_cascade & 97.5\% & 97.5\% & 2.0\% & 3.0\% \\
 fast_only & 97.5\% & 97.5\% & 2.0\% & 3.0\% \\
-w/o BIT Training & 95.0\% & 94.7\% & 0.0\% & 10.0\% \\
+w/o BIT Training & 95.0\% & 94.7\% & 0.0\%* & 10.0\% \\
 \bottomrule
 \end{tabular}
+\vspace{1mm}
+\footnotesize{*Low FPR due to lack of trigger words in deepset. See Table \ref{tab:bit-components} for over-defense evaluation on NotInject (86\% FPR w/o BIT).}
 \end{table}

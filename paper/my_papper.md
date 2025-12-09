@@ -800,7 +800,7 @@ Practitioners should calibrate threshold based on deployment context. Our report
 
 ## 9. Conclusion
 
-We introduced a multi-layer defense system for multi-agent LLMs that mitigates prompt injection and infection. By combining ensemble detection with Balanced Intent Training (BIT) and optimized classification threshold (θ=0.764), we achieved **97.6% accuracy**, **92.6-100% recall** across attack datasets (97.1% average), and **1.8% FPR** [95% CI: 0.8-3.4%] on the NotInject over-defense benchmark (n=339) with latency of ~3ms (P95: 4.2ms).
+We present a multi-layer defense system achieving **97.6% accuracy** and **1.8% FPR** with **sub-5ms latency**. Code and model weights are released upon publication. By combining ensemble detection with Balanced Intent Training (BIT) and optimized classification threshold (θ=0.764), we effectively mitigate over-defense on trigger-heavy benign prompts while maintaining high recall against diverse attacks.
 
 **Key contributions**:
 

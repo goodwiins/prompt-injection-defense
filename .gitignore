@@ -19,7 +19,7 @@ env/
 
 # Data and models
 data/
-models/
+
 *.pkl
 *.joblib
 
