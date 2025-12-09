@@ -97,7 +97,7 @@ def run_ablation(config: AblationConfig, datasets: Dict) -> Dict[str, Any]:
     
     # Select model based on MOF config
     if config.use_mof_data:
-        model_path = "models/mof_classifier.json"
+        model_path = "models/bit_classifier.json"
     else:
         # Use non-MOF model if available, else fallback
         model_path = "models/all-MiniLM-L6-v2_classifier.json"

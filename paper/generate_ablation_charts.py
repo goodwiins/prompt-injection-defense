@@ -61,7 +61,7 @@ def plot_ablation_bar_chart(results: dict, output_path: str):
     config_labels = {
         "full_system": "Full System",
         "no_embedding": "No Embedding",
-        "no_mof": "No MOF",
+        "no_mof": "No BIT",
         "no_pattern": "No Pattern",
         "embedding_only": "Embedding Only",
         "pattern_only": "Pattern Only",
@@ -119,7 +119,7 @@ def plot_fpr_fnr_chart(results: dict, output_path: str):
     config_labels = {
         "full_system": "Full System",
         "no_embedding": "No Embedding",
-        "no_mof": "No MOF",
+        "no_mof": "No BIT",
         "no_pattern": "No Pattern",
         "embedding_only": "Embedding Only",
         "pattern_only": "Pattern Only",
@@ -172,7 +172,7 @@ def generate_latex_table(results: dict, output_path: str):
     config_labels = {
         "full_system": "Full System (Ours)",
         "no_embedding": "w/o Embedding",
-        "no_mof": "w/o MOF Training",
+        "no_mof": "w/o BIT Training",
         "no_pattern": "w/o Pattern Detector",
         "embedding_only": "Embedding Only",
         "pattern_only": "Pattern Only",

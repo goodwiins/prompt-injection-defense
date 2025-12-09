@@ -231,7 +231,7 @@ def main():
     parser = argparse.ArgumentParser(description="Evaluate adversarial robustness")
     parser.add_argument("--output", "-o", default="results/adversarial_results.json",
                        help="Output path")
-    parser.add_argument("--model", "-m", default="models/mof_classifier.json",
+    parser.add_argument("--model", "-m", default="models/bit_classifier.json",
                        help="Model path")
     args = parser.parse_args()
     

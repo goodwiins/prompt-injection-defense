@@ -295,7 +295,7 @@ def main():
     print(f"   (Target: < 5%, Lower is better)")
     
     # Save model
-    model_path = "models/mof_classifier.json"
+    model_path = "models/bit_classifier.json"
     classifier.save_model(model_path)
     logger.info(f"Model saved to {model_path}")
     

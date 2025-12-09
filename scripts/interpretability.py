@@ -160,7 +160,7 @@ def main():
     
     print("\nLoading model...")
     detector = EmbeddingClassifier()
-    detector.load_model("models/mof_classifier.json")
+    detector.load_model("models/bit_classifier.json")
     
     # Test samples
     test_samples = [

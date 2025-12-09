@@ -104,7 +104,7 @@ def run_statistical_analysis():
     
     # Load classifier
     clf = EmbeddingClassifier(model_name="all-MiniLM-L6-v2")
-    clf.load_model("models/mof_classifier.json")
+    clf.load_model("models/bit_classifier.json")
     
     # Load test data
     with open("data/prompt_injections.json") as f:

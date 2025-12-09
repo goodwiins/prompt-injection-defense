@@ -1,37 +1,19 @@
-\begin{table*}[t]
+\begin{table}[h]
 \centering
-\caption{Comparison with State-of-the-Art Prompt Injection Defenses}
+\caption{Comparison with Industry Baselines}
 \label{tab:baselines}
-\begin{tabular}{llccccc}
+\begin{tabular}{lccccc}
 \toprule
-\textbf{System} & \textbf{Type} & \textbf{Acc./ASR} & \textbf{FPR} & \textbf{NotInject} & \textbf{Latency} & \textbf{Open} \\
+\textbf{System} & \textbf{Acc.} & \textbf{FPR} & \textbf{FNR} & \textbf{P50 (ms)} & \textbf{Open} \\
 \midrule
-\textbf{BIT (Ours)} & Classifier & \textbf{96.7\%} & \textbf{0.5\%} & \textbf{0\%} & \textbf{1.9ms} & \checkmark \\
-\midrule
-\multicolumn{7}{l}{\textit{Classifier-Based Defenses}} \\
-InjecGuard/PIGuard$^\dagger$ & Classifier & 94.3\% & 2.1\%$^\ddagger$ & 2.1\%$^\ddagger$ & 12ms & \checkmark \\
-HuggingFace DeBERTa & Classifier & 90.0\% & 10.0\% & -- & 48ms & \checkmark \\
-TF-IDF + SVM & Classifier & 81.6\% & 14.0\% & -- & 0.1ms & \checkmark \\
-\midrule
-\multicolumn{7}{l}{\textit{Training-Time Defenses (require model fine-tuning)}} \\
-StruQ$^\dagger$ & Training & <2\% ASR & -- & -- & -- & \checkmark \\
-SecAlign$^\dagger$ & Training & $\approx$0\% ASR & -- & -- & -- & \checkmark \\
-\midrule
-\multicolumn{7}{l}{\textit{Test-Time Defenses}} \\
-DefensiveToken$^\dagger$ & Test-time & 0.24\% ASR & -- & -- & $\approx$5ms & \checkmark \\
-\midrule
-\multicolumn{7}{l}{\textit{LLM-Based Defenses}} \\
-PromptArmor$^\dagger$ & LLM Guard & <1\% FNR & <1\% & -- & $\approx$200ms & -- \\
-\midrule
-\multicolumn{7}{l}{\textit{Commercial APIs}} \\
-Lakera Guard$^*$ & Commercial & 87.9\% & 5.7\% & -- & 66ms & -- \\
-ProtectAI$^*$ & Commercial & 90.0\% & -- & -- & 500ms & -- \\
-Glean AI$^*$ & Commercial & 97.8\% & 3.0\% & -- & -- & -- \\
+\textbf{BIT (Ours)} & \textbf{97.6\%} & \textbf{1.8\%} & \textbf{6.9\%} & \textbf{2.5} & ✓ \\
+HuggingFace DeBERTa & 90.0\% & 10.0\% & 60.0\% & 48.0 & - \\
+TF-IDF + SVM & 81.6\% & 14.0\% & 29.5\% & 0.1 & ✓ \\
+Lakera Guard* & 87.9\% & 5.7\% & - & 66.0 & - \\
+ProtectAI* & 90.0\% & - & - & 500.0 & - \\
+Glean AI* & 97.8\% & 3.0\% & - & - & - \\
 \bottomrule
 \end{tabular}
 \vspace{2mm}
-
-\footnotesize{$^*$Numbers from published benchmarks; may use different test sets. $^\dagger$Reported numbers from original papers. $^\ddagger$Estimated from paper figures.}
-
-\footnotesize{Note: ASR = Attack Success Rate (lower is better). StruQ/SecAlign require full LLM fine-tuning. DefensiveToken requires model internals access.}
-\end{table*}
+\footnotesize{* Numbers from published benchmarks; may use different test sets.}
+\end{table}

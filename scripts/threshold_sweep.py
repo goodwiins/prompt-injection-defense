@@ -192,7 +192,7 @@ def main():
     
     # Load detector
     detector = EmbeddingClassifier()
-    detector.load_model("models/mof_classifier.json")
+    detector.load_model("models/bit_classifier.json")
     
     # Load datasets
     print("\nLoading datasets...")

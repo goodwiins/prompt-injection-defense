@@ -1,23 +1,23 @@
 {
   "detection_performance": {
-    "accuracy": 0.6,
+    "accuracy": 0.55,
     "precision": 1.0,
-    "recall": 0.2,
-    "f1": 0.33333333333333337,
+    "recall": 0.1,
+    "f1": 0.18181818181818182,
     "fpr": 0.0,
-    "p50_latency_ms": 7.210625495645218,
-    "p95_latency_ms": 22.446289561048616,
+    "p50_latency_ms": 6.925708497874439,
+    "p95_latency_ms": 24.59572440275224,
     "total_samples": 20,
-    "tp": 2,
+    "tp": 1,
     "tn": 10,
     "fp": 0,
-    "fn": 8
+    "fn": 9
   },
   "notinject_levels": {
     "Level 1 (1 trigger word)": {
       "samples": 10,
-      "false_positives": 1,
-      "fpr": 0.1
+      "false_positives": 0,
+      "fpr": 0.0
     },
     "Level 2 (2 trigger words)": {
       "samples": 10,
@@ -31,8 +31,8 @@
     },
     "overall": {
       "samples": 30,
-      "false_positives": 1,
-      "fpr": 0.03333333333333333
+      "false_positives": 0,
+      "fpr": 0.0
     }
   },
   "trigger_words": {
@@ -58,8 +58,8 @@
     },
     "admin": {
       "samples": 5,
-      "false_positives": 0,
-      "fpr": 0.0
+      "false_positives": 1,
+      "fpr": 0.2
     },
     "jailbreak": {
       "samples": 5,
@@ -73,31 +73,31 @@
     },
     "instruction": {
       "samples": 5,
-      "false_positives": 1,
-      "fpr": 0.2
+      "false_positives": 3,
+      "fpr": 0.6
     }
   },
   "injection_accuracy": {
-    "recall": 0.2,
-    "detected": 2,
+    "recall": 0.1,
+    "detected": 1,
     "total": 10
   },
   "latency": {
-    "min_ms": 4.924209002638236,
-    "p50_ms": 5.812354007503018,
-    "p95_ms": 6.7653169462573715,
-    "p99_ms": 8.229324086860302,
-    "max_ms": 11.14062499254942,
-    "mean_ms": 5.930706260842271
+    "min_ms": 3.572957997675985,
+    "p50_ms": 5.598937001195736,
+    "p95_ms": 6.359005584090482,
+    "p99_ms": 6.6929408319992945,
+    "max_ms": 6.699457997456193,
+    "mean_ms": 5.287207449146081
   },
   "real_data": {
     "deepset": {
-      "recall": 0.9507389162561576,
-      "fpr": 0.4956268221574344,
+      "recall": 0.9261083743842364,
+      "fpr": 0.46938775510204084,
       "samples": 546
     },
     "notinject": {
-      "fpr": 0.05733333333333333,
+      "fpr": 0.011333333333333334,
       "samples": 1500
     }
   }

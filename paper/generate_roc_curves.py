@@ -114,7 +114,7 @@ def main():
     # Load detector
     print("\nLoading models...")
     detector = EmbeddingClassifier()
-    detector.load_model("models/mof_classifier.json")
+    detector.load_model("models/bit_classifier.json")
     
     # Load deepset dataset
     print("\nLoading deepset dataset...")
@@ -141,7 +141,7 @@ def main():
     embedding_scores = mof_scores  # In practice, same for this setup
     
     results = {
-        "MOF (Ours)": {"labels": labels, "scores": mof_scores},
+        "BIT (Ours)": {"labels": labels, "scores": mof_scores},
         "Keyword Baseline": {"labels": labels, "scores": keyword_scores},
     }
     

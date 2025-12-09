@@ -242,7 +242,7 @@ def main():
     # Load detector
     print("\nLoading detector...")
     detector = EmbeddingClassifier()
-    detector.load_model("models/mof_classifier.json")
+    detector.load_model("models/bit_classifier.json")
     
     # Evaluate
     print("Testing detection on GPT-4 targeted prompts...")

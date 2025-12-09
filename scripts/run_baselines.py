@@ -73,7 +73,7 @@ def evaluate_mof_model(texts: List[str], labels: List[int]) -> BaselineResult:
     
     logger.info("Evaluating MOF model...")
     detector = EmbeddingClassifier()
-    detector.load_model("models/mof_classifier.json")
+    detector.load_model("models/bit_classifier.json")
     
     start = time.time()
     predictions = detector.predict(texts)

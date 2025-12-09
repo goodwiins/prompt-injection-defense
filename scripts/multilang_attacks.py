@@ -259,7 +259,7 @@ def main():
         print("=" * 60)
         
         detector = EmbeddingClassifier()
-        detector.load_model("models/mof_classifier.json")
+        detector.load_model("models/bit_classifier.json")
         
         results = evaluate_multilang(detector)
         

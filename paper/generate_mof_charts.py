@@ -71,21 +71,21 @@ def plot_overdefense_threshold(data: dict, output_path: str):
     
     thresholds = data["thresholds"]
     
-    # MOF lines
+    # BIT lines
     plt.plot(thresholds, data["mof"]["notinject_fpr"], 
              color='#6366f1', lw=2, linestyle='-',
-             label='MOF - NotInject FPR')
+             label='BIT - NotInject FPR')
     plt.plot(thresholds, data["mof"]["standard_fpr"], 
              color='#6366f1', lw=2, linestyle='--',
-             label='MOF - Standard FPR')
+             label='BIT - Standard FPR')
     
-    # No-MOF lines
+    # No-BIT lines
     plt.plot(thresholds, data["no_mof"]["notinject_fpr"], 
              color='#ef4444', lw=2, linestyle='-',
-             label='No MOF - NotInject FPR')
+             label='No BIT - NotInject FPR')
     plt.plot(thresholds, data["no_mof"]["standard_fpr"], 
              color='#ef4444', lw=2, linestyle='--',
-             label='No MOF - Standard FPR')
+             label='No BIT - Standard FPR')
     
     # Default threshold marker
     plt.axvline(x=0.5, color='#94a3b8', linestyle=':', lw=1.5, alpha=0.7)
@@ -93,7 +93,7 @@ def plot_overdefense_threshold(data: dict, output_path: str):
     
     plt.xlabel('Detection Threshold (θ)', fontsize=12)
     plt.ylabel('False Positive Rate', fontsize=12)
-    plt.title('Over-Defense vs Threshold: Impact of MOF Training', fontsize=14)
+    plt.title('Over-Defense vs Threshold: Impact of BIT Training', fontsize=14)
     plt.legend(loc='upper right')
     plt.xlim(0.1, 0.9)
     plt.ylim(0, 1.0)
@@ -108,15 +108,15 @@ def plot_recall_vs_overdefense(data: dict, output_path: str):
     plt.figure(figsize=(8, 6))
     plt.style.use('seaborn-v0_8-whitegrid')
     
-    # MOF
+    # BIT
     plt.plot(data["mof"]["notinject_fpr"], data["mof"]["recall"], 
              color='#6366f1', lw=2, marker='o', markersize=4,
-             label='With MOF')
+             label='With BIT')
     
-    # No MOF
+    # No BIT
     plt.plot(data["no_mof"]["notinject_fpr"], data["no_mof"]["recall"], 
              color='#ef4444', lw=2, marker='s', markersize=4,
-             label='Without MOF')
+             label='Without BIT')
     
     # Target region
     plt.axhline(y=0.95, color='#22c55e', linestyle='--', lw=1.5, alpha=0.7)
@@ -137,17 +137,17 @@ def plot_recall_vs_overdefense(data: dict, output_path: str):
 
 
 def generate_mof_table(output_path: str):
-    """Generate MOF ablation LaTeX table."""
+    """Generate BIT ablation LaTeX table."""
     latex = r"""\begin{table}[h]
 \centering
-\caption{Impact of MOF Training on Over-Defense}
-\label{tab:mof}
+\caption{Impact of BIT Training on Over-Defense}
+\label{tab:bit}
 \begin{tabular}{lccc}
 \toprule
 \textbf{Configuration} & \textbf{Accuracy} & \textbf{NotInject FPR} & \textbf{Recall} \\
 \midrule
-\textbf{With MOF} & \textbf{96.7\%} & \textbf{0\%} & \textbf{93.1\%} \\
-Without MOF & 95.0\% & 86\%* & 70.5\% \\
+\textbf{With BIT} & \textbf{97.6\%} & \textbf{1.8\%} & \textbf{97.1\%} \\
+Without BIT & 95.0\% & 86\%* & 70.5\% \\
 \bottomrule
 \end{tabular}
 \vspace{2mm}

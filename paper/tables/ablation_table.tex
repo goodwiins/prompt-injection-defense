@@ -6,14 +6,12 @@
 \toprule
 \textbf{Configuration} & \textbf{Accuracy} & \textbf{F1} & \textbf{FPR} & \textbf{FNR} \\
 \midrule
-\textbf{Full System (BIT)} & \textbf{97.5\%} & \textbf{97.5\%} & \textbf{2.0\%} & \textbf{3.0\%} \\
+\textbf{Full System (Ours)} & \textbf{97.5\%} & \textbf{97.5\%} & \textbf{2.0\%} & \textbf{3.0\%} \\
 w/o Pattern Detector & 97.5\% & 97.5\% & 2.0\% & 3.0\% \\
 w/o Embedding & 60.5\% & 0.0\% & 0.0\% & 79.0\% \\
-w/o Cascade & 97.5\% & 97.5\% & 2.0\% & 3.0\% \\
-Fast Path Only & 97.5\% & 97.5\% & 2.0\% & 3.0\% \\
+no_cascade & 97.5\% & 97.5\% & 2.0\% & 3.0\% \\
+fast_only & 97.5\% & 97.5\% & 2.0\% & 3.0\% \\
 w/o BIT Training & 95.0\% & 94.7\% & 0.0\% & 10.0\% \\
 \bottomrule
 \end{tabular}
-\vspace{2mm}
-\footnotesize{Note: Removing BIT training maintains accuracy but causes NotInject FPR to spike to 86\%.}
 \end{table}

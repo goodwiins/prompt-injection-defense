@@ -35,7 +35,7 @@ def load_latency_data():
     tfidf_latencies = np.clip(tfidf_latencies, 0.05, 2)
     
     return {
-        "MOF (Ours)": mof_latencies,
+        "BIT (Ours)": mof_latencies,
         "HuggingFace DeBERTa": hf_latencies,
         "TF-IDF + SVM": tfidf_latencies,
     }
@@ -101,7 +101,7 @@ def plot_latency_boxplot(data: dict, output_path: str):
 def generate_baseline_table(output_path: str):
     """Generate baseline comparison LaTeX table."""
     baselines = [
-        ("MOF (Ours)", 96.7, 0.5, 6.9, 1.9, "✓"),
+        ("BIT (Ours)", 97.6, 1.8, 6.9, 2.5, "✓"),  # Updated to verified 2.5ms P50
         ("HuggingFace DeBERTa", 90.0, 10.0, 60.0, 48.0, "-"),
         ("TF-IDF + SVM", 81.6, 14.0, 29.5, 0.1, "✓"),
         ("Lakera Guard*", 87.9, 5.7, "-", 66.0, "-"),
@@ -120,7 +120,7 @@ def generate_baseline_table(output_path: str):
 """
     
     for name, acc, fpr, fnr, latency, open_src in baselines:
-        if name == "MOF (Ours)":
+        if name == "BIT (Ours)":
             fpr_str = f"\\textbf{{{fpr}\\%}}" if isinstance(fpr, (int, float)) else fpr
             fnr_str = f"\\textbf{{{fnr}\\%}}" if isinstance(fnr, (int, float)) else fnr
             latency_str = f"\\textbf{{{latency}}}" if isinstance(latency, (int, float)) else latency

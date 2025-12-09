@@ -264,7 +264,7 @@ def main():
     print("\nLoading model and data...")
     
     detector = EmbeddingClassifier()
-    detector.load_model("models/mof_classifier.json")
+    detector.load_model("models/bit_classifier.json")
     
     # Load test data
     ds = load_dataset("deepset/prompt-injections", split="train", streaming=True)
