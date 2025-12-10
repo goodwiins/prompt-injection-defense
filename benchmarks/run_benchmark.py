@@ -155,7 +155,7 @@ Examples:
 
 def list_datasets():
     """Print available datasets and exit."""
-    from .datasets import AVAILABLE_DATASETS
+    from .benchmark_datasets import AVAILABLE_DATASETS
     
     print("\nAvailable Benchmark Datasets:")
     print("=" * 60)
@@ -222,7 +222,7 @@ def main():
     # Import benchmark modules
     from .runner import BenchmarkRunner
     from .reporter import BenchmarkReporter
-    from .datasets import load_all_datasets
+    from .benchmark_datasets import load_all_datasets
     
     # Load detector with threshold
     detector = load_detector(args.model, args.model_type, args.threshold)
@@ -264,7 +264,7 @@ def main():
             "llmail": 200               # Phase 1
         }
         
-        from .datasets import load_all_datasets
+        from .benchmark_datasets import load_all_datasets
         all_results = {}
         
         for dataset_name, limit in paper_config.items():

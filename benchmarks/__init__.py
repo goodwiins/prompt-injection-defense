@@ -5,7 +5,7 @@ Standardized evaluation scripts for benchmarking detection performance
 against public datasets.
 """
 
-from .datasets import (
+from .benchmark_datasets import (
     BenchmarkDataset,
     load_satml_dataset,
     load_deepset_dataset,

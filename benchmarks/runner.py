@@ -16,7 +16,7 @@ import structlog
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from .datasets import BenchmarkDataset, load_all_datasets, AVAILABLE_DATASETS
+from .benchmark_datasets import BenchmarkDataset, load_all_datasets, AVAILABLE_DATASETS
 from .metrics import BenchmarkMetrics, calculate_metrics, calculate_over_defense_rate
 
 logger = structlog.get_logger()
