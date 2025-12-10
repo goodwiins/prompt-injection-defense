@@ -80,6 +80,163 @@ result = detector.predict(["Ignore all previous instructions"])
 # Output: [1]  (1 = injection detected)
 ```
 
+## 🧬 The Science Behind BIT (Balanced Intent Training)
+
+### What is BIT?
+
+**BIT solves the "over-defense problem"**: Traditional classifiers learn lexical shortcuts (e.g., "if contains 'ignore' → injection") rather than semantic intent. This causes **high false positive rates** (86% in baseline models) on benign prompts containing trigger words.
+
+**The BIT mechanism:**
+1. **Dataset Composition (40/40/20 split)**:
+   - 40% injection attacks
+   - 40% safe/benign prompts
+   - **20% benign-trigger samples** (safe prompts containing injection-like keywords)
+
+2. **Weighted Loss Optimization**:
+   ```python
+   # Standard training (w=1.0 for all samples)
+   loss = sum(error(y_true, y_pred))
+
+   # BIT training (w=2.0 for benign-trigger samples)
+   loss = sum(
+       1.0 * error(injection_samples) +
+       1.0 * error(safe_samples) +
+       2.0 * error(benign_trigger_samples)  # ← THE KEY
+   )
+   ```
+
+3. **Result**: Model learns to distinguish **malicious intent** from **keyword presence**.
+
+---
+
+### Why It Works: The Proof
+
+We have **three independent lines of evidence** that the weighted loss mechanism (not just data composition) drives improvement:
+
+#### **Evidence 1: Inverse Weighting Experiment** ⭐⭐⭐
+
+Train 3 models on **identical 40/40/20 data**, varying only the weight:
+
+| Weight (w) | NotInject FPR | Interpretation |
+|------------|---------------|----------------|
+| w=2.0 (Full BIT) | **1.8%** | Upweight benign-triggers → best |
+| w=1.0 (Uniform) | 12.4% | No weighting → worse |
+| w=0.5 (Inverse) | 18.7% | Downweight benign-triggers → worst |
+
+**Monotonic relationship proves directionality matters!** If improvement was just from "adding benign-trigger samples," all 3 would perform equally.
+
+#### **Evidence 2: Architecture Independence** (Table 7)
+
+| Trigger Word | DeBERTa FPR | XGBoost w/o BIT | XGBoost with BIT |
+|--------------|-------------|-----------------|------------------|
+| "ignore"     | 89.2% | 94.1% | **0%** ✅ |
+| "bypass"     | 92.1% | 95.8% | **0%** ✅ |
+| "jailbreak"  | 97.3% | 98.2% | **0%** ✅ |
+
+**Proves it's the mechanism, not the model:** XGBoost without BIT suffers from keyword bias just like DeBERTa. Only BIT-trained models achieve 0% FPR.
+
+#### **Evidence 3: Statistical Significance**
+
+McNemar's test: **χ²=36.2, p<0.001** (n=339)
+
+The 10.6pp FPR improvement (1.8% vs 12.4%) is **statistically significant**, not random noise.
+
+---
+
+### How to Use BIT
+
+**Step 1: Prepare your dataset with benign-trigger samples**
+```python
+from train_bit_model import generate_synthetic_benign_triggers
+
+# Generate samples like:
+# "Please ignore my previous typo"
+# "Take the bypass to avoid traffic"
+# "iPhone jailbreak tutorial"
+benign_triggers = generate_synthetic_benign_triggers(n_samples=1000)
+```
+
+**Step 2: Apply 40/40/20 balancing**
+```python
+# Balance dataset
+n_total = 5000
+injections = sample(all_injections, int(n_total * 0.4))    # 2000
+safe = sample(all_safe, int(n_total * 0.4))                # 2000
+benign_trigger = sample(benign_triggers, int(n_total * 0.2)) # 1000
+```
+
+**Step 3: Train with weighted loss**
+```python
+from src.detection.embedding_classifier import EmbeddingClassifier
+
+# Assign weights
+weights = [
+    2.0 if sample_type == "benign_trigger" else 1.0
+    for sample_type in types
+]
+
+# Train XGBoost with sample weights
+classifier = EmbeddingClassifier(use_xgboost=True)
+classifier.train_on_dataset(
+    texts,
+    labels,
+    sample_weights=weights  # ← THE MAGIC
+)
+```
+
+**Step 4: Optimize threshold for 98% recall**
+```python
+from train_bit_model import optimize_threshold
+
+threshold = optimize_threshold(
+    classifier,
+    X_val,
+    y_val,
+    target_recall=0.98
+)
+# Result: threshold=0.764
+```
+
+---
+
+### Reproducing Paper Results
+
+**Run the complete BIT training pipeline:**
+```bash
+# Train BIT model from scratch (~10 minutes)
+python train_bit_model.py
+
+# Run inverse weighting proof experiment
+python run_inverse_weight_experiment.py
+
+# Verify statistical significance
+python run_statistical_tests.py
+
+# Evaluate on NotInject benchmark
+python -m benchmarks.run_benchmark --paper --threshold 0.764
+```
+
+**Interactive notebook:** See `paper_walkthrough.ipynb` for step-by-step demonstration.
+
+---
+
+### Where Else Can BIT Be Applied?
+
+The BIT mechanism is broadly applicable to any classification problem where models learn **lexical shortcuts** instead of **semantic intent**:
+
+| Domain | Problem | BIT Solution |
+|--------|---------|--------------|
+| **Content Moderation** | Flags "Let's discuss racism" as toxic | Upweight educational content with toxic keywords |
+| **Spam Detection** | Flags "Here's your invoice" as phishing | Upweight legitimate emails with trigger words |
+| **Medical Diagnosis** | "Headache" → assumes brain tumor | Upweight benign conditions with severe symptoms |
+| **Hate Speech Detection** | Flags reclaimed slurs, quotes | Upweight in-group usage, educational context |
+| **Code Vulnerability** | Flags all `eval()` as vulnerable | Upweight safe usages in sandboxed contexts |
+| **Resume Screening** | Over-optimizes for keyword matches | Upweight diverse backgrounds with fewer buzzwords |
+
+**The pattern:** Whenever "the right answer for the wrong reason" is common, BIT forces learning of true decision boundaries.
+
+---
+
 ## 📊 Comprehensive Evaluation
 
 ### Adversarial Robustness (92.1%)
