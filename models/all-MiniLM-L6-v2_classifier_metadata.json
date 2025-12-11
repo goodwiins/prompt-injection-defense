@@ -48,31 +48,31 @@
       "verbosity": null,
       "use_label_encoder": false
     },
-    "val_auc": 0.9995578231292517,
+    "val_auc": 0.9998639455782312,
     "val_classification_report": {
       "0": {
-        "precision": 0.974477958236659,
+        "precision": 0.9836065573770492,
         "recall": 1.0,
-        "f1-score": 0.9870740305522914,
+        "f1-score": 0.9917355371900827,
         "support": 420.0
       },
       "1": {
         "precision": 1.0,
-        "recall": 0.9607142857142857,
-        "f1-score": 0.9799635701275046,
+        "recall": 0.975,
+        "f1-score": 0.9873417721518988,
         "support": 280.0
       },
-      "accuracy": 0.9842857142857143,
+      "accuracy": 0.99,
       "macro avg": {
-        "precision": 0.9872389791183295,
-        "recall": 0.9803571428571429,
-        "f1-score": 0.983518800339898,
+        "precision": 0.9918032786885246,
+        "recall": 0.9875,
+        "f1-score": 0.9895386546709908,
         "support": 700.0
       },
       "weighted avg": {
-        "precision": 0.9846867749419955,
-        "recall": 0.9842857142857143,
-        "f1-score": 0.9842298463823765,
+        "precision": 0.9901639344262295,
+        "recall": 0.99,
+        "f1-score": 0.989978031174809,
         "support": 700.0
       }
     },
