@@ -97,7 +97,7 @@ class EmbeddingClassifier:
         """
         logger.info("Starting large-scale training", total_samples=len(dataset))
 
-        texts = dataset["text"]
+        texts = list(dataset["text"])
         labels = list(dataset["label"])
         
         # Handle weights splitting if provided
