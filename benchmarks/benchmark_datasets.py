@@ -11,6 +11,7 @@ Standardized loaders for public prompt injection datasets:
 import os
 import json
 import random
+from tqdm import tqdm
 from typing import List, Dict, Tuple, Optional, Iterator, Any
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -135,7 +136,7 @@ class BenchmarkDataset:
         }
 
 
-def load_satml_dataset(limit: Optional[int] = None, streaming: bool = True) -> BenchmarkDataset:
+def load_satml_dataset(limit: Optional[int] = None, streaming: bool = False) -> BenchmarkDataset:
     """
     Load SaTML CTF 2024 dataset (adversarial attacks).
     
@@ -159,8 +160,11 @@ def load_satml_dataset(limit: Optional[int] = None, streaming: bool = True) -> B
         )
         
         texts = []
-        for i, sample in enumerate(ds):
-            if limit and i >= limit:
+        # Use tqdm for progress tracking
+        iterator = tqdm(ds, desc="Processing SaTML", unit="samples", leave=False)
+        
+        for sample in iterator:
+            if limit and len(texts) >= limit:
                 break
             
             # Extract user message from chat history
@@ -195,7 +199,7 @@ def load_deepset_dataset(
     limit: Optional[int] = None,
     include_safe: bool = True,
     include_injections: bool = True,
-    streaming: bool = True
+    streaming: bool = False
 ) -> BenchmarkDataset:
     """
     Load deepset/prompt-injections dataset.
@@ -226,7 +230,9 @@ def load_deepset_dataset(
         injection_count = 0
         safe_count = 0
         
-        for sample in ds:
+        iterator = tqdm(ds, desc="Processing deepset", unit="samples", leave=False)
+        
+        for sample in iterator:
             label = sample.get("label", 0)
             text = sample.get("text", "")
             
@@ -391,7 +397,7 @@ def load_notinject_dataset(limit: Optional[int] = None) -> BenchmarkDataset:
     )
 
 
-def load_llmail_dataset(limit: Optional[int] = None, streaming: bool = True) -> BenchmarkDataset:
+def load_llmail_dataset(limit: Optional[int] = None, streaming: bool = False) -> BenchmarkDataset:
     """
     Load LLMail-Inject dataset (email-based injections).
     
@@ -427,8 +433,10 @@ def load_llmail_dataset(limit: Optional[int] = None, streaming: bool = True) -> 
             raise ValueError("No valid split found in LLMail dataset")
         
         texts = []
-        for i, sample in enumerate(ds):
-            if limit and i >= limit:
+        iterator = tqdm(ds, desc="Processing LLMail", unit="samples", leave=False)
+        
+        for sample in iterator:
+            if limit and len(texts) >= limit:
                 break
             
             # Try different field names
@@ -464,7 +472,7 @@ def load_llmail_dataset(limit: Optional[int] = None, streaming: bool = True) -> 
         )
 
 
-def load_browsesafe_dataset(limit: Optional[int] = None, streaming: bool = True) -> BenchmarkDataset:
+def load_browsesafe_dataset(limit: Optional[int] = None, streaming: bool = False) -> BenchmarkDataset:
     """
     Load BrowseSafe-Bench dataset (HTML-embedded attacks).
     
@@ -505,8 +513,11 @@ def load_browsesafe_dataset(limit: Optional[int] = None, streaming: bool = True)
         
         texts = []
         labels = []
-        for i, sample in enumerate(ds):
-            if limit and i >= limit:
+        
+        iterator = tqdm(ds, desc="Processing BrowseSafe", unit="samples", leave=False)
+        
+        for sample in iterator:
+            if limit and len(texts) >= limit:
                 break
             
             # BrowseSafe has 'content' field for HTML

@@ -14,7 +14,7 @@ import structlog
 logger = structlog.get_logger()
 
 
-class TfidfSvmBaseline:
+class TfidfSVMBaseline:
     """TF-IDF + SVM baseline classifier."""
     
     def __init__(self, max_features: int = 5000, C: float = 1.0):
