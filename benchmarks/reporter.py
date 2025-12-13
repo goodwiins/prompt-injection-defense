@@ -137,9 +137,14 @@ class BenchmarkReporter:
         print("BASELINE COMPARISONS:")
         
         # Use overall metrics for comparison
+        # Use overall metrics for comparison
         overall_metrics = BenchmarkMetrics(
             accuracy=self.results.overall_accuracy,
             false_positive_rate=self.results.overall_fpr,
+            false_negative_rate=self.results.overall_fnr,
+            precision=self.results.overall_precision,
+            recall=self.results.overall_recall,
+            f1_score=self.results.overall_f1,
             latency_p50=max(
                 m.latency_p50 for m in self.results.results.values()
             ) if self.results.results else 0

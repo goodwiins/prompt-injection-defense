@@ -76,6 +76,63 @@ class BenchmarkResults:
         return total_fp / total_negatives
     
     @property
+    def overall_fnr(self) -> float:
+        """Calculate weighted average FNR across datasets."""
+        if not self.results:
+            return 0.0
+        
+        total_positives = sum(
+            m.true_positives + m.false_negatives 
+            for m in self.results.values()
+        )
+        if total_positives == 0:
+            return 0.0
+        
+        total_fn = sum(m.false_negatives for m in self.results.values())
+        return total_fn / total_positives
+
+    @property
+    def overall_recall(self) -> float:
+        """Calculate weighted average Recall across datasets."""
+        if not self.results:
+            return 0.0
+        
+        total_positives = sum(
+            m.true_positives + m.false_negatives 
+            for m in self.results.values()
+        )
+        if total_positives == 0:
+            return 0.0
+        
+        total_tp = sum(m.true_positives for m in self.results.values())
+        return total_tp / total_positives
+
+    @property
+    def overall_precision(self) -> float:
+        """Calculate weighted average Precision across datasets."""
+        if not self.results:
+            return 0.0
+        
+        total_predicted_positives = sum(
+            m.true_positives + m.false_positives 
+            for m in self.results.values()
+        )
+        if total_predicted_positives == 0:
+            return 0.0
+        
+        total_tp = sum(m.true_positives for m in self.results.values())
+        return total_tp / total_predicted_positives
+
+    @property
+    def overall_f1(self) -> float:
+        """Calculate weighted average F1 across datasets."""
+        p = self.overall_precision
+        r = self.overall_recall
+        if p + r == 0:
+            return 0.0
+        return 2 * (p * r) / (p + r)
+    
+    @property
     def over_defense_rate(self) -> Optional[float]:
         """Get over-defense rate from NotInject dataset if available."""
         if "notinject" in self.results:
