@@ -573,7 +573,15 @@ class EmbeddingClassifier:
                     metadata = json.load(f)
                     self.threshold = metadata.get('threshold', self.threshold)
                     self.training_stats = metadata.get('training_stats', {})
-                    
+
+                    # Restore model_name and reload embedding model if different
+                    saved_model_name = metadata.get('model_name')
+                    if saved_model_name and saved_model_name != self.model_name:
+                        logger.info("Reloading embedding model from metadata",
+                                   old_model=self.model_name, new_model=saved_model_name)
+                        self.model_name = saved_model_name
+                        self.embedding_model = SentenceTransformer(self.model_name)
+
                     # Restore classes_ for proper probability column ordering
                     if 'classes_' in metadata:
                         self._saved_classes = metadata['classes_']
