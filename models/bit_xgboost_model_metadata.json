@@ -1,15 +1,13 @@
 {
   "model_name": "all-MiniLM-L6-v2",
-  "threshold": 0.4755237102508545,
+  "threshold": 0.766011118888855,
   "training_stats": {
     "train_auc": 1.0,
     "train_samples": 6300,
     "model_params": {
       "objective": "binary:logistic",
-      "base_score": [
-        0.21842106
-      ],
-      "booster": "gbtree",
+      "base_score": null,
+      "booster": null,
       "colsample_bylevel": null,
       "colsample_bynode": null,
       "colsample_bytree": 0.8,
@@ -48,31 +46,31 @@
       "verbosity": null,
       "use_label_encoder": false
     },
-    "val_auc": 0.9994812925170067,
+    "val_auc": 0.9998809523809523,
     "val_classification_report": {
       "0": {
-        "precision": 0.9835680751173709,
-        "recall": 0.9976190476190476,
-        "f1-score": 0.9905437352245863,
+        "precision": 0.9928741092636579,
+        "recall": 0.9952380952380953,
+        "f1-score": 0.9940546967895363,
         "support": 420.0
       },
       "1": {
-        "precision": 0.9963503649635036,
-        "recall": 0.975,
-        "f1-score": 0.9855595667870036,
+        "precision": 0.992831541218638,
+        "recall": 0.9892857142857143,
+        "f1-score": 0.9910554561717353,
         "support": 280.0
       },
-      "accuracy": 0.9885714285714285,
+      "accuracy": 0.9928571428571429,
       "macro avg": {
-        "precision": 0.9899592200404372,
-        "recall": 0.9863095238095239,
-        "f1-score": 0.988051651005795,
+        "precision": 0.9928528252411479,
+        "recall": 0.9922619047619048,
+        "f1-score": 0.9925550764806358,
         "support": 700.0
       },
       "weighted avg": {
-        "precision": 0.988680991055824,
-        "recall": 0.9885714285714285,
-        "f1-score": 0.9885500678495532,
+        "precision": 0.9928570820456499,
+        "recall": 0.9928571428571429,
+        "f1-score": 0.992855000542416,
         "support": 700.0
       }
     },
@@ -90,12 +88,12 @@
   "training_samples": 7000,
   "validation_samples": 1500,
   "test_results": {
-    "recall": 0.9883333333333333,
-    "fpr": 0.006666666666666667,
-    "notinject_fpr": 0.028,
+    "recall": 0.975,
+    "fpr": 0.0,
+    "notinject_fpr": 0.002,
     "notinject_fpr_ci": [
-      0.01675081930862122,
-      0.04644682058455155
+      0.000353127309584542,
+      0.011240992747195207
     ]
   },
   "is_trained": true

@@ -65,15 +65,15 @@ AVAILABLE_DATASETS = {
     },
     "agentdojo": {
         "name": "AgentDojo",
-        "source": "ethz-spylab/agentdojo",
-        "description": "97 multi-agent workflow injection scenarios (NeurIPS 2024)",
+        "source": "github:ethz-spylab/agentdojo",
+        "description": "97 multi-agent workflow injection scenarios (NeurIPS 2024) - requires pip install agentdojo",
         "type": "injection_only"
     },
     "tensortrust": {
         "name": "TensorTrust",
-        "source": "tensortrust/tensortrust-data",
-        "description": "126K+ human-generated adversarial examples",
-        "type": "mixed"
+        "source": "qxcv/tensor-trust", 
+        "description": "126K+ human-generated adversarial prompt injection examples",
+        "type": "injection_only"
     }
 }
 
@@ -488,9 +488,10 @@ def load_browsesafe_dataset(limit: Optional[int] = None, streaming: bool = False
     try:
         from datasets import load_dataset
         
+        # Use 'train' split for consistency with training data
         ds = load_dataset(
             "perplexity-ai/browsesafe-bench",
-            split="test",
+            split="train",
             streaming=streaming
         )
         
@@ -531,14 +532,20 @@ def load_browsesafe_dataset(limit: Optional[int] = None, streaming: bool = False
             # Extract text from HTML for fair comparison with training
             text = extract_text_from_html(html)
             
-            # Get label (1 for injection, 0 for safe)
-            label = sample.get("label", 1)
-            if isinstance(label, str):
-                label = 1 if label.lower() in ["yes", "1", "true", "malicious"] else 0
+            # Get label - BrowseSafe uses "yes"/"no" string format
+            # "yes" = malicious/injection (label=1)
+            # "no" = benign/safe (label=0)
+            raw_label = sample.get("label", "")
+            if isinstance(raw_label, str):
+                label = 1 if raw_label.lower() == "yes" else 0
+            elif isinstance(raw_label, (int, float)):
+                label = int(raw_label)
+            else:
+                label = 0  # Default to safe if unknown
             
             if text and text.strip():
                 texts.append(text)
-                labels.append(int(label))
+                labels.append(label)
         
         logger.info("BrowseSafe dataset loaded", samples=len(texts), 
                    injections=sum(labels), safe=len(labels)-sum(labels))
@@ -645,6 +652,134 @@ def load_deepset_injections_only(limit: Optional[int] = None) -> BenchmarkDatase
     )
 
 
+def load_agentdojo_dataset(limit: Optional[int] = None, streaming: bool = False) -> BenchmarkDataset:
+    """
+    Load AgentDojo dataset (multi-agent workflow injection scenarios).
+    
+    AgentDojo contains 97 multi-agent workflow injection scenarios
+    from the NeurIPS 2024 paper by ETH Zurich.
+    
+    NOTE: AgentDojo is a framework, not a HuggingFace dataset.
+    Install with: pip install agentdojo
+    
+    Args:
+        limit: Maximum number of samples to load
+        streaming: Use streaming mode (ignored for this dataset)
+        
+    Returns:
+        BenchmarkDataset with multi-agent injection samples (all label=1)
+    """
+    logger.info("Loading AgentDojo dataset", limit=limit)
+    
+    # Try to import from pip package first
+    try:
+        from agentdojo.agent_pipeline import AgentPipeline
+        from agentdojo.default_suites import load_suite
+        
+        texts = []
+        
+        # Load injection tasks from the framework
+        for suite_name in ["workspace", "banking", "travel"]:
+            try:
+                suite = load_suite(suite_name)
+                for task in suite.tasks:
+                    if hasattr(task, 'injection') and task.injection:
+                        if isinstance(task.injection, str):
+                            texts.append(task.injection)
+                        elif hasattr(task.injection, 'content'):
+                            texts.append(task.injection.content)
+                    if limit and len(texts) >= limit:
+                        break
+                if limit and len(texts) >= limit:
+                    break
+            except Exception:
+                continue
+        
+        if texts:
+            labels = [1] * len(texts)
+            logger.info("AgentDojo dataset loaded from pip package", samples=len(texts))
+            return BenchmarkDataset(
+                name="AgentDojo",
+                source="pip:agentdojo",
+                texts=texts,
+                labels=labels,
+                metadata={"dataset_type": "injection_only", "domain": "multi-agent"}
+            )
+    except ImportError:
+        pass
+    
+    # Fallback: return empty with helpful message
+    error_msg = "AgentDojo is a framework, not a HuggingFace dataset. Install with: pip install agentdojo"
+    logger.warning(error_msg)
+    return BenchmarkDataset(
+        name="AgentDojo (Not Installed)",
+        source="github:ethz-spylab/agentdojo",
+        metadata={"error": error_msg, "install": "pip install agentdojo"}
+    )
+
+
+def load_tensortrust_dataset(limit: Optional[int] = None, streaming: bool = False) -> BenchmarkDataset:
+    """
+    Load TensorTrust dataset (human-generated adversarial examples).
+    
+    TensorTrust contains 126K+ human-generated prompt injection attacks
+    collected from a gamified red-teaming platform (ICLR 2024).
+    
+    Args:
+        limit: Maximum number of samples to load
+        streaming: Use streaming mode
+        
+    Returns:
+        BenchmarkDataset with attack samples (all label=1)
+    """
+    logger.info("Loading TensorTrust dataset", limit=limit)
+    
+    try:
+        from datasets import load_dataset
+        
+        # Load from the raw attacks file which has proper structure
+        ds = load_dataset(
+            "qxcv/tensor-trust",
+            data_files="raw-data/v1/raw_dump_attacks.jsonl.bz2",
+            split="train",
+            streaming=streaming
+        )
+        
+        texts = []
+        
+        iterator = tqdm(ds, desc="Processing TensorTrust", unit="samples", leave=False)
+        
+        for sample in iterator:
+            if limit and len(texts) >= limit:
+                break
+            
+            # TensorTrust raw attacks use 'attacker_input' field
+            text = sample.get("attacker_input", "")
+            
+            if text and text.strip() and len(text) > 5:  # Filter very short inputs
+                texts.append(text)
+        
+        # All samples are attacks (label=1)
+        labels = [1] * len(texts)
+        
+        logger.info("TensorTrust dataset loaded", samples=len(texts))
+        
+        return BenchmarkDataset(
+            name="TensorTrust",
+            source="qxcv/tensor-trust",
+            texts=texts,
+            labels=labels,
+            metadata={"dataset_type": "injection_only", "domain": "gamified-redteam"}
+        )
+        
+    except Exception as e:
+        logger.error("Failed to load TensorTrust dataset", error=str(e))
+        return BenchmarkDataset(
+            name="TensorTrust (Failed)",
+            source="qxcv/tensor-trust",
+            metadata={"error": str(e)}
+        )
+
 def load_all_datasets(
     limit_per_dataset: Optional[int] = None,
     include_datasets: Optional[List[str]] = None
@@ -669,6 +804,8 @@ def load_all_datasets(
         "notinject_hf": lambda: load_notinject_hf_dataset(limit=limit_per_dataset),
         "llmail": lambda: load_llmail_dataset(limit=limit_per_dataset),
         "browsesafe": lambda: load_browsesafe_dataset(limit=limit_per_dataset),
+        "agentdojo": lambda: load_agentdojo_dataset(limit=limit_per_dataset),
+        "tensortrust": lambda: load_tensortrust_dataset(limit=limit_per_dataset),
     }
     
     for name, loader in loaders.items():

@@ -2,7 +2,7 @@ import structlog
 import sys
 from src.detection.ensemble import InjectionDetector
 from src.coordination.agent_factory import AgentFactory
-from src.response.quarantine import QuarantineProtocol
+from src.response.quarantine import QuarantineManager
 from src.coordination.messaging import SecureMessage, OVONContent
 
 # Configure structured logging
@@ -30,7 +30,7 @@ def main():
         )
         
         # Response Layer
-        quarantine = QuarantineProtocol()
+        quarantine = QuarantineManager()
         
         # Coordination Layer
         factory = AgentFactory()

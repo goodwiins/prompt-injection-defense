@@ -1,0 +1,114 @@
+{
+  "model_name": "all-MiniLM-L6-v2",
+  "threshold": 0.4169920086860657,
+  "paper_configuration": {
+    "total_samples": 10240,
+    "train_samples": 8192,
+    "test_samples": 2048,
+    "injection_pct": 0.4,
+    "safe_pct": 0.4,
+    "benign_trigger_pct": 0.2,
+    "random_seed": 42,
+    "train_test_split": "80/20"
+  },
+  "bit_composition": {
+    "injections": 0.4,
+    "safe": 0.4,
+    "benign_triggers": 0.2
+  },
+  "sample_weights": {
+    "benign_trigger": 2.0,
+    "other": 1.0
+  },
+  "training_stats": {
+    "train_auc": 1.0,
+    "train_samples": 6266,
+    "model_params": {
+      "objective": "binary:logistic",
+      "base_score": null,
+      "booster": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.8,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": "auc",
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": 0.1,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.05,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 6,
+      "max_leaves": null,
+      "min_child_weight": 1,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 300,
+      "n_jobs": -1,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": 0.01,
+      "reg_lambda": 1,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.8,
+      "tree_method": "hist",
+      "validate_parameters": null,
+      "verbosity": null,
+      "use_label_encoder": false
+    },
+    "val_auc": 0.9952839086964724,
+    "val_classification_report": {
+      "0": {
+        "precision": 0.9630484988452656,
+        "recall": 0.9976076555023924,
+        "f1-score": 0.9800235017626322,
+        "support": 418.0
+      },
+      "1": {
+        "precision": 0.9962121212121212,
+        "recall": 0.942652329749104,
+        "f1-score": 0.9686924493554327,
+        "support": 279.0
+      },
+      "accuracy": 0.975609756097561,
+      "macro avg": {
+        "precision": 0.9796303100286934,
+        "recall": 0.9701299926257482,
+        "f1-score": 0.9743579755590325,
+        "support": 697.0
+      },
+      "weighted avg": {
+        "precision": 0.9763234638959869,
+        "recall": 0.975609756097561,
+        "f1-score": 0.9754878294217302,
+        "support": 697.0
+      }
+    },
+    "val_samples": 697
+  },
+  "test_results": {
+    "accuracy": 0.98095703125,
+    "recall": 0.960927960927961,
+    "precision": 0.9911838790931989,
+    "fpr": 0.005695687550854353,
+    "samples": 2048
+  },
+  "notinject_results": {
+    "fpr": 0.022,
+    "ci_low": 0.01232788016714588,
+    "ci_high": 0.03896125514839773,
+    "samples": 500,
+    "false_positives": 11
+  },
+  "is_trained": true,
+  "paper_aligned": true
+}

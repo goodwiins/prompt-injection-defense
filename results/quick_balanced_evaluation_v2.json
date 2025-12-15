@@ -1,0 +1,85 @@
+{
+  "model": "bit_xgboost_balanced",
+  "threshold": 0.764,
+  "date": "2025-12-13 17:23:11",
+  "sampling_info": {
+    "satml": "2000/136000 samples",
+    "llmail": "2000/370000 samples",
+    "deepset": "Full dataset",
+    "notinject": "247 samples"
+  },
+  "datasets": {
+    "deepset_benign": {
+      "dataset": "deepset_benign",
+      "samples": 343,
+      "accuracy": 0.4402332361516035,
+      "recall": 0,
+      "precision": 0.0,
+      "f1": 0,
+      "fpr": 0.5597667638483965,
+      "fnr": 0,
+      "auc": 0.0,
+      "confusion_matrix": {
+        "tn": 151,
+        "fp": 192,
+        "fn": 0,
+        "tp": 0
+      },
+      "duration_ms": 359.48920249938965
+    },
+    "deepset_injections": {
+      "dataset": "deepset_injections",
+      "samples": 203,
+      "accuracy": 1.0,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "fpr": 0,
+      "fnr": 0.0,
+      "auc": 0.0,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "tp": 203
+      },
+      "duration_ms": 509.9320411682129
+    },
+    "NotInject": {
+      "dataset": "NotInject",
+      "samples": 247,
+      "accuracy": 1.0,
+      "recall": 0,
+      "precision": 0,
+      "f1": 0,
+      "fpr": 0.0,
+      "fnr": 0,
+      "auc": 0.0,
+      "confusion_matrix": {
+        "tn": 247,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "duration_ms": 124.37891960144043
+    },
+    "Overall": {
+      "dataset": "Overall",
+      "samples": 4793,
+      "accuracy": 0.9125808470686417,
+      "recall": 0.9459909588389246,
+      "precision": 0.9539347408829175,
+      "f1": 0.9499462429817226,
+      "fpr": 0.3254237288135593,
+      "fnr": 0.054009041161075425,
+      "auc": 0.8482593143718974,
+      "confusion_matrix": {
+        "tn": 398,
+        "fp": 192,
+        "fn": 227,
+        "tp": 3976
+      },
+      "duration_ms": 20982.606172561646
+    }
+  }
+}

@@ -476,20 +476,41 @@ def optimize_threshold(classifier, X_val: List[str], y_val: List[int], target_re
 
 def main():
     """Main BIT training function."""
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Train BIT model for prompt injection detection")
+    parser.add_argument(
+        "--include-browsesafe", 
+        action="store_true",
+        help="Include BrowseSafe HTML dataset in training (adds ~2K attacks + ~2K benign)"
+    )
+    parser.add_argument(
+        "--output",
+        type=str,
+        default="models/bit_xgboost_model.json",
+        help="Output model path (default: models/bit_xgboost_model.json)"
+    )
+    args = parser.parse_args()
+    
+    include_browsesafe = args.include_browsesafe
+    model_output_path = args.output
+    
     print("=" * 60)
     print("BIT Training: Balanced Intent Training")
     print("Paper: 40% injections, 40% safe, 20% benign-triggers")
     print("Weighted loss: benign-triggers = 2.0x")
+    if include_browsesafe:
+        print("🌐 Including BrowseSafe HTML dataset")
     print("=" * 60)
     
     # Collect all samples
     all_samples = []
     
     # 1. Load attack samples (40%)
-    all_samples.extend(load_attack_samples(target_count=4000))
+    all_samples.extend(load_attack_samples(target_count=4000, include_browsesafe=include_browsesafe))
     
     # 2. Load diverse benign samples (40%)
-    all_samples.extend(load_diverse_benign_samples(target_count=4000))
+    all_samples.extend(load_diverse_benign_samples(target_count=4000, include_browsesafe=include_browsesafe))
     
     # 3. Generate NotInject benign-trigger samples (20%)
     print("\n📝 Generating NotInject benign-trigger samples...")
@@ -607,7 +628,7 @@ def main():
         print("   ❌ FAIL - Exceeds acceptable FPR")
     
     # Save model
-    model_path = "models/bit_xgboost_model.json"
+    model_path = model_output_path  # Use CLI-specified path
     classifier.save_model(model_path)
     
     # Update metadata with correct values

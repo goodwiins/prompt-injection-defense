@@ -1,0 +1,46 @@
+{
+  "model": "bit_xgboost_theta_764",
+  "threshold": 0.764,
+  "date": "2025-12-14 23:29:07",
+  "datasets": {
+    "deepset_benign": {
+      "fpr": 0.13411078717201166,
+      "fp": 46,
+      "tn": 297,
+      "samples": 343
+    },
+    "deepset_injections": {
+      "recall": 0.35960591133004927,
+      "tp": 73,
+      "fn": 130,
+      "samples": 203
+    },
+    "NotInject": {
+      "fpr": 0.08502024291497975,
+      "fp": 21,
+      "tn": 226,
+      "samples": 247
+    },
+    "SaTML": {
+      "recall": 0.742,
+      "tp": 742,
+      "fn": 258,
+      "samples": 1000
+    },
+    "LLMail": {
+      "recall": 0.663,
+      "tp": 663,
+      "fn": 337,
+      "samples": 1000
+    }
+  },
+  "targets_met": false,
+  "summary": {
+    "model_ready": "\u274c Needs improvement",
+    "strengths": [],
+    "weaknesses": [
+      "Poor performance on SaTML dataset",
+      "Poor performance on LLMail dataset"
+    ]
+  }
+}

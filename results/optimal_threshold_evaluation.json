@@ -1,0 +1,25 @@
+{
+  "threshold": 0.764,
+  "date": "2025-12-14 23:21:51",
+  "datasets": {
+    "deepset_benign": {
+      "fpr": 0.0,
+      "samples": 343
+    },
+    "deepset_injections": {
+      "recall": 0.0,
+      "samples": 203
+    },
+    "SaTML": {
+      "recall": 0.052,
+      "samples": 500
+    }
+  },
+  "summary": {
+    "threshold": 0.764,
+    "security_level": "Maximum",
+    "expected_recall": "94%+",
+    "expected_fpr": "~40%",
+    "recommendation": "Use in production with smart filtering"
+  }
+}

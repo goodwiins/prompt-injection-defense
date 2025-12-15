@@ -1,0 +1,115 @@
+{
+  "model": "bit_distilbert_balanced",
+  "base_model": "distilbert-base-uncased",
+  "threshold": 0.9968358874320984,
+  "date": "2025-12-14 19:18:58",
+  "datasets": {
+    "deepset_benign": {
+      "dataset": "deepset_benign",
+      "samples": 343,
+      "accuracy": 1.0,
+      "recall": 0,
+      "precision": 0,
+      "f1": 0,
+      "fpr": 0.0,
+      "fnr": 0,
+      "auc": 0.0,
+      "confusion_matrix": {
+        "tn": 343,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "duration_ms": 876.2011528015137,
+      "threshold": 0.9968358874320984
+    },
+    "deepset_injections": {
+      "dataset": "deepset_injections",
+      "samples": 203,
+      "accuracy": 0.0,
+      "recall": 0.0,
+      "precision": 0,
+      "f1": 0,
+      "fpr": 0,
+      "fnr": 1.0,
+      "auc": 0.0,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 0,
+        "fn": 203,
+        "tp": 0
+      },
+      "duration_ms": 1867.4280643463135,
+      "threshold": 0.9968358874320984
+    },
+    "NotInject": {
+      "dataset": "NotInject",
+      "samples": 247,
+      "accuracy": 1.0,
+      "recall": 0,
+      "precision": 0,
+      "f1": 0,
+      "fpr": 0.0,
+      "fnr": 0,
+      "auc": 0.0,
+      "confusion_matrix": {
+        "tn": 247,
+        "fp": 0,
+        "fn": 0,
+        "tp": 0
+      },
+      "duration_ms": 224.84111785888672,
+      "threshold": 0.9968358874320984
+    },
+    "SaTML": {
+      "dataset": "SaTML",
+      "samples": 1000,
+      "accuracy": 0.003,
+      "recall": 0.003,
+      "precision": 1.0,
+      "f1": 0.005982053838484547,
+      "fpr": 0,
+      "fnr": 0.997,
+      "auc": 0.0,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 0,
+        "fn": 997,
+        "tp": 3
+      },
+      "duration_ms": 16815.20104408264,
+      "threshold": 0.9968358874320984
+    },
+    "Overall": {
+      "dataset": "Overall",
+      "samples": 1793,
+      "accuracy": 0.33073061907417733,
+      "recall": 0.0024937655860349127,
+      "precision": 1.0,
+      "f1": 0.004975124378109453,
+      "fpr": 0.0,
+      "fnr": 0.9975062344139651,
+      "auc": 0.8470011412147598,
+      "confusion_matrix": {
+        "tn": 590,
+        "fp": 0,
+        "fn": 1200,
+        "tp": 3
+      },
+      "duration_ms": 18081.444025039673,
+      "threshold": 0.9968358874320984
+    }
+  },
+  "training_info": {
+    "safe_benign_samples": 1333,
+    "benign_with_triggers": 667,
+    "malicious_samples": 2000,
+    "total_samples": 4000,
+    "benign_ratio": 0.5,
+    "malicious_ratio": 0.5
+  },
+  "comparison_with_minilm": {
+    "available": true,
+    "minilm_file": "results/balanced_v2_evaluation.json"
+  }
+}

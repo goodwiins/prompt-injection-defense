@@ -71,7 +71,7 @@ Examples:
     dataset_group.add_argument(
         "--datasets",
         nargs="+",
-        choices=["satml", "deepset", "deepset_injections", "notinject", "notinject_hf", "llmail", "browsesafe"],
+        choices=["satml", "deepset", "deepset_injections", "notinject", "notinject_hf", "llmail", "browsesafe", "agentdojo", "tensortrust"],
         help="Specific datasets to benchmark"
     )
     dataset_group.add_argument(
@@ -98,7 +98,7 @@ Examples:
     parser.add_argument(
         "--threshold",
         type=float,
-        default=0.5,
+        default=0.764,
         help="Classification threshold (default: 0.5)"
     )
     parser.add_argument(

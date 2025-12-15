@@ -61,20 +61,15 @@ class EmbeddingClassifier:
         self._load_models()
 
     def _load_models(self):
-        """Load the embedding model and try to load a trained classifier."""
+        """Load the embedding model and initialize classifier."""
         logger.info("Loading embedding model", model=self.model_name)
         try:
             self.embedding_model = SentenceTransformer(self.model_name)
 
-            # Try to load a pre-trained classifier
-            model_path = self.model_dir / f"{self.model_name}_classifier.json"
-            if model_path.exists():
-                self.load_model(str(model_path))
-                logger.info("Pre-trained model loaded", path=model_path)
-            else:
-                # Initialize classifier with optimized parameters
-                self.classifier = xgb.XGBClassifier(**self.xgb_params)
-                logger.info("Initialized new classifier", params=self.xgb_params)
+            # Initialize classifier with optimized parameters (don't auto-load)
+            # Users should explicitly call load_model() for trained models
+            self.classifier = xgb.XGBClassifier(**self.xgb_params)
+            logger.info("Initialized new classifier", params=self.xgb_params)
 
         except Exception as e:
             logger.error("Failed to load models", error=str(e))
@@ -417,7 +412,24 @@ class EmbeddingClassifier:
         embeddings = self.embed(texts)
 
         try:
-            return self.classifier.predict_proba(embeddings)
+            # Get probabilities
+            probs = self.classifier.predict_proba(embeddings)
+            
+            # Robustly handle class ordering
+            # XGBoost might order classes as [1, 0] or [0, 1] depending on training data
+            # Check saved classes first (from loaded model), then classifier's classes_
+            classes = None
+            if hasattr(self, '_saved_classes') and self._saved_classes is not None:
+                classes = self._saved_classes
+            elif hasattr(self.classifier, 'classes_'):
+                classes = list(self.classifier.classes_)
+            
+            if classes == [1, 0]:
+                # If classes are inverted [1, 0], then column 0 is class 1 (injection)
+                # We need column 1 to be class 1, so we swap columns
+                probs = probs[:, [1, 0]]
+            
+            return probs
         except Exception as e:
             # Fallback: Use underlying booster if sklearn wrapper fails
             if hasattr(self.classifier, "get_booster"):
@@ -484,6 +496,25 @@ class EmbeddingClassifier:
         self.is_trained = True
         logger.info("Training complete")
 
+    def _convert_to_native_types(self, obj):
+        """
+        Recursively convert numpy types to native Python types for JSON serialization.
+        """
+        if isinstance(obj, dict):
+            return {k: self._convert_to_native_types(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [self._convert_to_native_types(v) for v in obj]
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        elif isinstance(obj, (np.float32, np.float64, np.floating)):
+            return float(obj)
+        elif isinstance(obj, (np.int32, np.int64, np.integer)):
+            return int(obj)
+        elif isinstance(obj, np.bool_):
+            return bool(obj)
+        else:
+            return obj
+
     def save_model(self, path: str, save_metadata: bool = True):
         """
         Save the trained classifier to a file with metadata.
@@ -504,6 +535,13 @@ class EmbeddingClassifier:
                 'xgb_params': self.xgb_params,
                 'is_trained': self.is_trained
             }
+            
+            # Save classes_ for proper probability column ordering after load
+            if hasattr(self.classifier, 'classes_'):
+                metadata['classes_'] = list(self.classifier.classes_)
+            
+            # Convert numpy types to native Python types for JSON serialization
+            metadata = self._convert_to_native_types(metadata)
 
             metadata_path = path.replace('.json', '_metadata.json')
             with open(metadata_path, 'w') as f:
@@ -535,5 +573,17 @@ class EmbeddingClassifier:
                     metadata = json.load(f)
                     self.threshold = metadata.get('threshold', self.threshold)
                     self.training_stats = metadata.get('training_stats', {})
+                    
+                    # Restore classes_ for proper probability column ordering
+                    if 'classes_' in metadata:
+                        self._saved_classes = metadata['classes_']
+                        logger.debug("Restored classes_", classes=metadata['classes_'])
+                    else:
+                        # Default to standard ordering if not saved
+                        self._saved_classes = [0, 1]
+                        logger.debug("Using default classes_ [0, 1]")
+            else:
+                # No metadata - use default class ordering
+                self._saved_classes = [0, 1]
 
         logger.info("Model loaded", path=path, is_trained=self.is_trained)
