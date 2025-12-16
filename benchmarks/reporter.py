@@ -61,14 +61,14 @@ class BenchmarkReporter:
         print(f"Detector: {self.results.metadata.get('detector_type', 'N/A')}")
         print(f"Threshold: {self.results.metadata.get('threshold', 0.5)}")
         print(f"Timestamp: {self.results.metadata.get('timestamp', 'N/A')}")
-        print("─" * 80)
+        print("─" * 120)
     
     def _print_summary_table(self) -> None:
         """Print dataset summary table."""
         # Header
         print(f"\n{'Dataset':<25} {'Accuracy':>10} {'Precision':>10} {'Recall':>10} "
-              f"{'F1':>8} {'FPR':>8} {'Lat(P95)':>10}")
-        print("─" * 80)
+              f"{'F1':>8} {'FPR':>8} {'TNR':>8} {'B.Acc':>8} {'MCC':>8} {'PR-AUC':>8} {'Lat(P95)':>10}")
+        print("─" * 120)
         
         # Data rows
         for name, metrics in self.results.results.items():
@@ -77,6 +77,10 @@ class BenchmarkReporter:
             rec = f"{metrics.recall:.1%}" if metrics.recall > 0 else "N/A"
             f1 = f"{metrics.f1_score:.1%}" if metrics.f1_score > 0 else "N/A"
             fpr = f"{metrics.false_positive_rate:.1%}"
+            tnr = f"{metrics.tnr:.1%}"
+            balanced_acc = f"{metrics.balanced_accuracy:.1%}"
+            mcc = f"{metrics.mcc:.3f}"
+            pr_auc = f"{metrics.pr_auc:.3f}"
             lat = f"{metrics.latency_p95:.1f}ms"
             
             # Highlight NotInject for over-defense
@@ -86,9 +90,9 @@ class BenchmarkReporter:
                 name_display = name
             
             print(f"{name_display:<25} {acc:>10} {prec:>10} {rec:>10} "
-                  f"{f1:>8} {fpr:>8} {lat:>10}")
+                  f"{f1:>8} {fpr:>8} {tnr:>8} {balanced_acc:>8} {mcc:>8} {pr_auc:>8} {lat:>10}")
         
-        print("─" * 80)
+        print("─" * 120)
     
     def _print_overall_metrics(self) -> None:
         """Print overall aggregated metrics."""
@@ -100,7 +104,7 @@ class BenchmarkReporter:
     
     def _print_target_status(self) -> None:
         """Print status of target thresholds."""
-        print("\n" + "─" * 80)
+        print("\n" + "─" * 120)
         print("TARGET STATUS:")
         
         # Accuracy target
@@ -133,7 +137,7 @@ class BenchmarkReporter:
     
     def _print_baseline_comparison(self) -> None:
         """Print comparison against industry baselines."""
-        print("\n" + "─" * 80)
+        print("\n" + "─" * 120)
         print("BASELINE COMPARISONS:")
         
         # Use overall metrics for comparison
@@ -186,14 +190,16 @@ class BenchmarkReporter:
         
         # Summary table
         lines.append("## Dataset Results\n")
-        lines.append("| Dataset | Accuracy | Precision | Recall | F1 | FPR | Latency (P95) |")
-        lines.append("|---------|----------|-----------|--------|----|-----|---------------|")
+        lines.append("| Dataset | Accuracy | Precision | Recall | F1 | FPR | TNR | Balanced Accuracy | MCC | PR-AUC | Latency (P95) |")
+        lines.append("|---------|----------|-----------|--------|----|-----|-----|-------------------|-----|--------|---------------|")
         
         for name, metrics in self.results.results.items():
             lines.append(
                 f"| {name} | {metrics.accuracy:.1%} | {metrics.precision:.1%} | "
                 f"{metrics.recall:.1%} | {metrics.f1_score:.1%} | "
-                f"{metrics.false_positive_rate:.1%} | {metrics.latency_p95:.1f}ms |"
+                f"{metrics.false_positive_rate:.1%} | {metrics.tnr:.1%} | "
+                f"{metrics.balanced_accuracy:.1%} | {metrics.mcc:.3f} | "
+                f"{metrics.pr_auc:.3f} | {metrics.latency_p95:.1f}ms |"
             )
         
         # Overall

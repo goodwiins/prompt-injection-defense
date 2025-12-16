@@ -10,7 +10,8 @@ from dataclasses import dataclass, field
 import numpy as np
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score,
-    roc_auc_score, confusion_matrix, precision_recall_curve
+    roc_auc_score, confusion_matrix, precision_recall_curve,
+    auc, matthews_corrcoef, balanced_accuracy_score
 )
 import structlog
 
@@ -34,6 +35,10 @@ class BenchmarkMetrics:
     
     # Ranking metrics
     roc_auc: float = 0.0
+    pr_auc: float = 0.0
+    mcc: float = 0.0
+    balanced_accuracy: float = 0.0
+    tnr: float = 0.0
     
     # Custom metrics
     tivs: float = 0.0  # Total Injection Vulnerability Score
@@ -68,6 +73,10 @@ class BenchmarkMetrics:
             "false_positive_rate": round(self.false_positive_rate, 4),
             "false_negative_rate": round(self.false_negative_rate, 4),
             "roc_auc": round(self.roc_auc, 4),
+            "pr_auc": round(self.pr_auc, 4),
+            "mcc": round(self.mcc, 4),
+            "balanced_accuracy": round(self.balanced_accuracy, 4),
+            "tnr": round(self.tnr, 4),
             "tivs": round(self.tivs, 4),
             "over_defense_rate": round(self.over_defense_rate, 4),
             "latency": {
@@ -164,6 +173,14 @@ def calculate_metrics(
         # Error rates
         metrics.false_positive_rate = fp / (fp + tn) if (fp + tn) > 0 else 0
         metrics.false_negative_rate = fn / (fn + tp) if (fn + tp) > 0 else 0
+        
+        # True Negative Rate (Specificity)
+        metrics.tnr = tn / (tn + fp) if (tn + fp) > 0 else 0
+        
+        # Balanced Accuracy and MCC
+        metrics.balanced_accuracy = balanced_accuracy_score(true_labels, predictions)
+        metrics.mcc = matthews_corrcoef(true_labels, predictions)
+        
     except Exception as e:
         logger.warning("Error calculating confusion matrix", error=str(e))
     
@@ -171,6 +188,11 @@ def calculate_metrics(
     if scores is not None and len(set(true_labels)) > 1:
         try:
             metrics.roc_auc = roc_auc_score(true_labels, scores)
+            
+            # PR-AUC
+            precision, recall, _ = precision_recall_curve(true_labels, scores)
+            metrics.pr_auc = auc(recall, precision)
+            
         except Exception as e:
             logger.warning("Error calculating ROC-AUC", error=str(e))
     

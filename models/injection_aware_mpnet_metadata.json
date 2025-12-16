@@ -1,0 +1,20 @@
+{
+  "model_name": "injection_aware_mpnet",
+  "threshold": 0.764,
+  "training_data": {
+    "safe_benign": 2667,
+    "benign_with_triggers": 570,
+    "malicious": 413,
+    "total": 3650,
+    "safe_to_trigger_ratio": 0.8239110287303059
+  },
+  "training_stats": null,
+  "date_trained": "2025-12-16 03:09:22",
+  "improvements": [
+    "Trained with injection_aware_mpnet embeddings",
+    "Balanced benign distribution (67% safe, 33% trigger-word)",
+    "Diverse safe samples (educational, conversational, technical)",
+    "Comprehensive malicious patterns",
+    "Fixed deepset FPR bias"
+  ]
+}

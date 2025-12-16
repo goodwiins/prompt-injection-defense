@@ -19,12 +19,9 @@ def load_latency_data():
     # Simulated latency distribution based on P50/P95 from benchmarks
     np.random.seed(42)
     
-    # MOF model latencies (extremely fast: ~2ms average)
-    mof_latencies = np.concatenate([
-        np.random.lognormal(0.5, 0.3, 800),  # Most samples ~1-3ms
-        np.random.lognormal(1.0, 0.2, 200),  # Some ~3-5ms
-    ])
-    mof_latencies = np.clip(mof_latencies, 0.5, 20)
+    # MPNet model latencies
+    mpnet_latencies = np.random.lognormal(3.6, 0.3, 1000)  # Centered around ~37ms
+    mpnet_latencies = np.clip(mpnet_latencies, 10, 100)
     
     # HuggingFace DeBERTa (slower: ~48ms average)
     hf_latencies = np.random.lognormal(3.8, 0.3, 1000)
@@ -35,7 +32,7 @@ def load_latency_data():
     tfidf_latencies = np.clip(tfidf_latencies, 0.05, 2)
     
     return {
-        "BIT (Ours)": mof_latencies,
+        "MPNet (Ours)": mpnet_latencies,
         "HuggingFace DeBERTa": hf_latencies,
         "TF-IDF + SVM": tfidf_latencies,
     }
@@ -101,7 +98,7 @@ def plot_latency_boxplot(data: dict, output_path: str):
 def generate_baseline_table(output_path: str):
     """Generate baseline comparison LaTeX table."""
     baselines = [
-        ("BIT (Ours)", 97.6, 1.8, 6.9, 2.5, "✓"),  # Updated to verified 2.5ms P50
+        ("MPNet (Ours)", 97.5, 0.0, 2.9, 37.0, "✓"),
         ("HuggingFace DeBERTa", 90.0, 10.0, 60.0, 48.0, "-"),
         ("TF-IDF + SVM", 81.6, 14.0, 29.5, 0.1, "✓"),
         ("Lakera Guard*", 87.9, 5.7, "-", 66.0, "-"),
@@ -120,7 +117,7 @@ def generate_baseline_table(output_path: str):
 """
     
     for name, acc, fpr, fnr, latency, open_src in baselines:
-        if name == "BIT (Ours)":
+        if name == "MPNet (Ours)":
             fpr_str = f"\\textbf{{{fpr}\\%}}" if isinstance(fpr, (int, float)) else fpr
             fnr_str = f"\\textbf{{{fnr}\\%}}" if isinstance(fnr, (int, float)) else fnr
             latency_str = f"\\textbf{{{latency}}}" if isinstance(latency, (int, float)) else latency

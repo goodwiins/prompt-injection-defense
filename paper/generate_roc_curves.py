@@ -114,7 +114,7 @@ def main():
     # Load detector
     print("\nLoading models...")
     detector = EmbeddingClassifier()
-    detector.load_model("models/bit_classifier.json")
+    detector.load_model("models/injection_aware_mpnet_classifier.json")
     
     # Load deepset dataset
     print("\nLoading deepset dataset...")
@@ -141,7 +141,7 @@ def main():
     embedding_scores = mof_scores  # In practice, same for this setup
     
     results = {
-        "BIT (Ours)": {"labels": labels, "scores": mof_scores},
+        "MPNet (Ours)": {"labels": labels, "scores": mof_scores},
         "Keyword Baseline": {"labels": labels, "scores": keyword_scores},
     }
     

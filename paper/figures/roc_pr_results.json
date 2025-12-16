@@ -1,7 +1,7 @@
 {
-  "BIT (Ours)": {
-    "roc_auc": 0.9986258379602979,
-    "pr_auc": 0.9972536467246444
+  "MPNet (Ours)": {
+    "roc_auc": 1.0,
+    "pr_auc": 1.0
   },
   "Keyword Baseline": {
     "roc_auc": 0.6019108280254777,

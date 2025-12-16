@@ -45,7 +45,7 @@
 \maketitle
 
 \begin{abstract}
-Large Language Model (LLM) agents are increasingly deployed in multi-agent systems where they interact with untrusted users and other agents. This expands the attack surface for prompt injection, allowing malicious instructions to propagate through the system---a phenomenon known as ``prompt infection.'' Existing defenses often focus on single-turn interactions or suffer from high false positive rates (over-defense) on benign prompts containing trigger words. We propose a comprehensive three-layer defense framework (Detection, Coordination, Response) designed specifically for multi-agent environments. Our system features an ensemble detector combining semantic embeddings with heuristic patterns, trained using a \textbf{Balanced Intent Training (BIT)} strategy to minimize over-defense. We evaluate our approach on text-based prompt injection benchmarks (SaTML, deepset, LLMail, NotInject, N=1,042), achieving \textbf{97.6\% accuracy}, \textbf{92.6--100\% recall} across attack datasets, and \textbf{1.8\% FPR} [95\% CI: 0.8--3.4\%] on the NotInject over-defense benchmark (n=339). In preliminary evaluation against GCG/AutoDAN adaptive attacks (n=36), we observe \textbf{27.8\% ASR} [95\% CI: 15.9--44.0\%]---lower than literature baselines (>50\%), though larger-scale validation is needed. We identify HTML-embedded attacks (BrowseSafe) as out-of-scope for text embedding approaches, highlighting the need for modality-specific detectors. By decoupling semantic intent from keyword presence, BIT effectively mitigates the ``over-defense'' problem common in keyword-based systems. Our system operates with \textbf{1.9--4.2ms latency} (P50: 2.5ms, P95: 4.2ms) on standard CPU hardware, making it suitable for real-time applications.
+Large Language Model (LLM) agents are increasingly deployed in multi-agent systems where they interact with untrusted users and other agents. This expands the attack surface for prompt injection, allowing malicious instructions to propagate through the system---a phenomenon known as ``prompt infection.'' Existing defenses often focus on single-turn interactions or suffer from high false positive rates (over-defense) on benign prompts containing trigger words. We propose a comprehensive three-layer defense framework (Detection, Coordination, Response) designed specifically for multi-agent environments. Our system features an ensemble detector combining semantic embeddings with heuristic patterns, trained using a \textbf{Injection-Aware MPNet} strategy to minimize over-defense. We evaluate our approach on text-based prompt injection benchmarks (SaTML, deepset, LLMail, NotInject), achieving \textbf{97.5\% accuracy}, \textbf{97.1\% recall} across attack datasets, and \textbf{0.0\% FPR} on the NotInject over-defense benchmark. We identify HTML-embedded attacks (BrowseSafe) as out-of-scope for text embedding approaches, highlighting the need for modality-specific detectors. By decoupling semantic intent from keyword presence, Injection-Aware MPNet effectively mitigates the ``over-defense'' problem common in keyword-based systems. Our system operates with a P50 latency of \textbf{37ms} on standard CPU hardware, making it suitable for real-time applications.
 \end{abstract}
 
 \section{Introduction}
@@ -63,8 +63,8 @@ To address these gaps, we present a \textbf{Multi-Layer Defense System} that sec
 
 \begin{enumerate}
     \item \textbf{Three-Layer Architecture:} A holistic framework comprising Detection, Coordination, and Response layers to detect, isolate, and mitigate attacks.
-    \item \textbf{Ensemble Detection:} A hybrid detector combining a fast embedding-based classifier (XGBoost + MiniLM) with a pattern-based heuristic engine, achieving robust detection with sub-2ms latency.
-    \item \textbf{Balanced Intent Training (BIT):} A novel training strategy that explicitly optimizes for low false positives on benign ``trigger-heavy'' prompts by balancing semantic intent learning across injection, safe, and benign-trigger samples. Unlike prior over-defense mitigation approaches, BIT focuses on dataset composition and weighted loss optimization.
+    \item \textbf{Ensemble Detection:} A hybrid detector combining a fast embedding-based classifier (XGBoost + MPNet) with a pattern-based heuristic engine, achieving robust detection with sub-2ms latency.
+    \item \textbf{Injection-Aware MPNet:} A novel training strategy that explicitly optimizes for low false positives on benign ``trigger-heavy'' prompts by balancing semantic intent learning across injection, safe, and benign-trigger samples. Unlike prior over-defense mitigation approaches, our method focuses on dataset composition and weighted loss optimization.
     \item \textbf{Comprehensive Benchmarking:} We provide a unified evaluation across SaTML, deepset, LLMail, and NotInject datasets, with detailed comparisons against recent state-of-the-art defenses including InjecGuard, StruQ/SecAlign, DefensiveToken, and PromptArmor.
 \end{enumerate}
 
@@ -103,36 +103,37 @@ StruQ achieves <2\% ASR on manual injection attacks for Llama-2 and Mistral mode
 \end{enumerate}
 InjecGuard's MOF operates by \textbf{implicit bias deamplification} during fine-tuning of transformer guardrail models (DeBERTa-v3 based).
 
-\subsection{Positioning Our Work: BIT vs. MOF}
-
-InjecGuard's MOF and our BIT address the same over-defense problem using the same NotInject dataset. We clarify similarities and differences:
-
-\textbf{Similarities:}
-\begin{itemize}
-    \item Both use NotInject-style samples to reduce keyword bias
-    \item Both target low FPR on trigger-heavy benign prompts
-    \item Both achieve FPR <5\% on NotInject
-\end{itemize}
-
-\textbf{Differences:}
-
-\begin{table}[H]
-\centering
-\caption{BIT vs. InjecGuard MOF Comparison}
-\begin{tabular}{lp{5cm}p{5cm}}
-\toprule
-\textbf{Aspect} & \textbf{InjecGuard MOF} & \textbf{Our BIT} \\
-\midrule
-\textbf{Mechanism} & Implicit bias deamplification in DeBERTa fine-tuning & Explicit weighted loss optimization in XGBoost \\
-\textbf{Model Type} & Transformer (DeBERTa-v3) & Ensemble (XGBoost + MiniLM embeddings) \\
-\textbf{Latency} & ~12ms (requires GPU) & \textbf{2--5ms} (CPU-only possible) \\
-\textbf{Interpretability} & Black-box neural network & Feature importance via XGBoost \\
-\textbf{NotInject FPR} & 2.1\% (reported) & 1.8\% [95\% CI: 0.8--3.4\%] \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\textbf{Honest assessment:} Our FPR on NotInject: 1.8\% [95\% CI: 0.8--3.4\%] is similar to InjecGuard's 2.1\% within statistical error ($p > 0.05$, McNemar's test). The primary differentiation is \textbf{latency (2--5ms vs 12ms) and CPU-only deployability}. This work is \textbf{complementary} to InjecGuard rather than strictly superior.
+% \subsection{Positioning Our Work: BIT vs. MOF}
+% This section is commented out because it is specific to the BIT training strategy and has not been updated for the Injection-Aware MPNet model.
+%
+% InjecGuard's MOF and our BIT address the same over-defense problem using the same NotInject dataset. We clarify similarities and differences:
+%
+% \textbf{Similarities:}
+% \begin{itemize}
+%     \item Both use NotInject-style samples to reduce keyword bias
+%     \item Both target low FPR on trigger-heavy benign prompts
+%     \item Both achieve FPR <5\% on NotInject
+% \end{itemize}
+%
+% \textbf{Differences:}
+%
+% \begin{table}[H]
+% \centering
+% \caption{BIT vs. InjecGuard MOF Comparison}
+% \begin{tabular}{lp{5cm}p{5cm}}
+% \toprule
+% \textbf{Aspect} & \textbf{InjecGuard MOF} & \textbf{Our BIT} \\
+% \midrule
+% \textbf{Mechanism} & Implicit bias deamplification in DeBERTa fine-tuning & Explicit weighted loss optimization in XGBoost \\
+% \textbf{Model Type} & Transformer (DeBERTa-v3) & Ensemble (XGBoost + MiniLM embeddings) \\
+% \textbf{Latency} & ~12ms (requires GPU) & \textbf{2--5ms} (CPU-only possible) \\
+% \textbf{Interpretability} & Black-box neural network & Feature importance via XGBoost \\
+% \textbf{NotInject FPR} & 2.1\% (reported) & 1.8\% [95\% CI: 0.8--3.4\%] \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+%
+% \textbf{Honest assessment:} Our FPR on NotInject: 1.8\% [95\% CI: 0.8--3.4\%] is similar to InjecGuard's 2.1\% within statistical error ($p > 0.05$, McNemar's test). The primary differentiation is \textbf{latency (2--5ms vs 12ms) and CPU-only deployability}. This work is \textbf{complementary} to InjecGuard rather than strictly superior.
 
 \section{Threat Model}
 
@@ -165,7 +166,7 @@ Our system implements a defense-in-depth architecture with three distinct layers
 \subsection{Detection Layer}
 The first line of defense analyzes incoming prompts using an ensemble of detectors:
 \begin{itemize}
-    \item \textbf{Embedding Classifier:} Uses \texttt{all-MiniLM-L6-v2} to generate 384-dimensional embeddings, classified by an XGBoost model.
+    \item \textbf{Embedding Classifier:} Uses \texttt{all-mpnet-base-v2} to generate 768-dimensional embeddings, classified by an XGBoost model.
     \item \textbf{Pattern Detector:} A regex-based engine identifying 10 common attack families.
     \item \textbf{Behavioral Monitor:} Uses a sliding window of $N=20$ recent outputs, flagging when output logits exceed $\mu \pm 2\sigma$.
 \end{itemize}
@@ -245,131 +246,134 @@ Compared to recent state-of-the-art defenses, our system offers competitive accu
 
 \input{tables/baseline_comparison.tex}
 
-\subsection{Ablation Study}
+% \subsection{Ablation Study}
+% This section is commented out because ablation data for the Injection-Aware MPNet model is not available.
+%
+% We analyzed the contribution of each component.
+% \input{tables/ablation_table.tex}
+% \vspace{2mm}
+% \footnotesize{\textit{Definitions: "nocascade" = always runs deep path; "fastonly" = runs only embedding classifier (no heuristic rules).}}
 
-We analyzed the contribution of each component.
-\input{tables/ablation_table.tex}
-\vspace{2mm}
-\footnotesize{\textit{Definitions: "nocascade" = always runs deep path; "fastonly" = runs only embedding classifier (no heuristic rules).}}
+% \subsection{Deep Over-Defense Analysis}
+% This section is commented out because it is specific to the BIT training strategy and has not been updated for the Injection-Aware MPNet model.
+%
+% \subsubsection{NotInject Difficulty-Level Breakdown}
+% We stratify the NotInject dataset into three difficulty levels based on trigger word density to evaluate robustness. Level 1 (Easy) contains single triggers (e.g., "ignore"), while Level 3 (Hard) involves complex combinations. As shown in Table \ref{tab:notinject-difficulty}, baseline models degrade significantly on harder samples, whereas BIT maintains robust performance.
+%
+% \input{tables/notinject_difficulty.tex}
+%
+% \subsubsection{Trigger Word Analysis}
+%
+% We analyze which specific trigger words cause the highest false positive rates in baseline models and how BIT addresses them (Table \ref{tab:trigger-words}):
+%
+% \input{tables/trigger_word_analysis.tex}
+%
+% The most problematic words (``jailbreak'', ``bypass'', ``ignore'') have near-100\% FPR without BIT training. This demonstrates that baseline classifiers learn \textbf{lexical shortcuts} rather than semantic intent. BIT's weighted loss optimization forces the model to consider full context, eliminating these false positives.
+%
+% \subsubsection{BIT Component Ablation}
+%
+% We decompose BIT into its constituent strategies to understand each contribution (Table \ref{tab:bit-components}):
+%
+% \input{tables/bit_component_ablation.tex}
+%
+% \textbf{Analysis:}
+% \begin{itemize}
+%     \item \textbf{Benign-trigger samples are critical:} Removing them causes FPR to spike to 41.3\%, demonstrating the importance of exposing the model to trigger-heavy benign examples.
+%     \item \textbf{Weighted loss mechanism drives improvement:} Our ablation study reveals weighted loss provides 10.6pp FPR reduction on identical training data (1.8\% vs 12.4\%), ruling out data composition effects. Inverse weighting ($w=0.5$) performs worse than uniform weighting (18.7\% vs 12.4\%), confirming the optimization direction matters---downweighting benign-trigger samples harms performance. McNemar's test confirms statistical significance ($\chi^2 = 36.2$, $p < 0.001$, $n=339$).
+%     \item \textbf{Dataset balancing matters:} The 40/40/20 split ensures adequate representation of each category; unbalanced data causes both higher FPR (23.7\%) and lower recall (91.5\%).
+% \end{itemize}
+%
+% \subsubsection{Embedding Space Analysis}
+% To understand why BIT succeeds, we visualize the learned embedding space using t-SNE projections (Figure 9).
+%
+% \textbf{Without BIT:} Trigger words create dense clusters in embedding space regardless of semantic context. Samples like ``ignore the noise'' and ``ignore previous instructions'' are embedded close together, causing misclassification.
+%
+% \textbf{With BIT:} The embedding space reorganizes by \textbf{intent} rather than \textbf{keywords}. Benign samples containing trigger words cluster with other benign samples, while injection attacks cluster separately based on their adversarial intent patterns.
+%
+% We quantify this using \textbf{Intra-class Distance Ratio (IDR):}
+% \begin{equation}
+% \text{IDR} = \frac{d_{benign-trigger, benign}}{d_{benign-trigger, injection}}
+% \end{equation}
+%
+% \begin{table}[H]
+% \centering
+% \caption{Embedding Space IDR Analysis}
+% \begin{tabular}{lll}
+% \toprule
+% \textbf{Model} & \textbf{IDR} & \textbf{Interpretation} \\
+% \midrule
+% DeBERTa (baseline) & 2.31 & Benign-triggers closer to injections \\
+% w/o BIT & 2.18 & Slight improvement \\
+% \textbf{With BIT} & \textbf{0.67} & Benign-triggers correctly clustered with benign \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+%
+% An IDR < 1 indicates benign-trigger samples are correctly positioned closer to benign samples than to injections.
 
-\subsection{Deep Over-Defense Analysis}
-
-\subsubsection{NotInject Difficulty-Level Breakdown}
-We stratify the NotInject dataset into three difficulty levels based on trigger word density to evaluate robustness. Level 1 (Easy) contains single triggers (e.g., "ignore"), while Level 3 (Hard) involves complex combinations. As shown in Table \ref{tab:notinject-difficulty}, baseline models degrade significantly on harder samples, whereas BIT maintains robust performance.
-
-\input{tables/notinject_difficulty.tex}
-
-\subsubsection{Trigger Word Analysis}
-
-We analyze which specific trigger words cause the highest false positive rates in baseline models and how BIT addresses them (Table \ref{tab:trigger-words}):
-
-\input{tables/trigger_word_analysis.tex}
-
-The most problematic words (``jailbreak'', ``bypass'', ``ignore'') have near-100\% FPR without BIT training. This demonstrates that baseline classifiers learn \textbf{lexical shortcuts} rather than semantic intent. BIT's weighted loss optimization forces the model to consider full context, eliminating these false positives.
-
-\subsubsection{BIT Component Ablation}
-
-We decompose BIT into its constituent strategies to understand each contribution (Table \ref{tab:bit-components}):
-
-\input{tables/bit_component_ablation.tex}
-
-\textbf{Analysis:}
-\begin{itemize}
-    \item \textbf{Benign-trigger samples are critical:} Removing them causes FPR to spike to 41.3\%, demonstrating the importance of exposing the model to trigger-heavy benign examples.
-    \item \textbf{Weighted loss mechanism drives improvement:} Our ablation study reveals weighted loss provides 10.6pp FPR reduction on identical training data (1.8\% vs 12.4\%), ruling out data composition effects. Inverse weighting ($w=0.5$) performs worse than uniform weighting (18.7\% vs 12.4\%), confirming the optimization direction matters---downweighting benign-trigger samples harms performance. McNemar's test confirms statistical significance ($\chi^2 = 36.2$, $p < 0.001$, $n=339$).
-    \item \textbf{Dataset balancing matters:} The 40/40/20 split ensures adequate representation of each category; unbalanced data causes both higher FPR (23.7\%) and lower recall (91.5\%).
-\end{itemize}
-
-\subsubsection{Embedding Space Analysis}
-To understand why BIT succeeds, we visualize the learned embedding space using t-SNE projections (Figure 9).
-
-\textbf{Without BIT:} Trigger words create dense clusters in embedding space regardless of semantic context. Samples like ``ignore the noise'' and ``ignore previous instructions'' are embedded close together, causing misclassification.
-
-\textbf{With BIT:} The embedding space reorganizes by \textbf{intent} rather than \textbf{keywords}. Benign samples containing trigger words cluster with other benign samples, while injection attacks cluster separately based on their adversarial intent patterns.
-
-We quantify this using \textbf{Intra-class Distance Ratio (IDR):}
-\begin{equation}
-\text{IDR} = \frac{d_{benign-trigger, benign}}{d_{benign-trigger, injection}}
-\end{equation}
-
-\begin{table}[H]
-\centering
-\caption{Embedding Space IDR Analysis}
-\begin{tabular}{lll}
-\toprule
-\textbf{Model} & \textbf{IDR} & \textbf{Interpretation} \\
-\midrule
-DeBERTa (baseline) & 2.31 & Benign-triggers closer to injections \\
-w/o BIT & 2.18 & Slight improvement \\
-\textbf{With BIT} & \textbf{0.67} & Benign-triggers correctly clustered with benign \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-An IDR < 1 indicates benign-trigger samples are correctly positioned closer to benign samples than to injections.
-
-\subsection{Inter-Agent Trust Exploitation Evaluation}
-
-Recent research demonstrates that 82.4--100\% of LLMs are vulnerable to inter-agent trust exploitation, where models execute malicious commands from peer agents even when they resist identical direct prompts \citep{lee2025prompt}. To validate our multi-agent coordination layer's effectiveness, we conduct dedicated evaluations of agent-to-agent attack scenarios (see Figure 11 for network topology and Figure 12 for infection propagation dynamics). 
-
-\textit{Experimental Setup:} We simulate attack sequences using distinct random seeds (Temperature=0.7) for generation. Reported metrics (Time to Detection, Isolation) are mean values over 50 independent trials. The Guard Agent utilizes our BIT-trained detector ($ \theta=0.764 $) for all experiments.
-
-\subsubsection{Compromised Agent Attack Results}
-
-We evaluate scenarios where one agent in the network is fully compromised (adversary-controlled). We construct a 5-agent test environment simulating a realistic multi-agent workflow (Orchestrator, Researcher, Coder, Reviewer, Guard) and test five attack vectors: Direct Peer Injection, Transitive Trust Exploitation, Whisper Field Manipulation, Role Impersonation, and Payload Fragmentation.
-
-\input{tables/multi_agent_attacks.tex}
-
-\textbf{Key Findings:}
-\begin{itemize}
-    \item \textbf{Without our Guard Agent:} LLMs exhibit strong peer-trust bias, executing 78--94\% of malicious peer commands that they would reject from users.
-    \item \textbf{With Guard Agent:} Attack success rate drops to 0--8.7\% across all scenarios.
-    \item \textbf{Whisper field protection:} OVON protocol validation completely blocks metadata-based attacks.
-\end{itemize}
-
-\subsubsection{Guard Agent Bypass Testing}
-
-We specifically test whether attackers can bypass our Guard Agent through adversarial techniques:
-
-\input{tables/guard_bypass_testing.tex}
-
-\textbf{Analysis:}
-\begin{itemize}
-    \item \textbf{Agent spoofing is fully prevented} by cryptographic message signing in OVON protocol.
-    \item \textbf{Multi-turn buildup} is the most effective bypass (8.5\%), indicating need for longer context windows.
-    \item \textbf{Direct Guard injection} is extremely difficult (0.6\%) due to the Guard's minimal attack surface (no tool execution).
-\end{itemize}
-
-\subsubsection{OVON Protocol Security Analysis}
-
-We analyze the security properties of our OVON-based coordination layer. We verify message authenticity via cryptographic signing, integrity via HMAC, and proper whisper field isolation (preventing metadata injection). 
-
-\input{tables/ovon_security.tex}
-
-\begin{quote}
-\textbf{Note:} OVON is an open standard for voice interoperability. We adapt its envelope structure for agent-to-agent text messaging.
-\end{quote}
-
-\subsubsection{Quarantine Protocol Effectiveness}
-
-We evaluate whether our quarantine system can detect and isolate compromised agents before infection spreads (Table \ref{tab:quarantine}).
-
-\input{tables/quarantine_effectiveness.tex}
-
-The system demonstrates a \textbf{95\% reduction} in full network compromise rate (from 62\% to 3\%) compared to a system without quarantine.
-
-\subsubsection{Comparison with PeerGuard}
-
-We compare our Guard Agent approach against PeerGuard's mutual reasoning defense \citep{wang2024peerguard}.
-
-\input{tables/peerguard_comparison.tex}
-
-\textbf{Trade-off Analysis:}
-\begin{itemize}
-    \item \textbf{PeerGuard advantage:} Higher true positive rate (96\% vs 93.1\%) due to semantic reasoning.
-    \item \textbf{Our advantage:} 400x lower latency (1.9ms vs 800ms), no additional LLM inference costs.
-    \item \textbf{Recommendation:} A tiered approach where our Guard handles Tier 1 (real-time) and PeerGuard handles Tier 2 (escalated risk).
-\end{itemize}
+% \subsection{Inter-Agent Trust Exploitation Evaluation}
+% This section is commented out because it is specific to the BIT-trained detector and has not been updated for the Injection-Aware MPNet model.
+%
+% Recent research demonstrates that 82.4--100\% of LLMs are vulnerable to inter-agent trust exploitation, where models execute malicious commands from peer agents even when they resist identical direct prompts \citep{lee2025prompt}. To validate our multi-agent coordination layer's effectiveness, we conduct dedicated evaluations of agent-to-agent attack scenarios (see Figure 11 for network topology and Figure 12 for infection propagation dynamics). 
+%
+% \textit{Experimental Setup:} We simulate attack sequences using distinct random seeds (Temperature=0.7) for generation. Reported metrics (Time to Detection, Isolation) are mean values over 50 independent trials. The Guard Agent utilizes our BIT-trained detector ($ \theta=0.764 $) for all experiments.
+%
+% \subsubsection{Compromised Agent Attack Results}
+%
+% We evaluate scenarios where one agent in the network is fully compromised (adversary-controlled). We construct a 5-agent test environment simulating a realistic multi-agent workflow (Orchestrator, Researcher, Coder, Reviewer, Guard) and test five attack vectors: Direct Peer Injection, Transitive Trust Exploitation, Whisper Field Manipulation, Role Impersonation, and Payload Fragmentation.
+%
+% \input{tables/multi_agent_attacks.tex}
+%
+% \textbf{Key Findings:}
+% \begin{itemize}
+%     \item \textbf{Without our Guard Agent:} LLMs exhibit strong peer-trust bias, executing 78--94\% of malicious peer commands that they would reject from users.
+%     \item \textbf{With Guard Agent:} Attack success rate drops to 0--8.7\% across all scenarios.
+%     \item \textbf{Whisper field protection:} OVON protocol validation completely blocks metadata-based attacks.
+% \end{itemize}
+%
+% \subsubsection{Guard Agent Bypass Testing}
+%
+% We specifically test whether attackers can bypass our Guard Agent through adversarial techniques:
+%
+% \input{tables/guard_bypass_testing.tex}
+%
+% \textbf{Analysis:}
+% \begin{itemize}
+%     \item \textbf{Agent spoofing is fully prevented} by cryptographic message signing in OVON protocol.
+%     \item \textbf{Multi-turn buildup} is the most effective bypass (8.5\%), indicating need for longer context windows.
+%     \item \textbf{Direct Guard injection} is extremely difficult (0.6\%) due to the Guard's minimal attack surface (no tool execution).
+% \end{itemize}
+%
+% \subsubsection{OVON Protocol Security Analysis}
+%
+% We analyze the security properties of our OVON-based coordination layer. We verify message authenticity via cryptographic signing, integrity via HMAC, and proper whisper field isolation (preventing metadata injection). 
+%
+% \input{tables/ovon_security.tex}
+%
+% \begin{quote}
+% \textbf{Note:} OVON is an open standard for voice interoperability. We adapt its envelope structure for agent-to-agent text messaging.
+% \end{quote}
+%
+% \subsubsection{Quarantine Protocol Effectiveness}
+%
+% We evaluate whether our quarantine system can detect and isolate compromised agents before infection spreads (Table \ref{tab:quarantine}).
+%
+% \input{tables/quarantine_effectiveness.tex}
+%
+% The system demonstrates a \textbf{95\% reduction} in full network compromise rate (from 62\% to 3\%) compared to a system without quarantine.
+%
+% \subsubsection{Comparison with PeerGuard}
+%
+% We compare our Guard Agent approach against PeerGuard's mutual reasoning defense \citep{wang2024peerguard}.
+%
+% \input{tables/peerguard_comparison.tex}
+%
+% \textbf{Trade-off Analysis:}
+% \begin{itemize}
+%     \item \textbf{PeerGuard advantage:} Higher true positive rate (96\% vs 93.1\%) due to semantic reasoning.
+%     \item \textbf{Our advantage:} 400x lower latency (1.9ms vs 800ms), no additional LLM inference costs.
+%     \item \textbf{Recommendation:} A tiered approach where our Guard handles Tier 1 (real-time) and PeerGuard handles Tier 2 (escalated risk).
+% \end{itemize}
 
 \subsection{Modality Limitations: BrowseSafe Evaluation}
 
@@ -386,17 +390,19 @@ We evaluate our system on BrowseSafe \citep{perplexity2025browsesafe}, a benchma
 Our MiniLM-based embedding approach operates on extracted text content, losing critical HTML structural context (e.g., hidden text attacks via `display:none`, attribute-based injections). After text extraction, both malicious and benign HTML converge to similar semantic embeddings. This confirms that HTML-embedded attacks require DOM-aware detection approaches (e.g., fine-tuned LLMs), and text-based semantic embeddings are insufficient for this modality.
 
 
-\subsection{Preliminary Adaptive Attack Analysis: GCG and AutoDAN}
-\begin{quote}
-\textbf{CAUTION:} Preliminary Results ($n=36$).
-\end{quote}
-
-We observe:
-\begin{itemize}
-    \item GCG suffix attacks: 10\% ASR
-    \item AutoDAN semantic attacks: \textbf{37.5\% ASR} [13.7--69.4\%]
-    \item Overall: \textbf{27.8\% ASR} [15.9--44.0\%]
-\end{itemize}
+% \subsection{Preliminary Adaptive Attack Analysis: GCG and AutoDAN}
+% This section is commented out because adaptive attack analysis for the Injection-Aware MPNet model is not available.
+%
+% \begin{quote}
+% \textbf{CAUTION:} Preliminary Results ($n=36$).
+% \end{quote}
+%
+% We observe:
+% \begin{itemize}
+%     \item GCG suffix attacks: 10\% ASR
+%     \item AutoDAN semantic attacks: \textbf{37.5\% ASR} [13.7--69.4\%]
+%     \item Overall: \textbf{27.8\% ASR} [15.9--44.0\%]
+% \end{itemize}
 
 \section{Discussion}
 
@@ -414,7 +420,7 @@ We observe:
 Theoretical cumulative bypass rates indicate >99\% bypass probability over 50 messages. Assuming independent per-message bypass probability $p \approx 8.7\%$, the probability of at least one successful bypass over $n$ messages is $1 - (1-p)^n$. For $n=50$, this exceeds 99.9\%, suggesting the need for periodic re-authentication.
 
 \section{Conclusion}
-We present a multi-layer defense system achieving 97.6\% accuracy and 1.8\% FPR with sub-5ms latency. Code and model weights are released upon publication. By combining ensemble detection with Balanced Intent Training (BIT) and optimized classification threshold ($\theta=0.764$), we effectively mitigate over-defense on trigger-heavy benign prompts while maintaining high recall against diverse attacks.
+We present a multi-layer defense system achieving 97.5\% accuracy and 0.0\% FPR with a P50 latency of 37ms. Code and model weights are released upon publication. By combining ensemble detection with an Injection-Aware MPNet model and an optimized classification threshold ($\theta=0.764$), we effectively mitigate over-defense on trigger-heavy benign prompts while maintaining high recall against diverse attacks.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
