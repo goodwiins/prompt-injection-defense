@@ -150,6 +150,13 @@ Examples:
         help="List available datasets and exit"
     )
     
+    # GPU option
+    parser.add_argument(
+        "--gpu",
+        action="store_true",
+        help="Enable GPU acceleration (if available)"
+    )
+    
     return parser.parse_args()
 
 
@@ -171,14 +178,14 @@ def list_datasets():
     sys.exit(0)
 
 
-def load_detector(model_path: str = None, model_type: str = "auto", threshold: float = 0.5):
+def load_detector(model_path: str = None, model_type: str = "auto", threshold: float = 0.5, gpu: bool = False):
     """Load detector model with threshold override."""
     from src.detection.embedding_classifier import EmbeddingClassifier
     
-    logger.info("Loading detector model", path=model_path, type=model_type, threshold=threshold)
+    logger.info("Loading detector model", path=model_path, type=model_type, threshold=threshold, gpu=gpu)
     
-    # Initialize with threshold
-    detector = EmbeddingClassifier(threshold=threshold)
+    # Initialize with threshold and GPU option
+    detector = EmbeddingClassifier(threshold=threshold, gpu=gpu)
     
     if model_path and Path(model_path).exists():
         detector.load_model(model_path)
@@ -224,8 +231,8 @@ def main():
     from .reporter import BenchmarkReporter
     from .benchmark_datasets import load_all_datasets
     
-    # Load detector with threshold
-    detector = load_detector(args.model, args.model_type, args.threshold)
+    # Load detector with threshold and GPU option
+    detector = load_detector(args.model, args.model_type, args.threshold, args.gpu)
     
     # Create runner
     runner = BenchmarkRunner(

@@ -239,10 +239,13 @@ class PolicyEnforcer:
                     return True
 
             elif "signature_valid ==" in condition:
-                expected = "True" in condition
-                signature_valid = data.get("signature_valid", True)
-                if signature_valid != expected:
-                    return True
+                if "signature_valid" in data:
+                    expected = "True" in condition
+                    signature_valid = data.get("signature_valid")
+                    if signature_valid != expected:
+                        return True
+                else: # Don't trigger if signature is not present
+                    return False
 
             elif "matched_patterns.length >" in condition:
                 threshold = int(condition.split(">")[1].strip())

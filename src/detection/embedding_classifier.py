@@ -21,7 +21,7 @@ class EmbeddingClassifier:
     """
 
     def __init__(self, model_name: str = "all-MiniLM-L6-v2", threshold: float = 0.95,
-                 model_dir: str = "models"):
+                 model_dir: str = "models", gpu: bool = False):
         """
         Initialize the embedding classifier.
 
@@ -29,11 +29,13 @@ class EmbeddingClassifier:
             model_name: Name of the sentence-transformer model to use.
             threshold: Confidence threshold for classifying as injection.
             model_dir: Directory to save/load trained models.
+            gpu: Whether to use GPU for acceleration.
         """
         self.model_name = model_name
         self.threshold = threshold
         self.model_dir = Path(model_dir)
         self.model_dir.mkdir(exist_ok=True)
+        self.gpu = gpu
 
         self.embedding_model = None
         self.classifier = None
@@ -53,7 +55,7 @@ class EmbeddingClassifier:
             'reg_lambda': 1,
             'use_label_encoder': False,
             'eval_metric': 'auc',
-            'tree_method': 'hist',  # Faster for large datasets
+            'tree_method': 'gpu_hist' if self.gpu else 'hist',  # Use GPU if enabled
             'n_jobs': -1,  # Use all available cores
             'random_state': 42
         }

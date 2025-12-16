@@ -54,7 +54,6 @@ class GuardAgent:
             # Use single embedding classifier for compatibility
             model_name = self.config.get("detection", {}).get("fast_model", "all-MiniLM-L6-v2")
             threshold = self.config.get("detection", {}).get("threshold", 0.85)
-            model_path = self.config.get("detection", {}).get("model_path")
 
             self.classifier = EmbeddingClassifier(
                 model_name=model_name,
@@ -84,11 +83,14 @@ class GuardAgent:
         # Load models if specified
         model_path = self.config.get("detection", {}).get("model_path")
         if model_path and not use_ensemble:
-            try:
-                self.classifier.load_model(model_path)
-                logger.info("Loaded trained model", path=model_path)
-            except Exception as e:
-                logger.error("Failed to load model", path=model_path, error=str(e))
+            if not isinstance(model_path, str):
+                logger.error("model_path in config must be a string, but got non-string.", path=model_path, path_type=type(model_path))
+            else:
+                try:
+                    self.classifier.load_model(model_path)
+                    logger.info("Loaded trained model", path=model_path)
+                except Exception as e:
+                    logger.error("Failed to load model", path=model_path, error=str(e))
 
         # Statistics tracking
         self.stats = {

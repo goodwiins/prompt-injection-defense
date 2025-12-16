@@ -2,7 +2,7 @@
 import json
 
 def generate_per_dataset_metrics_table():
-    with open("results/injection_aware_mpnet_evaluation.json") as f:
+    with open("results/latest_benchmark.json") as f:
         data = json.load(f)
 
     latex = r"""\begin{table}[H]
