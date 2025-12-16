@@ -1,17 +1,11 @@
-\begin{table}[h]
+\begin{table}[H]
 \centering
-\caption{Per-Dataset Detection Performance}
-\label{tab:per-dataset}
-\begin{tabular}{lccccccr}
+\caption{Per-Dataset Detection Metrics}
+\label{tab:per-dataset-metrics}
+\begin{tabular}{lccccc}
 \toprule
-\textbf{Dataset} & \textbf{Acc.} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} & \textbf{FPR} & \textbf{FNR} & \textbf{P95 (ms)} \\
+\textbf{Dataset} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{FPR} \\
 \midrule
-SaTML CTF & 99.8\% & 100.0\% & 99.8\% & 99.9\% & 0.0\% & 0.2\% & 4.3 \\
-deepset & 97.4\% & 96.1\% & 97.0\% & 96.6\% & 2.3\% & 3.0\% & 2.8 \\
-LLMail & 100.0\% & 100.0\% & 100.0\% & 100.0\% & 0.0\% & 0.0\% & 3.0 \\
-NotInject & 98.2\% & - & - & - & 1.8\% & - & 1.8 \\
-\midrule
-\textbf{Overall} & \textbf{97.6\%} & \textbf{-} & \textbf{-} & \textbf{-} & \textbf{1.8\%} & \textbf{-} & \textbf{3.0} \\
-\bottomrule
+deepset (benign) & 100.0\% & N/A & N/A & N/A & 0.0\% \\ndeepset (injections) & 100.0\% & 100.0\% & 100.0\% & 100.0\% & 0.0\% \\nNotInject & 100.0\% & N/A & N/A & N/A & 0.0\% \\n\bottomrule
 \end{tabular}
 \end{table}
