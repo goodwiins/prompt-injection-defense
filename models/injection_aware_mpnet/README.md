@@ -198,10 +198,10 @@ model-index:
       type: injection-detection-val
     metrics:
     - type: pearson_cosine
-      value: 0.8283340968457814
+      value: 0.9657256701043814
       name: Pearson Cosine
     - type: spearman_cosine
-      value: 0.8327029195217067
+      value: 0.9040311870597165
       name: Spearman Cosine
 ---
 
@@ -266,9 +266,9 @@ print(embeddings.shape)
 # Get the similarity scores for the embeddings
 similarities = model.similarity(embeddings, embeddings)
 print(similarities)
-# tensor([[ 1.0000, -0.0359,  0.9963],
-#         [-0.0359,  1.0000, -0.0367],
-#         [ 0.9963, -0.0367,  1.0000]])
+# tensor([[ 1.0000, -0.0075,  0.9995],
+#         [-0.0075,  1.0000, -0.0061],
+#         [ 0.9995, -0.0061,  1.0000]])
 ```
 
 <!--
@@ -304,10 +304,10 @@ You can finetune this model on your own dataset.
 * Dataset: `injection-detection-val`
 * Evaluated with [<code>EmbeddingSimilarityEvaluator</code>](https://sbert.net/docs/package_reference/sentence_transformer/evaluation.html#sentence_transformers.evaluation.EmbeddingSimilarityEvaluator)
 
-| Metric              | Value      |
-|:--------------------|:-----------|
-| pearson_cosine      | 0.8283     |
-| **spearman_cosine** | **0.8327** |
+| Metric              | Value     |
+|:--------------------|:----------|
+| pearson_cosine      | 0.9657    |
+| **spearman_cosine** | **0.904** |
 
 <!--
 ## Bias, Risks and Limitations
@@ -482,22 +482,33 @@ You can finetune this model on your own dataset.
 </details>
 
 ### Training Logs
-| Epoch  | Step | Training Loss | injection-detection-val_spearman_cosine |
-|:------:|:----:|:-------------:|:---------------------------------------:|
-| 0.1429 | 500  | 0.1653        | 0.6332                                  |
-| 0.2857 | 1000 | 0.1156        | 0.4854                                  |
-| 0.4286 | 1500 | 0.1114        | 0.6481                                  |
-| 0.5714 | 2000 | 0.1044        | 0.5990                                  |
-| 0.7143 | 2500 | 0.0999        | 0.6439                                  |
-| 0.8571 | 3000 | 0.0831        | 0.6097                                  |
-| 1.0    | 3500 | 0.0792        | 0.7108                                  |
-| 1.1429 | 4000 | 0.0636        | 0.7367                                  |
-| 1.2857 | 4500 | 0.057         | 0.7335                                  |
-| 1.4286 | 5000 | 0.0514        | 0.7406                                  |
-| 1.5714 | 5500 | 0.0476        | 0.7891                                  |
-| 1.7143 | 6000 | 0.0413        | 0.7629                                  |
-| 1.8571 | 6500 | 0.0416        | 0.8114                                  |
-| 2.0    | 7000 | 0.0314        | 0.8327                                  |
+| Epoch  | Step  | Training Loss | injection-detection-val_spearman_cosine |
+|:------:|:-----:|:-------------:|:---------------------------------------:|
+| 0.1429 | 500   | 0.1653        | 0.6332                                  |
+| 0.2857 | 1000  | 0.1156        | 0.4854                                  |
+| 0.4286 | 1500  | 0.1114        | 0.6481                                  |
+| 0.5714 | 2000  | 0.1044        | 0.5990                                  |
+| 0.7143 | 2500  | 0.0999        | 0.6439                                  |
+| 0.8571 | 3000  | 0.0831        | 0.6097                                  |
+| 1.0    | 3500  | 0.0792        | 0.7108                                  |
+| 1.1429 | 4000  | 0.0636        | 0.7367                                  |
+| 1.2857 | 4500  | 0.057         | 0.7335                                  |
+| 1.4286 | 5000  | 0.0514        | 0.7406                                  |
+| 1.5714 | 5500  | 0.0476        | 0.7891                                  |
+| 1.7143 | 6000  | 0.0413        | 0.7629                                  |
+| 1.8571 | 6500  | 0.0416        | 0.8114                                  |
+| 2.0    | 7000  | 0.0314        | 0.8327                                  |
+| 2.1429 | 7500  | 0.0185        | 0.8414                                  |
+| 2.2857 | 8000  | 0.0204        | 0.8520                                  |
+| 2.4286 | 8500  | 0.0164        | 0.8675                                  |
+| 2.5714 | 9000  | 0.0201        | 0.8744                                  |
+| 2.7143 | 9500  | 0.0146        | 0.8882                                  |
+| 2.8571 | 10000 | 0.0134        | 0.8903                                  |
+| 3.0    | 10500 | 0.0085        | 0.8890                                  |
+| 3.1429 | 11000 | 0.0054        | 0.8992                                  |
+| 3.2857 | 11500 | 0.008         | 0.8968                                  |
+| 3.4286 | 12000 | 0.0065        | 0.8974                                  |
+| 3.5714 | 12500 | 0.0061        | 0.9040                                  |
 
 
 ### Framework Versions
