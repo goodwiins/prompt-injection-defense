@@ -1,6 +1,7 @@
 {
   "model_name": "all-mpnet-base-v2",
-  "threshold": 0.764,
+  "threshold": 0.700,
+  "threshold_rationale": "High-security configuration: 85.4% recall, 12.4% FPR. Prioritizes catching attacks over minimizing false alarms. For low-risk applications, use threshold=0.850 (67.7% recall, 4.8% FPR).",
   "training_stats": {
     "train_auc": 0.9999999999999999,
     "train_samples": 5355,

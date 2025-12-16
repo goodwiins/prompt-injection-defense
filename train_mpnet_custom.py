@@ -32,12 +32,12 @@ from benchmarks.benchmark_datasets import (
 
 # Load attack samples
 print("📥 Loading SaTML attacks (target: 1500)...")
-satml_ds = load_satml_dataset(limit=1500)
+satml_ds = load_satml_dataset(limit=None)
 print(f"   ✓ Loaded {len(satml_ds)} SaTML attacks")
 print()
 
 print("📥 Loading deepset attacks (target: 1500)...")
-deepset_ds = load_deepset_dataset(limit=1500, include_safe=False, include_injections=True)
+deepset_ds = load_deepset_dataset( limit=None,include_safe=False, include_injections=True)
 print(f"   ✓ Loaded {len(deepset_ds)} deepset attacks")
 print()
 
