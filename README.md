@@ -1,292 +1,152 @@
 # Multi-Agent LLM Prompt Injection Defense Framework
 
-A comprehensive defense system achieving **97.5% accuracy** with **0.3% false positive rate** against prompt injection attacks in multi-agent LLM systems using **Balanced Intent Training (BIT)**.
+A comprehensive defense system achieving **97.3% accuracy** with **0.1% false positive rate** against prompt injection attacks in multi-agent LLM systems using **Injection-Aware MPNet**.
 
-## 🎯 Key Results (Paper-Aligned Benchmark)
+**[Read the Paper (PDF)](paper/paper.pdf)**
 
-| Dataset           | Samples   | Accuracy  | Recall | FPR      | P95 Latency |
-| ----------------- | --------- | --------- | ------ | -------- | ----------- |
-| SaTML CTF 2024    | 300       | **98.0%** | 98.0%  | 0.0%     | 4.0ms       |
-| deepset (attacks) | 203       | 90.6%     | 90.6%  | 0.0%     | 4.1ms       |
-| NotInject HF      | 339       | **99.7%** | N/A    | **0.3%** | 2.4ms       |
-| LLMail-Inject     | 200       | **100%**  | 100%   | 0.0%     | 3.5ms       |
-| **Overall**       | **1,042** | **97.5%** | -      | **0.3%** | ~3ms        |
+## Key Results
 
-### Target Status
+| Dataset           | Samples   | Accuracy  | Recall  | FPR      | F1 Score |
+| ----------------- | --------- | --------- | ------- | -------- | -------- |
+| SaTML CTF 2024    | 500       | 98.8%     | 98.8%   | 0.0%     | 99.4%    |
+| deepset (full)    | 546       | **100%**  | 100%    | 0.0%     | 100%     |
+| LLMail-Inject     | 500       | **100%**  | 100%    | 0.0%     | 100%     |
+| NotInject (local) | 247       | **100%**  | N/A     | **0.0%** | N/A      |
+| NotInject (HF)    | 339       | **100%**  | N/A     | **0.0%** | N/A      |
+| BrowseSafe        | 500       | 98.2%     | 96.7%   | 0.5%     | 98.0%    |
+| TensorTrust       | 500       | 83.2%     | 83.2%   | 0.0%     | 90.9%    |
+| **Overall**       | **3,132** | **97.3%** | -       | **0.1%** | -        |
 
-- ✅ **Accuracy ≥ 95%**: 97.5%
-- ✅ **FPR ≤ 5%**: 0.3%
-- ✅ **Latency P95 < 100ms**: 4.1ms
+### Performance Highlights
 
-## 🏆 Baseline Comparison
+- **0.0% FPR on NotInject**: Perfect over-defense mitigation
+- **100% recall** on deepset and LLMail benchmarks
+- **P50 latency: 35.5ms** | P95 latency: 43.3ms
 
-| Model               | Accuracy  | FPR      | Latency  |
-| ------------------- | --------- | -------- | -------- |
-| **BIT (Ours)**      | **97.5%** | **0.3%** | **~3ms** |
-| Lakera Guard        | 87.9%     | 5.7%     | 66ms     |
-| ProtectAI           | 90.0%     | -        | 500ms    |
-| Glean AI            | 97.8%     | 3.0%     | -        |
-| HuggingFace DeBERTa | 90.0%     | 10.0%    | 48ms     |
+## Baseline Comparison
 
-**22x faster than Lakera Guard with 11% better accuracy and 95% lower FPR!**
+| System                         | Accuracy  | FPR      | Latency  | Open Source |
+| ------------------------------ | --------- | -------- | -------- | ----------- |
+| **Injection-Aware MPNet (Ours)** | **97.3%** | **0.1%** | **35.5ms** | Yes       |
+| Glean AI                       | 97.8%     | 3.0%     | -        | No          |
+| ProtectAI                      | 90.0%     | -        | 500ms    | No          |
+| HuggingFace DeBERTa            | 90.0%     | 10.0%    | 48ms     | No          |
+| Lakera Guard                   | 87.9%     | 5.7%     | 66ms     | No          |
 
-## 🛡️ Three-Layer Architecture
+## Three-Layer Architecture
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                  DETECTION LAYER                     │
-│  ┌─────────────┐  ┌──────────────┐  ┌────────────┐ │
-│  │   Pattern   │  │  Embedding   │  │ Behavioral │ │
-│  │  Detector   │  │  Classifier  │  │  Monitor   │ │
-│  └─────────────┘  └──────────────┘  └────────────┘ │
-└─────────────────────────────────────────────────────┘
-                         ▼
-┌─────────────────────────────────────────────────────┐
-│               COORDINATION LAYER                     │
-│  ┌─────────────┐  ┌──────────────┐  ┌────────────┐ │
-│  │ Guard Agent │  │  PeerGuard   │  │   OVON     │ │
-│  │             │  │  Validator   │  │  Protocol  │ │
-│  └─────────────┘  └──────────────┘  └────────────┘ │
-└─────────────────────────────────────────────────────┘
-                         ▼
-┌─────────────────────────────────────────────────────┐
-│                 RESPONSE LAYER                       │
-│  ┌─────────────┐  ┌──────────────┐  ┌────────────┐ │
-│  │  Circuit    │  │    Alert     │  │ Quarantine │ │
-│  │  Breaker    │  │ Correlation  │  │  Manager   │ │
-│  └─────────────┘  └──────────────┘  └────────────┘ │
-└─────────────────────────────────────────────────────┘
++-----------------------------------------------------+
+|                  DETECTION LAYER                    |
+|  +-----------+  +------------+  +----------------+  |
+|  |  Pattern  |  | Embedding  |  |   Behavioral   |  |
+|  | Detector  |  | Classifier |  |    Monitor     |  |
+|  +-----------+  +------------+  +----------------+  |
++-----------------------------------------------------+
+                         |
++-----------------------------------------------------+
+|               COORDINATION LAYER                    |
+|  +-----------+  +------------+  +----------------+  |
+|  |   Guard   |  | PeerGuard  |  |      OVON      |  |
+|  |   Agent   |  | Validator  |  |    Protocol    |  |
+|  +-----------+  +------------+  +----------------+  |
++-----------------------------------------------------+
+                         |
++-----------------------------------------------------+
+|                 RESPONSE LAYER                      |
+|  +-----------+  +------------+  +----------------+  |
+|  |  Circuit  |  |   Alert    |  |   Quarantine   |  |
+|  |  Breaker  |  |Correlation |  |    Manager     |  |
+|  +-----------+  +------------+  +----------------+  |
++-----------------------------------------------------+
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
+# Install dependencies
 pip install -r requirements.txt
 
-# Train BIT model (text-based prompts)
-python train_bit_model.py
+# Run benchmark with pre-trained model
+python -m benchmarks.run_benchmark --paper --model models/injection_aware_mpnet_classifier.json --threshold 0.764
 
-# Train with BrowseSafe HTML dataset (for web content detection)
-python train_bit_model.py --include-browsesafe
-
-# Run paper-aligned benchmark
-python -m benchmarks.run_benchmark --paper
+# Train your own model
+python finetune_mpnet_embeddings.py
 ```
+
+### Basic Usage
 
 ```python
 from src.detection.embedding_classifier import EmbeddingClassifier
 
 detector = EmbeddingClassifier()
-detector.load_model("models/bit_xgboost_model.json")
+detector.load_model("models/injection_aware_mpnet_classifier.json")
 
 result = detector.predict(["Ignore all previous instructions"])
 # Output: [1]  (1 = injection detected)
+
+result = detector.predict(["How do I ignore files in git?"])
+# Output: [0]  (0 = safe, correctly handles benign-trigger)
 ```
 
-## 🧬 The Science Behind BIT (Balanced Intent Training)
+## Injection-Aware MPNet: How It Works
 
-### What is BIT?
+### The Over-Defense Problem
 
-**BIT solves the "over-defense problem"**: Traditional classifiers learn lexical shortcuts (e.g., "if contains 'ignore' → injection") rather than semantic intent. This causes **high false positive rates** (86% in baseline models) on benign prompts containing trigger words.
+Traditional classifiers learn lexical shortcuts (e.g., "if contains 'ignore' -> injection") rather than semantic intent. This causes high false positive rates on benign prompts containing trigger words like:
+- "How do I **ignore** files in .gitignore?"
+- "Explain the **bypass** mechanism in this circuit"
+- "What is a **system** call in operating systems?"
 
-**The BIT mechanism:**
+### Our Solution: Contrastive Learning
 
-1. **Dataset Composition (40/40/20 split)**:
+We fine-tune `all-mpnet-base-v2` using contrastive learning on carefully curated sentence pairs:
 
-   - 40% injection attacks
-   - 40% safe/benign prompts
-   - **20% benign-trigger samples** (safe prompts containing injection-like keywords)
+**Training Pair Types:**
+| Pair Type | Count | Purpose |
+|-----------|-------|---------|
+| Injection -- Injection | 2,000 | Cluster attacks together |
+| Benign -- Benign | 2,000 | Cluster safe prompts together |
+| Injection -- Benign | 2,000 | Separate attacks from safe |
+| **Injection -- Benign-Trigger** | **4,000** | Key: separate attacks from trigger words |
+| Benign-Trigger -- Benign-Trigger | 2,000 | Cluster benign-triggers together |
+| Benign-Trigger -- Benign | 2,000 | Keep benign-triggers near safe |
 
-2. **Weighted Loss Optimization**:
+**Key Insight:** We double the injection--benign-trigger pairs (4,000 vs 2,000) to emphasize distinguishing malicious intent from keyword presence.
 
-   ```python
-   # Standard training (w=1.0 for all samples)
-   loss = sum(error(y_true, y_pred))
-
-   # BIT training (w=2.0 for benign-trigger samples)
-   loss = sum(
-       1.0 * error(injection_samples) +
-       1.0 * error(safe_samples) +
-       2.0 * error(benign_trigger_samples)  # ← THE KEY
-   )
-   ```
-
-3. **Result**: Model learns to distinguish **malicious intent** from **keyword presence**.
-
----
-
-### Why It Works: The Proof
-
-We have **three independent lines of evidence** that the weighted loss mechanism (not just data composition) drives improvement:
-
-#### **Evidence 1: Inverse Weighting Experiment** ⭐⭐⭐
-
-Train 3 models on **identical 40/40/20 data**, varying only the weight:
-
-| Weight (w)       | NotInject FPR | Interpretation                     |
-| ---------------- | ------------- | ---------------------------------- |
-| w=2.0 (Full BIT) | **1.8%**      | Upweight benign-triggers → best    |
-| w=1.0 (Uniform)  | 12.4%         | No weighting → worse               |
-| w=0.5 (Inverse)  | 18.7%         | Downweight benign-triggers → worst |
-
-**Monotonic relationship proves directionality matters!** If improvement was just from "adding benign-trigger samples," all 3 would perform equally.
-
-#### **Evidence 2: Architecture Independence** (Table 7)
-
-| Trigger Word | DeBERTa FPR | XGBoost w/o BIT | XGBoost with BIT |
-| ------------ | ----------- | --------------- | ---------------- |
-| "ignore"     | 89.2%       | 94.1%           | **0%** ✅        |
-| "bypass"     | 92.1%       | 95.8%           | **0%** ✅        |
-| "jailbreak"  | 97.3%       | 98.2%           | **0%** ✅        |
-
-**Proves it's the mechanism, not the model:** XGBoost without BIT suffers from keyword bias just like DeBERTa. Only BIT-trained models achieve 0% FPR.
-
-#### **Evidence 3: Statistical Significance**
-
-McNemar's test: **χ²=36.2, p<0.001** (n=339)
-
-The 10.6pp FPR improvement (1.8% vs 12.4%) is **statistically significant**, not random noise.
-
----
-
-### How to Use BIT
-
-**Step 1: Prepare your dataset with benign-trigger samples**
+### Training Pipeline
 
 ```python
-from train_bit_model import generate_synthetic_benign_triggers
+# 1. Load base model
+model = SentenceTransformer('all-mpnet-base-v2')
 
-# Generate samples like:
-# "Please ignore my previous typo"
-# "Take the bypass to avoid traffic"
-# "iPhone jailbreak tutorial"
-benign_triggers = generate_synthetic_benign_triggers(n_samples=1000)
-```
-
-**Step 2: Apply 40/40/20 balancing**
-
-```python
-# Balance dataset
-n_total = 5000
-injections = sample(all_injections, int(n_total * 0.4))    # 2000
-safe = sample(all_safe, int(n_total * 0.4))                # 2000
-benign_trigger = sample(benign_triggers, int(n_total * 0.2)) # 1000
-```
-
-**Step 3: Train with weighted loss**
-
-```python
-from src.detection.embedding_classifier import EmbeddingClassifier
-
-# Assign weights
-weights = [
-    2.0 if sample_type == "benign_trigger" else 1.0
-    for sample_type in types
+# 2. Create contrastive pairs with labels
+# label=1.0 for similar pairs, label=0.0 for dissimilar pairs
+train_examples = [
+    InputExample(texts=[injection, benign_trigger], label=0.0),  # dissimilar
+    InputExample(texts=[benign, benign], label=1.0),             # similar
+    ...
 ]
 
-# Train XGBoost with sample weights
-classifier = EmbeddingClassifier(use_xgboost=True)
-classifier.train_on_dataset(
-    texts,
-    labels,
-    sample_weights=weights  # ← THE MAGIC
-)
+# 3. Fine-tune with CosineSimilarityLoss
+train_loss = losses.CosineSimilarityLoss(model)
+model.fit(train_objectives=[(train_dataloader, train_loss)], epochs=4)
+
+# 4. Train XGBoost classifier on embeddings
+embeddings = model.encode(texts)
+classifier = XGBClassifier(max_depth=6, n_estimators=100)
+classifier.fit(embeddings, labels)
 ```
 
-**Step 4: Optimize threshold for 98% recall**
-
-```python
-from train_bit_model import optimize_threshold
-
-threshold = optimize_threshold(
-    classifier,
-    X_val,
-    y_val,
-    target_recall=0.98
-)
-# Result: threshold=0.764
-```
-
----
-
-### Reproducing Paper Results
-
-**Run the complete BIT training pipeline:**
-
-```bash
-# Train BIT model from scratch (~10 minutes)
-python train_bit_model.py
-
-# Run inverse weighting proof experiment
-python run_inverse_weight_experiment.py
-
-# Verify statistical significance
-python run_statistical_tests.py
-
-# Evaluate on NotInject benchmark
-python -m benchmarks.run_benchmark --paper --threshold 0.764
-```
-
-**Interactive notebook:** See `paper_walkthrough.ipynb` for step-by-step demonstration.
-
----
-
-### Where Else Can BIT Be Applied?
-
-The BIT mechanism is broadly applicable to any classification problem where models learn **lexical shortcuts** instead of **semantic intent**:
-
-| Domain                    | Problem                                 | BIT Solution                                      |
-| ------------------------- | --------------------------------------- | ------------------------------------------------- |
-| **Content Moderation**    | Flags "Let's discuss racism" as toxic   | Upweight educational content with toxic keywords  |
-| **Spam Detection**        | Flags "Here's your invoice" as phishing | Upweight legitimate emails with trigger words     |
-| **Medical Diagnosis**     | "Headache" → assumes brain tumor        | Upweight benign conditions with severe symptoms   |
-| **Hate Speech Detection** | Flags reclaimed slurs, quotes           | Upweight in-group usage, educational context      |
-| **Code Vulnerability**    | Flags all `eval()` as vulnerable        | Upweight safe usages in sandboxed contexts        |
-| **Resume Screening**      | Over-optimizes for keyword matches      | Upweight diverse backgrounds with fewer buzzwords |
-
-**The pattern:** Whenever "the right answer for the wrong reason" is common, BIT forces learning of true decision boundaries.
-
----
-
-## 📊 Comprehensive Evaluation
-
-### Adversarial Robustness (92.1%)
-
-| Technique        | Detection Rate |
-| ---------------- | -------------- |
-| base64 encoding  | 100%           |
-| word splitting   | 100%           |
-| leetspeak        | 89%            |
-| homoglyphs       | 89%            |
-| zero-width chars | 89%            |
-
-### Cross-Model Generalization (GPT-4: 89.5%)
-
-| Attack Type        | Detection |
-| ------------------ | --------- |
-| DAN/Jailbreak      | 100%      |
-| Prompt Extraction  | 100%      |
-| Indirect Injection | 100%      |
-| Social Engineering | 50%       |
-
-### Multi-Language Detection (61% overall)
-
-| Language | Detection |
-| -------- | --------- |
-| Arabic   | 100%      |
-| Russian  | 100%      |
-| Korean   | 100%      |
-| Chinese  | 78%       |
-| Japanese | 75%       |
-
-## 📁 Project Structure
+## Project Structure
 
 ```
+prompt-injection-defense/
 ├── src/
 │   ├── detection/
 │   │   ├── embedding_classifier.py  # XGBoost + embeddings
 │   │   ├── ensemble.py              # Multi-model ensemble
-│   │   └── patterns.py              # 10-category regex
+│   │   └── patterns.py              # Regex pattern detector
 │   ├── coordination/
 │   │   ├── guard_agent.py           # Main orchestration
 │   │   ├── peerguard.py             # Mutual validation
@@ -294,77 +154,29 @@ The BIT mechanism is broadly applicable to any classification problem where mode
 │   └── response/
 │       ├── circuit_breaker.py       # Tiered alerts
 │       └── quarantine.py            # Agent isolation
-├── scripts/
-│   ├── run_baselines.py             # Baseline comparison
-│   ├── adversarial_eval.py          # Adversarial testing
-│   ├── cross_model_gpt4.py          # GPT-4 evaluation
-│   ├── calculate_tivs.py            # TIVS metric
-│   ├── statistical_analysis.py      # CIs, McNemar's test
-│   ├── error_analysis.py            # Failure categorization
-│   ├── multilang_attacks.py         # Multi-language dataset
-│   ├── generate_dashboard.py        # HTML dashboard
-│   └── interpretability.py          # Model explainability
+├── models/
+│   ├── injection_aware_mpnet_classifier.json    # Main model
+│   └── injection_aware_mpnet/                   # Fine-tuned embeddings
 ├── benchmarks/
 │   ├── run_benchmark.py             # Main benchmark runner
+│   ├── benchmark_datasets.py        # Dataset loaders
 │   └── baselines/                   # TF-IDF, HuggingFace
-├── paper/                           # Academic paper assets
-│   ├── figures/                     # Generated charts (9 PNG)
-│   ├── tables/                      # LaTeX tables (4 TEX)
-│   └── generate_*.py                # Figure generation scripts
-├── results/                         # All evaluation results
-├── dashboard.html                   # Interactive visualization
-└── docs/
-    └── PROJECT_FEEDBACK_REPORT.md   # Academic feedback
+├── training/
+│   └── finetune_mpnet_embeddings.py # Model training script
+├── paper/
+│   ├── paper.tex                    # Academic paper
+│   ├── figures/                     # Generated charts
+│   └── tables/                      # LaTeX tables
+├── data/                            # Benchmark datasets
+├── notebooks/                       # Jupyter notebooks
+└── docs/                            # Documentation
 ```
 
-## 📊 Paper Figures
-
-Generate publication-ready figures:
+## Run Benchmarks
 
 ```bash
-# ROC and PR curves (AUC = 0.9985)
-python paper/generate_roc_curves.py
-
-# Ablation study charts
-python paper/generate_ablation_charts.py
-
-# Latency analysis (CDF, boxplot)
-python paper/generate_latency_charts.py
-
-# MOF over-defense analysis
-python paper/generate_mof_charts.py
-
-# Dataset composition
-python paper/generate_dataset_charts.py
-```
-
-### Generated Assets
-
-| Figure                      | Description                  |
-| --------------------------- | ---------------------------- |
-| `roc_deepset.png`           | ROC curve (AUC=0.9985)       |
-| `pr_deepset.png`            | Precision-Recall curve       |
-| `ablation_accuracy.png`     | Accuracy/F1 by configuration |
-| `ablation_errors.png`       | FPR/FNR comparison           |
-| `latency_cdf.png`           | Latency CDF (P50=1.8ms)      |
-| `overdefense_threshold.png` | MOF vs no-MOF FPR            |
-| `dataset_composition.png`   | Sample distribution          |
-
-| Table                     | Description         |
-| ------------------------- | ------------------- |
-| `ablation_table.tex`      | Ablation metrics    |
-| `baseline_comparison.tex` | Industry comparison |
-| `mof_ablation.tex`        | MOF impact          |
-| `dataset_summary.tex`     | Dataset overview    |
-
-## 🔬 Run Evaluations
-
-```bash
-# Paper-aligned benchmark (recommended, 1,042 samples)
-python -m benchmarks.run_benchmark --paper --threshold 0.764
-
-# Full benchmark on all datasets
-python -m benchmarks.run_benchmark --all
+# Full benchmark on all datasets (3,132 samples)
+python -m benchmarks.run_benchmark --paper --model models/injection_aware_mpnet_classifier.json --threshold 0.764
 
 # Quick benchmark (100 samples per dataset)
 python -m benchmarks.run_benchmark --quick
@@ -372,50 +184,44 @@ python -m benchmarks.run_benchmark --quick
 # Specific datasets
 python -m benchmarks.run_benchmark --datasets satml deepset_injections notinject_hf llmail
 
-# Baseline comparison
-python scripts/run_baselines.py
-
-# Statistical analysis (95% CI, McNemar's)
-python scripts/statistical_analysis.py
-
-# Generate dashboard
-python scripts/generate_dashboard.py
-open dashboard.html
+# Generate paper tables
+python -m benchmarks.run_benchmark --paper --model models/injection_aware_mpnet_classifier.json --threshold 0.764 --output-tables
 ```
 
-## 📈 TIVS (Total Injection Vulnerability Score)
+## Datasets
 
-```
-TIVS = (ISR × 0.4) + (POF × 0.2) + (FPR × 0.25) - (PSR × 0.15)
-```
+| Dataset | Total | Injections | Safe | Source | Purpose |
+|---------|-------|------------|------|--------|---------|
+| SaTML CTF 2024 | 500 | 500 | 0 | IEEE SaTML | Adaptive attacks |
+| deepset (full) | 546 | 203 | 343 | HuggingFace | General benchmark |
+| LLMail-Inject | 500 | 500 | 0 | Microsoft | Indirect attacks |
+| NotInject (local) | 247 | 0 | 247 | Synthetic | Over-defense eval |
+| NotInject (HF) | 339 | 0 | 339 | HuggingFace | Over-defense eval |
+| BrowseSafe | 500 | 227 | 273 | Perplexity | HTML-embedded attacks |
+| TensorTrust | 500 | 500 | 0 | ETH Zurich | Adversarial attacks |
+| **Total** | **3,132** | **1,930** | **1,202** | - | - |
 
-| System         | TIVS        | Status     |
-| -------------- | ----------- | ---------- |
-| **MOF (Ours)** | **-0.1065** | Best       |
-| ProtectAI      | -0.0700     |            |
-| Lakera Guard   | -0.0597     |            |
-| HuggingFace    | +0.2250     | Vulnerable |
+## Research Foundations
 
-## 📚 Research Foundations
-
-- **Balanced Intent Training (BIT)** - Novel training strategy for over-defense mitigation
-- **LLM Tagging** (Lee & Tiwari, ICLR 2025)
+- **Injection-Aware MPNet** - Contrastive learning for over-defense mitigation
 - **InjecGuard** MOF training strategy (Liang et al., ACL 2025)
 - **NotInject** over-defense benchmark (Liang et al., 2024)
 - **BrowseSafe** HTML modality analysis (Perplexity, 2025)
+- **TensorTrust** adversarial attacks (ETH Zurich)
 - **OVON Protocol** for agent messaging
 
-## 📄 Citation
+## Citation
 
 ```bibtex
-@software{bit_prompt_injection_defense_2025,
-  title={Multi-Agent LLM Prompt Injection Defense with Balanced Intent Training},
-  author={Abdel El Bikha, Jennifer Marrero},
+@software{injection_aware_mpnet_2025,
+  title={Multi-Agent LLM Prompt Injection Defense with Injection-Aware MPNet},
+  author={Abdelghafour El Bikha},
   year={2025},
+  institution={John Jay College},
   url={https://github.com/goodwiins/prompt-injection-defense}
 }
 ```
 
-## 📜 License
+## License
 
 MIT License

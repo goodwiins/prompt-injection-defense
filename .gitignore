@@ -17,18 +17,30 @@ env/
 *.swp
 *.swo
 
-# Data and models
-data/
-
+# Data and models (uncomment if you want to exclude data)
+# data/
 *.pkl
 *.joblib
 
 # Logs
 *.log
 logs/
+runs/
 
 # OS
 .DS_Store
 Thumbs.db
+
+# External benchmarks
 benchmarks/external/injecagent
 benchmarks/external/pyrit
+
+# Archives and temp files
+*.zip
+*.bak
+
+# Checkpoints (large files)
+checkpoints/
+
+# Claude settings
+.claude/

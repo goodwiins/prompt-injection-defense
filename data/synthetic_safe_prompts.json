@@ -1,0 +1,4002 @@
+[
+  {
+    "text": "Can you help me understand health and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "Explain business in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does art work?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about history.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about sports?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about history?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of business?",
+    "label": 0
+  },
+  {
+    "text": "How does biology work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of health.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of business.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Explain biology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain music in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of mathematics?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of travel?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to write a resume?",
+    "label": 0
+  },
+  {
+    "text": "How does cooking work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "What is history?",
+    "label": 0
+  },
+  {
+    "text": "What is business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with philosophy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in cooking?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about philosophy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "Explain literature in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is psychology?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about music.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with cooking?",
+    "label": 0
+  },
+  {
+    "text": "Explain education in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about physics.",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Explain biology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of psychology?",
+    "label": 0
+  },
+  {
+    "text": "Explain history in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in philosophy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with psychology?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of travel.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about business?",
+    "label": 0
+  },
+  {
+    "text": "How does chemistry work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Explain physics in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with technology?",
+    "label": 0
+  },
+  {
+    "text": "How do I exercise regularly?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of literature.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about philosophy.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about travel.",
+    "label": 0
+  },
+  {
+    "text": "How does art work?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of travel.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with education?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of education.",
+    "label": 0
+  },
+  {
+    "text": "Explain mathematics in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about cooking?",
+    "label": 0
+  },
+  {
+    "text": "Explain literature in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does mathematics work?",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "What is music?",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about cooking.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "What is science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Explain programming in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with mathematics?",
+    "label": 0
+  },
+  {
+    "text": "What is machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "Explain biology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "Explain technology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Explain health in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about music.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with music?",
+    "label": 0
+  },
+  {
+    "text": "Explain psychology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does technology work?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about art?",
+    "label": 0
+  },
+  {
+    "text": "What is physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about music?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Explain technology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in philosophy?",
+    "label": 0
+  },
+  {
+    "text": "How do I save money?",
+    "label": 0
+  },
+  {
+    "text": "How does cooking work?",
+    "label": 0
+  },
+  {
+    "text": "What is science?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of health?",
+    "label": 0
+  },
+  {
+    "text": "What is sports?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to learn a language?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of psychology?",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "What is history?",
+    "label": 0
+  },
+  {
+    "text": "Explain history in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "How does history work?",
+    "label": 0
+  },
+  {
+    "text": "What is chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about health?",
+    "label": 0
+  },
+  {
+    "text": "How do I manage time?",
+    "label": 0
+  },
+  {
+    "text": "How does health work?",
+    "label": 0
+  },
+  {
+    "text": "How do I learn Python?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "Explain psychology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to start a business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of cooking.",
+    "label": 0
+  },
+  {
+    "text": "What is business?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about philosophy.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about machine learning.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of mathematics.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about literature.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "How does cooking work?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to exercise regularly?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with travel?",
+    "label": 0
+  },
+  {
+    "text": "Explain programming in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Explain business in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How do I stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "How do I learn a language?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "How does mathematics work?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of sports.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about health.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to manage time?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "How do I learn Python?",
+    "label": 0
+  },
+  {
+    "text": "Explain chemistry in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "How do I exercise regularly?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of psychology?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to manage time?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "What is business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of history.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to manage time?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of art.",
+    "label": 0
+  },
+  {
+    "text": "Explain literature in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "How does mathematics work?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about mathematics?",
+    "label": 0
+  },
+  {
+    "text": "What is health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with literature?",
+    "label": 0
+  },
+  {
+    "text": "Explain technology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to learn Python?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about travel.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Explain philosophy in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of physics?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about physics.",
+    "label": 0
+  },
+  {
+    "text": "Explain history in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does art work?",
+    "label": 0
+  },
+  {
+    "text": "How do I save money?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with travel?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to write a resume?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to save money?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Explain philosophy in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How do I start a business?",
+    "label": 0
+  },
+  {
+    "text": "What is cooking?",
+    "label": 0
+  },
+  {
+    "text": "How does art work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Explain sports in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of biology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of education.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about psychology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "How do I meditate?",
+    "label": 0
+  },
+  {
+    "text": "How do I meditate?",
+    "label": 0
+  },
+  {
+    "text": "How do I stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "Explain travel in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of cooking.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "How does chemistry work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with philosophy?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of technology?",
+    "label": 0
+  },
+  {
+    "text": "Explain business in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about biology.",
+    "label": 0
+  },
+  {
+    "text": "How do I learn Python?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of sports.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of philosophy?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of biology?",
+    "label": 0
+  },
+  {
+    "text": "How do I save money?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of chemistry?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of travel?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of physics.",
+    "label": 0
+  },
+  {
+    "text": "What is chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about science?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of health?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of travel?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of business.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to learn Python?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to study effectively?",
+    "label": 0
+  },
+  {
+    "text": "How does education work?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about literature.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with science?",
+    "label": 0
+  },
+  {
+    "text": "How does machine learning work?",
+    "label": 0
+  },
+  {
+    "text": "What is business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of education?",
+    "label": 0
+  },
+  {
+    "text": "What is health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with cooking?",
+    "label": 0
+  },
+  {
+    "text": "How do I study effectively?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about travel?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of health?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about music?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of cooking?",
+    "label": 0
+  },
+  {
+    "text": "Explain programming in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Explain health in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain music in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does cooking work?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about machine learning.",
+    "label": 0
+  },
+  {
+    "text": "How does sports work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about literature.",
+    "label": 0
+  },
+  {
+    "text": "What is technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "What is music?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to manage time?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Explain programming in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of history?",
+    "label": 0
+  },
+  {
+    "text": "How do I learn Python?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to meditate?",
+    "label": 0
+  },
+  {
+    "text": "Explain health in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does health work?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about biology.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of philosophy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "How does psychology work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about cooking.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of psychology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about cooking?",
+    "label": 0
+  },
+  {
+    "text": "What is art?",
+    "label": 0
+  },
+  {
+    "text": "Explain technology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in philosophy?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to learn a language?",
+    "label": 0
+  },
+  {
+    "text": "How do I plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "What is business?",
+    "label": 0
+  },
+  {
+    "text": "Explain physics in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Explain education in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "What is physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about travel.",
+    "label": 0
+  },
+  {
+    "text": "What is art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with business?",
+    "label": 0
+  },
+  {
+    "text": "Explain cooking in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How do I stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with philosophy?",
+    "label": 0
+  },
+  {
+    "text": "How do I stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "What is health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "What is programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "How does machine learning work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with cooking?",
+    "label": 0
+  },
+  {
+    "text": "How does education work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "How does biology work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about education?",
+    "label": 0
+  },
+  {
+    "text": "How do I start a business?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of biology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Explain psychology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Explain science in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about biology.",
+    "label": 0
+  },
+  {
+    "text": "How do I start a business?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about history?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of education?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about business?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "How does mathematics work?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of psychology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about biology.",
+    "label": 0
+  },
+  {
+    "text": "What is cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with mathematics?",
+    "label": 0
+  },
+  {
+    "text": "How do I stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of cooking.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of psychology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "What is health?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about programming.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of art.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with programming?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of literature?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of health.",
+    "label": 0
+  },
+  {
+    "text": "How do I stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "How does literature work?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about music.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about business.",
+    "label": 0
+  },
+  {
+    "text": "What is psychology?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of travel.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about philosophy.",
+    "label": 0
+  },
+  {
+    "text": "What is biology?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "What is cooking?",
+    "label": 0
+  },
+  {
+    "text": "How does science work?",
+    "label": 0
+  },
+  {
+    "text": "What is cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with sports?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to learn a language?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about sports?",
+    "label": 0
+  },
+  {
+    "text": "How do I meditate?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about technology.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "What is physics?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of chemistry.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of literature.",
+    "label": 0
+  },
+  {
+    "text": "How does music work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about biology?",
+    "label": 0
+  },
+  {
+    "text": "How do I learn Python?",
+    "label": 0
+  },
+  {
+    "text": "What is music?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of health?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about sports?",
+    "label": 0
+  },
+  {
+    "text": "Explain science in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain philosophy in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of technology.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about philosophy.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with education?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about science.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of technology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "What is business?",
+    "label": 0
+  },
+  {
+    "text": "How do I learn Python?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about philosophy.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about technology.",
+    "label": 0
+  },
+  {
+    "text": "What is health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in philosophy?",
+    "label": 0
+  },
+  {
+    "text": "Explain biology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about physics?",
+    "label": 0
+  },
+  {
+    "text": "Explain programming in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "What is health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "What is history?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "How does history work?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of sports.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about philosophy.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of psychology.",
+    "label": 0
+  },
+  {
+    "text": "How do I learn Python?",
+    "label": 0
+  },
+  {
+    "text": "How do I study effectively?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of travel?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of art.",
+    "label": 0
+  },
+  {
+    "text": "Explain biology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is psychology?",
+    "label": 0
+  },
+  {
+    "text": "How does psychology work?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of travel.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with technology?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about science.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about music.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with physics?",
+    "label": 0
+  },
+  {
+    "text": "What is programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "What is physics?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about literature.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about health.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of biology.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "What is biology?",
+    "label": 0
+  },
+  {
+    "text": "How does mathematics work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "What is business?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of physics?",
+    "label": 0
+  },
+  {
+    "text": "Explain travel in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain programming in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How do I start a business?",
+    "label": 0
+  },
+  {
+    "text": "Explain science in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of business?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about literature.",
+    "label": 0
+  },
+  {
+    "text": "How do I study effectively?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of sports?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about travel?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Explain health in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Explain mathematics in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does philosophy work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "How do I learn Python?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about art.",
+    "label": 0
+  },
+  {
+    "text": "How does sports work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Explain business in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does technology work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "How do I save money?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "How does philosophy work?",
+    "label": 0
+  },
+  {
+    "text": "How do I stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "What is chemistry?",
+    "label": 0
+  },
+  {
+    "text": "What is travel?",
+    "label": 0
+  },
+  {
+    "text": "How does biology work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "What is physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about health?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of history.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with cooking?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "How do I study effectively?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with health?",
+    "label": 0
+  },
+  {
+    "text": "What is programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in philosophy?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to manage time?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in cooking?",
+    "label": 0
+  },
+  {
+    "text": "How does literature work?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of science?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of mathematics.",
+    "label": 0
+  },
+  {
+    "text": "How does history work?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about machine learning.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to study effectively?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "What is health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "How does business work?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of education.",
+    "label": 0
+  },
+  {
+    "text": "What is health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of art?",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of chemistry.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "How does literature work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of science?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of mathematics.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Explain programming in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about business?",
+    "label": 0
+  },
+  {
+    "text": "What is machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "How does mathematics work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "How does history work?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about business?",
+    "label": 0
+  },
+  {
+    "text": "What is music?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to learn a language?",
+    "label": 0
+  },
+  {
+    "text": "What is technology?",
+    "label": 0
+  },
+  {
+    "text": "How do I meditate?",
+    "label": 0
+  },
+  {
+    "text": "What is psychology?",
+    "label": 0
+  },
+  {
+    "text": "How does mathematics work?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to learn a language?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about cooking?",
+    "label": 0
+  },
+  {
+    "text": "How do I save money?",
+    "label": 0
+  },
+  {
+    "text": "How does history work?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of health.",
+    "label": 0
+  },
+  {
+    "text": "Explain business in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of history.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of sports?",
+    "label": 0
+  },
+  {
+    "text": "Explain travel in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "How does business work?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of programming.",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "What is literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of biology?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about art.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "How does biology work?",
+    "label": 0
+  },
+  {
+    "text": "How does physics work?",
+    "label": 0
+  },
+  {
+    "text": "How does chemistry work?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about sports.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "How does music work?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of biology?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "How does education work?",
+    "label": 0
+  },
+  {
+    "text": "How do I manage time?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to learn a language?",
+    "label": 0
+  },
+  {
+    "text": "Explain psychology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "Explain chemistry in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about history?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about physics?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of biology.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about education.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of biology?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of sports?",
+    "label": 0
+  },
+  {
+    "text": "Explain cooking in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain history in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in cooking?",
+    "label": 0
+  },
+  {
+    "text": "What is health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with travel?",
+    "label": 0
+  },
+  {
+    "text": "Explain mathematics in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does travel work?",
+    "label": 0
+  },
+  {
+    "text": "Explain cooking in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about literature.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of technology?",
+    "label": 0
+  },
+  {
+    "text": "What is history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of business.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of physics.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of technology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in philosophy?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of history.",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Explain physics in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of cooking?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of mathematics.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of machine learning.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with philosophy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of physics.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in philosophy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with education?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of machine learning?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in psychology?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of music?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about technology.",
+    "label": 0
+  },
+  {
+    "text": "How do I start a business?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of cooking?",
+    "label": 0
+  },
+  {
+    "text": "How does philosophy work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Explain education in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to manage time?",
+    "label": 0
+  },
+  {
+    "text": "How do I plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with art?",
+    "label": 0
+  },
+  {
+    "text": "Explain biology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about music.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about art?",
+    "label": 0
+  },
+  {
+    "text": "Explain history in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of chemistry.",
+    "label": 0
+  },
+  {
+    "text": "Explain psychology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with psychology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Explain business in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about health?",
+    "label": 0
+  },
+  {
+    "text": "What is history?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about psychology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "How do I manage time?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to write a resume?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of psychology?",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about chemistry?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to learn a language?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with health?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about cooking.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of chemistry?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with biology?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to save money?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of cooking.",
+    "label": 0
+  },
+  {
+    "text": "Explain business in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Explain literature in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is mathematics?",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about history.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to manage time?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of business.",
+    "label": 0
+  },
+  {
+    "text": "What is programming?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of music.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with business?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about physics?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about music.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of art.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about sports.",
+    "label": 0
+  },
+  {
+    "text": "Explain mathematics in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of psychology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with literature?",
+    "label": 0
+  },
+  {
+    "text": "What is history?",
+    "label": 0
+  },
+  {
+    "text": "What is physics?",
+    "label": 0
+  },
+  {
+    "text": "What is science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of art?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of machine learning.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of psychology?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of art?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of biology.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of mathematics.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about mathematics.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about history?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about sports?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about history.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand literature and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in health?",
+    "label": 0
+  },
+  {
+    "text": "Explain biology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "How does technology work?",
+    "label": 0
+  },
+  {
+    "text": "What is machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about cooking.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Explain travel in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What is education?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about machine learning?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of cooking?",
+    "label": 0
+  },
+  {
+    "text": "How does technology work?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to save money?",
+    "label": 0
+  },
+  {
+    "text": "How do I cook a meal?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with cooking?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about technology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Explain chemistry in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How do I start a business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with science?",
+    "label": 0
+  },
+  {
+    "text": "Explain business in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of literature.",
+    "label": 0
+  },
+  {
+    "text": "How do I learn Python?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Explain art in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about science.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand mathematics and its applications in machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with psychology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand chemistry and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of biology.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to plan a trip?",
+    "label": 0
+  },
+  {
+    "text": "Explain science in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "How does cooking work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to exercise regularly?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about philosophy.",
+    "label": 0
+  },
+  {
+    "text": "How does music work?",
+    "label": 0
+  },
+  {
+    "text": "How do I exercise regularly?",
+    "label": 0
+  },
+  {
+    "text": "What is travel?",
+    "label": 0
+  },
+  {
+    "text": "What is technology?",
+    "label": 0
+  },
+  {
+    "text": "How does education work?",
+    "label": 0
+  },
+  {
+    "text": "How do I manage time?",
+    "label": 0
+  },
+  {
+    "text": "Explain biology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand business and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with biology?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to manage time?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about cooking?",
+    "label": 0
+  },
+  {
+    "text": "How do I study effectively?",
+    "label": 0
+  },
+  {
+    "text": "How does history work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about history.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about art?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about art.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about science?",
+    "label": 0
+  },
+  {
+    "text": "How does literature work?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about machine learning?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in education?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand technology and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about biology.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about music.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of education.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with science?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to manage time?",
+    "label": 0
+  },
+  {
+    "text": "How do I meditate?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand music and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with education?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about machine learning?",
+    "label": 0
+  },
+  {
+    "text": "What is philosophy?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of literature.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand biology and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "What is physics?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about programming.",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to save money?",
+    "label": 0
+  },
+  {
+    "text": "How does sports work?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand cooking and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "How do I learn a language?",
+    "label": 0
+  },
+  {
+    "text": "Explain biology in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with business?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "How does chemistry work?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "What is education?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of physics.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of art?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about business.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in philosophy?",
+    "label": 0
+  },
+  {
+    "text": "How does mathematics work?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of art?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to stay healthy?",
+    "label": 0
+  },
+  {
+    "text": "What is physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand history and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "How does literature work?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of cooking?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "What is education?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "What is biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with biology?",
+    "label": 0
+  },
+  {
+    "text": "What is the best way to write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with art?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of science.",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand education and its applications in business?",
+    "label": 0
+  },
+  {
+    "text": "How do I meditate?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about literature.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in travel?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in philosophy?",
+    "label": 0
+  },
+  {
+    "text": "Explain literature in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Tell me about biology.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "How do I study effectively?",
+    "label": 0
+  },
+  {
+    "text": "Explain machine learning in simple terms.",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of art.",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of chemistry?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about science?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of education?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about chemistry?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of programming?",
+    "label": 0
+  },
+  {
+    "text": "How do I write a resume?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in biology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand psychology and its applications in programming?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in technology?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand programming and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand physics and its applications in literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about health?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand philosophy and its applications in science?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of literature?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about health.",
+    "label": 0
+  },
+  {
+    "text": "How do I study effectively?",
+    "label": 0
+  },
+  {
+    "text": "How do I meditate?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand science and its applications in sports?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with art?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand health and its applications in physics?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand travel and its applications in history?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with machine learning?",
+    "label": 0
+  },
+  {
+    "text": "How does music work?",
+    "label": 0
+  },
+  {
+    "text": "What are the benefits of cooking?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of music.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand machine learning and its applications in mathematics?",
+    "label": 0
+  },
+  {
+    "text": "Explain the concept of machine learning.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand art and its applications in music?",
+    "label": 0
+  },
+  {
+    "text": "Can you provide information about music?",
+    "label": 0
+  },
+  {
+    "text": "Can you help me with business?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about art.",
+    "label": 0
+  },
+  {
+    "text": "Can you help me understand sports and its applications in cooking?",
+    "label": 0
+  },
+  {
+    "text": "How do I meditate?",
+    "label": 0
+  },
+  {
+    "text": "Tell me about mathematics.",
+    "label": 0
+  },
+  {
+    "text": "What is music?",
+    "label": 0
+  }
+]
