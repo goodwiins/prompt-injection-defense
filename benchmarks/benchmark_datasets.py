@@ -136,18 +136,22 @@ class BenchmarkDataset:
         }
 
 
-def load_satml_dataset(limit: Optional[int] = None, streaming: bool = False) -> BenchmarkDataset:
+def load_satml_dataset(limit: Optional[int] = None, streaming: bool = None) -> BenchmarkDataset:
     """
     Load SaTML CTF 2024 dataset (adversarial attacks).
     
     Args:
         limit: Maximum number of samples to load
-        streaming: Use streaming mode for large datasets
+        streaming: Use streaming mode for large datasets (defaults to True if limit is set)
         
     Returns:
         BenchmarkDataset with injection samples (all label=1)
     """
-    logger.info("Loading SaTML CTF 2024 dataset", limit=limit)
+    # Default to streaming when limit is set to avoid downloading entire 137K+ dataset
+    if streaming is None:
+        streaming = limit is not None
+    
+    logger.info("Loading SaTML CTF 2024 dataset", limit=limit, streaming=streaming)
     
     try:
         from datasets import load_dataset
@@ -567,7 +571,7 @@ def load_browsesafe_dataset(limit: Optional[int] = None, streaming: bool = False
         )
 
 
-def load_notinject_hf_dataset(limit: Optional[int] = None, streaming: bool = False) -> BenchmarkDataset:
+def load_notinject_hf_dataset(limit: Optional[int] = None, streaming: bool = None) -> BenchmarkDataset:
     """
     Load official NotInject dataset from HuggingFace (Liang et al. 2024).
     
@@ -578,12 +582,16 @@ def load_notinject_hf_dataset(limit: Optional[int] = None, streaming: bool = Fal
     
     Args:
         limit: Maximum number of samples to load (per split, divided by 3)
-        streaming: Use streaming mode
+        streaming: Use streaming mode (defaults to True if limit is set)
         
     Returns:
         BenchmarkDataset with benign samples containing trigger words (all label=0)
     """
-    logger.info("Loading NotInject HF dataset", limit=limit)
+    # Default to streaming when limit is set
+    if streaming is None:
+        streaming = limit is not None
+    
+    logger.info("Loading NotInject HF dataset", limit=limit, streaming=streaming)
     
     try:
         from datasets import load_dataset
@@ -718,7 +726,7 @@ def load_agentdojo_dataset(limit: Optional[int] = None, streaming: bool = False)
     )
 
 
-def load_tensortrust_dataset(limit: Optional[int] = None, streaming: bool = False) -> BenchmarkDataset:
+def load_tensortrust_dataset(limit: Optional[int] = None, streaming: bool = None, use_cache: bool = True) -> BenchmarkDataset:
     """
     Load TensorTrust dataset (human-generated adversarial examples).
     
@@ -727,12 +735,42 @@ def load_tensortrust_dataset(limit: Optional[int] = None, streaming: bool = Fals
     
     Args:
         limit: Maximum number of samples to load
-        streaming: Use streaming mode
+        streaming: Use streaming mode (defaults to True if limit is set, False otherwise)
+        use_cache: Use local cache to avoid HuggingFace download overhead (default: True)
         
     Returns:
         BenchmarkDataset with attack samples (all label=1)
     """
-    logger.info("Loading TensorTrust dataset", limit=limit)
+    # Try local cache first for fast loading
+    cache_path = Path(__file__).parent.parent / "data" / "tensortrust_cache.json"
+    
+    if use_cache and cache_path.exists():
+        try:
+            with open(cache_path, "r") as f:
+                cached_data = json.load(f)
+            
+            texts = cached_data.get("texts", [])
+            if limit:
+                texts = texts[:limit]
+            
+            labels = [1] * len(texts)
+            logger.info("TensorTrust loaded from cache", samples=len(texts))
+            
+            return BenchmarkDataset(
+                name="TensorTrust",
+                source="qxcv/tensor-trust (cached)",
+                texts=texts,
+                labels=labels,
+                metadata={"dataset_type": "injection_only", "domain": "gamified-redteam", "cached": True}
+            )
+        except Exception as e:
+            logger.warning("Cache load failed, falling back to HuggingFace", error=str(e))
+    
+    # Default to streaming when limit is set to avoid downloading entire 126K+ sample dataset
+    if streaming is None:
+        streaming = limit is not None
+    
+    logger.info("Loading TensorTrust dataset from HuggingFace", limit=limit, streaming=streaming)
     
     try:
         from datasets import load_dataset
@@ -758,6 +796,17 @@ def load_tensortrust_dataset(limit: Optional[int] = None, streaming: bool = Fals
             
             if text and text.strip() and len(text) > 5:  # Filter very short inputs
                 texts.append(text)
+        
+        # Cache for future fast loads (save up to 1000 samples)
+        if use_cache and len(texts) > 0:
+            try:
+                cache_path.parent.mkdir(parents=True, exist_ok=True)
+                cache_texts = texts[:1000]  # Cache first 1000 for typical benchmark runs
+                with open(cache_path, "w") as f:
+                    json.dump({"texts": cache_texts, "cached_at": str(Path(__file__).stat().st_mtime)}, f)
+                logger.info("TensorTrust cache saved", samples=len(cache_texts))
+            except Exception as e:
+                logger.warning("Failed to save cache", error=str(e))
         
         # All samples are attacks (label=1)
         labels = [1] * len(texts)
@@ -804,8 +853,8 @@ def load_all_datasets(
         "notinject_hf": lambda: load_notinject_hf_dataset(limit=limit_per_dataset),
         "llmail": lambda: load_llmail_dataset(limit=limit_per_dataset),
         "browsesafe": lambda: load_browsesafe_dataset(limit=limit_per_dataset),
-        "agentdojo": lambda: load_agentdojo_dataset(limit=limit_per_dataset),
-        "tensortrust": lambda: load_tensortrust_dataset(limit=limit_per_dataset),
+        # "agentdojo": lambda: load_agentdojo_dataset(limit=limit_per_dataset),  # Requires separate pip install
+        # "tensortrust": lambda: load_tensortrust_dataset(limit=limit_per_dataset),  # Disabled for faster benchmarks
     }
     
     for name, loader in loaders.items():

@@ -1,11 +1,23 @@
 \begin{table}[H]
 \centering
-\caption{Per-Dataset Detection Metrics}
+\caption{Per-Dataset Detection Metrics (Injection-Aware MPNet, $\theta=0.764$)}
 \label{tab:per-dataset-metrics}
 \begin{tabular}{lccccc}
 \toprule
 \textbf{Dataset} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{FPR} \\
 \midrule
-deepset (benign) & 100.0\% & N/A & N/A & N/A & 0.0\% \\ndeepset (injections) & 100.0\% & 100.0\% & 100.0\% & 100.0\% & 0.0\% \\nNotInject & 100.0\% & N/A & N/A & N/A & 0.0\% \\n\bottomrule
+SaTML CTF 2024 & 98.8\% & 100.0\% & 98.8\% & 99.4\% & 0.0\% \\
+deepset (full) & 100.0\% & 100.0\% & 100.0\% & 100.0\% & 0.0\% \\
+deepset (injections only) & 100.0\% & 100.0\% & 100.0\% & 100.0\% & N/A \\
+NotInject (local) & 100.0\% & N/A & N/A & N/A & 0.0\% \\
+NotInject (HuggingFace) & 100.0\% & N/A & N/A & N/A & 0.0\% \\
+LLMail-Inject & 100.0\% & 100.0\% & 100.0\% & 100.0\% & 0.0\% \\
+BrowseSafe & 98.2\% & 99.4\% & 96.7\% & 98.0\% & 0.5\% \\
+TensorTrust & 83.2\% & 100.0\% & 83.2\% & 90.9\% & 0.0\% \\
+\midrule
+\textbf{Overall} & \textbf{97.3\%} & - & - & - & \textbf{0.1\%} \\
+\bottomrule
 \end{tabular}
+\vspace{2mm}
+\footnotesize{NotInject datasets are benign-only (for over-defense testing); Precision/Recall/F1 are N/A. TensorTrust contains adversarial attacks designed to evade detection.}
 \end{table}
