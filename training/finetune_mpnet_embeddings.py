@@ -31,10 +31,12 @@ from torch.utils.data import DataLoader
 from benchmarks.benchmark_datasets import (
     load_satml_dataset,
     load_deepset_dataset,
+    load_deepset_injections_only,
     load_notinject_hf_dataset,
     load_llmail_dataset,
     load_browsesafe_dataset,
-    load_notinject_dataset
+    load_notinject_dataset,
+    load_tensortrust_dataset
 )
 
 print("=" * 80)
@@ -65,6 +67,43 @@ print()
 print("1️⃣ Loading training data...")
 print()
 
+# ============================================================================
+# 0. Build the EVAL HOLDOUT set (texts that must NOT enter training)
+# ============================================================================
+# These limits MUST match every benchmark invocation that produces a paper
+# number. --paper uses: satml=300, deepset_injections=203, notinject_hf=339,
+# llmail=200. The full per-dataset table also reports deepset(full), browsesafe,
+# tensortrust. We hold out a superset of all of them so no evaluated text can
+# enter the encoder fine-tuning pool or the XGBoost training set.
+
+def _normalize(t: str) -> str:
+    """Normalize text so trivial whitespace/case differences still collide."""
+    return " ".join(t.split()).strip().lower()
+
+print("0️⃣ Computing eval holdout (zero-leak guard)...")
+_eval_holdout_datasets = {
+    "satml":              load_satml_dataset(limit=300),
+    "deepset_full":       load_deepset_dataset(limit=400),
+    "deepset_injections": load_deepset_injections_only(limit=203),
+    "notinject_hf":       load_notinject_hf_dataset(limit=339),
+    "llmail":             load_llmail_dataset(limit=200),
+    "browsesafe":         load_browsesafe_dataset(limit=500),
+    "tensortrust":        load_tensortrust_dataset(limit=1000),
+}
+EVAL_HOLDOUT = set()
+for _name, _ds in _eval_holdout_datasets.items():
+    for _t in _ds.texts:
+        EVAL_HOLDOUT.add(_normalize(_t))
+print(f"   ✓ Eval holdout contains {len(EVAL_HOLDOUT)} unique normalized texts")
+print()
+
+def _drop_holdout(samples: List[str], label_name: str) -> List[str]:
+    before = len(samples)
+    kept = [s for s in samples if _normalize(s) not in EVAL_HOLDOUT]
+    print(f"   [holdout] {label_name}: {before} -> {len(kept)} "
+          f"(removed {before - len(kept)})")
+    return kept
+
 # Load injection samples
 print("   Loading injection samples...")
 satml = load_satml_dataset(limit=1500)
@@ -82,6 +121,7 @@ for text, label in browsesafe:
         injection_samples.append(text)
 
 print(f"   ✓ Loaded {len(injection_samples)} injection samples")
+injection_samples = _drop_holdout(injection_samples, "injection_samples")
 
 # Load safe samples
 print("   Loading safe samples...")
@@ -94,6 +134,7 @@ for text, label in browsesafe:
         safe_samples.append(text)
 
 print(f"   ✓ Loaded {len(safe_samples)} safe samples")
+safe_samples = _drop_holdout(safe_samples, "safe_samples")
 
 # Load benign-trigger samples (NotInject)
 print("   Loading benign-trigger samples...")
@@ -105,6 +146,15 @@ for ds in [notinject_hf, notinject_synthetic]:
     benign_trigger_samples.extend([text for text, label in ds if label == 0])
 
 print(f"   ✓ Loaded {len(benign_trigger_samples)} benign-trigger samples")
+benign_trigger_samples = _drop_holdout(benign_trigger_samples, "benign_trigger_samples")
+print()
+
+# Guard against a pool collapsing to nothing after holdout subtraction.
+assert len(injection_samples) > 100, "injection pool collapsed after holdout"
+assert len(safe_samples) > 100, "safe pool collapsed after holdout"
+assert len(benign_trigger_samples) > 100, "benign-trigger pool collapsed after holdout"
+print(f"   Post-holdout pools: {len(injection_samples)} inj / "
+      f"{len(safe_samples)} safe / {len(benign_trigger_samples)} benign-trigger")
 print()
 
 # ============================================================================
@@ -195,22 +245,41 @@ def create_contrastive_pairs(
 
     return examples
 
+# Carve disjoint train / internal-val splits per pool (no overlap, seed 42).
+# Previously the validation pairs were drawn from pool[-200:] while those same
+# samples remained in the training pairs (an internal leak); we now split first.
+VAL_TAIL = 200
+np.random.seed(42)
+
+def _split_pool(pool: List[str]) -> Tuple[List[str], List[str]]:
+    pool = list(pool)
+    np.random.shuffle(pool)            # deterministic under seed 42
+    if len(pool) <= VAL_TAIL * 2:
+        cut = max(1, len(pool) // 10)  # too small to spare 200; use 10%
+    else:
+        cut = VAL_TAIL
+    return pool[cut:], pool[:cut]      # (train_part, val_part) — disjoint
+
+inj_train,  inj_val  = _split_pool(injection_samples)
+safe_train, safe_val = _split_pool(safe_samples)
+bt_train,   bt_val   = _split_pool(benign_trigger_samples)
+
 train_examples = create_contrastive_pairs(
-    injection_samples,
-    safe_samples,
-    benign_trigger_samples,
+    inj_train,
+    safe_train,
+    bt_train,
     samples_per_type=2000
 )
 
 print(f"   ✓ Created {len(train_examples)} training pairs")
 print()
 
-# Create validation set
-print("   Creating validation pairs...")
+# Create validation set from the held-out tails (disjoint from train pairs)
+print("   Creating validation pairs (disjoint from train)...")
 val_examples = create_contrastive_pairs(
-    injection_samples[-200:],
-    safe_samples[-200:],
-    benign_trigger_samples[-200:],
+    inj_val,
+    safe_val,
+    bt_val,
     samples_per_type=100
 )
 print(f"   ✓ Created {len(val_examples)} validation pairs")
@@ -298,9 +367,11 @@ n_injection = 2800
 n_safe = 2800
 n_benign_trigger = 1400
 
-selected_injections = np.random.choice(injection_samples, min(n_injection, len(injection_samples)), replace=False).tolist()
-selected_safe = np.random.choice(safe_samples, min(n_safe, len(safe_samples)), replace=False).tolist()
-selected_benign = np.random.choice(benign_trigger_samples, min(n_benign_trigger, len(benign_trigger_samples)), replace=False).tolist()
+# Sample from the train halves only (already holdout-subtracted AND disjoint
+# from the encoder's internal validation tail) so the classifier is doubly clean.
+selected_injections = np.random.choice(inj_train, min(n_injection, len(inj_train)), replace=False).tolist()
+selected_safe = np.random.choice(safe_train, min(n_safe, len(safe_train)), replace=False).tolist()
+selected_benign = np.random.choice(bt_train, min(n_benign_trigger, len(bt_train)), replace=False).tolist()
 
 all_texts = selected_safe + selected_benign + selected_injections
 all_labels = [0] * len(selected_safe) + [0] * len(selected_benign) + [1] * len(selected_injections)

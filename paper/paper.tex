@@ -45,7 +45,7 @@
 \maketitle
 
 \begin{abstract}
-Large Language Model (LLM) agents are increasingly deployed in multi-agent systems where they interact with untrusted users and other agents. This expands the attack surface for prompt injection, allowing malicious instructions to propagate through the system---a phenomenon known as ``prompt infection.'' Existing defenses often focus on single-turn interactions or suffer from high false positive rates (over-defense) on benign prompts containing trigger words. We propose a comprehensive three-layer defense framework (Detection, Coordination, Response) designed specifically for multi-agent environments. Our system features an ensemble detector combining semantic embeddings with heuristic patterns, using a fine-tuned \textbf{Injection-Aware MPNet} embedding model to minimize over-defense. We evaluate our approach on text-based prompt injection benchmarks (SaTML, deepset, LLMail, NotInject, TensorTrust, BrowseSafe), achieving \textbf{97.2\% accuracy}, \textbf{98.8\% recall} on SaTML, \textbf{100\% recall} on deepset and LLMail, and \textbf{0.0\% FPR} on the NotInject over-defense benchmark. We also demonstrate strong generalization on BrowseSafe (97.8\% accuracy, 0.4\% FPR) despite its HTML-embedded attack modality. By learning injection-aware semantic representations, our approach decouples malicious intent from keyword presence, effectively mitigating the ``over-defense'' problem common in keyword-based systems. Our system operates with a P95 latency of \textbf{38.1ms} on GPU hardware, making it suitable for real-time applications.
+Large Language Model (LLM) agents are increasingly deployed in multi-agent systems where they interact with untrusted users and other agents. This expands the attack surface for prompt injection, allowing malicious instructions to propagate through the system---a phenomenon known as ``prompt infection.'' Existing defenses often focus on single-turn interactions or suffer from high false positive rates (over-defense) on benign prompts containing trigger words. We propose a comprehensive three-layer defense framework (Detection, Coordination, Response) designed specifically for multi-agent environments. Our system features an ensemble detector combining semantic embeddings with heuristic patterns, using a fine-tuned \textbf{Injection-Aware MPNet} embedding model to minimize over-defense. We evaluate our approach on text-based prompt injection benchmarks (SaTML, deepset, LLMail, NotInject, TensorTrust, BrowseSafe), achieving \textbf{97.3\% accuracy}, \textbf{98.8\% recall} on SaTML, \textbf{100\% recall} on deepset and LLMail, and \textbf{0.0\% FPR} on the NotInject over-defense benchmark. We also report results on BrowseSafe (98.2\% accuracy, 0.5\% FPR) despite its HTML-embedded attack modality. The detector supports two interchangeable embedding backends that trade accuracy for speed: a 768-dim fine-tuned MPNet (peak accuracy) and a 384-dim MiniLM (lower latency, $\approx$93\% accuracy). By learning injection-aware semantic representations, our approach decouples malicious intent from keyword presence, effectively mitigating the ``over-defense'' problem common in keyword-based systems. End-to-end on CPU we measure a median latency of \textbf{61--91ms} (P50) depending on backend. \textcolor{red}{[TODO: latency requires re-measurement end-to-end on the original GPU hardware; previously reported figures (e.g.\ 2.5/38.1ms) timed only the XGBoost classification stage and excluded embedding generation, which dominates inference cost.]}
 \end{abstract}
 
 \section{Introduction}
@@ -166,7 +166,7 @@ Our system implements a defense-in-depth architecture with three distinct layers
 \subsection{Detection Layer}
 The first line of defense analyzes incoming prompts using an ensemble of detectors:
 \begin{itemize}
-    \item \textbf{Embedding Classifier:} Uses our fine-tuned \texttt{injection-aware-mpnet} model to generate 768-dimensional embeddings, classified by an XGBoost model with optimized threshold ($\theta=0.764$).
+    \item \textbf{Embedding Classifier:} Uses our fine-tuned \texttt{injection-aware-mpnet} model to generate 768-dimensional embeddings, classified by an XGBoost model with optimized threshold ($\theta=0.764$). A lighter 384-dimensional \texttt{all-MiniLM-L6-v2} backend is also supported for latency-sensitive deployments at a moderate accuracy cost (Section~\ref{sec:latency}).
     \item \textbf{Pattern Detector:} A regex-based engine identifying 10 common attack families.
     \item \textbf{Behavioral Monitor:} Uses a sliding window of $N=20$ recent outputs, flagging when output logits exceed $\mu \pm 2\sigma$.
 \end{itemize}
@@ -380,8 +380,29 @@ Figure \ref{fig:roc-pr} shows the ROC and Precision-Recall curves on the deepset
 \end{figure}
 
 \subsection{Latency Analysis}
+\label{sec:latency}
 
-Figure \ref{fig:latency} shows the latency distribution across all benchmarks. The system achieves P50 latency of 35.5ms and P95 latency of 43.3ms, suitable for real-time applications.
+\textcolor{red}{[TODO: The latency figures in this section require re-measurement on the original GPU hardware. The numbers below are honest end-to-end measurements (embedding generation + XGBoost classification) taken on a CPU server; earlier drafts reported figures (2.5--38.1ms) that timed only the XGBoost stage and excluded embedding generation, which is the dominant cost.]}
+
+We report \emph{end-to-end} per-prompt latency (embedding + classification) for both supported backends, measured single-sample on CPU ($n=150$). Embedding generation, not classification, dominates inference cost; the choice of embedding backend therefore drives the accuracy/latency trade-off (Table~\ref{tab:tradeoff}).
+
+\begin{table}[H]
+\centering
+\caption{Accuracy/latency trade-off between embedding backends ($\theta=0.764$, end-to-end CPU latency). Accuracy is the mean over the four verified text benchmarks (SaTML, deepset, NotInject-HF, LLMail).}
+\label{tab:tradeoff}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Backend} & \textbf{Dim} & \textbf{Accuracy} & \textbf{Latency P50 / P95} \\
+\midrule
+\textbf{MPNet (peak accuracy)} & 768 & \textbf{99.5\%} & 91 / 102\,ms \\
+MiniLM (lower latency) & 384 & 93.3\% & 61 / 254\,ms \\
+\bottomrule
+\end{tabular}
+\vspace{1mm}
+\footnotesize{Note: on CPU the MiniLM backend has a lower median but a heavier tail (P95 254\,ms) than MPNet (P95 102\,ms); a GPU deployment is expected to reduce both substantially. These figures supersede the GPU numbers in Figure~\ref{fig:latency}, which are pending re-measurement.}
+\end{table}
+
+Figure \ref{fig:latency} shows the latency distribution across benchmarks for the MPNet backend.
 
 \begin{figure}[H]
 \centering
@@ -494,7 +515,7 @@ Despite BrowseSafe's HTML-embedded attack modality, our Injection-Aware MPNet mo
 
 \section{Discussion}
 
-\textbf{Latency \& Scalability:} P50 latency of 35.5ms is negligible for real-time applications.
+\textbf{Latency \& Scalability:} End-to-end median latency on CPU is 61--91ms (P50) depending on the embedding backend (Table~\ref{tab:tradeoff}), small relative to downstream LLM inference. \textcolor{red}{[TODO: report GPU latency after re-measurement.]}
 
 \subsection{Limitations}
 \begin{itemize}
@@ -514,7 +535,7 @@ We present a multi-layer defense system for prompt injection detection in multi-
     \item \textbf{0.0\% FPR} on the NotInject over-defense benchmark (both local and HuggingFace versions)
     \item \textbf{100\% recall} on deepset and LLMail injection datasets
     \item \textbf{98.2\% accuracy} on BrowseSafe HTML-embedded attacks (0.5\% FPR)
-    \item \textbf{P95 latency of 43.3ms} suitable for real-time applications
+    \item \textbf{End-to-end CPU latency of 61--91ms (P50)}, with an accuracy/latency trade-off between the MPNet (768-dim) and MiniLM (384-dim) backends \textcolor{red}{[GPU latency pending re-measurement]}
 \end{itemize}
 
 By fine-tuning sentence embeddings using contrastive learning on carefully balanced injection/benign pairs, we decouple malicious intent from keyword presence. This effectively mitigates the ``over-defense'' problem that plagues keyword-based systems. The optimized classification threshold ($\theta=0.764$) balances high recall (98.8\% on SaTML) with minimal false positives.
