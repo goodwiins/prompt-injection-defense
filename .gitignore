@@ -44,3 +44,6 @@ checkpoints/
 
 # Claude settings
 .claude/
+
+# Locally downloaded HF model (do not commit large weights)
+models/injection_aware_mpnet_hf/
