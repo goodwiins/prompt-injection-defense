@@ -1,0 +1,130 @@
+{
+  "attributes": [
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Enter artist name or song title"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "980807"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "980807"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "buckeye.foobar"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "3rd party ad content"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "aria_label",
+      "text": "Advertisement"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "3rd party ad content"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "aria_label",
+      "text": "Advertisement"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Linkin Park - Meteora"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "siriusb42"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Neckwringer"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "FL_Bob2002"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "michum"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "suribro"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "NSpen1"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Thudster"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "JorgeM93"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "itsnotheere"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "jarkko099"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "buckeye.foobar"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "3rd party ad content"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "aria_label",
+      "text": "Advertisement"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "apple store"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "google play"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "huawei store"
+    }
+  ],
+  "hidden": []
+}

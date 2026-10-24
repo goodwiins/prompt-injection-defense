@@ -1,0 +1,78 @@
+{
+  "checked_at": "2026-09-11T20:22:44.118370+00:00",
+  "exact_parent_recovery": true,
+  "rows": [
+    {
+      "id": "ee1ed93ebb8a69d23d4c",
+      "website": "sports.yahoo",
+      "content_tokens": 189356,
+      "windows": 662,
+      "token_sha256": "304af9497fdd9d0e03e00281681e3491344c2d7589a1fd2f72378da198b8af72",
+      "attack": null
+    },
+    {
+      "id": "213b3ce97f4df825eb40",
+      "website": "travelzoo",
+      "content_tokens": 57468,
+      "windows": 201,
+      "token_sha256": "0ba81be4e3d1a501ae1de56d786e89b76aee516eb054f497598abaa3ee04087f",
+      "attack": null
+    },
+    {
+      "id": "323024a2dffc2fbbf6b4",
+      "website": "kohls",
+      "content_tokens": 63468,
+      "windows": 222,
+      "token_sha256": "b81de77ee9b8761915c8788ea595c5c000cd213de6bb1c37319cf9878df9232b",
+      "attack": null
+    },
+    {
+      "id": "49eebac55cfb03dc0211",
+      "website": "kohls",
+      "content_tokens": 63493,
+      "windows": 222,
+      "token_sha256": "a5a8e754ef9cc0dc321cfca6a0d3c5453e3bf46971202f8a8a3c5b3b48d39ea0",
+      "attack": {
+        "token_bounds": [
+          63460,
+          63485
+        ],
+        "complete_windows": [
+          221
+        ]
+      }
+    },
+    {
+      "id": "e90541be4b053ea908bb",
+      "website": "sports.yahoo",
+      "content_tokens": 189369,
+      "windows": 662,
+      "token_sha256": "102246df7019c0d186f4e86328a240d2238bb4943e0bd1f7fb9cbd6107001fa7",
+      "attack": {
+        "token_bounds": [
+          189348,
+          189361
+        ],
+        "complete_windows": [
+          661
+        ]
+      }
+    },
+    {
+      "id": "1874e45c7aa824ece6bf",
+      "website": "travelzoo",
+      "content_tokens": 57487,
+      "windows": 201,
+      "token_sha256": "fec36e564f4d562f5a80274185f4c129912e683b73da7d04b37123fec6305f16",
+      "attack": {
+        "token_bounds": [
+          57460,
+          57479
+        ],
+        "complete_windows": [
+          200
+        ]
+      }
+    }
+  ]
+}

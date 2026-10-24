@@ -1,0 +1,238 @@
+{
+  "completed_at": "2026-09-11T06:25:55.917079+00:00",
+  "summaries": {
+    "frozen_17": {
+      "n": 447,
+      "tp": 16,
+      "tn": 210,
+      "fp": 14,
+      "fn": 207,
+      "accuracy": {
+        "value": 0.5055928411633109,
+        "nominal_wilson_95": [
+          0.45939438667647264,
+          0.5516959864517639
+        ]
+      },
+      "recall": {
+        "value": 0.07174887892376682,
+        "nominal_wilson_95": [
+          0.044643401947999754,
+          0.1133588389431808
+        ]
+      },
+      "fpr": {
+        "value": 0.0625,
+        "nominal_wilson_95": [
+          0.03759145389816756,
+          0.10216124512994307
+        ]
+      },
+      "threshold": 0.5104188919067383,
+      "roc_auc": 0.5316303651505445,
+      "average_precision": 0.5307250091214633,
+      "balanced_accuracy": 0.5046244394618834
+    },
+    "finetuned_17": {
+      "n": 447,
+      "tp": 138,
+      "tn": 219,
+      "fp": 5,
+      "fn": 85,
+      "accuracy": {
+        "value": 0.7986577181208053,
+        "nominal_wilson_95": [
+          0.7590100587936345,
+          0.8332158662541983
+        ]
+      },
+      "recall": {
+        "value": 0.6188340807174888,
+        "nominal_wilson_95": [
+          0.5535876198840587,
+          0.6800557373555615
+        ]
+      },
+      "fpr": {
+        "value": 0.022321428571428572,
+        "nominal_wilson_95": [
+          0.009571183418320913,
+          0.05117921245931008
+        ]
+      },
+      "threshold": 0.4809763729572296,
+      "roc_auc": 0.8353419282511211,
+      "average_precision": 0.8811365860656242,
+      "balanced_accuracy": 0.7982563260730301
+    },
+    "frozen_42": {
+      "n": 447,
+      "tp": 12,
+      "tn": 215,
+      "fp": 9,
+      "fn": 211,
+      "accuracy": {
+        "value": 0.5078299776286354,
+        "nominal_wilson_95": [
+          0.4616152098032544,
+          0.5539113125762767
+        ]
+      },
+      "recall": {
+        "value": 0.053811659192825115,
+        "nominal_wilson_95": [
+          0.031047167007153965,
+          0.09168815203653677
+        ]
+      },
+      "fpr": {
+        "value": 0.04017857142857143,
+        "nominal_wilson_95": [
+          0.021279692111532543,
+          0.07458283849964495
+        ]
+      },
+      "threshold": 0.5151113271713257,
+      "roc_auc": 0.5264253683536195,
+      "average_precision": 0.5420355736315967,
+      "balanced_accuracy": 0.5068165438821268
+    },
+    "finetuned_42": {
+      "n": 447,
+      "tp": 23,
+      "tn": 205,
+      "fp": 19,
+      "fn": 200,
+      "accuracy": {
+        "value": 0.5100671140939598,
+        "nominal_wilson_95": [
+          0.4638369493517397,
+          0.5561257222790862
+        ]
+      },
+      "recall": {
+        "value": 0.1031390134529148,
+        "nominal_wilson_95": [
+          0.06971448426843582,
+          0.15000486985585196
+        ]
+      },
+      "fpr": {
+        "value": 0.08482142857142858,
+        "nominal_wilson_95": [
+          0.05497303079015267,
+          0.1286698366548911
+        ]
+      },
+      "threshold": 0.5355667471885681,
+      "roc_auc": 0.46682815502882763,
+      "average_precision": 0.49068313797077157,
+      "balanced_accuracy": 0.5091587924407431
+    },
+    "frozen_73": {
+      "n": 447,
+      "tp": 13,
+      "tn": 212,
+      "fp": 12,
+      "fn": 210,
+      "accuracy": {
+        "value": 0.5033557046979866,
+        "nominal_wilson_95": [
+          0.457174479807669,
+          0.549479744069273
+        ]
+      },
+      "recall": {
+        "value": 0.05829596412556054,
+        "nominal_wilson_95": [
+          0.034381491555691555,
+          0.09717055794987164
+        ]
+      },
+      "fpr": {
+        "value": 0.05357142857142857,
+        "nominal_wilson_95": [
+          0.030907367343724866,
+          0.0912892643176125
+        ]
+      },
+      "threshold": 0.5127815008163452,
+      "roc_auc": 0.515835201793722,
+      "average_precision": 0.5153717462492223,
+      "balanced_accuracy": 0.5023622677770659
+    },
+    "finetuned_73": {
+      "n": 447,
+      "tp": 114,
+      "tn": 223,
+      "fp": 1,
+      "fn": 109,
+      "accuracy": {
+        "value": 0.7539149888143176,
+        "nominal_wilson_95": [
+          0.7119332386995023,
+          0.7915697013224379
+        ]
+      },
+      "recall": {
+        "value": 0.5112107623318386,
+        "nominal_wilson_95": [
+          0.4459705782344384,
+          0.5760712479202429
+        ]
+      },
+      "fpr": {
+        "value": 0.004464285714285714,
+        "nominal_wilson_95": [
+          0.0007884912109385606,
+          0.024849769933145915
+        ]
+      },
+      "threshold": 0.5627574920654297,
+      "roc_auc": 0.8584240871236387,
+      "average_precision": 0.8912372923899088,
+      "balanced_accuracy": 0.7533732383087764
+    }
+  },
+  "historical_reference": {
+    "n": 447,
+    "tp": 28,
+    "tn": 211,
+    "fp": 13,
+    "fn": 195,
+    "accuracy": {
+      "value": 0.5346756152125279,
+      "nominal_wilson_95": [
+        0.48833666992828945,
+        0.5804236434667773
+      ]
+    },
+    "recall": {
+      "value": 0.12556053811659193,
+      "nominal_wilson_95": [
+        0.08831780610706907,
+        0.17548520032658094
+      ]
+    },
+    "fpr": {
+      "value": 0.05803571428571429,
+      "nominal_wilson_95": [
+        0.03422658597487419,
+        0.09674807936984983
+      ]
+    },
+    "threshold": 0.8808263540267944,
+    "roc_auc": 0.5695067264573991,
+    "average_precision": 0.5856565353052723,
+    "balanced_accuracy": 0.5337624119154388
+  },
+  "limitations": [
+    "Small BrowseSafe-only pilot; no general prompt-injection or downstream security claim",
+    "Source labels are machine-generated, not independently verified attack-span annotations",
+    "A max-pooled page classifier cannot resolve dependencies across distant windows",
+    "Five percent is an exploratory empirical validation budget, not a production safety target or guarantee",
+    "Lexical filtering does not prove independence of unknown websites, templates or pretraining data",
+    "All seeds are reported; three training runs do not establish universal robustness",
+    "Prior test rows and scores never enter training or model selection; prior text is used to reject overlap"
+  ]
+}

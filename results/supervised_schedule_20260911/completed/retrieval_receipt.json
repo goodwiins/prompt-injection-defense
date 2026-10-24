@@ -1,0 +1,9 @@
+{
+  "manifest_sha256": "a605f325ebf3f2207cc1cda7fb1dbdb2c1de69f39cedbe35597e2a43d29a1280",
+  "verified_files": 238,
+  "counts": {
+    "existing": 14,
+    "cloned": 142,
+    "downloaded": 82
+  }
+}

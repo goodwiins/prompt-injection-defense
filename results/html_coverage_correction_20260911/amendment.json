@@ -1,0 +1,8 @@
+{
+  "amended_at": "2026-09-11T21:59:21.297039+00:00",
+  "previous_protocol_sha256": "370fe167c672020a12a9618d06b8cf5c7eab746542d850799d9dbb111606ee14",
+  "reason": "Balance both new-source and retained-source training labels, not just overall counts",
+  "changed": "Fitting plan selects 20 of 30 training-group candidates; other 10 remain review-only. Raw pages, review sheet and validation/reserved groups unchanged.",
+  "training_or_scoring_before_amendment": false,
+  "previous_snapshot": "results/html_coverage_correction_20260911_preparation_v1"
+}

@@ -1,0 +1,1640 @@
+{
+  "attributes": [
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Link to club's homepage"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": " logo"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "More menu choices"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Primary Navigation"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "News"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "News "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Scores"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Scores "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Schedule"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Schedule "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Videos"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Videos "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Teams"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Teams "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Players"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Players "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Stats"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Stats "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Standings"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Standings "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Draft"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Draft "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL+"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL+ "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "NFL+"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL Network"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL Network "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Fantasy"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Fantasy target=_blank"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Tickets"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Tickets target=_blank"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Travel"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Travel "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Shop"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Shop target=_blank"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "My NFL Profile"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Open your profile page"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "More menu choices"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL Films"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL Films "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Salute to Service"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Salute to Service "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Community"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Community "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Por la Cultura"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Por la Cultura "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Inspire Change "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "HBCU"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "HBCU "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Ways to Watch"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Ways to Watch "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Photos"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Photos "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "En Espaol"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "En Espaol target=_blank"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Super Bowl"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Super Bowl "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL Shop"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL Shop target=_blank"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL+"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL+ "
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Action Related Navigation"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL+"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL+ "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "NFL+"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL Network"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL Network "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Fantasy"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Fantasy target=_blank"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Tickets"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Tickets target=_blank"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Travel"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Travel "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Shop"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Shop target=_blank"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "My NFL Profile"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Open your profile page"
+    },
+    {
+      "tag": "main",
+      "attribute": "aria_label",
+      "text": "Page main content"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Advertising"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "3rd party ad content"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "aria_label",
+      "text": "Advertisement"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Round 2 steals in waiting?"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Round 2 steals in waiting?"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "carousel with 8 items"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "DJ's Top Prospects: Comparing Stroud vs. Young"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ DJ's Top Prospects - 3/31/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "DJ's Draft Show: Ryan Day deep dives on C.J. Stroud"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ DJ's Draft Show: Ryan Day on C.J. Stroud - 3/30/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Daniel Jeremiah's Mock Draft 3.0 Explained"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - Daniel Jeremiah's Mock Draft 3.0 Explained - 3/22/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Daniel Jeremiah's Draft Show: Klatt projects Richardson, Levis, Hooker landing spots"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - Daniel Jeremiah's Draft Show Joel Klatt projects who will take Richardson, Levis and Hooker- 3/22/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Daniel Jeremiah's Draft Show: Joel Klatt on Bryce Young's landing spot"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - Daniel Jeremiah's Draft Show: Joel Klatt on Bryce Young's landing spot- 3/22/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Daniel Jeremiah's Draft Show: Klatt on Stroud's draft stock"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - Daniel Jeremiah's Draft Show: Joel Klatt on C.J. Stroud's draft stock - 3/22/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Daniel Jeremiah's Draft Show: Klatt's biggest first-round curveball"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - Daniel Jeremiah's Draft Show: Joel Klatt's biggest first round curveball- 3/22/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL+: Daniel Jeremiah's mock draft combine recap"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - DJ's mock draft combine recap - 3/10/23"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "carousel with 9 items"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Ravens GM Eric DeCosta sees 'more than four guys' in draft who can be 'significant' NFL QBs"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Ravens GM Eric DeCosta sees 'more than four guys' in draft who can be 'significant' NFL QBs"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "John Elway no longer with Broncos after consultant contract expires"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "John Elway no longer with Broncos after consultant contract expires"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Marvin Jones on return to Detroit: 'The culture's different, the coaches, everything. It's not the same'"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Marvin Jones on return to Detroit: 'The culture's different, the coaches, everything. It's not the same'"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Bills finalize agreement on new stadium with state, county"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Bills finalize agreement on new stadium with state, county"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Buccaneers GM Jason Licht thinks RB Rachaad White 'is going to be a stud' in Tampa Bay"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Buccaneers GM Jason Licht thinks RB Rachaad White 'is going to be a stud' in Tampa Bay"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL free agency tracker: Latest signings, trades, contract info for all 32 teams"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL free agency tracker: Latest signings, trades, contract info for all 32 teams"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Former WR Danny Amendola joins Raiders coaching staff "
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Former WR Danny Amendola joins Raiders coaching staff "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Stand Up to Jewish Hate"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Stand Up to Jewish Hate"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Six potential Round 2 steals in 2023 class | 'Path to the Draft'"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Six potential Round 2 steals in 2023 class | 'Path to the Draft'"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "carousel with 15 items"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL Draft: Five Round 1 trades that would make sense"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL Draft: Five Round 1 trades that would make sense"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL Draft: Which prospect SHOULD the Carolina Panthers select with the No. 1 overall pick?"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL Draft: Which prospect SHOULD the Carolina Panthers select with the No. 1 overall pick?"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Cynthia Frelund 2023 NFL mock draft 2.0: Packers select WR Jaxon Smith-Njigba; Falcons pick QB"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Cynthia Frelund 2023 NFL mock draft 2.0: Packers select WR Jaxon Smith-Njigba; Falcons pick QB"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL Draft: First-round order, top three needs for all 32 teams"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL Draft: First-round order, top three needs for all 32 teams"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL Draft: Ten teams that most need to ace their picks"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL Draft: Ten teams that most need to ace their picks"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Bucky Brooks 2023 NFL mock draft 3.0: Colts pass on quarterback; Will Levis falls out of first round"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Bucky Brooks 2023 NFL mock draft 3.0: Colts pass on quarterback; Will Levis falls out of first round"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL Draft: Strongest position group? Weakest?"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL Draft: Strongest position group? Weakest?"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Eric Edholm 2023 NFL mock draft 2.0: Cowboys trade up for Texas RB Bijan Robinson"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Eric Edholm 2023 NFL mock draft 2.0: Cowboys trade up for Texas RB Bijan Robinson"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Four-round 2023 NFL mock draft 1.0: QBs go 1-2-3 after Colts trade up"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Four-round 2023 NFL mock draft 1.0: QBs go 1-2-3 after Colts trade up"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Charles Davis 2023 NFL mock draft 1.0: Panthers pick C.J. Stroud at No. 1; Vikings take Will Levis"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Charles Davis 2023 NFL mock draft 1.0: Panthers pick C.J. Stroud at No. 1; Vikings take Will Levis"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Bucky Brooks' top five 2023 NFL Draft prospects by position 2.0: QB Hooker above Richardson and Levis"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Bucky Brooks' top five 2023 NFL Draft prospects by position 2.0: QB Hooker above Richardson and Levis"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Daniel Jeremiah 2023 NFL mock draft 3.0: Bucs, Colts, Panthers, Texans, Vikings pick QBs in Round 1"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Daniel Jeremiah 2023 NFL mock draft 3.0: Bucs, Colts, Panthers, Texans, Vikings pick QBs in Round 1"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL Draft: Quarterback prospect-team fits after initial wave of free agency"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL Draft: Quarterback prospect-team fits after initial wave of free agency"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Eric Edholm's top 100: Ranking prospects in 2023 NFL Draft class"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Eric Edholm's top 100: Ranking prospects in 2023 NFL Draft class"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Daniel Jeremiah's top 50: 2023 NFL Draft prospect rankings 3.0"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Daniel Jeremiah's top 50: 2023 NFL Draft prospect rankings 3.0"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "PHOTOS"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "carousel with 15 items"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from TCU's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ TCU Pro Day - 4/3/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Replay of Florida's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ Replay of Florida's Pro Day - 3/30/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Replay of Ohio State's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ Live Ohio State pro days highlights - 3/22/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Replay of Kentucky's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ Replay of Kentucky's Pro Day - 3/28/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Replay of Alabama's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ Pro Day Alabama Replay - 3/23/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from Texas A&M's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+: Texas A&M's Pro Day - 3/30/23 "
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from Notre Dame's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ ND's Pro Day - 3/27/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from Boston College's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - BC Pro Day Highlights - 3/27/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from Utah's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - Utah Pro Day Highlights - 3/27/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from Auburn's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ Pro Day Auburn - 3/24/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from Georgia's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ Georgia pro days - 3/20/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from UCLA's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ UCLA Pro Day highlights - 3/17/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from Clemson's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+: Clemson pro day - 3/16/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from Northwestern's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+ Northwestern Pro Day - 3/17/23"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Highlights from Oregon's Pro Day"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Promo - Homepage - Redirect - NFL+: Oregon pro day - 3/16/23"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "carousel with 7 items"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Opening play touchdowns | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Opening play touchdowns | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2013 NFL Draft rewind: Hit, miss, or meh?"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2013 NFL Draft rewind: Hit, miss, or meh?"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Tom Brady career highlights | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Tom Brady career highlights | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Greatest chasedown tackles of all time | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Greatest chasedown tackles of all time | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL Top 10: Free agent signings | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL Top 10: Free agent signings | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Longest fourth-down conversions | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Longest fourth-down conversions | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL Top 10: Freak Athletes | NFL Throwback"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL Top 10: Freak Athletes | NFL Throwback"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "carousel with 6 items"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "RedHot Recaps: 2022 Season"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "RedHot Recaps: 2022 Season"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Next Gen Stats: Top 10 passing scores | 2022 season"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Next Gen Stats: Top 10 passing scores | 2022 season"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Justin Jefferson reacts to his epic plays from 2022 | Gaining Greatness"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Justin Jefferson reacts to his epic plays from 2022 | Gaining Greatness"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Destination Munich: Behind-the-scenes with the Seahawks"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Destination Munich: Behind-the-scenes with the Seahawks"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Jamaal Williams reacts to his biggest plays from 2022 | Gaining Greatness"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Jamaal Williams reacts to his biggest plays from 2022 | Gaining Greatness"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "The NFL and Sleep Number team up to support cancer initiatives"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "The NFL and Sleep Number team up to support cancer initiatives"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "PHOTOS"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "carousel with 17 items"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Daniel Jeremiah's top 50: 2023 NFL Draft prospect rankings 4.0"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Daniel Jeremiah's top 50: 2023 NFL Draft prospect rankings 4.0"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL offseason: Projecting performances of quarterbacks who changed teams"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL offseason: Projecting performances of quarterbacks who changed teams"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Jalen Hurts' forthcoming megadeal underscores Eagles' brilliance; Julian Love reshapes Seahawks' D"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Jalen Hurts' forthcoming megadeal underscores Eagles' brilliance; Julian Love reshapes Seahawks' D"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Derek Carr will push New Orleans Saints far as Cinderella team of 2023 NFL season"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Derek Carr will push New Orleans Saints far as Cinderella team of 2023 NFL season"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL offseason: Projecting performances of receivers who changed teams"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL offseason: Projecting performances of receivers who changed teams"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL free agency: Bears, Patriots, Saints among teams poised for turnaround after signings/trades"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL free agency: Bears, Patriots, Saints among teams poised for turnaround after signings/trades"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL free agency: Yannick Ngakoue, DJ Chark among veterans who can still contribute"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL free agency: Yannick Ngakoue, DJ Chark among veterans who can still contribute"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Bears, Lions pushing to take over NFC North; how Patrick Peterson, Stephon Gilmore defy Father Time"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Bears, Lions pushing to take over NFC North; how Patrick Peterson, Stephon Gilmore defy Father Time"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL's best revenge games in 2023 season: Super Bowl LVII rematch, Frank Reich vs. Colts and more"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL's best revenge games in 2023 season: Super Bowl LVII rematch, Frank Reich vs. Colts and more"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL free agency: Best team fits for Teddy Bridgewater, Odell Beckham Jr. and more"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL free agency: Best team fits for Teddy Bridgewater, Odell Beckham Jr. and more"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL Power Rankings: Jets, Dolphins climb after free agency frenzy; Vikings, Packers slip"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL Power Rankings: Jets, Dolphins climb after free agency frenzy; Vikings, Packers slip"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL trade grades: Weighing deals for No. 1 pick, Jalen Ramsey, Brandin Cooks and more"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL trade grades: Weighing deals for No. 1 pick, Jalen Ramsey, Brandin Cooks and more"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL free agency: Best/riskiest moves in the opening wave of the veteran market"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL free agency: Best/riskiest moves in the opening wave of the veteran market"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 'Hard Knocks' candidates: Ranking Jets, Bears, Saints, Commanders by entertainment potential"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 'Hard Knocks' candidates: Ranking Jets, Bears, Saints, Commanders by entertainment potential"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL free agency: Don't overlook these signings"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL free agency: Don't overlook these signings"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL free agency: Four analytical fits and three head-scratchers"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL free agency: Four analytical fits and three head-scratchers"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "2023 NFL free agency: Biggest moves (and non-moves) so far"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "2023 NFL free agency: Biggest moves (and non-moves) so far"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "carousel with 9 items"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Dr. Topeka K. Sam advocates to aid incarcerated women | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Dr. Topeka K. Sam advocates to aid incarcerated women | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Welcome OutEast | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Welcome OutEast | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "How Kelvin Beachum advocates for increased minority representation in aviation field | 'Inspire Change'"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "How Kelvin Beachum advocates for increased minority representation in aviation field | 'Inspire Change'"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Saquon Barkley's support for homeless through Covenant House | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Saquon Barkley's support for homeless through Covenant House | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Dion Dawkins | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Dion Dawkins | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Garett Bolles mentors kids in Colorado | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Garett Bolles mentors kids in Colorado | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Darius Slayton, Julian Love mentoring Far Rockaway Giants | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Darius Slayton, Julian Love mentoring Far Rockaway Giants | Inspire Change"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Inspire Change: We See You, Mentors"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Inspire Change: We See You, Mentors"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "NFL Inspire Change | Stats"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NFL Inspire Change | Stats"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "carousel with 6 items"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Panthers.com"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Vikings.com"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Steelers.com"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Newyorkjets.com"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "BuffaloBills.com"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Vikings.com"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "MORE"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Advertising"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "Content from Riddle"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Teams links Navigation"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Baltimore Ravens"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Cincinnati Bengals"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Cleveland Browns"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Pittsburgh Steelers"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Buffalo Bills"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Miami Dolphins"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "New England Patriots"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "New York Jets"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Houston Texans"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Indianapolis Colts"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Jacksonville Jaguars"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Tennessee Titans"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Denver Broncos"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Kansas City Chiefs"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Las Vegas Raiders"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Los Angeles Chargers"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Chicago Bears"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Detroit Lions"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Green Bay Packers"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Minnesota Vikings"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Dallas Cowboys"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "New York Giants"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Philadelphia Eagles"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Washington Commanders"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Atlanta Falcons"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Carolina Panthers"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "New Orleans Saints"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Tampa Bay Buccaneers"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Arizona Cardinals"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Los Angeles Rams"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "San Francisco 49ers"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Seattle Seahawks"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Download Apps Navigation"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Download on the Apple Store - Opens new window"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Download on the Apple Store"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Get it on Google Play - Opens new window"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Get it on Google Play"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Legal Links Navigation"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Privacy Policy"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Terms of Service"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Subscription Terms and Conditions"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "dismiss cookie message"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Your Privacy Choices"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": ", opens in a new tab"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Back"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Filter"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Powered by OneTrust Opens in a new Tab"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Powered by Onetrust"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Powered by OneTrust Opens in a new Tab"
+    }
+  ],
+  "hidden": []
+}

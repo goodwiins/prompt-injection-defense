@@ -1,0 +1,18 @@
+{
+  "delivered_at": "2026-09-11T22:03:31.044057+00:00",
+  "status": "prepared_awaiting_independent_human_labels_and_provenance",
+  "training_started": false,
+  "new_weights_produced": false,
+  "staged_diff_sha256": "404de3b634a62eb9fceb16b48da2a054c4ae3edcbb1a5b665c2affbfb40bcd46",
+  "files": {
+    "results/html_coverage_correction_20260911/protocol.json": "84dec0f6b1fc27eb2c9b7d367be7122c78d1f1769ce1b9468e0093667be49a4f",
+    "results/html_coverage_correction_20260911/verification.json": "2ce4734dae61e40056c7ae22f8671f2e39270e649d8e28decc1be2d61952fa86",
+    "results/html_coverage_correction_20260911/preflight.json": "66518e0106b8f4d611027e118e45bf3619b44c7db41490512131debcec3a1f51",
+    "results/html_coverage_correction_20260911/REVIEW.md": "dd4ce69d24c1baf1ece2045036be7858afd3d8514f610cf4c01afe87e629e56e",
+    "results/html_coverage_correction_20260911/human_review.csv": "0fec9632c38c20e9c7ab02d86059af40da9817921da6c40f6644123ffdc67d8e",
+    "results/html_coverage_correction_20260911/replacement_plan.json": "b42658c9087b842e7b3544af33d5e1c76ae7e3ee719416a851824d1cc73f90b4",
+    "scripts/prepare_html_coverage_correction.py": "db96f999505374900e3188a6e7a88b4a32e2dc9ca6a2e75e10a4070660d25a5f",
+    "paper/HTML_COVERAGE_CORRECTION.md": "af0f5a96bec3dd38a5675d04652fce955a408ead44e799cb7c13cda2245a0d7c",
+    "paper/HANDOFF.md": "5ff352ba34c2e157cee557ff81dcf797ad5fbd0e8077875589792dbcbd68094b"
+  }
+}

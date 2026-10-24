@@ -44,3 +44,7 @@ checkpoints/
 
 # Claude settings
 .claude/
+
+# Files over GitHub 100MB limit (kept locally; see results/supervised_pilot_20260911/)
+results/supervised_pilot_20260911/browsesafe_test_raw.jsonl
+results/supervised_pilot_20260911/browsesafe_train_raw.jsonl

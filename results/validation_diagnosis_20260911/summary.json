@@ -1,0 +1,200 @@
+{
+  "content_token_budget": 382,
+  "slices": [
+    {
+      "split": "train",
+      "source": "deepset/prompt-injections",
+      "n": 311,
+      "attacks": 115,
+      "truncated": 2,
+      "median_content_tokens": 17.0,
+      "marker_only_after_head": 0
+    },
+    {
+      "split": "train",
+      "source": "ethz-spylab/ctf-satml24",
+      "n": 510,
+      "attacks": 510,
+      "truncated": 11,
+      "median_content_tokens": 41.0,
+      "marker_only_after_head": 2
+    },
+    {
+      "split": "train",
+      "source": "microsoft/llmail-inject-challenge",
+      "n": 124,
+      "attacks": 124,
+      "truncated": 38,
+      "median_content_tokens": 300.5,
+      "marker_only_after_head": 0
+    },
+    {
+      "split": "train",
+      "source": "perplexity-ai/browsesafe-bench",
+      "n": 1205,
+      "attacks": 613,
+      "truncated": 1047,
+      "median_content_tokens": 1705.0,
+      "marker_only_after_head": 108
+    },
+    {
+      "split": "train",
+      "source": "synthetic-additional-templates",
+      "n": 136,
+      "attacks": 0,
+      "truncated": 0,
+      "median_content_tokens": 10.0,
+      "marker_only_after_head": 0
+    },
+    {
+      "split": "validation",
+      "source": "deepset/prompt-injections",
+      "n": 110,
+      "attacks": 38,
+      "truncated": 0,
+      "median_content_tokens": 17.0,
+      "marker_only_after_head": 0,
+      "variants": {
+        "base": {
+          "tp": 17,
+          "tn": 71,
+          "fp": 1,
+          "fn": 21,
+          "roc_auc": 0.9228801169590644
+        },
+        "uniform": {
+          "tp": 22,
+          "tn": 69,
+          "fp": 3,
+          "fn": 16,
+          "roc_auc": 0.9155701754385964
+        },
+        "double": {
+          "tp": 34,
+          "tn": 70,
+          "fp": 2,
+          "fn": 4,
+          "roc_auc": 0.9780701754385965
+        }
+      }
+    },
+    {
+      "split": "validation",
+      "source": "ethz-spylab/ctf-satml24",
+      "n": 154,
+      "attacks": 154,
+      "truncated": 5,
+      "median_content_tokens": 48.5,
+      "marker_only_after_head": 0,
+      "variants": {
+        "base": {
+          "tp": 143,
+          "tn": 0,
+          "fp": 0,
+          "fn": 11,
+          "roc_auc": null
+        },
+        "uniform": {
+          "tp": 145,
+          "tn": 0,
+          "fp": 0,
+          "fn": 9,
+          "roc_auc": null
+        },
+        "double": {
+          "tp": 146,
+          "tn": 0,
+          "fp": 0,
+          "fn": 8,
+          "roc_auc": null
+        }
+      }
+    },
+    {
+      "split": "validation",
+      "source": "microsoft/llmail-inject-challenge",
+      "n": 0,
+      "attacks": 0,
+      "truncated": 0,
+      "median_content_tokens": null,
+      "marker_only_after_head": 0
+    },
+    {
+      "split": "validation",
+      "source": "perplexity-ai/browsesafe-bench",
+      "n": 410,
+      "attacks": 202,
+      "truncated": 363,
+      "median_content_tokens": 1882.0,
+      "marker_only_after_head": 54,
+      "variants": {
+        "base": {
+          "tp": 23,
+          "tn": 199,
+          "fp": 9,
+          "fn": 179,
+          "roc_auc": 0.5146610814927646
+        },
+        "uniform": {
+          "tp": 16,
+          "tn": 198,
+          "fp": 10,
+          "fn": 186,
+          "roc_auc": 0.4862909367859863
+        },
+        "double": {
+          "tp": 75,
+          "tn": 148,
+          "fp": 60,
+          "fn": 127,
+          "roc_auc": 0.5538128332063976
+        }
+      }
+    },
+    {
+      "split": "validation",
+      "source": "synthetic-additional-templates",
+      "n": 68,
+      "attacks": 0,
+      "truncated": 0,
+      "median_content_tokens": 10.0,
+      "marker_only_after_head": 0,
+      "variants": {
+        "base": {
+          "tp": 0,
+          "tn": 66,
+          "fp": 2,
+          "fn": 0,
+          "roc_auc": null
+        },
+        "uniform": {
+          "tp": 0,
+          "tn": 46,
+          "fp": 22,
+          "fn": 0,
+          "roc_auc": null
+        },
+        "double": {
+          "tp": 0,
+          "tn": 53,
+          "fp": 15,
+          "fn": 0,
+          "roc_auc": null
+        }
+      }
+    }
+  ],
+  "training_template_groups": {
+    "template:technical": 68,
+    "template:recipe": 34,
+    "template:manual": 34
+  },
+  "validation_template_groups": {
+    "template:education": 68
+  },
+  "lexical_near_duplicates_at_090": 97,
+  "lexical_near_duplicates_opposite_labels_at_090": 7,
+  "source_only_validation_auc": 0.7791586440282396,
+  "marker_caveat": "Lexical flags locate candidate instructions, not attack ground truth. No automatic relabeling.",
+  "manifest_sha256": "c1ecc4cc779e620f6da9437b4fea4b5be1b47972055353eb077135d0dbcd81d4"
+}

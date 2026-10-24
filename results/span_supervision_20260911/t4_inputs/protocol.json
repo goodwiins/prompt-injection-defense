@@ -1,0 +1,107 @@
+{
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "gpu": "NVIDIA T4",
+  "seeds": [
+    17,
+    42,
+    73
+  ],
+  "epochs": 6,
+  "document_batch": 4,
+  "inference_window_batch": 32,
+  "encoder_lr": 1e-05,
+  "head_lr": 0.001,
+  "weight_decay": 0.01,
+  "gradient_clip": 1.0,
+  "max_length": 384,
+  "overlap": 96,
+  "validation_fpr_budget": 0.05,
+  "loss": "Page-max BCE + 0.5 times class-balanced reviewed-span BCE, normalized per training page",
+  "comparison": "same linear head initialization, data, document order, loss and optimizer settings; encoder frozen versus updated",
+  "dropout": "disabled in both arms; gradients still update the fine-tuned encoder",
+  "precision": "CUDA float16 autocast and GradScaler; parameters remain float32",
+  "checkpoint_rule": "maximum validation recall at empirical FPR <=5%, then ROC-AUC; earliest epoch breaks ties; complete all six epochs",
+  "threshold_rule": "maximum validation recall at empirical FPR <=5%; highest threshold breaks ties",
+  "stop_on_non_improvement": false,
+  "record_training_diagnostics": true,
+  "retry_amp_overflow": true,
+  "amp_overflow_policy": "On nonfinite gradients recorded by GradScaler, let it skip mutation and reduce its scale; clear gradients and retry backward on the same retained forward graph. At most eight retries; persistent nonfinite gradients abort. Preserve all 384 finite optimizer updates and record every recovery.",
+  "frozen_at": "2026-09-11T23:19:22.656743+00:00",
+  "experiment": "Reviewed attack-span auxiliary loss; T4 hardware amendment; implementation prepared, untrained",
+  "intervention": "Add a fixed auxiliary loss on complete reviewed training insertions; data and page loss unchanged",
+  "counts": {
+    "train": {
+      "0": 128,
+      "1": 128
+    },
+    "validation": {
+      "0": 106,
+      "1": 101
+    }
+  },
+  "windows": {
+    "train": 22176,
+    "validation": 19256
+  },
+  "expected_optimizer_updates_per_trial": 384,
+  "final_test_included": false,
+  "primary_endpoint": "Descriptive validation recall and FPR for every seed and arm, overall and by source/condition; no fresh-test success claim",
+  "limitations": [
+    "Same assistant constructed and reviewed this packet; review was not blind.",
+    "No evidence establishes the reviewer as a superior calibrated classifier.",
+    "New-cohort sites/categories are split-disjoint; historical family overlap remains unknown.",
+    "Quoted framing and source boilerplate can be shortcuts. Validation category and position are coupled.",
+    "Repeated validation use means exploratory development evidence only; no security-gate or generalization claim."
+  ],
+  "parent_protocol_sha256": "84dec0f6b1fc27eb2c9b7d367be7122c78d1f1769ce1b9468e0093667be49a4f",
+  "prior_schedule_protocol_sha256": "7848682024e2b28d08c5a7f2501bc1593a9f19db10f4314a5eb0581eafd204a8",
+  "legacy_train_sha256": "6d98699f22a72af7c2d85d5fad430b440a2c0688e1c70c669e0bcf7b57aa5b09",
+  "legacy_validation_sha256": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+  "files": {
+    "train.jsonl": "05f59fea6cbf5439b0401f7be7b3558e24d02a1ea61d5be428b1968b08c463d5",
+    "windowed_followup.py": "163d0f6ed0e56ae9ddab9873a68fa1374351466c8cfa7200d7ea676c03e288ed",
+    "span_targets.jsonl": "776acfc6f5b0b8d4125bba335a29e8f50252b7e1aaeddd82a193127f14ff68e3",
+    "construction_reference.jsonl": "57eefeff4e5dff4aa4eb068849e575e2ac174f1d3dd26fcbdec1736af1627a10",
+    "replacement_plan.json": "b42658c9087b842e7b3544af33d5e1c76ae7e3ee719416a851824d1cc73f90b4",
+    "ai_review.csv": "1e752f0099950333329bcdfa4f670e3b9524bbb52dad6f3a311b9bbbea19b6de",
+    "supervised_pilot.py": "4a800179908d513bb12ef5a8cce6076562368b129f54d9e9b9cc83dca921a44a",
+    "validation.jsonl": "f7419970fe5b7af62fae03fdcbd0532367f912c341bbb18afaded669df1c8894",
+    "ai_authorization.json": "1760dc457de35ace386ac6e9a7b167ec118167dcd082bc87fa70ea1430593fc2",
+    "mpnet_inference.py": "f9f3bcbb5b5fccd35ae88f87cab22070220f7642a6ee40781e95c913f69cbbec",
+    "retrain_audited.py": "06c908c571486b62313af603406e2c3544184cc28f57e304e97d4491a06c9a07",
+    "holdout_reservation.json": "d5eb6592c9955ac1cd8af99c6d522b47ff9de76526b2cf9d06e63a0171d36f32",
+    "inference_assets/tokenizer_config.json": "67f2ff7e223518e729869bb3a70f0caf8368fe549383fc11cfe2dfb42fffc268",
+    "inference_assets/special_tokens_map.json": "9ef40e9c160511bf3f46ceb71f1471dafa1e9473d5120bb816c36b2efa75f8ba",
+    "inference_assets/config.json": "d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0",
+    "inference_assets/tokenizer.json": "b8be2c30ba5dd723a6d5ee26d013da103d5408d92ddcb23747622f9e48f1d842",
+    "inference_assets/vocab.txt": "dbd90cb94e2247bd4d4ccaecbf616d2290e66691d7d5e5bb81f063c2d0649ada",
+    "inference_assets/1_Pooling/config.json": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56"
+  },
+  "span_supervision": {
+    "weight": 0.5,
+    "normalization": "Average covering windows within each annotated page, apply N/(2*N_class), sum over annotated pages and divide by document batch size",
+    "labels": "10 reviewed direct attacks and 5 reviewed quoted negatives; no inferred labels for other windows"
+  },
+  "prior_correction_protocol_sha256": "54601be87b5be4c63770f1fe7acd1ca43a57c546b0e8d60a6c4373d1e6dc3ea1",
+  "prior_correction_selections_sha256": "85947aa50019aacec3ab08f2da01a7252b408c1b4ac60e990261ce35d87b1f1b",
+  "amendment": {
+    "approved_by_user": "2026-09-24: T4",
+    "parent_protocol_sha256": "8295c42f83cd49285ed9e4cbc2d88ba096f60333a39897a132e43581b7240414",
+    "amended_at": "2026-09-24T04:30:27.858793+00:00",
+    "changes": [
+      "NVIDIA A100 -> NVIDIA T4",
+      "runner hardware assertion updated to NVIDIA T4"
+    ],
+    "unchanged": [
+      "train and validation rows",
+      "span targets",
+      "six epochs",
+      "three seeds",
+      "both arms",
+      "optimizer and precision settings",
+      "threshold and checkpoint rules",
+      "final holdout reservation"
+    ]
+  }
+}

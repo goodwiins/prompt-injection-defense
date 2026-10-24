@@ -1,0 +1,915 @@
+{
+  "attributes": [
+    {
+      "tag": "nav",
+      "attribute": "aria_label",
+      "text": "navigation left"
+    },
+    {
+      "tag": "nav",
+      "attribute": "aria_label",
+      "text": "navigation right"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Donate to help provide assistance to families affected by the earthquakes in Turkey and Syria."
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Dismiss"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Men's U AIRism Oversized T-Shirts"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Uniqlo U"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $19.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Welcome Spring in Top-Selling T-Shirts"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $9.90"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Dry Pique Short-Sleeve Polo Shirts"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $19.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Round Mini Shoulder Bags"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $14.90"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Men's U AIRism Oversized T-Shirts"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Uniqlo U"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $19.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Welcome Spring in Top-Selling T-Shirts"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $9.90"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next slide"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 1"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 2"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 3"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 4"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Men's AirSense Jackets and Pants"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Versatile Spring Style for Every Day"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $39.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Super Non-Iron Slim-Fit Long-Sleeve Shirts"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $29.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Rayon Long-Sleeve Blouses"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $29.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Men's AirSense Jackets and Pants"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Versatile Spring Style for Every Day"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $39.90 "
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next slide"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 1"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 2"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 3"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 4"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Kids' Ultra Stretch Dry Sweat Long-Sleeve Full-Zip Hoodies"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sport Utility Wear"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $24.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sport Utility Wear: High-Performance All-Weather Comfort "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sport Utility Wear"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $29.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UV Protection Pocketable Parkas"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sport Utility Wear"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UV Protection"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $39.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "DRY-EX Crew Neck Short-Sleeve T-Shirts"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sport Utility Wear"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Masterpiece"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $24.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Kids' Ultra Stretch Dry Sweat Long-Sleeve Full-Zip Hoodies"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sport Utility Wear"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $24.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sport Utility Wear: High-Performance All-Weather Comfort "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sport Utility Wear"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $29.90 "
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next slide"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 1"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 2"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 3"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 4"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Kids' AIRism Cotton Blend Innerwear"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $9.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism Ultra Seamless High-Rise Briefs"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $7.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Quick-Drying Functionality"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism Innerwear:Wearable Technology for Warmer Weather"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $14.90"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Kids' AIRism Cotton Blend Innerwear"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $9.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism Ultra Seamless High-Rise Briefs"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AIRism"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $7.90 "
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next slide"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 1"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 2"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 3"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 4"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO and JW ANDERSON 2023 Spring/Summer Collection"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO x Ines de la Fressange Spring/Summer 2023 Collection"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Ines"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Uniqlo U Spring/Summer 2023"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Uniqlo U"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $29.90"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Uniqlo U Spring/Summer 2023"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Uniqlo U"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "price is $59.90 "
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO and JW ANDERSON 2023 Spring/Summer Collection"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO x Ines de la Fressange Spring/Summer 2023 Collection"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Ines"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next slide"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 1"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 2"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 3"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 4"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Splatoon 3"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sanrio characters: Beach Trip"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Celebrating Sofia Coppola"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UT ARCHIVE"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Magic For All"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Splatoon 3"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Sanrio characters: Beach Trip"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next slide"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 1"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 2"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 3"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 4"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO Masterpiece"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Masterpiece"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO Update"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO 2023 Spring/Summer Collection"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Season Catalog"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "LifeWear Magazine Issue 08"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "LifeWear Magazine"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO Masterpiece"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Masterpiece"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO Update"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next slide"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 1"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 2"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 3"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 4"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "A single T-shirt has the power to spread peace."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Celebrate International Women's Day LifeWear Style"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Live Station"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Celebrate International Women's Day LifeWear Style"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "The Power of Clothing:January 2023 No.24"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Power of Clothing"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "A single T-shirt has the power to spread peace."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Celebrate International Women's Day LifeWear Style"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Live Station"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next slide"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 1"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 2"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 3"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 4"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Download the UNIQLO App for exclusive perks!"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO King of Prussia"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO Newport Centre"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "GU Pop-Up Store in NYC"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Download the UNIQLO App for exclusive perks!"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "UNIQLO King of Prussia"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next slide"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 1"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 2"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 3"
+    },
+    {
+      "tag": "span",
+      "attribute": "aria_label",
+      "text": "Go to slide 4"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "ORDER & PICK"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Scan + Shop"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Back in Stock Notifications"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "facebook"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "twitter"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "instagram"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "youtube"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Do Not Sell My Personal Information"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "More information about your privacy https://cookiepedia.co.uk/giving-consent-to-cookies, opens in a new tab"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Social Media Cookies"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Targeting Cookies"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Back"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Filter"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Powered by OneTrust Opens in a new Tab"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Powered by Onetrust"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Powered by OneTrust Opens in a new Tab"
+    }
+  ],
+  "hidden": []
+}

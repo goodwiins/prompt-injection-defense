@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-09-11T22:26:59.830694+00:00",
+  "status": "Completed and verified; A100 stopped; heartbeat paused",
+  "ai_review_sha256": "1e752f0099950333329bcdfa4f670e3b9524bbb52dad6f3a311b9bbbea19b6de",
+  "human_review_sha256": "0fec9632c38c20e9c7ab02d86059af40da9817921da6c40f6644123ffdc67d8e",
+  "protocol_sha256": "54601be87b5be4c63770f1fe7acd1ca43a57c546b0e8d60a6c4373d1e6dc3ea1",
+  "notebook_sha256": "752ad70888e7c55d7c08e341fe577c1b30a7aeb3c3d901822a3b4c6cd53ba406",
+  "verifier_sha256": "ceb4a217b3884ab281f9764e35daf90932b09d3e47f8aa853b3f7b5d6af0fed6",
+  "session": "mpnet-html-coverage-ai-a100",
+  "gpu_verified": "NVIDIA A100-SXM4-40GB",
+  "final_test_included": false,
+  "retrieval_script": "/tmp/retrieve_html_correction.py",
+  "transfer_helper": "/tmp/colab_html_transfer.py",
+  "heartbeat": "colab-experiment-updates",
+  "retrieved_finetuned_checkpoints": {
+    "finetuned_17": "1840bd9d7b8ee128e1ef25bfb3f3ad35ca1d9cd10da7ebb1a9332aff86ab935f",
+    "finetuned_42": "015595c507e551c8fc010dca9ec60df5c0077b7048ef18a36cd7844de4e33917"
+  },
+  "completed_at": "2026-09-11T22:52:27.311512+00:00",
+  "verified_at": "2026-09-11T22:53:56.362042+00:00",
+  "verification_sha256": "2b2b85874abe8d5e5bb10372d32a643fd34a46d1ead3ec966b696899aed6ddbc",
+  "report_sha256": "3fe13cb71682ccc0e5703ef95880bfabe4b4915b45cd32eccb4db340f3042382",
+  "runtime_closed_sha256": "e25bd41a42c23d43c61347f4be69fdd69bd305a78f0d28359b28e465c72b4e9c",
+  "final_test_evaluated": false,
+  "weights": {
+    "finetuned_17": "1840bd9d7b8ee128e1ef25bfb3f3ad35ca1d9cd10da7ebb1a9332aff86ab935f",
+    "finetuned_42": "015595c507e551c8fc010dca9ec60df5c0077b7048ef18a36cd7844de4e33917",
+    "finetuned_73": "e3cda270e20657e946feb85416594ff13b03a90bf2028c7d7779b5f5cfb67c5b"
+  }
+}

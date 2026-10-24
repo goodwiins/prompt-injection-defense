@@ -1,0 +1,320 @@
+{
+  "attributes": [
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "close"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Enter ZIP or State"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Set My Store"
+    },
+    {
+      "tag": "nav",
+      "attribute": "aria_label",
+      "text": "primary"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Open mobile navigation menu"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close mobile menu"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Open helpful links menu"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Open my store flyout"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "My Saved Cars"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Go to my profile page"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Search by make, model, or keyword"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Submit search by Make, Model, or Keyword"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "close dialog"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "$400"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "$400"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "$2,000"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "$2,000"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Photo of happy couple in a car with a dog"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "close dialog"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "close dialog"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "close dialog"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "close dialog"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by gabriellagriesss"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by rickey.ohbaby"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by tootie_shanl"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by grace.sauls"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by okkuurrrritsmichael"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by foreva_youngxo"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by timelordlucie"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by dry_can_acai_bowl"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by beccasbigsmile"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by alexandramohilowski"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by queenv_01410"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by itsshaqurie"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by issaballs_"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by melanie.h.chambers.9"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by dejaskye"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by activemattie"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Instagram post by lincyzh"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Photo of a parent using a computer with child on his shoulders."
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Electric Car Range: How Much Do You Need?"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Electric Car Range: How Much Do You Need?"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Getting Pre-Qualified:  Shop with Personalized Financing Terms"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Getting Pre-Qualified:  Shop with Personalized Financing Terms"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "AWD vs. 4WD: What's the difference?"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "AWD vs. 4WD: What's the difference?"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "How to Trade in a Car: Everything You Need to Know"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "How to Trade in a Car: Everything You Need to Know"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Mileage On A Car Can't Tell You Everything"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Mileage On A Car Can't Tell You Everything"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "How Much Does It Cost to Charge an Electric Car Compared to Pumping Gas?"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "How Much Does It Cost to Charge an Electric Car Compared to Pumping Gas?"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Getting Used Cars Ready to Sell: Meet the Master Mechanics Behind the Process"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Getting Used Cars Ready to Sell: Meet the Master Mechanics Behind the Process"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Want to learn more about our best-sellers? view all research"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "A mobile phone with the CarMax app"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Get the CarMax app at the Apple app store"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Get the CarMax app at the Google play store"
+    },
+    {
+      "tag": "aside",
+      "attribute": "aria_label",
+      "text": "disclaimers"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Open my store flyout"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "close dialog"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Open the chat window to speak with our virtual assistant. Use this button to open and minimize the chat window."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Feedback Link"
+    }
+  ],
+  "hidden": []
+}

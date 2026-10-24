@@ -1,0 +1,69 @@
+{
+  "verified_at": "2026-09-11T02:37:07.670447-04:00",
+  "recorded_hashes_verified": 81,
+  "counts": {
+    "train": {
+      "1": 128,
+      "0": 128
+    },
+    "validation": {
+      "0": 96,
+      "1": 96
+    },
+    "holdout": {
+      "0": 224,
+      "1": 223
+    }
+  },
+  "windows": {
+    "train": 18409,
+    "validation": 14823,
+    "holdout": 34189
+  },
+  "paired_nominal_95_intervals": {
+    "17": {
+      "recall_delta": [
+        0.47085201793721976,
+        0.6188340807174888
+      ],
+      "fpr_delta": [
+        -0.07142857142857142,
+        -0.008928571428571428
+      ],
+      "auc_delta": [
+        0.24834891495836012,
+        0.3558000680653428
+      ]
+    },
+    "42": {
+      "recall_delta": [
+        0.004484304932735426,
+        0.09865470852017937
+      ],
+      "fpr_delta": [
+        0.0,
+        0.08928571428571429
+      ],
+      "auc_delta": [
+        -0.11740320707879563,
+        -0.0021350496476618443
+      ]
+    },
+    "73": {
+      "recall_delta": [
+        0.3721973094170404,
+        0.5246636771300448
+      ],
+      "fpr_delta": [
+        -0.08482142857142858,
+        -0.017857142857142856
+      ],
+      "auc_delta": [
+        0.28140965326713663,
+        0.39632697389493904
+      ]
+    }
+  },
+  "scope": "All recorded hashes, raw token coverage, linear and historical XGBoost prediction replay, threshold and epoch choice, training orders, GPU identity and counts; GPU encoder inference/training not independently repeated",
+  "uncertainty": "1000 paired class-stratified document bootstrap resamples; nominal intervals assume independent pages and ignore unknown website/template families"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "Metadata-only reserve; no examples constructed, reviewed, trained or scored",
+  "websites": [
+    "amazon",
+    "exploretock",
+    "flightaware",
+    "instacart",
+    "soundcloud",
+    "yellowpages"
+  ],
+  "tasks": [
+    "9e9d7935-0c16-46e6-9e5c-3ea9124a6bf7",
+    "a338a731-596c-456e-9a9f-25f9e284309e",
+    "04b8b406-a031-48a3-a002-b1791d872e16",
+    "2ff0909b-a8bb-4370-8428-9d355f5c6a67",
+    "30e310ca-af64-46b4-a0f6-14b8f04fa734",
+    "44284a24-b3de-44ef-bcfc-abf57c3f791a",
+    "52a8bace-f14c-41ce-980f-50d95e5ac259",
+    "ca80bb42-2617-4f29-bbcd-bcc426b3e407",
+    "10b2af14-f708-4abe-94fc-00163d11cb56",
+    "8b4e49e9-9802-4c1f-acb3-de06e38445e7",
+    "91f56f3b-e3de-4d57-95df-f976a11c64f7",
+    "d311891e-82b9-4a16-ab46-6af92f054f94",
+    "dadb0251-a77c-45d7-aacb-0bb2e70e2b56"
+  ],
+  "limitations": "Not an evaluation-ready test. Historical development family provenance remains unknown."
+}

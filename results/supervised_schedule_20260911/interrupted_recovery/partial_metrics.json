@@ -1,0 +1,32 @@
+{
+  "status": "Transcribed from captured execution output; full prediction files and comparison were not retrieved or independently verified",
+  "metrics": {
+    "finetuned_17": {
+      "n": 453,
+      "tp": 150,
+      "fp": 6,
+      "recall": 0.6912442396313364,
+      "fpr": 0.025423728813559324,
+      "roc_auc": 0.8341013824884793,
+      "threshold": 0.6299245953559875
+    },
+    "finetuned_42": {
+      "n": 453,
+      "tp": 144,
+      "fp": 11,
+      "recall": 0.663594470046083,
+      "fpr": 0.046610169491525424,
+      "roc_auc": 0.8732328360540498,
+      "threshold": 0.6299117803573608
+    },
+    "finetuned_73": {
+      "n": 453,
+      "tp": 147,
+      "fp": 7,
+      "recall": 0.6774193548387096,
+      "fpr": 0.029661016949152543,
+      "roc_auc": 0.865988440209326,
+      "threshold": 0.8691009283065796
+    }
+  }
+}

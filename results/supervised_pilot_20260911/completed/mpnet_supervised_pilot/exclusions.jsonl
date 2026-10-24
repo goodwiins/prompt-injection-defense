@@ -1,0 +1,1220 @@
+{"id": "perplexity-ai/browsesafe-bench/train/1", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/13", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/42", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/45", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/72", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/73", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/99", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/112", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/113", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/120", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/133", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/140", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/178", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/192", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/217", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/227", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/235", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/236", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/259", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/264", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/266", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/300", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/341", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/347", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/349", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/358", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/376", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/395", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/412", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/414", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/435", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/452", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/453", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/455", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/462", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/510", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/518", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/548", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/585", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/592", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/618", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/623", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/637", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/648", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/649", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/650", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/657", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/677", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/680", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/698", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/741", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/751", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/769", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/787", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/808", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/833", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/847", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/858", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/875", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/914", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/920", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/926", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/931", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/952", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/954", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/957", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/963", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/965", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/997", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1016", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1023", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1028", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1059", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1121", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1137", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1157", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1169", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1170", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1177", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1189", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1195", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1229", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1239", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1266", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1268", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1275", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1293", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1302", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1311", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1319", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1333", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1335", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1343", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1360", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1362", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1363", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1425", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1429", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1436", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1444", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1458", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1515", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1517", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1555", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1567", "split": "train", "reason": "Full raw HTML contains ordinary account notices and official-domain links; attack intent/payload is not established from this isolated page. Quarantine, not a confirmed label error."}
+{"id": "perplexity-ai/browsesafe-bench/train/1620", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1624", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1628", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1656", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1663", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1674", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1706", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1709", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1714", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1728", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1748", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1755", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1765", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1812", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1824", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1833", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1878", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1879", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1885", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1906", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1919", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1932", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1935", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1957", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1968", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1984", "split": "train", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1994", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1996", "split": "validation", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1631", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1632", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1642", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1660", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1671", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1673", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1676", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1682", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1684", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1707", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1717", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1724", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1725", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1726", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1728", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1757", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1758", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1773", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1787", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1796", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1800", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1801", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1819", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1840", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1843", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1853", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1854", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1859", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1898", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1905", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1910", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1941", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1943", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1954", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1961", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1962", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1965", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1968", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1973", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/1986", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2010", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2020", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2036", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2038", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2043", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2051", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2053", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2055", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2067", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2083", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2086", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/test/2096", "split": "holdout", "reason": "extracted-text lexical cosine >=0.90 with reserved earlier partition"}
+{"id": "perplexity-ai/browsesafe-bench/train/1546", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1631", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1908", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/80", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/853", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1498", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1711", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1372", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/276", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1869", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/142", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/861", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1442", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/526", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/860", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1178", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/67", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/558", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/610", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1222", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1038", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/75", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/896", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/817", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/97", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/758", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1880", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/516", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1168", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/487", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/208", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1821", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1666", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1760", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1915", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/166", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/416", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1859", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/938", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1682", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1788", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/691", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/367", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/39", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1101", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/21", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1999", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1374", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/267", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1926", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/615", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1909", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1481", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/986", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/559", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/370", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/640", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/437", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/501", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1324", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/673", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1679", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/850", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/582", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/617", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1565", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/980", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/987", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/356", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/530", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1223", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/82", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1385", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/873", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1720", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1130", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1936", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1499", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1945", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1428", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1447", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/66", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1191", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1817", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1871", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/768", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/391", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1835", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1939", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1598", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1834", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1270", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1037", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1922", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/746", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1853", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1980", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/877", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1338", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1601", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/994", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/76", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/255", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/150", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1650", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/359", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/249", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1541", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/353", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/109", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1525", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1403", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/148", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/748", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1769", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/135", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1587", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/700", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/812", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1914", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1533", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/674", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/494", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1825", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1800", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1182", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1508", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/492", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1361", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1318", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/253", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/687", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/773", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/555", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/55", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1910", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/789", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/541", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/130", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/84", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/810", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1151", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1161", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/856", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1903", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1057", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/795", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/461", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1667", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1822", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/419", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1152", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1111", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1721", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/638", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1327", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1563", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1501", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1176", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1756", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/245", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1738", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/488", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/857", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1142", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1459", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/54", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/475", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/578", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1605", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/595", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/433", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/534", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1247", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1923", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1591", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/509", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1673", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/16", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1238", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1019", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/944", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1778", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/165", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/603", "split": "validation", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1421", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1461", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1702", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/69", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/639", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/941", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1301", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/745", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/268", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1055", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1680", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1781", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/239", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1396", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/311", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/524", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/966", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/821", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1522", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1284", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/157", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1257", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1120", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1789", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1235", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/835", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1355", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1950", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/714", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1432", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/459", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/304", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1535", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/116", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1347", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1024", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/327", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1315", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1899", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/59", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1638", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1900", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1773", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/162", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1729", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1746", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1870", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/512", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1470", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1722", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/147", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1292", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1132", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/898", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1265", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1009", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1790", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1734", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/244", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/434", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1849", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/863", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/581", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/871", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1523", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/831", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/340", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/252", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1271", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1046", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/572", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1422", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/616", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/840", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/125", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/797", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/229", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/151", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/670", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1924", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1715", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1804", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/330", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1034", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/189", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1323", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/711", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/321", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1135", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/52", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1193", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/631", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1305", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1277", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1719", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/86", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1255", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1367", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/177", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/326", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1648", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1537", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1127", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/7", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1146", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/342", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1974", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1477", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/983", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1128", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/191", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1561", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1163", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1113", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/336", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/805", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/14", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/843", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1672", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/949", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/527", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1569", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/532", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/661", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1005", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/695", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/417", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1854", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1102", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1584", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1141", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/759", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1258", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/604", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/849", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/432", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/668", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/684", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/104", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1375", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/626", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1708", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1617", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/338", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/696", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/732", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/56", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/842", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1761", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1144", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1162", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1173", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1763", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/726", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/720", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1607", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/371", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/221", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/889", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1416", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/859", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/51", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1202", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/724", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1564", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/447", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/415", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1664", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1156", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/406", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/764", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/733", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1353", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1391", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/591", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/975", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/999", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1987", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1615", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1904", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/569", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/959", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1036", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/443", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1044", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/261", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1985", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1660", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/771", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1449", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/193", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1832", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/364", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1215", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1751", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1015", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/422", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/905", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1003", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/179", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1986", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/260", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/449", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/201", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/622", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1249", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/366", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/985", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/538", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1844", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1068", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1874", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1803", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/458", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1230", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/383", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/29", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1901", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/721", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1626", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/950", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1095", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/183", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/180", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1705", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1382", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1831", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1417", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1731", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/553", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/767", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1342", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/375", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/456", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/970", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1737", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1045", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1841", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1445", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/320", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/972", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/411", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1960", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/129", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/37", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/131", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/502", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1516", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1100", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/897", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1438", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/215", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/20", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/64", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/153", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/438", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/923", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/852", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/522", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1784", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1725", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/198", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/228", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1054", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/551", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1969", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1289", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1621", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1276", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1435", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1030", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1861", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1228", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1196", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/247", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/108", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/930", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1262", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/540", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1951", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/537", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1058", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/96", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/523", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/887", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/806", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1052", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/738", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/866", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/880", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1570", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/17", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1890", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1593", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1600", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1538", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/106", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/656", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1670", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/988", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/757", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1645", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/646", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/664", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/302", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/964", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/535", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/984", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1029", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/976", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1433", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1098", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1826", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/139", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/246", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1056", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/263", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1838", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/993", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1594", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/563", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/343", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/996", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1689", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/705", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/625", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1509", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1031", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1022", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/390", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/277", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1582", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1067", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1298", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1608", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1376", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/445", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/834", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1070", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1551", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/275", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/49", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/404", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1468", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1618", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1846", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1419", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/547", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/172", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1942", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/144", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1948", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/270", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1181", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/226", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1552", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1079", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1250", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1688", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/883", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1855", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/314", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/22", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/53", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/457", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/420", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/633", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1895", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/788", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1241", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1014", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1644", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/525", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1576", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/605", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/41", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1119", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/600", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1244", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/448", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1647", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/599", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1659", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1105", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1754", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/194", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1158", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1654", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/339", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/256", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/468", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1386", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1336", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1287", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1837", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1279", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1976", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1749", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/483", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/697", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1881", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1368", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1166", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1160", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/560", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1543", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1198", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/722", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1852", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1944", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1245", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1306", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1724", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1174", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/765", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/792", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/386", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/491", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1246", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/149", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/803", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1653", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1462", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/301", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/620", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/945", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/739", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1590", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/499", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/128", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/476", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1828", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/740", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/815", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1149", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1211", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1208", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/549", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/278", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/596", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1332", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/287", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/378", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1410", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1972", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1504", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1080", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1744", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/62", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/77", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/408", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1548", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/398", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1073", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/9", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/756", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/436", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1007", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/136", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/427", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1640", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1069", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1602", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/430", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/570", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1539", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1408", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/154", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/826", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1491", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1938", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/776", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/467", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1767", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1651", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1483", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1646", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1630", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/23", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1226", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1964", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/779", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/716", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/168", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1434", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/928", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1699", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1892", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/981", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1963", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1431", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/333", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/519", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1797", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1352", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1000", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/844", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1933", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/886", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/478", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/901", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1048", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1847", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/188", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1437", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1990", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1681", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1636", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1759", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/718", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1185", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/298", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/426", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/489", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/893", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/982", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1492", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/575", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/736", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1947", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1882", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1893", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/141", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/143", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/508", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1109", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/3", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1085", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1340", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/382", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/12", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1050", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/305", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1712", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/117", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/580", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1572", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/211", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/567", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1750", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1632", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1039", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/961", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1727", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1730", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/203", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1493", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1503", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/44", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/318", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/902", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1780", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1077", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/644", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1589", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/322", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1312", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1795", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1216", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/713", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/652", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/204", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1307", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/727", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/114", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1782", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/127", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1695", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/660", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/484", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1484", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/825", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1785", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1464", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1471", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/254", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1321", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1490", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/783", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/940", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1303", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/337", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1478", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1236", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1339", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1875", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/533", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1081", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1217", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/953", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1184", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/539", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1147", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1114", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/413", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1864", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/956", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/872", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1856", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/393", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/676", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/545", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/196", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/818", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/232", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1110", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1406", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1180", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1035", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1642", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/813", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/735", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/425", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/348", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/102", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1814", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/362", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1032", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1736", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1916", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1025", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1726", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/870", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/816", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1975", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/922", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1314", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1777", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1051", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1450", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/35", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/381", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1097", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1206", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/360", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1423", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1613", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/579", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/365", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1716", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/450", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1507", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1489", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1940", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1713", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1480", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/998", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1042", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/310", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1958", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/762", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/230", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/11", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1192", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/32", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/973", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/176", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/824", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/43", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/10", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1210", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/190", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/156", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1806", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1928", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/402", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1614", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/635", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/200", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/906", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/874", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1060", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1212", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1779", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/299", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/5", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/879", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/240", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/786", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1426", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1959", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1655", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/597", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/979", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1635", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1407", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1843", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1331", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/195", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1040", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/974", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1094", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1440", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1573", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/477", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1952", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1143", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/992", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/134", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/715", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/124", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1012", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1399", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/334", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1989", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/36", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1259", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1234", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/262", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1683", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/543", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1346", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/628", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1520", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1603", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/418", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/197", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/663", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/934", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1063", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/899", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/681", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1693", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1505", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/479", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/837", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/960", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1532", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/115", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/766", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/598", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/186", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/306", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1842", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/250", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1286", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/692", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1369", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1172", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/841", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1559", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1107", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/212", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1891", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1084", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1197", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1851", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/123", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/688", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/19", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/809", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/81", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1818", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1313", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/31", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/291", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1783", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1678", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/916", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/107", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1978", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/138", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1273", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1221", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/658", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1205", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1770", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/794", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1497", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/71", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1776", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/335", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1735", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/220", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/213", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1876", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/207", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/904", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1998", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/400", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/167", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/770", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1064", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1456", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1383", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1290", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/285", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/493", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/881", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/909", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/804", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1792", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/621", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1809", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/900", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1388", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/734", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/444", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/529", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1752", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1469", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/743", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/671", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/463", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/576", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1378", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1991", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1641", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/654", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/223", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1420", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/990", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1448", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1165", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1443", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/796", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1092", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/89", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1973", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/830", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1389", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1556", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/678", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/511", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/374", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1612", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/918", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/282", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1125", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/93", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1329", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1694", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/396", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1619", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1365", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1227", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1190", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1209", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/241", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/388", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1373", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/345", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1384", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/937", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1992", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/704", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/682", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/101", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/train/1820", "split": "train", "reason": "fixed per-class pilot cap"}
+{"id": "perplexity-ai/browsesafe-bench/test/1680", "split": "holdout", "reason": "within-pilot raw duplicate or lexical cosine >=0.90"}

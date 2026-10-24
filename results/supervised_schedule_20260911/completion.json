@@ -1,0 +1,24 @@
+{
+  "completed_at": "2026-09-11T10:07:04.108627+00:00",
+  "recorded_artifact_hashes_verified": 238,
+  "staged_diff_sha256": "404de3b634a62eb9fceb16b48da2a054c4ae3edcbb1a5b665c2affbfb40bcd46",
+  "heartbeat_status": "PAUSED",
+  "pdf_pages_visually_inspected": [
+    1,
+    10,
+    11,
+    12,
+    13
+  ],
+  "final_documents": {
+    "paper/paper.tex": "5b6209f2f69cf34066d4d874c315af3e5aa10de036b22614bc1e895491505ef5",
+    "paper/paper.pdf": "6f244aecf15699f55a800bbaabc4b3202ed73fc953145a9f09639c7ef2e53454",
+    "paper/SUPERVISED_SCHEDULE.md": "6cae3f5ae07bdde0d40a7c1475a5da5e15b45025a458141fe2451706d6add46a",
+    "paper/HANDOFF.md": "0a5c3769f8dd05270b63a0b85096bed6f8448f61d6ac62be9b465158ad41cd5c",
+    "paper/figures/supervised_schedule_effects.pdf": "f533cb40461f84043df3949a6dda1fde72adf0f0ab0e11b937f0cc637aec1116",
+    "scripts/verify_supervised_schedule.py": "902d0e75bff626da4d30e73cd22b0411d1bf2f6d5863b620b2adfe3c9ad004c3",
+    "tests/test_supervised_pilot.py": "a4ce90acc8d4aae6e3c954f55b447ddf4d10de57359a1d312b35e3d260d12041",
+    "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/INFERENCE.md": "ba79055374451ba6c883d7e746009568c5acf9fa093dcbc04c2c7f2d96b71c7e",
+    "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/schedule_verification.json": "6feb4c2182a20a880921ffd904b184642a0d36a3ac73ca93049cae651da7ff02"
+  }
+}

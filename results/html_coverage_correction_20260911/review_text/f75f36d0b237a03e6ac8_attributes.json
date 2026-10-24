@@ -1,0 +1,220 @@
+{
+  "attributes": [
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Background hero image"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Trainline"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Trainline logo"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Change language or currency"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Basket"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Departure station, none selected. Select a station."
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Enter origin station..."
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Arrival station, none selected. Select a station."
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Enter destination station..."
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Arrival station, none selected. Select a station."
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Enter station..."
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Journey Type"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "single"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "single"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "return"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "return"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Date use format: 16-Mar-23"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "16-Mar-23"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "16-Mar-23"
+    },
+    {
+      "tag": "select",
+      "attribute": "aria_label",
+      "text": "hour"
+    },
+    {
+      "tag": "select",
+      "attribute": "aria_label",
+      "text": "minutes"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Date use format: "
+    },
+    {
+      "tag": "select",
+      "attribute": "aria_label",
+      "text": "hour"
+    },
+    {
+      "tag": "select",
+      "attribute": "aria_label",
+      "text": "minutes"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "eurostar"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "heathrowexpress"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "lner"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "sncf"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "trenitalia"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "italo"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "thalys"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "renfe"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "ouibus"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "westbahn"
+    },
+    {
+      "tag": "span",
+      "attribute": "title",
+      "text": "Independent"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Choose your cookies"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "More information about your privacy, opens in a new tab"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Back"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Filter"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Powered by OneTrust Opens in a new Tab"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Powered by Onetrust"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Powered by OneTrust Opens in a new Tab"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "Sign in with Google Dialog"
+    }
+  ],
+  "hidden": []
+}

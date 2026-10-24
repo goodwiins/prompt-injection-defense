@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-09-11T22:03:26.053113+00:00",
+  "frozen_hashes_passed": true,
+  "candidate_count": 6,
+  "human_review_csv_sha256": "291ea46defc63e265e270ce8a0e1671da9b83c7abb15c2b5321e8b2830a41dd7",
+  "ready_for_requested_evaluation": false,
+  "blockers": [
+    "6 candidates lack complete human label review",
+    "Unseen website/template families are not established against the training and validation data"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "artifact_count": 53,
+  "script_sha256": "06c908c571486b62313af603406e2c3544184cc28f57e304e97d4491a06c9a07",
+  "split_counts": {
+    "train": 2286,
+    "validation": 742,
+    "test": 2315
+  },
+  "paired_correctness": {
+    "double_correct_uniform_wrong": 313,
+    "uniform_correct_double_wrong": 287
+  },
+  "summary": {
+    "base": {
+      "accuracy": 0.6902807775377969,
+      "recall": 0.45549242424242425,
+      "fpr": 0.11278792692613185,
+      "official_notinject_fpr": 0.2949852507374631
+    },
+    "uniform": {
+      "accuracy": 0.6254859611231102,
+      "recall": 0.48295454545454547,
+      "fpr": 0.2549642573471009,
+      "official_notinject_fpr": 0.5781710914454278
+    },
+    "double": {
+      "accuracy": 0.6367170626349892,
+      "recall": 0.6420454545454546,
+      "fpr": 0.36775218427323275,
+      "official_notinject_fpr": 0.8377581120943953
+    }
+  },
+  "limits": [
+    "Checksums establish artifact consistency, not independent GPU replay.",
+    "Saved classifiers were replayed on saved test embeddings; encoder inference and fitting were not repeated.",
+    "Single seed, capped data, and unmeasured semantic near-duplicates limit generalization."
+  ]
+}

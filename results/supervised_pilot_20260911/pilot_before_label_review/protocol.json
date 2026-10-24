@@ -1,0 +1,85 @@
+{
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "seeds": [
+    17,
+    42,
+    73
+  ],
+  "epochs": 2,
+  "train_per_class": 128,
+  "validation_per_class": 96,
+  "document_batch": 4,
+  "inference_window_batch": 32,
+  "encoder_lr": 1e-05,
+  "head_lr": 0.001,
+  "weight_decay": 0.01,
+  "gradient_clip": 1.0,
+  "max_length": 384,
+  "overlap": 96,
+  "validation_fpr_budget": 0.05,
+  "inputs": "unchanged raw HTML, every overlapping token window; no content truncation",
+  "loss": "BCEWithLogitsLoss on maximum window logit per page; no chunk labels",
+  "comparison": "same linear head initialization, data, document order, loss and optimizer settings; encoder frozen versus updated",
+  "dropout": "disabled in both arms; gradients still update the fine-tuned encoder",
+  "precision": "CUDA float16 autocast and GradScaler; parameters remain float32",
+  "checkpoint_rule": "maximum validation recall at empirical FPR <=5%, then ROC-AUC; earliest epoch breaks ties; stop after one non-improving epoch",
+  "threshold_rule": "maximum validation recall at empirical FPR <=5%; highest threshold breaks ties",
+  "primary_endpoint": "paired holdout recall difference at validation-frozen thresholds, accompanied by actual holdout FPR",
+  "secondary_endpoints": [
+    "ROC-AUC",
+    "average precision",
+    "balanced accuracy"
+  ],
+  "holdout_interval": [
+    1600,
+    2100
+  ],
+  "limitations": [
+    "Small BrowseSafe-only pilot; no general prompt-injection or downstream security claim",
+    "Source labels are machine-generated, not independently verified attack-span annotations",
+    "A max-pooled page classifier cannot resolve dependencies across distant windows",
+    "Five percent is an exploratory empirical validation budget, not a production safety target or guarantee",
+    "Lexical filtering does not prove independence of unknown websites, templates or pretraining data",
+    "All seeds are reported; three training runs do not establish universal robustness",
+    "Prior test rows and scores never enter training or model selection; prior text is used to reject overlap"
+  ],
+  "frozen_at": "2026-09-11T05:58:26.483005+00:00",
+  "source_revision": "b506fb5bc7fd4472c8738055a67a0ef6406afdc9",
+  "old_manifest_sha256": "c1ecc4cc779e620f6da9437b4fea4b5be1b47972055353eb077135d0dbcd81d4",
+  "selection": "inherit original train/validation; reject lexical overlap with reserved partitions and within pilot; fixed hash sample 128/class train and 96/class validation; all eligible test indices 1600:2100",
+  "counts": {
+    "train": {
+      "1": 128,
+      "0": 128
+    },
+    "validation": {
+      "0": 96,
+      "1": 96
+    },
+    "holdout": {
+      "0": 224,
+      "1": 223
+    }
+  },
+  "windows": {
+    "train": 18278,
+    "validation": 14823,
+    "holdout": 34189
+  },
+  "files": {
+    "train.jsonl": "8e2e62a6f3547d371642456f239e30e5269e6ce2f76b83a419a26bea72393ff1",
+    "windowed_followup.py": "163d0f6ed0e56ae9ddab9873a68fa1374351466c8cfa7200d7ea676c03e288ed",
+    "supervised_pilot.py": "534a47d80ae8a440ac87099ada336bbc36998f07c84e645778bec7d345f546c4",
+    "validation.jsonl": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+    "historical_classifier.json": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "historical_threshold.json": "fddfa6d56e9390084f3277c8f7fc8d75eab29d0bda48ff384031b3d4130df899",
+    "exclusions.jsonl": "2ad54fb065ddbf5307c06e9384b1e9cc50e77975fc0a1bda7ca40ee56482477b",
+    "retrain_audited.py": "06c908c571486b62313af603406e2c3544184cc28f57e304e97d4491a06c9a07",
+    "holdout.jsonl": "62b9c9a1932a118f81ad2a5885945ae4d96b8f550377b849f4cd16cb747886e4"
+  },
+  "raw_inputs_sha256": {
+    "browsesafe_train_raw.jsonl": "9198b450af5251e6e94bf7a2505a2cca6a0bf60afc56b07824571047c3415c10",
+    "browsesafe_test_raw.jsonl": "71b925e3577d6990b4b6dd2ae3051760676012601b359a69cefe9cb31c8f42ba"
+  }
+}

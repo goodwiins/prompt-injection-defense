@@ -1,0 +1,14 @@
+{
+  "intervention": "Replace 20 of 256 existing training pages with 10 direct, 5 original and 5 quoted candidates. Retain both total and per-source class balance. Keep 10 other training-group candidates for review only. Add all 15 new validation candidates to existing 192.",
+  "pending_human_labels": true,
+  "architecture": "Unchanged MPNet, raw HTML, all 382-token windows, overlap 96, max window logit",
+  "comparison": "Retain frozen encoder controls and all seeds 17/42/73; reuse six-epoch training and validation-only selection procedures",
+  "test_policy": "Reserved website metadata only; final labels, sampling frame and family provenance must be settled before evaluation",
+  "limitations": [
+    "New-cohort websites and published template categories are disjoint across splits; historical family overlap remains unknown",
+    "Construction labels are hypotheses, not human truth",
+    "Balanced training replacement requires adjudication before export",
+    "Quoted framing can be a shortcut; varied positions and shared wrapper do not eliminate all construction artifacts",
+    "Published category separation does not prove semantic template independence"
+  ]
+}

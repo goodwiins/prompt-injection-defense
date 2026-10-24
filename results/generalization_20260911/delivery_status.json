@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-09-11T19:46:35.472095+00:00",
+  "status": "prepared_not_evaluated",
+  "expected_preflight_exit": 2,
+  "blockers": [
+    "6 candidates lack complete human label review",
+    "Unseen website/template families are not established against the training and validation data"
+  ],
+  "staged_diff_sha256": "404de3b634a62eb9fceb16b48da2a054c4ae3edcbb1a5b665c2affbfb40bcd46",
+  "files": {
+    "scripts/prepare_generalization_review.py": "b60873d84d3c606c74ecea55ad926740504808eb5e75acfe8307b9a01f53b0a4",
+    "paper/GENERALIZATION_PREPARATION.md": "98698ae178db7b277a6f421deeb1d9ce19984b65b6fae818e11f40fcc77a56b9",
+    "paper/HANDOFF.md": "556204fb7deaa9fab8b5bcaae24678540e9f8e88c9f22014249d1a63ecefadd1",
+    "results/generalization_20260911/preparation.json": "5f4033efb5e77465aa3f4310f816e8c371a5b5194093bcd80019cfdceb0be67b",
+    "results/generalization_20260911/template_audit.json": "9f7d233664098fab6e22187e4d16c53f53de743cd03809212493188e6ec20ff3"
+  }
+}

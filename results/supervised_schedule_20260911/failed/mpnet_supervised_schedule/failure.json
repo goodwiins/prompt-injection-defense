@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-09-11T08:29:19.808864+00:00",
+  "trial": "finetuned_17",
+  "failed_step": 181,
+  "completed_updates": 180,
+  "epoch": 3,
+  "reason": "Nonfinite gradient norm before GradScaler could back off",
+  "holdout_scored": false,
+  "protocol_sha256": "ca7031ee4cd49f55fd6dd083fbed354e30189a7948806950d3bd74bd02c34e19"
+}

@@ -1,0 +1,610 @@
+{
+  "attributes": [
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "https://www.gamestop.com/on/demandware.store/Sites-gamestop-us-Site/default/GoogleTagManager-GetSessionDataBypassAkamai"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "https://www.gamestop.com/on/demandware.store/Sites-gamestop-us-Site/default/GoogleTagManager-GetSessionDataBypassAkamai"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "customergroups"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "customergroups"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "GTM-57H2D2Q"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "GTM-57H2D2Q"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "nav",
+      "attribute": "aria_label",
+      "text": "Main"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Main Menu"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "GameStop Home"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "GameStop Homepage"
+    },
+    {
+      "tag": "form",
+      "attribute": "aria_label",
+      "text": "Search"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Search"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Search games, consoles & more"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Search games, consoles & more"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "default"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "default"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Find a Store"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "View Cart"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Cart, 0 items in cart"
+    },
+    {
+      "tag": "form",
+      "attribute": "aria_label",
+      "text": "Search"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Search"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Search games, consoles & more"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Search games, consoles & more"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "default"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "default"
+    },
+    {
+      "tag": "nav",
+      "attribute": "aria_label",
+      "text": "Shop, Main Menu"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Main"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Assassin&#39;s Creed Valhalla - Xbox One"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "SteelSeries Arctis 9X Wireless Gaming Headset for Xbox Series X/S and Xbox One"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Astro Gaming A10 Wired Gaming Headset for PlayStation 4"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Scan Barcode"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Xbox"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Nintendo"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Play Station"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Funco"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Hasbro"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Pokemon"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Turtle Beach"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "1 of 2"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "2 of 2"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Pokemon Trading Card Game: Crown Zenith Mini Tin (Assortment)"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Pokemon Trading Card Game: Crown Zenith Mini Tin &#40;Assortment&#41;"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Pokemon Trading Card Game: Scarlet and Violet Elite Trainer Box"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Pokemon Trading Card Game: Scarlet and Violet Elite Trainer Box"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Pokemon Trading Card Game: 2022 World Championships Deck (Assortment)"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Pokemon Trading Card Game: 2022 World Championships Deck &#40;Assortment&#41;"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Pokemon Trading Card Game: Crown Zenith Premium Figure Collection (Assortment)"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Pokemon Trading Card Game: Crown Zenith Premium Figure Collection &#40;Assortment&#41;"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Pokemon Trading Card Game: Crown Zenith Tin (Assortment)"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Pokemon Trading Card Game: Crown Zenith Tin &#40;Assortment&#41;"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Pokemon Trading Card Game: Scarlet and Violet Booster Bundle"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Pokemon Trading Card Game: Scarlet and Violet Booster Bundle"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "1 of 1"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Accessible Carousel"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "1 of 2"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "2 of 2"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Accessible Carousel"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "1 of 1"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Previous"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Hasbro The Black Series Gaming Greats Star Wars: Republic Commando RC-1262 (Scorch) 6-in Action Figure GameStop Exclusive"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Hasbro The Black Series Gaming Greats Star Wars: Republic Commando RC-1262 &#40;Scorch&#41; 6-in Action Figure GameStop Exclusive"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "McFarlane Toys The Dark Knight Trilogy The Joker (Build-A-Figure - Bane) 7-in Action Figure"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "McFarlane Toys The Dark Knight Trilogy The Joker &#40;Build-A-Figure - Bane&#41;  7-in Action Figure"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "McFarlane Toys The Dark Knight Trilogy Batman (Build-A-Figure - Bane) 7-in Action Figure"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "McFarlane Toys The Dark Knight Trilogy Batman &#40;Build-A-Figure - Bane&#41;  7-in Action Figure"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Funko POP! Movies: Cocaine Bear - Cocaine Bear 2.9-in Vinyl Figure"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Funko POP! Movies: Cocaine Bear - Cocaine Bear 2.9-in Vinyl Figure"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "McFarlane Toys DC Multiverse Batman: Hush Batman 12-in Statue"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "McFarlane Toys DC Multiverse Batman: Hush Batman 12-in Statue"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "McFarlane Toys DC Multiverse The Flash Batman 12-in Scale Statue"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "McFarlane Toys DC Multiverse The Flash Batman 12-in Scale Statue"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Funko Deluxe POP! Animation: Boruto: Naruto Next Generations Minato Namikaze 9-in Vinyl Figure GameStop Exclusive"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Funko Deluxe POP! Animation: Boruto: Naruto Next Generations Minato Namikaze 9-in Vinyl Figure GameStop Exclusive"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Funko POP! One Piece Luffytaro, Sabo, Roronoa Zoro, and Jinbe Vinyl Figure Set 4-Pack GameStop Exclusive"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Funko POP! One Piece Luffytaro, Sabo, Roronoa Zoro, and Jinbe Vinyl Figure Set 4-Pack GameStop Exclusive"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Funko POP! Deluxe Boruto: Naruto Next Generations Tsunade Senju 9-in Vinyl Figure GameStop Exclusive"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Funko POP! Deluxe Boruto: Naruto Next Generations Tsunade Senju 9-in Vinyl Figure GameStop Exclusive"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Funko POP! Super Animation: One Piece Kaido 6.75-in Vinyl Figure"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Funko POP! Super Animation: One Piece Kaido 6.75-in Vinyl Figure"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "1 of 2"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "2 of 2"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Pro Member Early Access only at this time. If inventory remains after this Pro Early Access event, you'll have a chance to grab it. Go Pro to receive early online access to future drops."
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Pro Member Early Access only at this time. If inventory remains after this Pro Early Access event, you'll have a chance to grab it. Go Pro to receive early online access to future drops."
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "form",
+      "attribute": "aria_label",
+      "text": "Newsletter Signup"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Enter Your E-mail"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Enter Your E-mail"
+    },
+    {
+      "tag": "li",
+      "attribute": "aria_label",
+      "text": "Open Cookie Preferences Modal"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Do Not Sell Or Share My Personal Information"
+    },
+    {
+      "tag": "form",
+      "attribute": "aria_label",
+      "text": "Newsletter Signup"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Enter Your E-mail"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Enter Your E-mail"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "{\"user\":{\"userType\":\"customer\",\"loyaltyPoints\":\"__undefined\",\"loginStatus\":\"recognized\",\"customerStatus\":\"new\",\"memberTier\":\"Free\",\"memberSinceDate\":\"01/20/2023\",\"custKey\":\"1311371538\",\"memberType\":\"Player\"},\"event\":\"User Detected\"}"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "{\"user\":{\"userType\":\"customer\",\"loyaltyPoints\":\"__undefined\",\"loginStatus\":\"recognized\",\"customerStatus\":\"new\",\"memberTier\":\"Free\",\"memberSinceDate\":\"01/20/2023\",\"custKey\":\"1311371538\",\"memberType\":\"Player\"},\"event\":\"User Detected\"}"
+    }
+  ],
+  "hidden": []
+}

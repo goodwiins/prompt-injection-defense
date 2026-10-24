@@ -1,0 +1,11 @@
+{
+  "pages": 207,
+  "windows": 14922,
+  "all_ten_insertions_have_complete_windows": true,
+  "files": {
+    "verify_token_coverage.py": "1f57a05eaf171390557fd68d24bf6ca1267b30250296eb8df25e03362718ccc6",
+    "validation.jsonl": "f7419970fe5b7af62fae03fdcbd0532367f912c341bbb18afaded669df1c8894",
+    "token_coverage_expected.jsonl": "a595c6487a1b24793c75f8f171515d24af001a1f5d20383bbf4372b1b5b7d4ff",
+    "predictions.jsonl": "7bdd1d5759af73aa17c82fe13419470050a45f9e678094536df0f2e9c5181f7c"
+  }
+}

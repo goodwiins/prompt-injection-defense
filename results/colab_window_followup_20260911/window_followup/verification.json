@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "checksums": 30,
+  "holdout_n": 919,
+  "window_counts": {
+    "validation": 5978,
+    "holdout": 11618
+  },
+  "maximum_holdout_prior_lexical_cosine": 0.8996566805062313,
+  "historical_base_seed42_max_validation_score_difference": 0.0,
+  "paired_auc_intervals": {
+    "17": {
+      "delta": 0.007334186697008582,
+      "nominal_paired_stratified_bootstrap_95": [
+        -0.03052671502394165,
+        0.05021618546437207
+      ]
+    },
+    "42": {
+      "delta": 0.009993836817901669,
+      "nominal_paired_stratified_bootstrap_95": [
+        -0.030513203432418444,
+        0.053565993457545195
+      ]
+    },
+    "73": {
+      "delta": 0.008040582183662881,
+      "nominal_paired_stratified_bootstrap_95": [
+        -0.03263001943772813,
+        0.053183165031052866
+      ]
+    }
+  },
+  "limits": [
+    "Saved classifier replay and token window verification; no independent GPU encoder replay.",
+    "Bootstrap treats documents as independent; unknown website/template dependence is not modeled.",
+    "Encoder is frozen; three seeds cover classifier randomness only."
+  ]
+}

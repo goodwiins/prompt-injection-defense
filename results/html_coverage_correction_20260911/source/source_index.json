@@ -1,0 +1,802 @@
+[
+  {
+    "task_id": "6a7eaba3-f6ec-4eba-9e04-ff974b228ef4",
+    "website": "espn",
+    "domain": "Entertainment",
+    "requested_task": "Select an event from the 2019 UFC schedule and show me the full profile from one of the athletes",
+    "action_id": "46c14367-c9aa-4663-aef8-8d3ebac75daa",
+    "raw_chars": 1089227
+  },
+  {
+    "task_id": "7a632871-a6a8-40fd-b48f-6fea49cf48da",
+    "website": "espn",
+    "domain": "Entertainment",
+    "requested_task": "check the NBA score board on March 11th",
+    "action_id": "888fcb67-1235-4bb3-9cdc-b96d07a8dc10",
+    "raw_chars": 724177
+  },
+  {
+    "task_id": "2e15efa0-f646-4dc4-9ce0-2e3d155c788b",
+    "website": "yelp",
+    "domain": "Travel",
+    "requested_task": "Find the highest-rated mover in Honolulu to shift a vehicle and large appliances out of state and who has virtual discussion options available.",
+    "action_id": "94362238-1136-4e0f-a10b-dc03a18519f6",
+    "raw_chars": 446910
+  },
+  {
+    "task_id": "2eaf60d5-d2af-4f50-a3ad-5cc9132a770a",
+    "website": "rei",
+    "domain": "Shopping",
+    "requested_task": "Buy the cheapest used women's running shoes available in a size 5",
+    "action_id": "68f2918a-1523-4303-b39f-7bc223dc32ba",
+    "raw_chars": 968524
+  },
+  {
+    "task_id": "486bdb13-16c5-4a53-8566-a60caaf94a73",
+    "website": "rei",
+    "domain": "Shopping",
+    "requested_task": "Buy a GoBites Uno Spork in the color magenta and have it delivered to a store in Seattle, WA. Checkout with default address, and use credit number 123456789, CVV 123, expire 01, 2024",
+    "action_id": "78c8ae11-a625-4244-9dc6-d9b5c26f064e",
+    "raw_chars": 983531
+  },
+  {
+    "task_id": "13d78369-994a-4202-a9ed-8361e1fdea9d",
+    "website": "newegg",
+    "domain": "Shopping",
+    "requested_task": "Browse bluetooth headphones with active noise-cancellation.",
+    "action_id": "1012b462-c850-48cc-9aec-b52c613c9815",
+    "raw_chars": 2648694
+  },
+  {
+    "task_id": "9e9d7935-0c16-46e6-9e5c-3ea9124a6bf7",
+    "website": "soundcloud",
+    "domain": "Entertainment",
+    "requested_task": "Browse the top 50 hip hop chart and play the top track, then add this track to a newly created private playlist named Top Hip Hop.",
+    "action_id": "4e0cd350-2884-4841-b365-0b0d62b7a9ea",
+    "raw_chars": 498872
+  },
+  {
+    "task_id": "a338a731-596c-456e-9a9f-25f9e284309e",
+    "website": "soundcloud",
+    "domain": "Entertainment",
+    "requested_task": "Make a playlist and add 3 songs from popular Selena Gomez tracks and name it Love.",
+    "action_id": "1ce7ca32-49ee-4274-abe9-5294b2487601",
+    "raw_chars": 766593
+  },
+  {
+    "task_id": "f122e4c9-7634-4193-94f9-8623cd75d1f1",
+    "website": "thetrainline",
+    "domain": "Travel",
+    "requested_task": "Find tickets from Manchester Piccadilly to any station in London on April 8, leaving nearest 10 AM for 1 adult",
+    "action_id": "78a07e5a-688d-4a24-9bde-901d62e64a5c",
+    "raw_chars": 205047
+  },
+  {
+    "task_id": "a513befc-46c3-4bb6-87c0-8f219107c756",
+    "website": "gamestop",
+    "domain": "Shopping",
+    "requested_task": "Add a NBA basketball game for the PS5 to the shoping cart",
+    "action_id": "cc647dd5-2319-4fd2-a79e-b64dc529275b",
+    "raw_chars": 453506
+  },
+  {
+    "task_id": "bd4b77db-00a5-405f-bf0a-a4d168967d64",
+    "website": "gamestop",
+    "domain": "Shopping",
+    "requested_task": "find Panini Diamond Kings Baseball cards set below $25.",
+    "action_id": "c649a304-2019-4ff6-9bab-817b700a4e2d",
+    "raw_chars": 498807
+  },
+  {
+    "task_id": "c14078dd-a4be-4784-a46b-cb01333e3019",
+    "website": "gamestop",
+    "domain": "Shopping",
+    "requested_task": "Add two $50 playstation store gift cards to cart",
+    "action_id": "1d55f87c-4f09-44d6-a9e3-9b9809a3584e",
+    "raw_chars": 408197
+  },
+  {
+    "task_id": "d86d5cc1-50f7-4bfd-8e5b-60db84e87956",
+    "website": "gamestop",
+    "domain": "Shopping",
+    "requested_task": "Check the trade-in value for Call of Duty: Black Ops III for Xbox One.",
+    "action_id": "947fb47d-5ba4-4225-b3ca-4d4948db8acf",
+    "raw_chars": 497730
+  },
+  {
+    "task_id": "f52ba76c-e5fc-48e5-85f3-41d4234a5c5f",
+    "website": "gamestop",
+    "domain": "Shopping",
+    "requested_task": "Find used Xbox series X available.",
+    "action_id": "3ab91777-9f12-48f7-b203-03dc68f21c05",
+    "raw_chars": 449284
+  },
+  {
+    "task_id": "28f6ac29-940a-4ec6-a8bd-16ae2ce69a1c",
+    "website": "united",
+    "domain": "Travel",
+    "requested_task": "Search receipt with the eTicket 12345678 for the trip reserved by Jason Two",
+    "action_id": "aa57cbad-a560-403a-a60e-dac248b9a9fe",
+    "raw_chars": 153314
+  },
+  {
+    "task_id": "2d18cb36-5628-49e8-a336-c25c153c5527",
+    "website": "united",
+    "domain": "Travel",
+    "requested_task": "Find John Atas's trip with the confirmation number 1000001",
+    "action_id": "2b13ecd2-3bf5-41ec-8dfe-063e95329550",
+    "raw_chars": 151213
+  },
+  {
+    "task_id": "e3016f6f-b0fe-46df-a5ae-d0ad80a6996c",
+    "website": "espn",
+    "domain": "Entertainment",
+    "requested_task": "Find the schedule for the Dallas Mavericks.",
+    "action_id": "c0b15fcf-8ad7-47dd-85a9-2ee548ce72d8",
+    "raw_chars": 1248748
+  },
+  {
+    "task_id": "84f19aba-ad0a-46db-84bb-c279b5353b8a",
+    "website": "yelp",
+    "domain": "Travel",
+    "requested_task": "Browse cafes that have outdoor seating and is dog friendly.",
+    "action_id": "1014509f-e902-4d92-9c7f-1668d0bf2f45",
+    "raw_chars": 447688
+  },
+  {
+    "task_id": "8e200503-9b49-48aa-aaf6-3d6692b5cb50",
+    "website": "yelp",
+    "domain": "Travel",
+    "requested_task": "Search for locksmiths near Texas City, Texas that provide virtual consultations and  are open now.",
+    "action_id": "e043291f-ff92-42c8-a9d2-016c8f3469f0",
+    "raw_chars": 425074
+  },
+  {
+    "task_id": "04b8b406-a031-48a3-a002-b1791d872e16",
+    "website": "amazon",
+    "domain": "Shopping",
+    "requested_task": "Add $100 Google Play Gift Card to cart and recipient email address as abc@abc.com",
+    "action_id": "ce745d88-3511-43d3-9e02-401be37eca9a",
+    "raw_chars": 227240
+  },
+  {
+    "task_id": "5b433cc4-26bf-4e62-b406-f00dc09c274d",
+    "website": "cvs",
+    "domain": "Shopping",
+    "requested_task": "Add a CVS brand covid home test kit to the cart.",
+    "action_id": "823d4e67-8189-45f6-af86-6455ba6791aa",
+    "raw_chars": 132160
+  },
+  {
+    "task_id": "af97084c-5b72-4fec-be1e-dcab0980b335",
+    "website": "foxsports",
+    "domain": "Entertainment",
+    "requested_task": "Check all Bayern Munich goalie stats",
+    "action_id": "7da23b05-7a5a-46b0-90bf-ba2e4dfa8ec9",
+    "raw_chars": 765298
+  },
+  {
+    "task_id": "c254dcec-bd9b-4cf0-9225-9d2bf1345f38",
+    "website": "foxsports",
+    "domain": "Entertainment",
+    "requested_task": "Check Real Madrid player Vinicius Junior bio",
+    "action_id": "daaa0ead-b5e3-4a9e-91aa-d9cadc1b97dd",
+    "raw_chars": 761453
+  },
+  {
+    "task_id": "e6c7934b-6949-46ee-8f72-edb46abd3da7",
+    "website": "foxsports",
+    "domain": "Entertainment",
+    "requested_task": "check the winning odds in the Champions League for Real Madrid against Chelsea.",
+    "action_id": "38de20d8-417d-49a7-a925-5499003e495a",
+    "raw_chars": 765656
+  },
+  {
+    "task_id": "5ad0f114-6cea-4f61-af3d-f9f4d4096d6c",
+    "website": "ign",
+    "domain": "Entertainment",
+    "requested_task": "Add Uncharted: Legacy of Thieves Collection to my guide and find the Queen's bracelet information.",
+    "action_id": "e644a94d-62bd-43a0-8279-1ea74b67e337",
+    "raw_chars": 227364
+  },
+  {
+    "task_id": "9c9e89c1-fdb9-424c-b544-b9fd2f1ef46e",
+    "website": "uniqlo",
+    "domain": "Shopping",
+    "requested_task": "Search for Limited Time Offers available in the Kids section and filter by size, 11-12Y(150).",
+    "action_id": "d522a186-135f-4d08-a07a-852004c505fa",
+    "raw_chars": 358782
+  },
+  {
+    "task_id": "ad381d87-53a0-4aa1-a1e5-d6d172a905cd",
+    "website": "uniqlo",
+    "domain": "Shopping",
+    "requested_task": "Show all the women cropped tops with lowest price first.",
+    "action_id": "5f626ce1-8f6c-41da-a606-191bbaf298a8",
+    "raw_chars": 347256
+  },
+  {
+    "task_id": "b30b9f84-0541-4826-a3af-98220b851f7c",
+    "website": "uniqlo",
+    "domain": "Shopping",
+    "requested_task": "Search for women's sports wear, size S.",
+    "action_id": "c31b9357-ee70-4f66-974d-647feb53a5da",
+    "raw_chars": 358825
+  },
+  {
+    "task_id": "b5cb859d-8460-4b27-b6c9-d6fea6de9889",
+    "website": "uniqlo",
+    "domain": "Shopping",
+    "requested_task": "Find kids 13Y size t shirts and add 3 to cart.",
+    "action_id": "5e1eaaa5-5b32-4ef7-8a06-5934987e804c",
+    "raw_chars": 347409
+  },
+  {
+    "task_id": "c53a4a47-d155-42fc-b9a8-6b37d092d9aa",
+    "website": "ign",
+    "domain": "Entertainment",
+    "requested_task": "Find the release date and supported platforms for the game \"Elden Ring.\"",
+    "action_id": "6d02d310-1f7b-45f6-b680-73edaeff707b",
+    "raw_chars": 229207
+  },
+  {
+    "task_id": "d637c171-dc6e-4a4e-a162-9c230e822932",
+    "website": "ign",
+    "domain": "Entertainment",
+    "requested_task": "Show popular news which is at number one in comics.",
+    "action_id": "3cdab44c-9799-48ba-a720-3dc25eb00579",
+    "raw_chars": 167936
+  },
+  {
+    "task_id": "db289bef-3d18-43c6-8ee3-a1ebc5d285b4",
+    "website": "ign",
+    "domain": "Entertainment",
+    "requested_task": "Show me news about the ps5.",
+    "action_id": "97a45713-c48e-4eef-8fe4-5711e87f4c5e",
+    "raw_chars": 202328
+  },
+  {
+    "task_id": "c5cc7e71-6fd6-4a33-b450-89565dcff0a3",
+    "website": "travelzoo",
+    "domain": "Travel",
+    "requested_task": "Find deals for Hotels in Mexico.",
+    "action_id": "62440a28-36b1-4101-bba1-55fc81c56f90",
+    "raw_chars": 147081
+  },
+  {
+    "task_id": "c8990751-0aab-440c-bf6d-a32ac1216344",
+    "website": "travelzoo",
+    "domain": "Travel",
+    "requested_task": "Find guided vacations in Europe for more than 10 nights in the month of July",
+    "action_id": "103014cb-e53e-4b52-84d3-7653842690ec",
+    "raw_chars": 147446
+  },
+  {
+    "task_id": "2ff0909b-a8bb-4370-8428-9d355f5c6a67",
+    "website": "flightaware",
+    "domain": "Travel",
+    "requested_task": "Open the most popular photos of the Adam A-500 model aircraft.",
+    "action_id": "75c1a95a-3206-4beb-9527-099e88355322",
+    "raw_chars": 373027
+  },
+  {
+    "task_id": "30e310ca-af64-46b4-a0f6-14b8f04fa734",
+    "website": "flightaware",
+    "domain": "Travel",
+    "requested_task": "Look up Popular Photos in the Community featuring Aegean Airlines",
+    "action_id": "d5387d67-6e85-40ef-8c69-412c86d9cd11",
+    "raw_chars": 339030
+  },
+  {
+    "task_id": "44284a24-b3de-44ef-bcfc-abf57c3f791a",
+    "website": "flightaware",
+    "domain": "Travel",
+    "requested_task": "Find the status of flight #039028",
+    "action_id": "0d85fdcc-ca3f-4b80-97ca-0d509c03ccc4",
+    "raw_chars": 359272
+  },
+  {
+    "task_id": "52a8bace-f14c-41ce-980f-50d95e5ac259",
+    "website": "flightaware",
+    "domain": "Travel",
+    "requested_task": "Show the list of countries with the highest number of seen aircrafts.",
+    "action_id": "bc681a63-23ff-493c-9959-e1b8e93a7aaa",
+    "raw_chars": 373029
+  },
+  {
+    "task_id": "ca80bb42-2617-4f29-bbcd-bcc426b3e407",
+    "website": "flightaware",
+    "domain": "Travel",
+    "requested_task": "Find Airport information of Camarillo Airport, CA and check weather.",
+    "action_id": "83815d26-fe3f-46de-8fdf-b8d347a78e50",
+    "raw_chars": 333905
+  },
+  {
+    "task_id": "10b2af14-f708-4abe-94fc-00163d11cb56",
+    "website": "instacart",
+    "domain": "Shopping",
+    "requested_task": "Create a new list and add four items from the personal care category at Walgreens.",
+    "action_id": "e95816f8-4423-4070-8a5b-f8bee335d0a1",
+    "raw_chars": 44394
+  },
+  {
+    "task_id": "acc194d4-2f71-496a-b378-e18ab698ab0f",
+    "website": "ticketcenter",
+    "domain": "Entertainment",
+    "requested_task": "Find reggae concerts this weekend.",
+    "action_id": "fbe93f95-b79d-4208-94b5-baa35be519f7",
+    "raw_chars": 266234
+  },
+  {
+    "task_id": "bb02400d-e9da-416a-839a-0068f511a630",
+    "website": "ticketcenter",
+    "domain": "Entertainment",
+    "requested_task": "Get WWE tickets for April 10 event happening in seattle, and book 4 cheapest lower level tickets.",
+    "action_id": "a5259ece-0829-477f-b30d-f47c1f508515",
+    "raw_chars": 266376
+  },
+  {
+    "task_id": "61c8e051-a847-4424-9d8b-b8bc2c134a35",
+    "website": "boardgamegeek",
+    "domain": "Entertainment",
+    "requested_task": "Show me the recent trades",
+    "action_id": "16006817-5fb0-425b-80e7-16d8eda37863",
+    "raw_chars": 525536
+  },
+  {
+    "task_id": "87d1206c-a16b-4816-9c1e-6e1a04f30bf6",
+    "website": "boardgamegeek",
+    "domain": "Entertainment",
+    "requested_task": "Add games with the title Atlantis to my collection.",
+    "action_id": "069e32e5-39d1-4db3-88d6-167a919fd1c0",
+    "raw_chars": 465521
+  },
+  {
+    "task_id": "2bc47bba-32d7-406b-bb39-c6f2b2f2039a",
+    "website": "last.fm",
+    "domain": "Entertainment",
+    "requested_task": "Favorite the top rock track",
+    "action_id": "bbefae42-d680-4113-a45a-8319079ac7fd",
+    "raw_chars": 187415
+  },
+  {
+    "task_id": "39fd14c2-3bdd-4ca6-8a3a-1a6e7374c8e6",
+    "website": "last.fm",
+    "domain": "Entertainment",
+    "requested_task": "Find a woman t-shirt in xl size from merchandise section, add 2 pieces to the cart and check out.",
+    "action_id": "89b46503-23ad-4b12-8aa0-132496a675ca",
+    "raw_chars": 238904
+  },
+  {
+    "task_id": "5b37d2e1-cbf7-4465-b28b-b63b0754895b",
+    "website": "thetrainline",
+    "domain": "Travel",
+    "requested_task": "Book a cheapest train ticket in upstairs deck and at least one window seat from Paris to Milan on March 26, departing after noon for 16 year old and 45 year old.",
+    "action_id": "4607b007-3775-44ff-8b39-d20807e3572e",
+    "raw_chars": 201234
+  },
+  {
+    "task_id": "b48c9974-4ba0-4112-98ce-3667781fa71b",
+    "website": "thetrainline",
+    "domain": "Travel",
+    "requested_task": "Find a cheapest standard train ticket from London to Sheffield on March, 29, arriving by 10:45 am for 2 adults.",
+    "action_id": "507874fe-1115-4387-ae3a-678440621c58",
+    "raw_chars": 201231
+  },
+  {
+    "task_id": "4c3b2a4f-4b54-4724-9d8a-0ea95ab180c5",
+    "website": "ultimate-guitar",
+    "domain": "Entertainment",
+    "requested_task": "Find forum threads which include the name Taylor Swift in the title within last month",
+    "action_id": "84e6c79d-94e9-4e04-b994-04ebf807383a",
+    "raw_chars": 286576
+  },
+  {
+    "task_id": "61d28a34-cc8e-46a9-b41d-c95933de2214",
+    "website": "ultimate-guitar",
+    "domain": "Entertainment",
+    "requested_task": "Find all time popular drop c rock tab of beginner difficulty",
+    "action_id": "cd2e2892-6319-4ee5-82a8-f4ea09e54de9",
+    "raw_chars": 277179
+  },
+  {
+    "task_id": "759a1b1b-bb1f-4981-aef4-02a319f8dbaa",
+    "website": "ultimate-guitar",
+    "domain": "Entertainment",
+    "requested_task": "Open the profile page for author of latest shot",
+    "action_id": "34e4693d-d86b-4536-ba7c-274c55c63850",
+    "raw_chars": 272622
+  },
+  {
+    "task_id": "928ec908-ea23-42a4-8b13-3ca6f0721ead",
+    "website": "ultimate-guitar",
+    "domain": "Entertainment",
+    "requested_task": "Filter search results for guitar tabs to only show songs with a difficulty rating of \"Beginner\"",
+    "action_id": "1287a730-f1cc-4046-9b54-e1aa12b6d33f",
+    "raw_chars": 280128
+  },
+  {
+    "task_id": "9326b908-cbe6-41f6-957f-00b84c26bfcc",
+    "website": "ultimate-guitar",
+    "domain": "Entertainment",
+    "requested_task": "Find recently added guitar pro non-acoustic tab intros",
+    "action_id": "865bb951-c7cd-439d-8d45-50b44019491b",
+    "raw_chars": 277989
+  },
+  {
+    "task_id": "a8de57df-b0be-400d-9211-931321c6500c",
+    "website": "ultimate-guitar",
+    "domain": "Entertainment",
+    "requested_task": "Add the best rated ukulele tab to my favorites",
+    "action_id": "1596c7ad-f09a-48bc-b641-b66197b5b5d0",
+    "raw_chars": 256066
+  },
+  {
+    "task_id": "b332a3c6-c4f5-423c-a207-b1bcb28db6c3",
+    "website": "ultimate-guitar",
+    "domain": "Entertainment",
+    "requested_task": "Find the highest rated Drop D guitar tab from the 1990s.",
+    "action_id": "63febe49-b818-4412-96ee-0589ed46caba",
+    "raw_chars": 280133
+  },
+  {
+    "task_id": "8b4e49e9-9802-4c1f-acb3-de06e38445e7",
+    "website": "yellowpages",
+    "domain": "Travel",
+    "requested_task": "Find beauty salons that are rated A and accept coupons in Seattle, WA.",
+    "action_id": "0a3ab473-d734-47eb-9710-22e03410d4f6",
+    "raw_chars": 61427
+  },
+  {
+    "task_id": "91f56f3b-e3de-4d57-95df-f976a11c64f7",
+    "website": "yellowpages",
+    "domain": "Travel",
+    "requested_task": "Find a veterinarian emergency service for dogs in Hawaii with a BBB rating of A+",
+    "action_id": "e186f90a-bada-4de9-9201-38bce05d6f24",
+    "raw_chars": 70278
+  },
+  {
+    "task_id": "a39f20a6-4d31-4f5f-b0ac-be8d548d7fa5",
+    "website": "koa",
+    "domain": "Travel",
+    "requested_task": "Show the hot deals within 500 miles from 10001",
+    "action_id": "aeeb7ac6-c8f3-4c56-bdb6-e9269dafab16",
+    "raw_chars": 228107
+  },
+  {
+    "task_id": "a92a83ca-25ff-4751-8754-c65ef858699d",
+    "website": "koa",
+    "domain": "Travel",
+    "requested_task": "Show me the Lava Hot Springs East KOA photo gallery.",
+    "action_id": "038530a6-b2a4-4695-8a15-81312f121013",
+    "raw_chars": 226647
+  },
+  {
+    "task_id": "08a0c5cc-41a9-4eb8-b3ea-91d9e26f8bd3",
+    "website": "koa",
+    "domain": "Travel",
+    "requested_task": "Get directions for the Koa resort campground in Arizona",
+    "action_id": "aade8bc2-34c6-4374-8812-2fa5b8bba84a",
+    "raw_chars": 228194
+  },
+  {
+    "task_id": "117b1d5c-1e54-4588-ba84-aa173887b067",
+    "website": "koa",
+    "domain": "Travel",
+    "requested_task": "Renew a existing KOA rewards account with the rewards number 1000000001 e postal code 10023",
+    "action_id": "cca8b945-855b-47c1-82fb-2ccaf2794176",
+    "raw_chars": 228106
+  },
+  {
+    "task_id": "39358d9c-6db2-4662-a91e-47a416eeacf7",
+    "website": "koa",
+    "domain": "Travel",
+    "requested_task": "See what deals there are for Dish Outdoor.",
+    "action_id": "8720478b-0b2c-4c71-a216-68ea7cc6ec42",
+    "raw_chars": 225126
+  },
+  {
+    "task_id": "4970cd99-ce6b-42e3-bc78-695c9d510f6c",
+    "website": "koa",
+    "domain": "Travel",
+    "requested_task": "Use the trip planner for a trip between Cheyenne, WY and Helena, MT.",
+    "action_id": "c6894a9d-3c38-4df4-b21f-e4135fb0b585",
+    "raw_chars": 226778
+  },
+  {
+    "task_id": "6d338fef-6d40-4f08-a045-861ddbc3d9f4",
+    "website": "koa",
+    "domain": "Travel",
+    "requested_task": "Browse glamping locations in Northern California.",
+    "action_id": "88a2761a-0c07-43a1-b931-1b8f81bb2cea",
+    "raw_chars": 226369
+  },
+  {
+    "task_id": "5b85b4e5-60cb-42e6-af73-a6a45f8fc49d",
+    "website": "ticketcenter",
+    "domain": "Entertainment",
+    "requested_task": "Find tickets as gifts and book 2 tickets for stand-up comedian Dave Chappelle and the roots shows.",
+    "action_id": "48938eb1-60ff-48ac-880b-4ffac70ac2ef",
+    "raw_chars": 266386
+  },
+  {
+    "task_id": "5e01c2f7-c63b-4826-98a3-a18f731e16ea",
+    "website": "ticketcenter",
+    "domain": "Entertainment",
+    "requested_task": "Browse tickets for Chicago Bears games.",
+    "action_id": "8ea37fac-98e7-436e-ad0c-0264750abc6e",
+    "raw_chars": 266259
+  },
+  {
+    "task_id": "6a56a1fb-f201-4bf9-b225-842181920388",
+    "website": "ticketcenter",
+    "domain": "Entertainment",
+    "requested_task": "Show events in Los Angeles and select the one on the Friday this weekend.",
+    "action_id": "64384e4d-3b63-4313-bc53-479890efd517",
+    "raw_chars": 266278
+  },
+  {
+    "task_id": "708cbe51-b493-41da-afa8-648564133972",
+    "website": "aa",
+    "domain": "Travel",
+    "requested_task": "Show me the Flight schedules and notifications for a flight outside the us from BHZ to EWN leaving on april 30",
+    "action_id": "ae0eb36b-220a-432b-99da-eb328e43f411",
+    "raw_chars": 192551
+  },
+  {
+    "task_id": "7b05f537-af7a-4fd7-972b-123ce5a34294",
+    "website": "aa",
+    "domain": "Travel",
+    "requested_task": "Check status of flight 6944 on April 6",
+    "action_id": "cd309bbc-3a76-4037-a334-4a8af50af9fd",
+    "raw_chars": 193063
+  },
+  {
+    "task_id": "c50985ee-d4d0-4a9e-ac6f-97bede200abd",
+    "website": "seatgeek",
+    "domain": "Entertainment",
+    "requested_task": "check the lowest price ticket including fees to the next M3 Rock Festival - 2 Day Pass",
+    "action_id": "fa153d9e-d788-4f23-b0b6-468c38cc3a47",
+    "raw_chars": 522297
+  },
+  {
+    "task_id": "c7058499-3dc9-4175-9142-d22416d25a1f",
+    "website": "seatgeek",
+    "domain": "Entertainment",
+    "requested_task": "search the best VIP seat to the Red Hot Chili Peppers 2023 Tour",
+    "action_id": "87e4d380-4acc-465f-a3ee-6c5084405805",
+    "raw_chars": 542546
+  },
+  {
+    "task_id": "21f5aaaa-d54e-42a6-91c0-d1a427533963",
+    "website": "kohls",
+    "domain": "Shopping",
+    "requested_task": "Show me the new arrivals on Easter home decor",
+    "action_id": "47d12b84-360d-4519-b16c-db6972664cf3",
+    "raw_chars": 192297
+  },
+  {
+    "task_id": "2b29b7d1-bd80-4d2c-a491-9dfc89827e84",
+    "website": "kohls",
+    "domain": "Shopping",
+    "requested_task": "Browse best selling black hoodies in mens size Big and Tall that is between $25 and $50.",
+    "action_id": "5330614e-ce1a-4da4-906a-6fc408c6c3f3",
+    "raw_chars": 173958
+  },
+  {
+    "task_id": "e9f5f0d0-7241-4a28-b387-c65a0ce52a61",
+    "website": "kayak",
+    "domain": "Travel",
+    "requested_task": "Search for a rental car in Miami, FL for pick up at the airport and drop off at a different location within the same city.",
+    "action_id": "eaaaf553-37a7-488f-95ac-adf4cde55890",
+    "raw_chars": 498697
+  },
+  {
+    "task_id": "eee72e78-71bd-434b-ba74-33888ea5522d",
+    "website": "kayak",
+    "domain": "Travel",
+    "requested_task": "book the cheapest hotel in Le maraise neighborhood in paris with 2 room for 3 adult on March 27th to April 2nd.",
+    "action_id": "0833eb64-245d-427a-be49-e6a766226478",
+    "raw_chars": 496845
+  },
+  {
+    "task_id": "02e7bae3-c67f-4227-b6ea-7b87d111202a",
+    "website": "tvguide",
+    "domain": "Entertainment",
+    "requested_task": "Show latest documentaries on Netflix and add the one with 70+ metascore.",
+    "action_id": "18d49e0a-7150-41f1-9d45-d10249fd7905",
+    "raw_chars": 425117
+  },
+  {
+    "task_id": "0dd0b532-7bac-4b3e-b5a4-2ca6b0897af6",
+    "website": "tvguide",
+    "domain": "Entertainment",
+    "requested_task": "Browse comedy TV shows streaming on HBO Max that was released in 2010.",
+    "action_id": "afb4cb82-bcbe-409b-aebe-2497017bb797",
+    "raw_chars": 425156
+  },
+  {
+    "task_id": "42f64db7-c573-4ba8-9cab-a390e2f5e535",
+    "website": "delta",
+    "domain": "Travel",
+    "requested_task": "Find a flight from Mumbai to New York City on 21st April, 2023.",
+    "action_id": "f8e87034-4dc4-4109-ba01-2b7b0347713f",
+    "raw_chars": 124667
+  },
+  {
+    "task_id": "0592744b-ea69-4724-80f8-3924916b7758",
+    "website": "us.megabus",
+    "domain": "Travel",
+    "requested_task": "Find out the cancellation policy",
+    "action_id": "e85650b5-205b-4c62-8430-558ab5a7a477",
+    "raw_chars": 59325
+  },
+  {
+    "task_id": "122af0dc-9e4e-4c5a-98ad-5c4d02f32284",
+    "website": "us.megabus",
+    "domain": "Travel",
+    "requested_task": "Find the next available bus from Chicago to Ann Arbor.",
+    "action_id": "9a2bfce6-7f6c-496d-8537-c063af49d516",
+    "raw_chars": 70537
+  },
+  {
+    "task_id": "0ad8d621-8f1a-4fc2-adf9-a78d363ebd3a",
+    "website": "foxsports",
+    "domain": "Entertainment",
+    "requested_task": "Browse the most recent NASCAR driver news.",
+    "action_id": "3a3dcc2b-8ba5-4ecc-9ebe-8935157be036",
+    "raw_chars": 781370
+  },
+  {
+    "task_id": "14d4edf5-e5ca-40e8-8e5d-77068a22c32c",
+    "website": "foxsports",
+    "domain": "Entertainment",
+    "requested_task": "check the scores of the premiership on 19th of March.",
+    "action_id": "33f63262-8a25-426d-9c57-61b071a348e6",
+    "raw_chars": 801061
+  },
+  {
+    "task_id": "14f5587e-1353-419e-a381-f92d54ea2059",
+    "website": "foxsports",
+    "domain": "Entertainment",
+    "requested_task": "Find bio information about Lebron James.",
+    "action_id": "33996c48-9ef9-42e0-9ae2-d73a23df1bee",
+    "raw_chars": 759170
+  },
+  {
+    "task_id": "29fde741-075c-446c-8e8a-f432e81e7ac0",
+    "website": "carmax",
+    "domain": "Shopping",
+    "requested_task": "Calculate vehicle price with a challenge credit score, monthly payment of $250 with a $3000 down payment and 24% APR for 48 months in Tennessee.",
+    "action_id": "2d7e4e1f-c4e4-4952-b72d-8578d04e5a20",
+    "raw_chars": 161514
+  },
+  {
+    "task_id": "5c91b907-39db-49c3-af73-5eb5c2390a93",
+    "website": "carmax",
+    "domain": "Shopping",
+    "requested_task": "Find a store in Modesto California and set is as my store.",
+    "action_id": "3c20ee92-54ff-4e67-9882-d6a25db69802",
+    "raw_chars": 209724
+  },
+  {
+    "task_id": "5d69e640-7765-4381-979c-9881afc048dd",
+    "website": "carmax",
+    "domain": "Shopping",
+    "requested_task": "Calculate the monthly payment of a 15k car with a down payment of 5k in Michigan for a fair-rated person for a term length of 48 months, then shop with this budget for the cheapest car and add it to the favorites.",
+    "action_id": "b2ff3565-c9c1-4ad1-8be6-a68c94ff24e2",
+    "raw_chars": 159579
+  },
+  {
+    "task_id": "82f654ab-fbfe-43f2-a2fe-0001b2ac853f",
+    "website": "kayak",
+    "domain": "Travel",
+    "requested_task": "Search for flights from New York City to London and filter the results to show only non-stop flights.",
+    "action_id": "b0e683ad-ed9d-4e6a-a7b1-df2a0b56bba5",
+    "raw_chars": 518351
+  },
+  {
+    "task_id": "837989e0-7476-496a-be02-e4c69f1f989b",
+    "website": "kayak",
+    "domain": "Travel",
+    "requested_task": "Find a cheapest one way flight from Mumbai to Dubai on 24 May.",
+    "action_id": "ef69e26b-3544-4e04-95cb-b382313130d4",
+    "raw_chars": 523946
+  },
+  {
+    "task_id": "bcc2b6df-c012-4513-9fc1-ab149e93001f",
+    "website": "budget",
+    "domain": "Travel",
+    "requested_task": "Rent a 12-inch available moving truck with a complete protection package for approx 250 miles, pick it up at 4:00 pm, and drop it off at the same location on June 20 at 4:30 pm from zip 07718.",
+    "action_id": "e206ee61-e177-44d4-9979-26f39dc2239a",
+    "raw_chars": 254894
+  },
+  {
+    "task_id": "c759aa6c-0738-4ac6-b03c-41d0f91ff4d3",
+    "website": "budget",
+    "domain": "Travel",
+    "requested_task": "Book a SUV rental from Mar 31 (noon) to April 7, 2023 (noon) from Chicago O'hare Intl Airport, ORD and returning to same place with the lowest pay now price.",
+    "action_id": "47aabd28-f643-4dbd-96ca-fcd0b7cbaae2",
+    "raw_chars": 246701
+  },
+  {
+    "task_id": "dd13bc51-f582-4004-8641-eb4e62cabfc7",
+    "website": "cargurus",
+    "domain": "Shopping",
+    "requested_task": "Get prequalified with a good credit score for a $30000 car with a $6000 down payment for 48 months.",
+    "action_id": "f39fd0f5-1a72-4a43-8c03-6e9ce2d22de9",
+    "raw_chars": 505118
+  },
+  {
+    "task_id": "e832e1f9-3a9d-440e-a96f-8cbbf241e4af",
+    "website": "cargurus",
+    "domain": "Shopping",
+    "requested_task": "Sell my single-key black car, which has no defect with a leather interior through Louisiana, license plate number YAW639 in zip 70726 with mileage of 222900, get the offer at my email sellmycar@mail.com.",
+    "action_id": "1f65089a-5b26-4f98-a884-82c44e2cc83a",
+    "raw_chars": 529683
+  },
+  {
+    "task_id": "04ec089f-2ae1-4fa9-bfdf-4dff9ab710ad",
+    "website": "viator",
+    "domain": "Travel",
+    "requested_task": "Find highest rated white water rafting experience available in Montana from May 1 to May 7",
+    "action_id": "804c3901-8299-4c08-b8b9-3ec0bee96528",
+    "raw_chars": 229801
+  },
+  {
+    "task_id": "19847108-680f-4021-83a9-2548fab75fac",
+    "website": "viator",
+    "domain": "Travel",
+    "requested_task": "Mark a review in the best rated activity to do in Paris in May 12, 2023 as he\nlpful",
+    "action_id": "34cd7674-6ef6-4a36-a6d4-86d0ed4840ac",
+    "raw_chars": 225754
+  },
+  {
+    "task_id": "f4623be1-31c6-4546-a567-92bfd1da9cd7",
+    "website": "newegg",
+    "domain": "Shopping",
+    "requested_task": "Upgrade the count of the current SSD in my cart to 10",
+    "action_id": "16766ce2-4e9e-4955-80fd-4578cec08085",
+    "raw_chars": 2666940
+  },
+  {
+    "task_id": "03e45ce0-4375-44aa-b57f-cf439ccbe363",
+    "website": "nfl",
+    "domain": "Entertainment",
+    "requested_task": "Find the latest news article and send an email about it.",
+    "action_id": "540f58be-846a-4639-988b-214d708f6238",
+    "raw_chars": 252870
+  },
+  {
+    "task_id": "d311891e-82b9-4a16-ab46-6af92f054f94",
+    "website": "exploretock",
+    "domain": "Travel",
+    "requested_task": "Check if 5pm is available to book a indoor reservation on 31st of March in Matthews Winery for 5 people",
+    "action_id": "0c9c1694-75c7-446b-b8a1-4585a8561f79",
+    "raw_chars": 84483
+  },
+  {
+    "task_id": "dadb0251-a77c-45d7-aacb-0bb2e70e2b56",
+    "website": "exploretock",
+    "domain": "Travel",
+    "requested_task": "Find food delivery services of American cuision in New York for 4 people on March 20, 8 pm.",
+    "action_id": "f981234b-29f6-451d-b795-ad8216ee453f",
+    "raw_chars": 91213
+  },
+  {
+    "task_id": "5418beec-bc06-4e11-9664-4038fbdeefe9",
+    "website": "gamestop",
+    "domain": "Shopping",
+    "requested_task": "List Batman collectible figures priced under 10 dollars and a customer rating above 4 with a same-day delivery option.",
+    "action_id": "153ea3be-8400-41e8-b0d1-339375d3b742",
+    "raw_chars": 449209
+  },
+  {
+    "task_id": "693ae151-6a70-41b1-b016-87279c4c532e",
+    "website": "gamestop",
+    "domain": "Shopping",
+    "requested_task": "find the cheapest xbox 360 game available for purchase",
+    "action_id": "f455e88f-ed98-4077-b0cb-ea5f32a69743",
+    "raw_chars": 504493
+  }
+]

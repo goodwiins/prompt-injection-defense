@@ -1,0 +1,2507 @@
+{
+  "n": 192,
+  "max_absolute_score_error": 1.4901161193847656e-08,
+  "identical_decisions": true,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "input_sha256": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+  "expected_sha256": "1ca3f64ba0a6d81849055d9ab74ff317aac4353dbefe3a3b050bc540116d2e08",
+  "config_sha256": "cc60bba67a1387e6805c4b24e3bf670a5dfe6b5044e136482839644f7dfafe5d",
+  "predictions": [
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/100",
+      "score": 0.06515802443027496,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 97,
+      "winning_window": 75,
+      "winning_token_bounds": [
+        21450,
+        21832
+      ],
+      "content_tokens": 27756
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1001",
+      "score": 0.06282016634941101,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 84,
+      "winning_window": 14,
+      "winning_token_bounds": [
+        4004,
+        4386
+      ],
+      "content_tokens": 24115
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1002",
+      "score": 0.9449202418327332,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 129,
+      "winning_window": 77,
+      "winning_token_bounds": [
+        22022,
+        22404
+      ],
+      "content_tokens": 36783
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1011",
+      "score": 0.0635383352637291,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 216,
+      "winning_window": 114,
+      "winning_token_bounds": [
+        32604,
+        32986
+      ],
+      "content_tokens": 61803
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1021",
+      "score": 0.06228942796587944,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 2,
+      "winning_window": 1,
+      "winning_token_bounds": [
+        286,
+        481
+      ],
+      "content_tokens": 481
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1043",
+      "score": 0.06275705993175507,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 43,
+      "winning_window": 17,
+      "winning_token_bounds": [
+        4862,
+        5244
+      ],
+      "content_tokens": 12352
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1049",
+      "score": 0.9453036189079285,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 117,
+      "winning_window": 25,
+      "winning_token_bounds": [
+        7150,
+        7532
+      ],
+      "content_tokens": 33471
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/105",
+      "score": 0.07105695456266403,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 55,
+      "winning_window": 46,
+      "winning_token_bounds": [
+        13156,
+        13538
+      ],
+      "content_tokens": 15790
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1061",
+      "score": 0.06243567913770676,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 17,
+      "winning_window": 14,
+      "winning_token_bounds": [
+        4004,
+        4386
+      ],
+      "content_tokens": 4940
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1066",
+      "score": 0.08325628936290741,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 145,
+      "winning_window": 84,
+      "winning_token_bounds": [
+        24024,
+        24406
+      ],
+      "content_tokens": 41322
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1072",
+      "score": 0.28226202726364136,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 90,
+      "winning_window": 38,
+      "winning_token_bounds": [
+        10868,
+        11250
+      ],
+      "content_tokens": 25787
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1075",
+      "score": 0.9451009035110474,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 151,
+      "winning_window": 52,
+      "winning_token_bounds": [
+        14872,
+        15254
+      ],
+      "content_tokens": 43127
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1083",
+      "score": 0.9451770782470703,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 1,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        259
+      ],
+      "content_tokens": 259
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1108",
+      "score": 0.06250734627246857,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 6,
+      "winning_window": 2,
+      "winning_token_bounds": [
+        572,
+        954
+      ],
+      "content_tokens": 1679
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1117",
+      "score": 0.06330054253339767,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 115,
+      "winning_window": 24,
+      "winning_token_bounds": [
+        6864,
+        7246
+      ],
+      "content_tokens": 32913
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1122",
+      "score": 0.0628773495554924,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 88,
+      "winning_window": 19,
+      "winning_token_bounds": [
+        5434,
+        5816
+      ],
+      "content_tokens": 25103
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1124",
+      "score": 0.94544517993927,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 154,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 43924
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1139",
+      "score": 0.9451088905334473,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 64,
+      "winning_window": 29,
+      "winning_token_bounds": [
+        8294,
+        8676
+      ],
+      "content_tokens": 18276
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1153",
+      "score": 0.9454569220542908,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 79,
+      "winning_window": 9,
+      "winning_token_bounds": [
+        2574,
+        2956
+      ],
+      "content_tokens": 22409
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1179",
+      "score": 0.9417181015014648,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 153,
+      "winning_window": 102,
+      "winning_token_bounds": [
+        29172,
+        29554
+      ],
+      "content_tokens": 43768
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1232",
+      "score": 0.062472011893987656,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 4,
+      "winning_window": 3,
+      "winning_token_bounds": [
+        858,
+        1077
+      ],
+      "content_tokens": 1077
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1237",
+      "score": 0.9453326463699341,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 29,
+      "winning_window": 25,
+      "winning_token_bounds": [
+        7150,
+        7532
+      ],
+      "content_tokens": 8212
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1240",
+      "score": 0.9453221559524536,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 19,
+      "winning_window": 16,
+      "winning_token_bounds": [
+        4576,
+        4958
+      ],
+      "content_tokens": 5484
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1248",
+      "score": 0.19556257128715515,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 69,
+      "winning_window": 48,
+      "winning_token_bounds": [
+        13728,
+        14110
+      ],
+      "content_tokens": 19828
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1261",
+      "score": 0.9440704584121704,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 56,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 15903
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1297",
+      "score": 0.06285788863897324,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 6,
+      "winning_window": 5,
+      "winning_token_bounds": [
+        1430,
+        1538
+      ],
+      "content_tokens": 1538
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1310",
+      "score": 0.06328599900007248,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 41,
+      "winning_window": 40,
+      "winning_token_bounds": [
+        11440,
+        11539
+      ],
+      "content_tokens": 11539
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1317",
+      "score": 0.06273235380649567,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 28,
+      "winning_window": 9,
+      "winning_token_bounds": [
+        2574,
+        2956
+      ],
+      "content_tokens": 8064
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1325",
+      "score": 0.06623166054487228,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 114,
+      "winning_window": 39,
+      "winning_token_bounds": [
+        11154,
+        11536
+      ],
+      "content_tokens": 32431
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1326",
+      "score": 0.06299559772014618,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 74,
+      "winning_window": 56,
+      "winning_token_bounds": [
+        16016,
+        16398
+      ],
+      "content_tokens": 21255
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1351",
+      "score": 0.9451207518577576,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 140,
+      "winning_window": 73,
+      "winning_token_bounds": [
+        20878,
+        21260
+      ],
+      "content_tokens": 40001
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1359",
+      "score": 0.06230572238564491,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 5,
+      "winning_window": 2,
+      "winning_token_bounds": [
+        572,
+        954
+      ],
+      "content_tokens": 1359
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1366",
+      "score": 0.06243790313601494,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 2,
+      "winning_window": 1,
+      "winning_token_bounds": [
+        286,
+        439
+      ],
+      "content_tokens": 439
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1371",
+      "score": 0.945396900177002,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 16,
+      "winning_window": 11,
+      "winning_token_bounds": [
+        3146,
+        3528
+      ],
+      "content_tokens": 4531
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1393",
+      "score": 0.06266339123249054,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 57,
+      "winning_window": 36,
+      "winning_token_bounds": [
+        10296,
+        10678
+      ],
+      "content_tokens": 16328
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1400",
+      "score": 0.9447885155677795,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 48,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 13821
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1413",
+      "score": 0.9017373323440552,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 38,
+      "winning_window": 33,
+      "winning_token_bounds": [
+        9438,
+        9820
+      ],
+      "content_tokens": 10858
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1451",
+      "score": 0.06426066160202026,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 117,
+      "winning_window": 44,
+      "winning_token_bounds": [
+        12584,
+        12966
+      ],
+      "content_tokens": 33414
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1472",
+      "score": 0.07668797671794891,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 26,
+      "winning_window": 17,
+      "winning_token_bounds": [
+        4862,
+        5244
+      ],
+      "content_tokens": 7411
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1473",
+      "score": 0.944987952709198,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 79,
+      "winning_window": 77,
+      "winning_token_bounds": [
+        22022,
+        22404
+      ],
+      "content_tokens": 22460
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1486",
+      "score": 0.2509607970714569,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 90,
+      "winning_window": 69,
+      "winning_token_bounds": [
+        19734,
+        20116
+      ],
+      "content_tokens": 25797
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1495",
+      "score": 0.4146055579185486,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 89,
+      "winning_window": 14,
+      "winning_token_bounds": [
+        4004,
+        4386
+      ],
+      "content_tokens": 25392
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1502",
+      "score": 0.742723286151886,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 77,
+      "winning_window": 6,
+      "winning_token_bounds": [
+        1716,
+        2098
+      ],
+      "content_tokens": 21943
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1510",
+      "score": 0.062418997287750244,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 1,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        335
+      ],
+      "content_tokens": 335
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1512",
+      "score": 0.06274250149726868,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 36,
+      "winning_window": 31,
+      "winning_token_bounds": [
+        8866,
+        9248
+      ],
+      "content_tokens": 10245
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1518",
+      "score": 0.06482044607400894,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 179,
+      "winning_window": 2,
+      "winning_token_bounds": [
+        572,
+        954
+      ],
+      "content_tokens": 51272
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1519",
+      "score": 0.9453305602073669,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 106,
+      "winning_window": 100,
+      "winning_token_bounds": [
+        28600,
+        28982
+      ],
+      "content_tokens": 30314
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1521",
+      "score": 0.944477915763855,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 69,
+      "winning_window": 18,
+      "winning_token_bounds": [
+        5148,
+        5530
+      ],
+      "content_tokens": 19597
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1549",
+      "score": 0.9454028606414795,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 96,
+      "winning_window": 17,
+      "winning_token_bounds": [
+        4862,
+        5244
+      ],
+      "content_tokens": 27426
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1557",
+      "score": 0.945266604423523,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 27,
+      "winning_window": 22,
+      "winning_token_bounds": [
+        6292,
+        6674
+      ],
+      "content_tokens": 7610
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1560",
+      "score": 0.0627254843711853,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 121,
+      "winning_window": 67,
+      "winning_token_bounds": [
+        19162,
+        19544
+      ],
+      "content_tokens": 34694
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1562",
+      "score": 0.6299245953559875,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 97,
+      "winning_window": 16,
+      "winning_token_bounds": [
+        4576,
+        4958
+      ],
+      "content_tokens": 27758
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1580",
+      "score": 0.06255614757537842,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 96,
+      "winning_window": 16,
+      "winning_token_bounds": [
+        4576,
+        4958
+      ],
+      "content_tokens": 27450
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1581",
+      "score": 0.06299320608377457,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 241,
+      "winning_window": 23,
+      "winning_token_bounds": [
+        6578,
+        6960
+      ],
+      "content_tokens": 68766
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1592",
+      "score": 0.06238410621881485,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 8,
+      "winning_window": 3,
+      "winning_token_bounds": [
+        858,
+        1240
+      ],
+      "content_tokens": 2304
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1597",
+      "score": 0.06258655339479446,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 15,
+      "winning_window": 14,
+      "winning_token_bounds": [
+        4004,
+        4201
+      ],
+      "content_tokens": 4201
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1599",
+      "score": 0.945348858833313,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 82,
+      "winning_window": 63,
+      "winning_token_bounds": [
+        18018,
+        18400
+      ],
+      "content_tokens": 23301
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/160",
+      "score": 0.9454611539840698,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 128,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 36595
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1606",
+      "score": 0.9450668692588806,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 37,
+      "winning_window": 7,
+      "winning_token_bounds": [
+        2002,
+        2384
+      ],
+      "content_tokens": 10651
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1623",
+      "score": 0.9449425935745239,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 54,
+      "winning_window": 51,
+      "winning_token_bounds": [
+        14586,
+        14968
+      ],
+      "content_tokens": 15489
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/163",
+      "score": 0.06362783908843994,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 139,
+      "winning_window": 78,
+      "winning_token_bounds": [
+        22308,
+        22690
+      ],
+      "content_tokens": 39583
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1634",
+      "score": 0.07361847162246704,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 234,
+      "winning_window": 129,
+      "winning_token_bounds": [
+        36894,
+        37276
+      ],
+      "content_tokens": 66900
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1637",
+      "score": 0.06341495364904404,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 8,
+      "winning_window": 7,
+      "winning_token_bounds": [
+        2002,
+        2100
+      ],
+      "content_tokens": 2100
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1639",
+      "score": 0.06294862926006317,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 125,
+      "winning_window": 38,
+      "winning_token_bounds": [
+        10868,
+        11250
+      ],
+      "content_tokens": 35840
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/164",
+      "score": 0.945215106010437,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 108,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 30763
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1676",
+      "score": 0.9444503784179688,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 20,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 5764
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1684",
+      "score": 0.9452574849128723,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 117,
+      "winning_window": 51,
+      "winning_token_bounds": [
+        14586,
+        14968
+      ],
+      "content_tokens": 33510
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/169",
+      "score": 0.06312018632888794,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 72,
+      "winning_window": 71,
+      "winning_token_bounds": [
+        20306,
+        20459
+      ],
+      "content_tokens": 20459
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1690",
+      "score": 0.08683652430772781,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 38,
+      "winning_window": 10,
+      "winning_token_bounds": [
+        2860,
+        3242
+      ],
+      "content_tokens": 10776
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1700",
+      "score": 0.06552872806787491,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 27,
+      "winning_window": 15,
+      "winning_token_bounds": [
+        4290,
+        4672
+      ],
+      "content_tokens": 7754
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1717",
+      "score": 0.06278711557388306,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 9,
+      "winning_window": 6,
+      "winning_token_bounds": [
+        1716,
+        2098
+      ],
+      "content_tokens": 2571
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1733",
+      "score": 0.9454110860824585,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 155,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 44145
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1757",
+      "score": 0.06364809721708298,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 27,
+      "winning_window": 26,
+      "winning_token_bounds": [
+        7436,
+        7542
+      ],
+      "content_tokens": 7542
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1758",
+      "score": 0.9454445242881775,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 78,
+      "winning_window": 38,
+      "winning_token_bounds": [
+        10868,
+        11250
+      ],
+      "content_tokens": 22296
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1764",
+      "score": 0.9453511238098145,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 201,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 57348
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1768",
+      "score": 0.06263335794210434,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 9,
+      "winning_window": 8,
+      "winning_token_bounds": [
+        2288,
+        2518
+      ],
+      "content_tokens": 2518
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1771",
+      "score": 0.07161814719438553,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 7,
+      "winning_window": 5,
+      "winning_token_bounds": [
+        1430,
+        1812
+      ],
+      "content_tokens": 2043
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1772",
+      "score": 0.06269749999046326,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 45,
+      "winning_window": 44,
+      "winning_token_bounds": [
+        12584,
+        12848
+      ],
+      "content_tokens": 12848
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1774",
+      "score": 0.06274912506341934,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 153,
+      "winning_window": 14,
+      "winning_token_bounds": [
+        4004,
+        4386
+      ],
+      "content_tokens": 43821
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1796",
+      "score": 0.9453696608543396,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 29,
+      "winning_window": 27,
+      "winning_token_bounds": [
+        7722,
+        8104
+      ],
+      "content_tokens": 8317
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1819",
+      "score": 0.9454182386398315,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 146,
+      "winning_window": 10,
+      "winning_token_bounds": [
+        2860,
+        3242
+      ],
+      "content_tokens": 41704
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1823",
+      "score": 0.06273071467876434,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 56,
+      "winning_window": 33,
+      "winning_token_bounds": [
+        9438,
+        9820
+      ],
+      "content_tokens": 16016
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1830",
+      "score": 0.06282977014780045,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 134,
+      "winning_window": 4,
+      "winning_token_bounds": [
+        1144,
+        1526
+      ],
+      "content_tokens": 38401
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1839",
+      "score": 0.9451309442520142,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 78,
+      "winning_window": 75,
+      "winning_token_bounds": [
+        21450,
+        21832
+      ],
+      "content_tokens": 22393
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1850",
+      "score": 0.0626046285033226,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 6,
+      "winning_window": 3,
+      "winning_token_bounds": [
+        858,
+        1240
+      ],
+      "content_tokens": 1665
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1866",
+      "score": 0.06288417428731918,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 46,
+      "winning_window": 27,
+      "winning_token_bounds": [
+        7722,
+        8104
+      ],
+      "content_tokens": 13230
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1883",
+      "score": 0.06332540512084961,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 257,
+      "winning_window": 78,
+      "winning_token_bounds": [
+        22308,
+        22690
+      ],
+      "content_tokens": 73592
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1884",
+      "score": 0.06259889155626297,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 28,
+      "winning_window": 13,
+      "winning_token_bounds": [
+        3718,
+        4100
+      ],
+      "content_tokens": 7935
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1889",
+      "score": 0.915841281414032,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 30,
+      "winning_window": 19,
+      "winning_token_bounds": [
+        5434,
+        5816
+      ],
+      "content_tokens": 8431
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1894",
+      "score": 0.06941388547420502,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 117,
+      "winning_window": 82,
+      "winning_token_bounds": [
+        23452,
+        23834
+      ],
+      "content_tokens": 33541
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1897",
+      "score": 0.7741349339485168,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 147,
+      "winning_window": 90,
+      "winning_token_bounds": [
+        25740,
+        26122
+      ],
+      "content_tokens": 41984
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1913",
+      "score": 0.9449134469032288,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 23,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 6545
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1917",
+      "score": 0.9452823996543884,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 97,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 27627
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1920",
+      "score": 0.9448904395103455,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 192,
+      "winning_window": 57,
+      "winning_token_bounds": [
+        16302,
+        16684
+      ],
+      "content_tokens": 55000
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1934",
+      "score": 0.9454801082611084,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 157,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 44758
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1961",
+      "score": 0.9434100985527039,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 154,
+      "winning_window": 102,
+      "winning_token_bounds": [
+        29172,
+        29554
+      ],
+      "content_tokens": 43977
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1981",
+      "score": 0.06293747574090958,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 123,
+      "winning_window": 40,
+      "winning_token_bounds": [
+        11440,
+        11822
+      ],
+      "content_tokens": 34992
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/1988",
+      "score": 0.3292425870895386,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 70,
+      "winning_window": 26,
+      "winning_token_bounds": [
+        7436,
+        7818
+      ],
+      "content_tokens": 19933
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/209",
+      "score": 0.06280514597892761,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 22,
+      "winning_window": 21,
+      "winning_token_bounds": [
+        6006,
+        6263
+      ],
+      "content_tokens": 6263
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/210",
+      "score": 0.9453550577163696,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 66,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 18707
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/218",
+      "score": 0.06282597780227661,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 78,
+      "winning_window": 17,
+      "winning_token_bounds": [
+        4862,
+        5244
+      ],
+      "content_tokens": 22225
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/225",
+      "score": 0.0632653683423996,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 81,
+      "winning_window": 78,
+      "winning_token_bounds": [
+        22308,
+        22690
+      ],
+      "content_tokens": 23124
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/233",
+      "score": 0.06260061264038086,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 111,
+      "winning_window": 109,
+      "winning_token_bounds": [
+        31174,
+        31556
+      ],
+      "content_tokens": 31609
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/237",
+      "score": 0.07223520427942276,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 75,
+      "winning_window": 14,
+      "winning_token_bounds": [
+        4004,
+        4386
+      ],
+      "content_tokens": 21437
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/238",
+      "score": 0.0625929906964302,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 19,
+      "winning_window": 16,
+      "winning_token_bounds": [
+        4576,
+        4958
+      ],
+      "content_tokens": 5502
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/24",
+      "score": 0.06280902028083801,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 76,
+      "winning_window": 39,
+      "winning_token_bounds": [
+        11154,
+        11536
+      ],
+      "content_tokens": 21765
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/242",
+      "score": 0.945385217666626,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 57,
+      "winning_window": 54,
+      "winning_token_bounds": [
+        15444,
+        15826
+      ],
+      "content_tokens": 16251
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/243",
+      "score": 0.9455004930496216,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 76,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 21676
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/248",
+      "score": 0.06287948042154312,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 81,
+      "winning_window": 15,
+      "winning_token_bounds": [
+        4290,
+        4672
+      ],
+      "content_tokens": 23176
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/25",
+      "score": 0.06357616186141968,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 121,
+      "winning_window": 93,
+      "winning_token_bounds": [
+        26598,
+        26980
+      ],
+      "content_tokens": 34545
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/26",
+      "score": 0.06301406770944595,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 103,
+      "winning_window": 27,
+      "winning_token_bounds": [
+        7722,
+        8104
+      ],
+      "content_tokens": 29303
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/272",
+      "score": 0.06262277811765671,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 28,
+      "winning_window": 27,
+      "winning_token_bounds": [
+        7722,
+        8035
+      ],
+      "content_tokens": 8035
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/279",
+      "score": 0.06310837715864182,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 125,
+      "winning_window": 124,
+      "winning_token_bounds": [
+        35464,
+        35705
+      ],
+      "content_tokens": 35705
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/281",
+      "score": 0.06270712614059448,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 11,
+      "winning_window": 9,
+      "winning_token_bounds": [
+        2574,
+        2956
+      ],
+      "content_tokens": 3166
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/297",
+      "score": 0.945494532585144,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 40,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 11264
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/303",
+      "score": 0.06265834718942642,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 45,
+      "winning_window": 25,
+      "winning_token_bounds": [
+        7150,
+        7532
+      ],
+      "content_tokens": 12843
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/309",
+      "score": 0.06191280856728554,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 1,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        224
+      ],
+      "content_tokens": 224
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/323",
+      "score": 0.06223945692181587,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 1,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        322
+      ],
+      "content_tokens": 322
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/331",
+      "score": 0.9454742670059204,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 225,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 64288
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/363",
+      "score": 0.06288212537765503,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 70,
+      "winning_window": 17,
+      "winning_token_bounds": [
+        4862,
+        5244
+      ],
+      "content_tokens": 20069
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/373",
+      "score": 0.06292538344860077,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 73,
+      "winning_window": 57,
+      "winning_token_bounds": [
+        16302,
+        16684
+      ],
+      "content_tokens": 20722
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/38",
+      "score": 0.06400678306818008,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 52,
+      "winning_window": 29,
+      "winning_token_bounds": [
+        8294,
+        8676
+      ],
+      "content_tokens": 14800
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/380",
+      "score": 0.9449638724327087,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 14,
+      "winning_window": 13,
+      "winning_token_bounds": [
+        3718,
+        4050
+      ],
+      "content_tokens": 4050
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/385",
+      "score": 0.06362789124250412,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 7,
+      "winning_window": 6,
+      "winning_token_bounds": [
+        1716,
+        1819
+      ],
+      "content_tokens": 1819
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/397",
+      "score": 0.9417062401771545,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 3,
+      "winning_window": 1,
+      "winning_token_bounds": [
+        286,
+        668
+      ],
+      "content_tokens": 693
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/4",
+      "score": 0.06278452277183533,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 14,
+      "winning_window": 12,
+      "winning_token_bounds": [
+        3432,
+        3814
+      ],
+      "content_tokens": 4054
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/407",
+      "score": 0.0625322237610817,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 13,
+      "winning_window": 9,
+      "winning_token_bounds": [
+        2574,
+        2956
+      ],
+      "content_tokens": 3764
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/429",
+      "score": 0.06326452642679214,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 126,
+      "winning_window": 2,
+      "winning_token_bounds": [
+        572,
+        954
+      ],
+      "content_tokens": 36013
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/442",
+      "score": 0.06284977495670319,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 168,
+      "winning_window": 135,
+      "winning_token_bounds": [
+        38610,
+        38992
+      ],
+      "content_tokens": 48144
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/46",
+      "score": 0.06273484230041504,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 18,
+      "winning_window": 10,
+      "winning_token_bounds": [
+        2860,
+        3242
+      ],
+      "content_tokens": 5162
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/460",
+      "score": 0.06298644840717316,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 61,
+      "winning_window": 59,
+      "winning_token_bounds": [
+        16874,
+        17256
+      ],
+      "content_tokens": 17335
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/464",
+      "score": 0.9450470209121704,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 68,
+      "winning_window": 32,
+      "winning_token_bounds": [
+        9152,
+        9534
+      ],
+      "content_tokens": 19339
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/47",
+      "score": 0.06231660023331642,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 13,
+      "winning_window": 3,
+      "winning_token_bounds": [
+        858,
+        1240
+      ],
+      "content_tokens": 3703
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/470",
+      "score": 0.06223762407898903,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 4,
+      "winning_window": 2,
+      "winning_token_bounds": [
+        572,
+        954
+      ],
+      "content_tokens": 1226
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/482",
+      "score": 0.06328680366277695,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 92,
+      "winning_window": 49,
+      "winning_token_bounds": [
+        14014,
+        14396
+      ],
+      "content_tokens": 26236
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/485",
+      "score": 0.9452950954437256,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 9,
+      "winning_window": 6,
+      "winning_token_bounds": [
+        1716,
+        2098
+      ],
+      "content_tokens": 2478
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/503",
+      "score": 0.06286248564720154,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 60,
+      "winning_window": 13,
+      "winning_token_bounds": [
+        3718,
+        4100
+      ],
+      "content_tokens": 17072
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/506",
+      "score": 0.06384915858507156,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 196,
+      "winning_window": 145,
+      "winning_token_bounds": [
+        41470,
+        41852
+      ],
+      "content_tokens": 56081
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/514",
+      "score": 0.9449085593223572,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 45,
+      "winning_window": 1,
+      "winning_token_bounds": [
+        286,
+        668
+      ],
+      "content_tokens": 12799
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/521",
+      "score": 0.06220191344618797,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 1,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        320
+      ],
+      "content_tokens": 320
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/552",
+      "score": 0.06260934472084045,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 30,
+      "winning_window": 28,
+      "winning_token_bounds": [
+        8008,
+        8390
+      ],
+      "content_tokens": 8455
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/564",
+      "score": 0.9453486800193787,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 99,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 28388
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/565",
+      "score": 0.06211995333433151,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 2,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 545
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/583",
+      "score": 0.06778024137020111,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 103,
+      "winning_window": 50,
+      "winning_token_bounds": [
+        14300,
+        14682
+      ],
+      "content_tokens": 29345
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/602",
+      "score": 0.06313520669937134,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 51,
+      "winning_window": 36,
+      "winning_token_bounds": [
+        10296,
+        10678
+      ],
+      "content_tokens": 14637
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/608",
+      "score": 0.9452922940254211,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 76,
+      "winning_window": 9,
+      "winning_token_bounds": [
+        2574,
+        2956
+      ],
+      "content_tokens": 21831
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/611",
+      "score": 0.9454153776168823,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 181,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 51628
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/613",
+      "score": 0.9449537992477417,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 29,
+      "winning_window": 27,
+      "winning_token_bounds": [
+        7722,
+        8104
+      ],
+      "content_tokens": 8321
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/634",
+      "score": 0.06274387985467911,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 2,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 437
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/643",
+      "score": 0.9453515410423279,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 112,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 31892
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/645",
+      "score": 0.06200724467635155,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 3,
+      "winning_window": 1,
+      "winning_token_bounds": [
+        286,
+        668
+      ],
+      "content_tokens": 948
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/651",
+      "score": 0.06582391262054443,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 57,
+      "winning_window": 49,
+      "winning_token_bounds": [
+        14014,
+        14396
+      ],
+      "content_tokens": 16161
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/655",
+      "score": 0.9452449083328247,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 122,
+      "winning_window": 47,
+      "winning_token_bounds": [
+        13442,
+        13824
+      ],
+      "content_tokens": 34787
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/662",
+      "score": 0.06336057931184769,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 80,
+      "winning_window": 13,
+      "winning_token_bounds": [
+        3718,
+        4100
+      ],
+      "content_tokens": 22777
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/669",
+      "score": 0.945418655872345,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 149,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 42608
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/683",
+      "score": 0.945073664188385,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 1,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        289
+      ],
+      "content_tokens": 289
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/685",
+      "score": 0.06264998018741608,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 212,
+      "winning_window": 11,
+      "winning_token_bounds": [
+        3146,
+        3528
+      ],
+      "content_tokens": 60714
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/694",
+      "score": 0.06380809098482132,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 168,
+      "winning_window": 17,
+      "winning_token_bounds": [
+        4862,
+        5244
+      ],
+      "content_tokens": 48028
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/712",
+      "score": 0.06277991086244583,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 70,
+      "winning_window": 25,
+      "winning_token_bounds": [
+        7150,
+        7532
+      ],
+      "content_tokens": 19916
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/719",
+      "score": 0.11133419722318649,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 82,
+      "winning_window": 51,
+      "winning_token_bounds": [
+        14586,
+        14968
+      ],
+      "content_tokens": 23348
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/728",
+      "score": 0.06305211037397385,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 198,
+      "winning_window": 152,
+      "winning_token_bounds": [
+        43472,
+        43854
+      ],
+      "content_tokens": 56614
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/74",
+      "score": 0.9454495310783386,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 62,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 17587
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/744",
+      "score": 0.9452955722808838,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 146,
+      "winning_window": 120,
+      "winning_token_bounds": [
+        34320,
+        34702
+      ],
+      "content_tokens": 41814
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/750",
+      "score": 0.9451318979263306,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 37,
+      "winning_window": 36,
+      "winning_token_bounds": [
+        10296,
+        10564
+      ],
+      "content_tokens": 10564
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/755",
+      "score": 0.9454396367073059,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 93,
+      "winning_window": 9,
+      "winning_token_bounds": [
+        2574,
+        2956
+      ],
+      "content_tokens": 26676
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/772",
+      "score": 0.7687563896179199,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 177,
+      "winning_window": 134,
+      "winning_token_bounds": [
+        38324,
+        38706
+      ],
+      "content_tokens": 50646
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/777",
+      "score": 0.06261387467384338,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 158,
+      "winning_window": 56,
+      "winning_token_bounds": [
+        16016,
+        16398
+      ],
+      "content_tokens": 45111
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/78",
+      "score": 0.06526593118906021,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 21,
+      "winning_window": 19,
+      "winning_token_bounds": [
+        5434,
+        5816
+      ],
+      "content_tokens": 6057
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/782",
+      "score": 0.9454155564308167,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 79,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 22420
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/784",
+      "score": 0.06422249227762222,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 195,
+      "winning_window": 178,
+      "winning_token_bounds": [
+        50908,
+        51290
+      ],
+      "content_tokens": 55690
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/79",
+      "score": 0.10151165723800659,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 34,
+      "winning_window": 7,
+      "winning_token_bounds": [
+        2002,
+        2384
+      ],
+      "content_tokens": 9681
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/798",
+      "score": 0.9453603625297546,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 118,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 33582
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/802",
+      "score": 0.9277437329292297,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 43,
+      "winning_window": 42,
+      "winning_token_bounds": [
+        12012,
+        12313
+      ],
+      "content_tokens": 12313
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/807",
+      "score": 0.06285307556390762,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 99,
+      "winning_window": 64,
+      "winning_token_bounds": [
+        18304,
+        18686
+      ],
+      "content_tokens": 28266
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/827",
+      "score": 0.06286656111478806,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 69,
+      "winning_window": 13,
+      "winning_token_bounds": [
+        3718,
+        4100
+      ],
+      "content_tokens": 19723
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/836",
+      "score": 0.06325597316026688,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 230,
+      "winning_window": 137,
+      "winning_token_bounds": [
+        39182,
+        39564
+      ],
+      "content_tokens": 65718
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/85",
+      "score": 0.944679319858551,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 2,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 648
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/867",
+      "score": 0.9453058242797852,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 163,
+      "winning_window": 85,
+      "winning_token_bounds": [
+        24310,
+        24692
+      ],
+      "content_tokens": 46664
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/868",
+      "score": 0.9450609087944031,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 81,
+      "winning_window": 56,
+      "winning_token_bounds": [
+        16016,
+        16398
+      ],
+      "content_tokens": 23008
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/878",
+      "score": 0.06291433423757553,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 118,
+      "winning_window": 36,
+      "winning_token_bounds": [
+        10296,
+        10678
+      ],
+      "content_tokens": 33661
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/885",
+      "score": 0.06310823559761047,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 242,
+      "winning_window": 39,
+      "winning_token_bounds": [
+        11154,
+        11536
+      ],
+      "content_tokens": 69105
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/907",
+      "score": 0.0625419020652771,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 87,
+      "winning_window": 86,
+      "winning_token_bounds": [
+        24596,
+        24961
+      ],
+      "content_tokens": 24961
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/912",
+      "score": 0.06275507062673569,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 15,
+      "winning_window": 2,
+      "winning_token_bounds": [
+        572,
+        954
+      ],
+      "content_tokens": 4149
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/913",
+      "score": 0.06415706872940063,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 79,
+      "winning_window": 14,
+      "winning_token_bounds": [
+        4004,
+        4386
+      ],
+      "content_tokens": 22597
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/92",
+      "score": 0.945147693157196,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 2,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 483
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/927",
+      "score": 0.06257326900959015,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 12,
+      "winning_window": 4,
+      "winning_token_bounds": [
+        1144,
+        1526
+      ],
+      "content_tokens": 3308
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/936",
+      "score": 0.0644010528922081,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 50,
+      "winning_window": 49,
+      "winning_token_bounds": [
+        14014,
+        14148
+      ],
+      "content_tokens": 14148
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/943",
+      "score": 0.9448157548904419,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 24,
+      "winning_window": 16,
+      "winning_token_bounds": [
+        4576,
+        4958
+      ],
+      "content_tokens": 6874
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/958",
+      "score": 0.9453221559524536,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 4,
+      "winning_window": 0,
+      "winning_token_bounds": [
+        0,
+        382
+      ],
+      "content_tokens": 1060
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/969",
+      "score": 0.06251116842031479,
+      "threshold": 0.6299245953559875,
+      "prediction": 0,
+      "windows": 19,
+      "winning_window": 2,
+      "winning_token_bounds": [
+        572,
+        954
+      ],
+      "content_tokens": 5458
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/98",
+      "score": 0.9453346729278564,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 45,
+      "winning_window": 30,
+      "winning_token_bounds": [
+        8580,
+        8962
+      ],
+      "content_tokens": 12702
+    },
+    {
+      "id": "perplexity-ai/browsesafe-bench/train/989",
+      "score": 0.9451488256454468,
+      "threshold": 0.6299245953559875,
+      "prediction": 1,
+      "windows": 58,
+      "winning_window": 32,
+      "winning_token_bounds": [
+        9152,
+        9534
+      ],
+      "content_tokens": 16559
+    }
+  ]
+}

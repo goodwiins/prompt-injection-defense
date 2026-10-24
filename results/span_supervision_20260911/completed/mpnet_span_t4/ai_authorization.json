@@ -1,0 +1,27 @@
+{
+  "authorized_at": "2026-09-11T22:17:49.471606+00:00",
+  "user_instruction": "You can review them by yourself. You have better classifier already",
+  "scope": "AI-reviewed exploratory training correction and validation; user replaces the pending human-review prerequisite for this exploratory path",
+  "reviewer_type": "AI",
+  "human_review_attested": false,
+  "independent_blind_review": false,
+  "classifier_superiority_established": false,
+  "parent_protocol_sha256": "84dec0f6b1fc27eb2c9b7d367be7122c78d1f1769ce1b9468e0093667be49a4f",
+  "label_policy": "Use explicit reviewed labels. Uncertain labels or disagreements are quarantined and require a documented pre-training revision. No forced labels to preserve counts.",
+  "review_counts": {
+    "injection": 15,
+    "non-injection_provisional": 30,
+    "uncertain": 0,
+    "construction_disagreements": 0
+  },
+  "intervention": "Existing 20-row balanced replacement; unchanged architecture, optimization and all three seeds with frozen encoder controls. Validation augmented by 15 reviewed candidates.",
+  "test_policy": "No final test data are exported, constructed, scored or used for selection in this run. Six metadata-only reserved websites remain untouched.",
+  "human_csv_sha256": "0fec9632c38c20e9c7ab02d86059af40da9817921da6c40f6644123ffdc67d8e",
+  "limitations": [
+    "Same assistant constructed and reviewed this packet; review was not blind.",
+    "No evidence establishes the reviewer as a superior calibrated classifier.",
+    "New-cohort sites/categories are split-disjoint; historical family overlap remains unknown.",
+    "Quoted framing and source boilerplate can be shortcuts. Validation category and position are coupled.",
+    "Repeated validation use means exploratory development evidence only; no security-gate or generalization claim."
+  ]
+}

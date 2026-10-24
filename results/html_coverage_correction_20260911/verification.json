@@ -1,0 +1,16 @@
+{
+  "verified_at": "2026-09-11T22:01:22.251884+00:00",
+  "raw_pages": 45,
+  "independent_token_hashes": 45,
+  "total_windows": 12170,
+  "all_30_insertions_completely_covered": true,
+  "human_label_fields_blank": 45,
+  "selected_training_candidates": 20,
+  "new_source_proposed_class_counts": {
+    "1": 10,
+    "0": 10
+  },
+  "reserved_groups": 6,
+  "prior_inputs_screened": 8376,
+  "protocol_sha256": "84dec0f6b1fc27eb2c9b7d367be7122c78d1f1769ce1b9468e0093667be49a4f"
+}

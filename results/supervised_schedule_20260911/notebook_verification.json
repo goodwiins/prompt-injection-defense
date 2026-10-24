@@ -1,0 +1,9 @@
+{
+  "code_cells": 9,
+  "source_identical": true,
+  "all_expected_outputs": true,
+  "errors": 0,
+  "package_replays": 6,
+  "figure_present": true,
+  "execution_counts_note": "CLI leaves execution_count null; completion is verified from actual stage outputs"
+}

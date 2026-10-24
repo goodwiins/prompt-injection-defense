@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "epoch": 6,
+  "threshold": 0.8815227150917053,
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "content_tokens": 382,
+  "overlap": 96,
+  "window_batch": 32,
+  "input": "unchanged UTF-8 text or raw HTML; no extraction or truncation",
+  "pooling": "masked mean, L2 normalization, linear head, maximum window logit, sigmoid",
+  "reference_precision": "A100 CUDA float16 encoder autocast; float32 head; CPU uses float32",
+  "limitations": "Research classifier. A negative prediction does not authorize tool access or establish safety.",
+  "files": {
+    "checkpoint.pt": "015595c507e551c8fc010dca9ec60df5c0077b7048ef18a36cd7844de4e33917",
+    "mpnet_inference.py": "f9f3bcbb5b5fccd35ae88f87cab22070220f7642a6ee40781e95c913f69cbbec",
+    "inference_assets/config.json": "d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0",
+    "inference_assets/tokenizer.json": "b8be2c30ba5dd723a6d5ee26d013da103d5408d92ddcb23747622f9e48f1d842",
+    "inference_assets/vocab.txt": "dbd90cb94e2247bd4d4ccaecbf616d2290e66691d7d5e5bb81f063c2d0649ada",
+    "inference_assets/special_tokens_map.json": "9ef40e9c160511bf3f46ceb71f1471dafa1e9473d5120bb816c36b2efa75f8ba",
+    "inference_assets/tokenizer_config.json": "67f2ff7e223518e729869bb3a70f0caf8368fe549383fc11cfe2dfb42fffc268",
+    "inference_assets/1_Pooling/config.json": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56"
+  }
+}

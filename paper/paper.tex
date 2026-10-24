@@ -35,491 +35,789 @@
 \graphicspath{{figures/}}
 
 % Title
-\title{A Multi-Layer Defense System Against Prompt Injection in Multi-Agent LLMs}
+\title{Injection-Aware Sentence Embeddings:\\
+       A Method and Evaluation Audit for Prompt Injection Detection}
+% TODO(authors): confirm author list before submission. PROJECT_FEEDBACK_REPORT.md
+%               lists Jennifer Marrero as a project group member; if she contributed,
+%               add her here.
 \author{Abdelghafour El Bikha}
 \affil{John Jay College}
-\date{\today}
+\date{September 11, 2026}
+
+\setlength{\emergencystretch}{2em}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-Large Language Model (LLM) agents are increasingly deployed in multi-agent systems where they interact with untrusted users and other agents. This expands the attack surface for prompt injection, allowing malicious instructions to propagate through the system---a phenomenon known as ``prompt infection.'' Existing defenses often focus on single-turn interactions or suffer from high false positive rates (over-defense) on benign prompts containing trigger words. We propose a comprehensive three-layer defense framework (Detection, Coordination, Response) designed specifically for multi-agent environments. Our system features an ensemble detector combining semantic embeddings with heuristic patterns, using a fine-tuned \textbf{Injection-Aware MPNet} embedding model to minimize over-defense. We evaluate our approach on text-based prompt injection benchmarks (SaTML, deepset, LLMail, NotInject, TensorTrust, BrowseSafe), achieving \textbf{97.2\% accuracy}, \textbf{98.8\% recall} on SaTML, \textbf{100\% recall} on deepset and LLMail, and \textbf{0.0\% FPR} on the NotInject over-defense benchmark. We also demonstrate strong generalization on BrowseSafe (97.8\% accuracy, 0.4\% FPR) despite its HTML-embedded attack modality. By learning injection-aware semantic representations, our approach decouples malicious intent from keyword presence, effectively mitigating the ``over-defense'' problem common in keyword-based systems. Our system operates with a P95 latency of \textbf{38.1ms} on GPU hardware, making it suitable for real-time applications.
+Prompt-injection detectors can reject benign text that contains attack-like
+keywords. We describe Injection-Aware MPNet, a fine-tuned sentence encoder
+whose contrastive training samples injection--benign-trigger pairs twice as
+often as each other pair type, followed by an XGBoost classifier. An audit
+of the repository found that the historical encoder training pools overlap
+with benchmark inputs and with the encoder validation pool. The available
+results therefore do not establish performance on unseen inputs or a causal
+reduction in over-defense. We retain only explicitly labelled historical
+counts, distinguish the local synthetic trigger benchmark from official
+NotInject, and report a new, bounded single-seed re-evaluation on 2,315
+held-out inputs. Doubling injection--benign-trigger pairs raises attack
+recall from 48.30\% to 64.20\% relative to uniform pairing, but also raises
+the false-positive rate from 25.50\% to 36.78\%. This experiment does not
+support a general reduction in over-defense. A separate supervised encoder
+pilot on 447 fresh BrowseSafe pages improves recall and false-positive rates
+for two training seeds, while a third seed degrades AUC and exceeds its
+validation false-positive budget on the holdout. A six-epoch follow-up with
+a disclosed mixed-precision repair improves recall for all three seeds on
+a separate 453-page holdout, reaching 66.36--69.12\% recall at empirical
+FPR 2.54--4.66\%. False positives increase for two seeds, and population
+FPR below 5\% remains unestablished. Previously reported latency
+distributions, embedding-distance improvements, and comparative superiority
+remain withdrawn; fresh timings are reported with a limited measurement scope.
+
 \end{abstract}
 
 \section{Introduction}
 
-The integration of Large Language Models (LLMs) into multi-agent systems enables complex workflows but introduces severe security vulnerabilities. Prompt injection attacks, where adversaries manipulate model behavior via malicious inputs, are well-documented in single-LLM setups. However, in multi-agent systems, a successful injection in one agent can cascade to others, compromising the entire network.
+Large Language Models (LLMs) deployed as conversational assistants and as
+components of agentic systems are exposed to a steady stream of untrusted
+text---direct user input, retrieved web pages, emails, and messages from
+other agents. Prompt injection attacks exploit this exposure by smuggling
+adversarial instructions into the input stream. While the attack surface and
+threat models in agentic deployments are still being mapped---e.g.\
+\citet{lee2024prompt} on cross-agent ``prompt infection''---a robust input
+filter remains a foundational primitive for any defence stack.
 
-Current defenses face two critical limitations:
+Current input-side detectors face two recurring limitations:
 
 \begin{itemize}
-    \item \textbf{Over-Defense:} Many detectors rely on keyword matching or aggressive classifiers that flag benign prompts containing security-related terms (e.g., ``system'', ``ignore''), rendering them unusable for legitimate power users.
-    \item \textbf{Single-Agent Focus:} Most defenses ignore the inter-agent trust boundaries and lack mechanisms to quarantine compromised agents to prevent lateral movement.
+    \item \textbf{Over-defense.} Detectors that lean on keyword matching or
+          aggressive classifiers reject benign prompts that merely contain
+          attack-adjacent terms (``system'', ``ignore'', ``bypass''),
+          breaking legitimate use cases. \citet{li2024injecguard} showed
+          that guardrail accuracy can fall to around 60\%
+          on the NotInject over-defense benchmark.
+    \item \textbf{Lexical shortcuts.} Models trained on imbalanced corpora
+          (where most malicious prompts contain trigger words and most
+          benign prompts do not) may learn a trigger-word/malicious
+          correlation rather than the intended distinction.
 \end{itemize}
 
-To address these gaps, we present a \textbf{Multi-Layer Defense System} that secures the entire agent lifecycle. Our contributions are:
-
+We investigate a focused detection approach:
 \begin{itemize}
-    \item \textbf{Three-Layer Architecture:} A holistic framework comprising Detection, Coordination, and Response layers to detect, isolate, and mitigate attacks.
-    \item \textbf{Ensemble Detection:} A hybrid detector combining a fast embedding-based classifier (XGBoost + MPNet) with a pattern-based heuristic engine, achieving robust detection with low latency.
-    \item \textbf{Injection-Aware MPNet:} A fine-tuned sentence embedding model that learns injection-aware semantic representations. By training on a carefully balanced dataset (67\% safe benign, 33\% benign-with-triggers, plus malicious samples), the model decouples malicious intent from keyword presence, achieving 0.0\% FPR on the NotInject over-defense benchmark.
-    \item \textbf{Comprehensive Benchmarking:} We provide a unified evaluation across 8 datasets (SaTML, deepset, LLMail, NotInject, BrowseSafe, TensorTrust), with detailed comparisons against state-of-the-art defenses including Lakera Guard, ProtectAI, ActiveFence, Glean AI, and PromptArmor.
+    \item \textbf{Injection-Aware MPNet.} Cosine-similarity training of
+          \texttt{all-mpnet-base-v2} with additional injection--benign-trigger
+          pairs, intended to discourage reliance on shared keywords.
+    \item \textbf{Embedding classification.} A 768-dimensional embedding
+          feeds XGBoost; the historical operating threshold is $0.764$.
+    \item \textbf{Evaluation audit.} We trace the available numerical
+          claims to source code and saved counts, and identify leakage,
+          missing provenance, and measurements that require replacement.
 \end{itemize}
+The intended benefit of the pair weighting is a hypothesis. A controlled
+ablation and independent evaluation are needed to establish it. Coordination
+and response modules exist in the repository, but this paper makes no
+empirical claim about their protection of downstream agents.
 
 \section{Background \& Related Work}
 
-\textbf{Prompt Injection:} Early work identified direct prompt injection \citep{perez2022ignore} and indirect injection via retrieved context \citep{greshake2023more}. In multi-agent systems, ``prompt infection'' \citep{lee2025prompt} describes how malicious prompts can replicate across agents.
+\textbf{Prompt Injection:} Early work identified direct prompt injection \citep{perez2022ignore} and indirect injection via retrieved context \citep{greshake2023more}. In multi-agent systems, ``prompt infection'' \citep{lee2024prompt} describes how malicious prompts can replicate across agents.
 
 \textbf{Defense Mechanisms:} Current defenses span multiple paradigms with distinct trade-offs:
 
 \subsection{Training-Time Defenses}
-
-\textit{StruQ} \citep{chen2024struq} addresses prompt injection through \textbf{structured query separation}. The approach introduces a ``Secure Front-End'' that:
-\begin{itemize}
-    \item Inserts special delimiter tokens (\texttt{[INST]}, \texttt{[DATA]}) to separate instructions from user data
-    \item Filters data inputs to remove potentially conflicting instructions
-    \item Fine-tunes the LLM to follow only instructions in the designated prompt section
-\end{itemize}
-StruQ achieves <2\% ASR on manual injection attacks for Llama-2 and Mistral models. However, it requires \textbf{full model fine-tuning} and remains vulnerable to optimization-based attacks (ASR reduced from 97\% to 58\%) \citep{zhan2025jailbreakbench}.
-
-\textit{SecAlign} \citep{chen2025secalign} extends StruQ via \textbf{preference optimization}. It constructs contrastive pairs of (secure output, insecure output) for prompt-injected inputs and applies Direct Preference Optimization (DPO) to align the model toward secure responses. SecAlign achieves near-zero ASR on optimization-free attacks while preserving utility (AlpacaEval2 scores). The key limitation is the requirement for model retraining, making it unsuitable for API-only LLM deployments.
-
-\subsection{Test-Time Defenses}
-
-\textit{DefensiveToken} \citep{defensivetoken2024} inserts a small number of optimized security tokens into the model vocabulary. These tokens are trained via gradient-based optimization to induce injection-resistant behavior without modifying base model weights. DefensiveToken achieves 0.24\% ASR on 31K+ samples---remarkably comparable to training-time methods. However, it requires access to model internals for token embedding optimization.
+\textit{StruQ} \citep{chen2024struq} separates prompts and data through a
+secure front-end and trains the LLM to follow instructions in the prompt
+channel. \textit{SecAlign} \citep{chen2024secalign} uses preference
+optimization on secure and insecure outputs for injected inputs. Both
+modify the protected model through training; our approach instead trains
+an external detector. Their downstream attack-success metrics are not
+directly comparable to text-classification accuracy.
 
 \subsection{LLM-Based Defenses}
-
-\textit{PromptArmor} \citep{promptarmor2024} employs a \textbf{guardrail LLM} as a preprocessing filter. The guardrail analyzes incoming prompts, identifies injected content, and sanitizes the input before forwarding to the primary LLM. On AgentDojo benchmarks, PromptArmor achieves <1\% FPR and FNR using GPT-4o as the guardrail. The trade-off is significant latency overhead (~200ms) due to additional LLM inference.
+\textit{PromptArmor} \citep{si2025promptarmor} prompts an off-the-shelf LLM
+to detect and remove injected content before an agent processes it. Its
+paper reports false-positive and false-negative rates below 1\% on
+AgentDojo with several guardrail models. We have not reproduced that
+experiment and make no comparative latency or superiority claim.
 
 \subsection{Over-Defense Mitigation}
-
-\textit{InjecGuard/PIGuard} (Liang et al., 2024; accepted ACL 2025) identified over-defense as a critical barrier to prompt guard adoption. They introduced:
-\begin{itemize}
-    \item \textbf{NotInject Dataset:} 339 benign samples enriched with 1--3 trigger words per sentence, enabling systematic over-defense evaluation
-    \item \textbf{MOF (Mitigating Over-defense for Free) Strategy:} A training approach that reduces trigger-word bias by augmenting training data with benign samples containing attack-like keywords
-\end{itemize}
-InjecGuard's MOF operates by \textbf{implicit bias deamplification} during fine-tuning of transformer guardrail models (DeBERTa-v3 based).
-
-% \subsection{Positioning Our Work: BIT vs. MOF}
-% This section is commented out because it is specific to the BIT training strategy and has not been updated for the Injection-Aware MPNet model.
-% 
-% InjecGuard's MOF and our BIT address the same over-defense problem using the same NotInject dataset. We clarify similarities and differences:
-% 
-% \textbf{Similarities:}
-% \begin{itemize}
-%     \item Both use NotInject-style samples to reduce keyword bias
-%     \item Both target low FPR on trigger-heavy benign prompts
-%     \item Both achieve FPR <5\% on NotInject
-% \end{itemize}
-% 
-% \textbf{Differences:}
-% 
-% \begin{table}[H]
-% \centering
-% \caption{BIT vs. InjecGuard MOF Comparison}
-% \begin{tabular}{lp{5cm}p{5cm}}
-% \toprule
-% \textbf{Aspect} & \textbf{InjecGuard MOF} & \textbf{Our BIT} \\
-% \midrule
-% \textbf{Mechanism} & Implicit bias deamplification in DeBERTa fine-tuning & Explicit weighted loss optimization in XGBoost \\
-% \textbf{Model Type} & Transformer (DeBERTa-v3) & Ensemble (XGBoost + MiniLM embeddings) \\
-% \textbf{Latency} & ~12ms (requires GPU) & \textbf{2--5ms} (CPU-only possible) \\
-% \textbf{Interpretability} & Black-box neural network & Feature importance via XGBoost \\
-% \textbf{NotInject FPR} & 2.1\% (reported) & 1.8\% [95\% CI: 0.8--3.4\%] \\
-% \bottomrule
-% \end{tabular}
-% </table
-% 
-% \textbf{Honest assessment:} Our FPR on NotInject: 1.8\% [95\% CI: 0.8--3.4\%] is similar to InjecGuard's 2.1\% within statistical error ($p > 0.05$, McNemar's test). The primary differentiation is \textbf{latency (2--5ms vs 12ms) and CPU-only deployability}. This work is \textbf{complementary} to InjecGuard rather than strictly superior.
+\textit{InjecGuard} \citep{li2024injecguard} introduces NotInject, a
+339-sample benign benchmark containing trigger words, and the Mitigating
+Over-defense for Free (MOF) training strategy. Our local synthetic trigger
+set is distinct from that benchmark. Both approaches target trigger-word
+bias, but matched data, model capacity, and evaluation conditions are needed
+to compare their training strategies.
 
 \section{Threat Model}
 
-We assume an adversary with the following capabilities:
+\textbf{Adversary capability.} The adversary controls at least one
+untrusted text channel into the LLM application: a chat input, a fetched
+web page, an email body, a tool-call response, or a message from a
+peer agent in a multi-agent setup. The adversary's text is concatenated
+with system prompts and trusted context before reaching the LLM.
+
+\textbf{Adversary goals.} (i) \emph{Policy bypass}: cause the LLM to
+violate its system-level instructions. (ii) \emph{Data exfiltration}:
+extract sensitive context (system prompts, conversation history, tool
+outputs) into the response. (iii) \emph{Lateral movement (multi-agent
+setting)}: have one agent issue commands that another agent then executes.
+
+\textbf{Defender capability.} The defender places our detector inline
+between the untrusted text channel and the downstream LLM. The detector
+sees raw text, returns a binary decision plus a confidence score, and may
+strip or quarantine flagged inputs.
+
+\textbf{Out of scope.}
 \begin{itemize}
-    \item \textbf{Input Control:} Can inject prompts into the system via user chat or indirect sources (e.g., emails, web pages).
-    \item \textbf{Compromised Agent:} May control one agent in the network to send malicious messages to others.
+    \item \emph{Adversarial attacks on the LLM's parameters} (weight
+          extraction, model inversion, supply-chain attacks on the base
+          model).
+    \item \emph{Adaptive attacks on the detector itself} (gradient-based
+          attacks such as GCG/AutoDAN). No model-matched adaptive evaluation is established here; see
+          Section~\ref{sec:limitations}.
+    \item \emph{Multi-turn attacks that build context across many
+          messages.} Our detector evaluates each message independently.
 \end{itemize}
 
-\textbf{Adversary Goals:}
-\begin{itemize}
-    \item \textbf{Policy Bypass:} Force agents to violate safety guidelines.
-    \item \textbf{Data Exfiltration:} Steal sensitive information from agent memory.
-    \item \textbf{Lateral Movement:} Propagate malicious instructions to privileged agents.
-\end{itemize}
+\textbf{Scope.} The primary focus of this paper is \textbf{single-turn,
+text-based prompt injection}. We additionally audit historical results for text extracted
+from HTML-embedded attacks (Section~\ref{sec:browsesafe}).
 
-\textbf{Out of Scope:} We do not address adversarial attacks on the LLM weights themselves or infrastructure-level compromises.
-\begin{itemize}
-    \item \textbf{Model extraction attacks}
-    \item \textbf{Feedback-based attacks}
-    \item \textbf{Distributed attacks}
-\end{itemize}
+\section{Detection System Design}
+\label{sec:design}
 
-\textbf{Scope:} Our primary focus is \textbf{text-based prompt injection} in multi-agent systems. We also evaluate cross-modality generalization on HTML-embedded attacks (Section 7.6).
+The embedding classifier receives a text input, encodes it with MPNet,
+and applies XGBoost to the embedding. The returned injection score is
+thresholded to obtain a binary decision; calibration as a real-world
+probability has not been established. Historical records identify an
+embedding-only detector. The repository also contains regex matching and
+behavioural monitoring modules, but no matched experiment establishes their
+incremental accuracy or false-positive cost.
 
-\section{System Design}
-
-Our system implements a defense-in-depth architecture with three distinct layers.
-
-\subsection{Detection Layer}
-The first line of defense analyzes incoming prompts using an ensemble of detectors:
-\begin{itemize}
-    \item \textbf{Embedding Classifier:} Uses our fine-tuned \texttt{injection-aware-mpnet} model to generate 768-dimensional embeddings, classified by an XGBoost model with optimized threshold ($\theta=0.764$).
-    \item \textbf{Pattern Detector:} A regex-based engine identifying 10 common attack families.
-    \item \textbf{Behavioral Monitor:} Uses a sliding window of $N=20$ recent outputs, flagging when output logits exceed $\mu \pm 2\sigma$.
-\end{itemize}
-
-\subsection{Coordination Layer}
-This layer manages inter-agent trust and communication:
-\begin{itemize}
-    \item \textbf{Guard Agent:} Acts as a gateway routing messages.
-    \item \textbf{OVON Protocol:} Enforces structured messaging with ``whisper'' fields.
-    \item \textbf{PeerGuard Validator:} (Optional) Uses a separate LLM for validation.
-\end{itemize}
-
-\subsection{Response Layer}
-The final layer handles mitigation:
-\begin{itemize}
-    \item \textbf{Circuit Breaker:} Tracks aggregate risk scores.
-    \item \textbf{Quarantine Protocol:} Automatically isolates agents flagged as compromised.
-\end{itemize}
+\paragraph{Multi-agent coordination and response.}
+The repository contains guard, messaging, circuit-breaker, and quarantine
+modules. These are implementation components, not evidence of resistance
+to prompt propagation or downstream compromise. In particular,
+\path{OVONMessage.verify_integrity} accepts a claimed verification flag
+in message metadata rather than verifying an authenticated signature. Authentication and
+multi-agent effectiveness must be independently implemented and tested
+before a security claim is made. PeerGuard \citep{fan2025peerguard}
+is related work on mutual reasoning against backdoors, not validation of
+these modules.
 
 \section{Methodology}
+\label{sec:method}
 
-\subsection{Ensemble Detection}
-We combine the outputs of our detectors using a weighted voting scheme:
+\subsection{Decision rule}
+For embedding $\mathbf{e}(x)$, let $s(x)$ be the XGBoost injection score.
+The historical classifier uses
 \begin{equation}
-s = w_{emb} \cdot s_{emb} + w_{pattern} \cdot s_{pattern}
+\hat{y}(x) = \mathbf{1}[s(x) \ge 0.764].
 \end{equation}
-The final decision is binary: $\hat{y} = \mathbf{1}[s \ge \theta]$. We optimize $\theta$ on the validation set targeting 98\% recall, selecting \textbf{$\theta=0.764$}.
+The classifier training entry point hard-codes this threshold. The saved
+metadata records it, but does not establish selection on a held-out
+validation set. We therefore do not describe it as optimal. A new
+operating threshold must be selected on validation data excluded from both
+training stages, then frozen before testing.
 
-\subsection{Injection-Aware MPNet Training}
+\subsection{Injection-Aware MPNet contrastive fine-tuning}
 
-To mitigate over-defense, we fine-tune \texttt{all-mpnet-base-v2} using contrastive learning on carefully curated sentence pairs. The training objective teaches the model to cluster semantically similar prompts together while separating malicious from benign content.
-
-\textbf{Training Data Sources:}
+The historical encoder uses \texttt{all-mpnet-base-v2} and requests the
+following data. Loader calls are recorded in
+\path{training/finetune_mpnet_embeddings.py}.
 \begin{itemize}
-    \item \textbf{Injection samples:} SaTML CTF (1,500), deepset attacks (500), LLMail (500), BrowseSafe injections (2,000)
-    \item \textbf{Safe samples:} deepset benign (1,000), BrowseSafe benign
-    \item \textbf{Benign-trigger samples:} NotInject HuggingFace (500), NotInject synthetic (1,000)
+    \item Injection text from SaTML (limit 1{,}500), deepset (up to 500
+          injections), and LLMail (limit 500).
+    \item BrowseSafe (limit 2{,}000), whose extracted text is assigned to
+          injection or safe pools according to its label.
+    \item Safe deepset text (up to 1{,}000 safe samples).
+    \item Official NotInject (limit 500) and local synthetic trigger text
+          (limit 1{,}000), both treated as benign.
 \end{itemize}
+These are loader limits, not observed corpus sizes: the local synthetic
+loader generates only 247 prompts, and deepset's limit applies separately
+to each class. The original pipeline does not exclude benchmark text from
+these pools. Its validation pairs also draw from the last 200 entries of
+pools used for training. These overlaps invalidate an interpretation of
+its validation score as performance on unseen text.
 
-\textbf{Contrastive Pair Construction:}
-We construct 14,000 sentence pairs with cosine similarity labels. The key insight is \textbf{doubling the injection vs. benign-trigger pairs} to emphasize this critical distinction:
+\paragraph{Pair construction.} From the loaded text, the script samples
+14{,}000 \texttt{InputExample} pairs as in Table~\ref{tab:pairs}. The
+defining methodological choice is \emph{doubling} the injection-vs.\
+benign-with-trigger dissimilar pairs (4{,}000 vs.\ 2{,}000 of every other
+pair type), intended to emphasize prompts that share trigger words but differ in intent.
+This changes sampling frequency rather than assigning an explicit per-pair
+loss coefficient.
 
 \begin{table}[H]
 \centering
 \small
+\caption{Contrastive pair counts and target cosine similarity labels.}
+\label{tab:pairs}
 \begin{tabular}{lcc}
 \toprule
-\textbf{Pair Type} & \textbf{Count} & \textbf{Label} \\
+\textbf{Pair type} & \textbf{Count} & \textbf{Target similarity} \\
 \midrule
-Injection--Injection & 2,000 & 1.0 (similar) \\
-Safe--Safe & 2,000 & 1.0 (similar) \\
-Benign-trigger--Benign-trigger & 2,000 & 1.0 (similar) \\
-Injection--Safe & 2,000 & 0.0 (dissimilar) \\
-\textbf{Injection--Benign-trigger} & \textbf{4,000} & \textbf{0.0 (dissimilar)} \\
-Safe--Benign-trigger & 2,000 & 0.8 (both benign) \\
+Injection--Injection                       & 2{,}000 & 1.0 \\
+Safe--Safe                                 & 2{,}000 & 1.0 \\
+Benign-trigger--Benign-trigger             & 2{,}000 & 1.0 \\
+Injection--Safe                            & 2{,}000 & 0.0 \\
+\textbf{Injection--Benign-trigger}         & \textbf{4{,}000} & \textbf{0.0} \\
+Safe--Benign-trigger                       & 2{,}000 & 0.8 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The doubled injection--benign-trigger pairs force the model to distinguish malicious intent from benign queries that happen to contain trigger words like ``ignore'', ``bypass'', or ``system''. The 0.8 label for safe--benign-trigger pairs acknowledges that both are benign but stylistically different.
+The 0.8 target for safe vs.\ benign-with-trigger acknowledges that both
+are benign but stylistically distinct, encoding a desired similarity rather than a measured geometric outcome.
 
-The model is trained using \textbf{CosineSimilarityLoss} with MSE:
+The encoder is trained with cosine-similarity loss
+(\path{losses.CosineSimilarityLoss}, MSE):
 \begin{equation}
-\mathcal{L} = \frac{1}{N} \sum_{i=1}^{N} (s_i - \cos(\mathbf{e}_1^{(i)}, \mathbf{e}_2^{(i)}))^2
+\mathcal{L} = \frac{1}{N} \sum_{i=1}^{N}
+\bigl(s_i - \cos(\mathbf{e}_1^{(i)}, \mathbf{e}_2^{(i)})\bigr)^2,
 \end{equation}
-where $\mathbf{e}_1, \mathbf{e}_2$ are 768-dimensional embeddings of the sentence pair and $s_i$ is the target similarity.
+where $\mathbf{e}_1, \mathbf{e}_2$ are 768-dim outputs of the fine-tuned
+encoder and $s_i$ is the target from Table~\ref{tab:pairs}.
 
-\textbf{Training Configuration:}
+\paragraph{Recorded training configuration.}
+The model card records batch size 4, learning rate $5\times10^{-5}$,
+100 warm-up steps, and a four-epoch configuration. The encoder script does
+not explicitly pass the learning rate, so reproducing the model-card
+configuration requires setting it rather than relying on a library default.
+The last model-card log entry reports Spearman correlation 0.9040 at step
+12{,}500 (epoch 3.5714); this is not proof of a plateau-triggered early stop.
+The validation-pool overlap described above limits the interpretation of
+that correlation.
+
+\subsection{XGBoost classifier on the fine-tuned embeddings}
+
+The 768-dim embeddings feed an XGBoost classifier
+(\texttt{n\_estimators=300}, \texttt{max\_depth=6},
+\texttt{learning\_rate=0.05}, \texttt{subsample=0.8},
+\path{colsample_bytree=0.8}, \texttt{tree\_method=hist}). The classifier
+was trained on the corpus recorded in
+\path{models/injection_aware_mpnet_metadata.json}:
+
 \begin{itemize}
-    \item Base model: \texttt{sentence-transformers/all-mpnet-base-v2}
-    \item Epochs: 4, Batch size: 4, Learning rate: $5 \times 10^{-5}$, Warmup: 100 steps
-    \item Validation Spearman correlation: \textbf{0.904}
+    \item Safe benign: 2{,}667 samples;
+    \item Benign-with-trigger: 570 samples;
+    \item Malicious: 413 rows of templated injections and a deepset slice.
 \end{itemize}
 
-\textbf{XGBoost Classifier Training:}
-The fine-tuned embeddings are used to train an XGBoost classifier on a balanced dataset:
-\begin{itemize}
-    \item Injections: 2,800 samples
-    \item Safe benign: 2,800 samples
-    \item Benign-trigger: 1,400 samples
-\end{itemize}
-XGBoost parameters: $n\_estimators=300$, $max\_depth=6$, $learning\_rate=0.05$. The classification threshold $\theta=0.764$ is optimized on validation data to achieve 98\% recall while minimizing false positives.
+The metadata counts rows, not necessarily unique prompts: the safe-text
+and malicious-text generators repeat templates. The classifier entry point
+calls \path{EmbeddingClassifier.train}, which fits all supplied embeddings
+without a validation split. Its configured parameters do not include
+\texttt{scale\_pos\_weight}. Thus neither a held-out classifier validation
+set nor class-ratio loss weighting is established by this training path.
+The separate \texttt{train\_on\_dataset} method offers a 90/10 split; its
+existence does not establish that the recorded classifier used that path.
 
-\section{Experimental Setup}
+\section{Evaluation Evidence and Protocol}
 
-\textbf{Datasets:}
-\input{tables/dataset_summary.tex}
+\subsection{Historical evidence}
+The count-bearing record used below is
+\path{results/injection_aware_mpnet_evaluation.json}, dated
+2025-12-16 03:24:39. It identifies Injection-Aware MPNet and threshold
+0.764, but lacks model hashes, dataset revisions, and per-example predictions.
+Its sampling metadata names SaTML, deepset, LLMail, and the local synthetic
+trigger set. Only the deepset class slices, the synthetic set, and a pooled
+record have stored confusion counts. We do not infer missing per-dataset
+counts from the pooled record.
 
-\textbf{Baselines:} We compare against classifier-based (DeBERTa, InjecGuard), training-time (StruQ, SecAlign), and LLM-based (PromptArmor) defenses.
+\subsection{Metrics and uncertainty}
+We recompute accuracy, recall, and false-positive rate (FPR) from counts:
+\begin{equation}
+\mathrm{Accuracy}=\frac{TP+TN}{TP+TN+FP+FN},\quad
+\mathrm{Recall}=\frac{TP}{TP+FN},\quad
+\mathrm{FPR}=\frac{FP}{FP+TN}.
+\end{equation}
+A metric with zero denominator is N/A, not zero. Table~\ref{tab:per-dataset-metrics}
+includes nominal 95\% Wilson intervals for these proportions. The intervals
+summarize finite-count uncertainty under an independent Bernoulli assumption;
+they do not correct training overlap, duplicate prompts, or selection bias.
+No paired model comparison or McNemar significance claim is made.
 
-\textbf{Statistical Methodology:} We use stratified 80/20 train/test splits with fixed seed 42. All reported metrics include 95\% confidence intervals (CI) computed using the \textbf{Wilson score method}, which provides more accurate coverage than normal approximation for small samples or extreme proportions (e.g., near-0\% FPR). Statistical significance for classifier comparison is assessed using \textbf{McNemar's test} for paired binary classifiers ($p < 0.05$).
+\section{Results Audit}
 
-\textbf{Metrics:} We report False Positive Rate (FPR) relative to the specific dataset size. The Intra-class Distance Ratio (IDR) is defined as the mean Euclidean distance between class centroids in the MPNet embedding space: $\text{IDR} = d( \mu_{\text{benign-trigger}}, \mu_{\text{benign}} ) / d( \mu_{\text{benign-trigger}}, \mu_{\text{injection}} )$.
+\subsection{Count-backed historical observations}
+\textbf{These are pre-remediation observations, not held-out performance.}
+The table is generated directly from the stored confusion counts; it
+replaces the manually combined per-dataset table. The pooled record covers
+more samples than the three displayed slices and is shown separately.
 
-\section{Results}
-
-To validate our multi-layer architecture (Section 4), we structure the evaluation as follows:
-\begin{itemize}
-    \item \textbf{Detection Layer:} Performance on benchmark datasets and over-defense analysis (Sections 7.1--7.4).
-    \item \textbf{Coordination Layer:} Inter-agent trust exploitation and OVON protocol security (Section 7.5).
-    \item \textbf{Response Layer:} Quarantine effectiveness and mitigation rates (Section 7.5.5).
-\end{itemize}
-
-\subsection{Detection Performance}
-
-Our system achieves state-of-the-art performance across all text-based benchmarks.
-
-% Table 2a
 \input{tables/per_dataset_metrics.tex}
 
-Notably, we achieve \textbf{0.0\% False Positive Rate} on the official NotInject HuggingFace dataset, validating our contrastive training approach.
+The local trigger record contains zero false positives in 247 rows, which
+is not evidence of a zero population error rate. It is also not a result
+on official NotInject. The separate
+\path{results/latest_benchmark_results.txt} summary reports 99.0\% overall
+accuracy for a different dataset mix; it does not establish the former
+97.3\% headline. Combining figures across these records would obscure
+their differing denominators and provenance.
 
-Figure \ref{fig:dataset-composition} shows the training data composition, highlighting the balanced distribution between injection and benign samples with emphasis on benign-trigger examples.
+\subsection{Comparisons, examples, and embedding geometry}
+We withdraw the prior state-of-the-art and lower-latency claims. The
+baseline table mixes model generations and published results with no
+matched input manifest. Truncated qualitative examples and their confidence
+values lack a linked prediction record and are excluded from empirical
+results. The claimed IDR change from 2.31 to 0.67 also lacks a model-matched
+measurement artifact and is withdrawn. A ratio of class-centroid distances
+alone would not establish that individual examples are correctly clustered.
 
-\begin{figure}[H]
+Likewise, the stored ROC/PR assets do not provide per-example scores and
+split provenance sufficient to establish independent generalization.
+They are excluded from this draft. A comparison between doubled and uniform
+pair sampling, using the same unique texts and held-out predictions, is
+needed to test whether pair weighting improves over-defense performance.
+
+\subsection{Latency evidence}
+\label{sec:latency}
+The earlier CDF and boxplot are excluded because
+\path{paper/generate_latency_charts.py} generates lognormal random samples
+rather than loading measured latencies. The benchmark runner times whole
+prediction batches and assigns batch duration divided by batch size to
+each item. Quantiles of these amortized times do not measure single-request
+tail latency. In the embedding-classifier path, this timer includes
+\texttt{predict\_proba}, which itself generates embeddings; source inspection
+does not support a blanket claim that it times only XGBoost.
+
+A replacement measurement must identify hardware, model hashes, input
+lengths, warm-up, batch size, synchronization, and whether preprocessing
+is included. Neither the old GPU headline nor a new CPU latency claim is
+established here.
+
+\subsection{BrowseSafe: text extraction, not cross-modality validation}
+\label{sec:browsesafe}
+BrowseSafe \citep{perplexity2025browsesafe} provides HTML-embedded prompt
+injections. Our loader removes script and style elements and extracts text,
+with a raw-prefix fallback for short extracted content. It does not evaluate
+a rendered browser, CSS visibility, screenshots, or downstream agent actions.
+The historical training pool also includes BrowseSafe text. Consequently,
+the old result cannot establish unseen-domain or cross-modality transfer.
+The text summary reports 98.0\% accuracy and 94.1\% recall, while the old
+manuscript table reported 98.2\% and 96.7\%; neither is promoted to a new
+performance claim without matched sample counts and prediction provenance.
+
+\section{Bounded Colab Re-evaluation}
+\label{sec:colab}
+A new experiment completed on September 11, 2026, using a Tesla T4 in
+Google Colab. It starts from the public base MPNet encoder rather than the
+historical checkpoint. Pinned source revisions and capped source prefixes
+produce 6,370 nonempty rows; one empty LLMail body is recorded as rejected.
+After removing 1,024 duplicate texts or truncated model inputs and three
+conflicting-label rows, the manifest contains 2,286 training, 742 validation,
+and 2,315 test inputs. Normalized text and 384-token input hashes, known
+LLMail team groups, and synthetic template families do not cross splits.
+Both training stages use the same training membership. All 339 official
+NotInject and 247 historical local synthetic prompts are test-only.
+Unknown source provenance and semantic near-duplicates remain uncontrolled.
+
+The comparison uses base MPNet plus XGBoost, a uniformly sampled pair
+mixture, and the doubled injection--trigger mixture. Both fine-tuned
+variants use 14,000 pairs per epoch, four epochs, batch size four, learning
+rate $5\times10^{-5}$, 100 warmup steps, and seed 42. The classifier threshold
+maximizes validation balanced accuracy, with the highest threshold breaking
+ties, and is saved before test inference. The resulting thresholds are
+0.880826, 0.772123, and 0.999148, respectively. Test labels do not select them.
+
+\begin{table}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{dataset_composition.png}
-\caption{Training dataset composition. The balanced distribution includes doubled injection--benign-trigger pairs to emphasize the critical distinction between malicious and benign samples containing trigger words.}
-\label{fig:dataset-composition}
-\end{figure}
-
-\subsection{Baseline Comparison}
-
-Compared to recent state-of-the-art defenses, our system offers competitive accuracy with significantly lower latency.
-
-\input{tables/baseline_comparison.tex}
-
-\subsection{Qualitative Examples}
-To provide a qualitative understanding of the system's performance, we present a set of test scenarios in Table \ref{tab:qualitative_examples}. These examples demonstrate the system's ability to correctly handle both benign prompts (including those with trigger words) and various injection attacks.
-
-\input{tables/qualitative_examples.tex}
-
-
-% \subsection{Ablation Study}
-% This section is commented out because ablation data for the Injection-Aware MPNet model is not available.
-% 
-% We analyzed the contribution of each component.
-% \input{tables/ablation_table.tex}
-% \vspace{2mm}
-% \footnotesize{\textit{Definitions: "nocascade" = always runs deep path; "fastonly" = runs only embedding classifier (no heuristic rules).}}
-
-% \subsection{Deep Over-Defense Analysis}
-% This section is commented out because it is specific to the BIT training strategy and has not been updated for the Injection-Aware MPNet model.
-% 
-% \subsubsection{NotInject Difficulty-Level Breakdown}
-% We stratify the NotInject dataset into three difficulty levels based on trigger word density to evaluate robustness. Level 1 (Easy) contains single triggers (e.g., "ignore"), while Level 3 (Hard) involves complex combinations. As shown in Table \ref{tab:notinject-difficulty}, baseline models degrade significantly on harder samples, whereas BIT maintains robust performance.
-% 
-% \input{tables/notinject_difficulty.tex}
-% 
-% \subsubsection{Trigger Word Analysis}
-% 
-% We analyze which specific trigger words cause the highest false positive rates in baseline models and how BIT addresses them (Table \ref{tab:trigger-words}):
-% 
-% \input{tables/trigger_word_analysis.tex}
-% 
-% The most problematic words (``jailbreak'', ``bypass'', ``ignore'') have near-100\% FPR without BIT training. This demonstrates that baseline classifiers learn \textbf{lexical shortcuts} rather than semantic intent. BIT's weighted loss optimization forces the model to consider full context, eliminating these false positives.
-% 
-% \subsubsection{BIT Component Ablation}
-% 
-% We decompose BIT into its constituent strategies to understand each contribution (Table \ref{tab:bit-components}):
-% 
-% \input{tables/bit_component_ablation.tex}
-% 
-% \textbf{Analysis:}
-% \begin{itemize}
-%     \item \textbf{Benign-trigger samples are critical:} Removing them causes FPR to spike to 41.3\%, demonstrating the importance of exposing the model to trigger-heavy benign examples.
-%     \item \textbf{Weighted loss mechanism drives improvement:} Our ablation study reveals weighted loss provides 10.6pp FPR reduction on identical training data (1.8\% vs 12.4\%), ruling out data composition effects. Inverse weighting ($w=0.5$) performs worse than uniform weighting (18.7\% vs 12.4\%), confirming the optimization direction matters---downweighting benign-trigger samples harms performance. McNemar's test confirms statistical significance ($\chi^2 = 36.2$, $p < 0.001$, $n=339$).
-%     \item \textbf{Dataset balancing matters:} The 40/40/20 split ensures adequate representation of each category; unbalanced data causes both higher FPR (23.7\%) and lower recall (91.5\%).
-% \end{itemize}
-
-\subsubsection{Embedding Space Analysis}
-The contrastive training approach reorganizes the embedding space by \textbf{intent} rather than \textbf{keywords}. By doubling injection--benign-trigger pairs during training, the model learns to separate prompts like ``ignore the noise'' (benign) from ``ignore previous instructions'' (malicious) despite sharing trigger words.
-
-We quantify this using \textbf{Intra-class Distance Ratio (IDR):}
-\begin{equation}
-\text{IDR} = \frac{d_{\text{benign-trigger, benign}}}{d_{\text{benign-trigger, injection}}}
-\end{equation}
-
-\begin{table}[H]
-\centering
-\caption{Embedding Space IDR Analysis}
-\begin{tabular}{lll}
+\caption{New single-seed results on the common 2,315-input test set. Values
+are percentages at each variant's validation-selected operating point;
+these are not comparisons at matched recall or false-positive rate.}
+\begin{tabular}{lrrrr}
 \toprule
-\textbf{Model} & \textbf{IDR} & \textbf{Interpretation} \\
+Variant & Accuracy & Recall & FPR & NotInject FPR \\
 \midrule
-all-mpnet-base-v2 (baseline) & 2.31 & Benign-triggers closer to injections \\
-\textbf{Injection-Aware MPNet} & \textbf{0.67} & Benign-triggers correctly clustered with benign \\
+Base MPNet & 69.03 & 45.55 & 11.28 & 29.50 \\
+Uniform pairs & 62.55 & 48.30 & 25.50 & 57.82 \\
+Doubled pairs & 63.67 & 64.20 & 36.78 & 83.78 \\
 \bottomrule
 \end{tabular}
+\label{tab:colab}
 \end{table}
 
-An IDR < 1 indicates benign-trigger samples are correctly positioned closer to benign samples than to injections.
+The test set contains 1,056 attacks and 1,259 benign inputs. Doubling the
+pair type increases recall by 15.91 percentage points over uniform pairing,
+but raises false positives by 11.28 points. On official NotInject it rejects
+284/339 benign prompts, versus 196/339 for uniform and 100/339 for base.
+Thus the sampled experiment does not support the claimed general reduction
+in over-defense. Base MPNet has the highest pooled accuracy and lowest FPR.
+One seed and capped data do not establish a population-level ranking or
+state-of-the-art comparison. Nominal Wilson intervals are retained with the
+count-bearing artifacts; correlated inputs limit their interpretation.
 
-\subsection{Classification Performance}
+Fresh synchronized single-input timings include tokenization, GPU encoding,
+and CPU XGBoost inference. On 150 common inputs after 10 warmups, P50/P95
+were 17.31/42.05 ms for base, 20.90/49.44 ms for uniform, and 17.24/45.18 ms
+for doubled pairs. They exclude HTML preprocessing, request queues, network
+latency, and downstream application work; they are not production latency.
 
-Figure \ref{fig:roc-pr} shows the ROC and Precision-Recall curves on the deepset benchmark, demonstrating near-perfect separation between injection and benign samples.
+The downloaded evidence, trained encoders, manifests, predictions, and
+verification summary are retained in
+\texttt{results/colab\_audit\_20260911}. All 53 recorded artifact checksums
+matched; saved classifiers reproduced saved scores from test embeddings.
+An independent checker also verified split isolation, token hashes, actual
+pair membership, validation threshold selection, confusion counts, and
+latency percentiles. This checks artifact consistency and classifier replay;
+it does not independently repeat GPU encoder inference or training.
+Per-source scores can mix official test rows with generated source holdouts;
+the manifest retains source-split identifiers. The existing TensorTrust
+cache contributes 121 unique test prompts with unknown upstream sampling
+provenance. No agent-level attack-success experiment is implied.
 
-\begin{figure}[H]
+\subsection{Validation diagnosis and a controlled coverage correction}
+Inspection of the frozen validation split identified input loss before
+classification. Of 410 BrowseSafe validation pages, 363 exceed the
+382-content-token budget (384 tokens including special tokens). A fixed
+lexical locator finds instruction phrases only beyond the first window in
+52 attack-labelled pages; all three variants miss 39 of these. Manual
+inspection confirms explicit instructions outside the window in selected
+cases. In another 21 attack-labelled pages, a phrase matches raw HTML but
+not extracted text; inspected examples lose payloads in hidden input
+values, comments, or data attributes. These counts are locator-assisted,
+not exhaustive attack-span annotations. Quoted instructional discussion
+also occurs in non-injection pages.
+
+Label and sampling limitations remain. All 136 training trigger examples
+come from three synthetic template families, while the 68 validation
+trigger examples share one education family; some substitutions are
+ungrammatical. No LLMail group reaches validation. A source-only score
+using training attack prevalence attains pooled validation ROC-AUC 0.779,
+showing that source recognition can inflate pooled evidence. This does
+not establish what features any encoder actually learned. A character
+TF-IDF diagnostic flags 97 validation inputs at cosine similarity at least
+0.90 to training text, including seven nearest pairs with opposite labels;
+similar pages with different inserted payloads need not be mislabeled.
+Non-injection labels also do not imply general harmlessness, and some
+isolated competition messages lack the context needed to judge their label.
+No labels were automatically changed.
+
+A one-factor follow-up retains frozen base MPNet, original training heads,
+labels, HTML extraction, and classifier parameters. The correction scores
+overlapping 382-token windows with 96-token overlap and takes the maximum
+document score. Seeds 17, 42, and 73 vary XGBoost subsampling only; this is
+not a multi-seed encoder-training experiment. Each method's threshold is
+selected on validation balanced accuracy and frozen before final inference.
+The fixed, previously unused BrowseSafe test interval 600--1599 yields
+919 inputs (445 attacks, 474 non-injections) after excluding 81 exact or
+highly similar inputs against prior raw data and within the fresh holdout.
+The similarity cutoff is 0.90; unknown website and semantic dependence
+remain. No seed or operating point is selected using the final scores.
+
+\begin{table}[htbp]
 \centering
-\begin{subfigure}{0.48\textwidth}
-    \includegraphics[width=\textwidth]{roc_deepset.png}
-    \caption{ROC Curve (AUC = 1.00)}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.48\textwidth}
-    \includegraphics[width=\textwidth]{pr_deepset.png}
-    \caption{Precision-Recall Curve (AUC = 1.00)}
-\end{subfigure}
-\caption{Classification performance on deepset benchmark. The Injection-Aware MPNet achieves perfect ROC-AUC and PR-AUC, significantly outperforming keyword baselines.}
-\label{fig:roc-pr}
+\caption{Fresh BrowseSafe follow-up. FPR values are percentages at
+validation-selected thresholds. Both methods share the same classifier
+within each seed.}
+\begin{tabular}{rrrrr}
+\toprule
+Seed & Base AUC & Windowed AUC & Base FPR & Windowed FPR \\
+\midrule
+17 & 0.5398 & 0.5471 & 12.24 & 45.99 \\
+42 & 0.5330 & 0.5430 & 6.96 & 36.08 \\
+73 & 0.5331 & 0.5412 & 22.78 & 60.34 \\
+\bottomrule
+\end{tabular}
+\label{tab:windowed-followup}
+\end{table}
+
+The predefined direction-consistency criterion holds, but the AUC gains
+are only 0.0073--0.0100 and all nominal paired bootstrap 95\% intervals
+include zero. The 1,000-resample, label-stratified bootstrap assumes
+independent documents and cannot account for unknown website dependence.
+Windowing raises recall from 11.24--30.11\% to 43.15--65.39\% across seeds
+while substantially increasing false positives. It does not provide a
+useful detector on this slice and cannot recover payloads removed by HTML
+extraction. All 30 recorded artifact hashes matched; window token inputs,
+saved classifier predictions, and validation thresholds were verified.
+Seed 42 exactly reproduced the original base validation scores. GPU encoder
+inference was not independently repeated. Detailed evidence is retained in
+\path{paper/VALIDATION_DIAGNOSIS.md} and
+\path{results/colab_window_followup_20260911/window_followup}.
+
+\subsection{Supervised encoder pilot across training seeds}
+\label{sec:supervised-pilot}
+A subsequent controlled experiment compares a frozen MPNet encoder with
+full encoder fine-tuning through the same linear binary-classification head.
+Both arms preserve unchanged raw HTML, including comments, attributes,
+and scripts, and score all overlapping 382-content-token windows. The
+maximum window logit gives one page-level binary cross-entropy loss;
+page labels are not assigned to individual windows. The fine-tuned arm
+selects the maximum without gradients and recomputes that window with
+gradients. Dropout is disabled in both arms, making this a max-loss
+subgradient apart from finite-precision batching differences.
+
+The pilot uses 256 training pages (128 per class), 192 validation pages
+(96 per class), and 447 previously unscored holdout pages (223 attacks,
+224 non-injections), all from the same pinned BrowseSafe revision.
+Training and validation retain their prior partition membership. A fixed
+hash order samples eligible pages after character TF-IDF overlap rejection
+at cosine similarity 0.90. The fresh official-test interval 1600--2099
+excludes 53 candidates against prior data or other new holdout pages.
+There are 18,409 training, 14,823 validation, and 34,189 holdout windows.
+A bounded label review quarantines one ambiguous training page without
+relabeling it; other source labels remain machine-generated supervision.
+Single-source sampling removes across-source label imbalance from this
+comparison but cannot remove unknown website or template dependence.
+
+Seeds 17, 42, and 73 vary head initialization and training order, with
+matched initialization and order between arms. Unlike the earlier window
+follow-up, these include three actual encoder-training runs. Each arm
+receives at most two epochs, four pages per optimizer step, AdamW weight
+decay 0.01, and gradient clipping at 1. Encoder and head learning rates are
+$10^{-5}$ and $10^{-3}$. Execution uses an NVIDIA A100-SXM4-40GB with
+float16 autocast and float32 parameters. Validation maximizes recall at
+empirical FPR at most 5\%, using ROC-AUC and the earliest epoch to break
+checkpoint ties. This budget permits at most four validation false
+positives; it is not a guarantee on new data. All six checkpoints and
+thresholds are frozen before any holdout scoring.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Supervised encoder pilot on 447 fresh BrowseSafe pages. Recall
+and FPR are percentages at each model's validation-frozen threshold.
+F denotes frozen encoder; T denotes fine-tuned encoder.}
+\begin{tabular}{rrrrrrr}
+\toprule
+Seed & F AUC & T AUC & F recall & T recall & F FPR & T FPR \\
+\midrule
+17 & 0.5316 & 0.8353 & 7.17 & 61.88 & 6.25 & 2.23 \\
+42 & 0.5264 & 0.4668 & 5.38 & 10.31 & 4.02 & 8.48 \\
+73 & 0.5158 & 0.8584 & 5.83 & 51.12 & 5.36 & 0.45 \\
+\bottomrule
+\end{tabular}
+\label{tab:supervised-pilot}
+\end{table}
+
+Seeds 17 and 73 improve recall while reducing false positives. Seed 42
+has worse AUC and exceeds the exploratory FPR budget on the holdout.
+The experiment therefore does not establish a reliable improvement across
+training seeds. Nominal paired 95\% bootstrap intervals for the AUC
+differences are $[0.2483, 0.3558]$, $[-0.1174, -0.0021]$, and
+$[0.2814, 0.3963]$ for seeds 17, 42, and 73. Figure~\ref{fig:supervised-effects}
+also shows the primary recall differences alongside FPR differences.
+The 1,000 class-stratified document resamples assume independent pages
+and omit unknown website/template dependence and label uncertainty.
+The unchanged MPNet--XGBoost baseline from the earlier audited run obtains
+AUC 0.5695, recall 12.56\%, and FPR 5.80\% on these same pages, but its
+different training data and input extraction make it a contextual reference,
+not the controlled encoder ablation. The short training budget does not
+establish convergence or the best achievable performance of either arm.
+This holdout is now consumed; subsequent model choices require validation
+and another untouched final evaluation. No standalone security-gate claim
+is supported. Protocol and evidence are documented in
+\path{paper/SUPERVISED_PILOT.md}. All 81 recorded hashes, full token
+coverage, saved linear-head and historical classifier predictions,
+validation selections, and paired training orders passed local verification.
+GPU encoder training and inference were not independently repeated.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{supervised_pilot_paired_effects.pdf}
+\caption{Fine-tuned minus frozen encoder on the fresh holdout. Positive
+recall and AUC differences and negative FPR differences are favorable.
+Whiskers are nominal paired 95\% document-bootstrap intervals; unknown
+website/template dependence is not represented. Rates use each model's
+validation-frozen threshold.}
+\label{fig:supervised-effects}
 \end{figure}
 
-\subsection{Latency Analysis}
+\subsection{Six-epoch supervised schedule follow-up}
+\label{sec:supervised-schedule}
+A training/validation-only diagnosis found that seed 42's mean training
+loss changed from 0.6946 to 0.6972 over the first two epochs, despite
+nonzero encoder updates. Its validation AUC improved in epoch two, but
+recall under the FPR budget fell, retaining epoch one. The selected
+checkpoint's median top-two-window logit gap was 0.00075, versus
+0.0421 and 0.0454 for the other seeds; these checkpoints came from
+different epochs. These observations motivate a longer schedule without
+establishing a label, pooling or optimizer defect.
 
-Figure \ref{fig:latency} shows the latency distribution across all benchmarks. The system achieves P50 latency of 35.5ms and P95 latency of 43.3ms, suitable for real-time applications.
+The follow-up completes six fixed epochs, retaining the best validation
+checkpoint, instead of at most two epochs with early stopping. It keeps
+the same 256 training and 192 validation pages, architecture, objective,
+raw-HTML window coverage, learning rates, optimizer, precision, seeds,
+initialization and page orders. Frozen-encoder controls remain. A separate
+453-page holdout contains 217 attacks and 236 non-injections (34,449
+windows), from the pinned BrowseSafe official-test interval 2100--2599.
+Before scoring, 47 of 500 candidates were excluded by normalized
+raw/extracted/first-window matches and character-TF-IDF cosine similarity
+at least 0.90 against 7,870 prior inputs or earlier retained candidates.
+This lexical screen does not establish website or template independence.
+Validation retains the same recall/FPR, AUC and earliest-epoch selection
+rule. All twelve prior/new models and thresholds are frozen before
+evaluation; no test score is used to select a seed.
 
-\begin{figure}[H]
+\paragraph{Numerical amendment.}
+The first attempt stopped at seed 17's update 181: nonfinite-gradient
+clipping raised before GradScaler could reduce its scale. No holdout
+evaluation had begun. A protocol amendment, frozen before test scoring,
+clears invalid gradients, lets GradScaler skip the invalid attempt and
+back off, then retries backward on the same retained forward graph.
+Persistent nonfinite gradients abort after at most eight retries.
+All six trials restart from initialization and complete 384 finite
+optimizer updates without omitting a batch. Fine-tuned seeds 17/42/73
+retry two batches each, with 2/4/2 invalid attempts; frozen arms have none.
+Forced-overflow recovery and persistent-nonfinite rejection checks pass.
+All first-two-epoch validation scores, decisions and page orders match
+the original runs exactly. This is a schedule comparison with a disclosed
+numerical repair, not an unamended one-factor experiment. The overflow
+occurs beyond the original two-epoch budget and does not explain the
+earlier seed-42 result.
+
+\begin{table}[htbp]
 \centering
-\begin{subfigure}{0.48\textwidth}
-    \includegraphics[width=\textwidth]{latency_boxplot.png}
-    \caption{Latency distribution by dataset}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.48\textwidth}
-    \includegraphics[width=\textwidth]{latency_cdf.png}
-    \caption{Cumulative latency distribution}
-\end{subfigure}
-\caption{Latency analysis across benchmark datasets. P95 latency remains under 50ms for all datasets.}
-\label{fig:latency}
+\small
+\caption{Prior versus revised fine-tuned schedules on the same 453-page
+BrowseSafe holdout. P denotes the prior schedule; R denotes six epochs
+with the numerical amendment. Recall and FPR are percentages at
+validation-frozen thresholds.}
+\begin{tabular}{rrrrrrr}
+\toprule
+Seed & P AUC & R AUC & P recall & R recall & P FPR & R FPR \\
+\midrule
+17 & 0.8128 & 0.8341 & 59.45 & 69.12 & 0.42 & 2.54 \\
+42 & 0.4532 & 0.8732 & 4.61 & 66.36 & 9.32 & 4.66 \\
+73 & 0.8360 & 0.8660 & 45.16 & 67.74 & 0.42 & 2.97 \\
+\bottomrule
+\end{tabular}
+\label{tab:supervised-schedule}
+\end{table}
+
+All revised fine-tuned selections are epoch six. Seed 42's loss falls
+to 0.4219 and its validation recall reaches 76.04\%, versus 7.29\%
+at the prior selection. This supports insufficient training duration as
+a contributor in this setup, without proving convergence or a universal
+cause. On the holdout, the declared directional criterion passes:
+each seed improves recall and has empirical FPR at most 5\%.
+Revised true-positive/false-positive counts are 150/6, 144/11 and 147/7,
+versus prior counts 129/1, 10/22 and 98/1. Nominal paired 95\% intervals
+for recall gains are $[5.99,13.82]$, $[53.92,68.66]$ and
+$[16.59,29.03]$ percentage points (1,000 class-stratified document
+bootstrap resamples). False positives increase for seeds 17 and 73;
+the seed-17 AUC-difference interval crosses zero and the seed-42
+FPR-difference interval reaches zero (Figure~\ref{fig:schedule-effects}).
+Revised FPR Wilson 95\% upper bounds are 5.43\%, 8.15\% and 5.99\%,
+so population FPR below 5\% is unestablished. These nominal intervals
+omit website/template dependence, label uncertainty, multiplicity and
+variation across further training seeds.
+
+The six-epoch frozen controls have AUC 0.5066/0.5435/0.5066, recall
+5.07/8.29/3.23\% and FPR 7.20/5.08/3.81\% for seeds 17/42/73.
+The preserved historical base MPNet--XGBoost reference obtains AUC
+0.5699, recall 14.29\% and FPR 3.39\%; its different training data
+and extraction make it contextual, not the paired schedule comparator.
+
+\paragraph{Interrupted execution and verification.}
+The first amended A100 run finished training and package replay but lost
+its Colab assignment during evaluation; keep-alive logs recorded OAuth
+scope-refresh failures. After repairing refresh under the same grant,
+a new A100 repeated the unchanged frozen protocol for artifact recovery.
+All six original checkpoint files reproduced byte for byte, as did both
+retrieved revised checkpoints (17/42); all 36 captured validation
+summaries matched. The interrupted seed-73 checkpoint was lost before
+retrieval, precluding a byte comparison to that file. Its recovered
+checkpoint is saved and verified. The holdout was untouched before initial
+choices but partially consumed by the interrupted evaluation. The final
+evaluation is a fixed remeasurement, not a new model-selection experiment;
+no scientific choices changed after test output.
+
+All 238 recorded artifact hashes, full token coverage, saved-head and
+historical classifier predictions, selection rules, freezes, histories,
+optimizer logs and recovery evidence pass local verification. The six
+prior/new fine-tuned inference packages replay all 192 validation pages
+on A100 with identical decisions and maximum score error $5.96\times10^{-8}$.
+Local checks do not independently repeat full GPU encoder computation;
+prior fine-tuned head replay uses saved winning embeddings. Three revised
+portable inference packages, complete notebooks and evidence are retained
+in \path{results/supervised_schedule_20260911}; the protocol and runnable
+verification command are in \path{paper/SUPERVISED_SCHEDULE.md}.
+Small, weakly labelled, single-source data and reused validation remain
+limitations. This consumed holdout must not inform further model choices.
+The result does not establish downstream security effectiveness or validate
+the original contrastive over-defense claim.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{supervised_schedule_effects.pdf}
+\caption{Six-epoch minus prior fine-tuned schedule on the separate
+453-page holdout. Positive recall and AUC differences and negative FPR
+differences are favorable. Whiskers are nominal paired 95\% bootstrap
+intervals with the dependence and label limitations stated in the text.}
+\label{fig:schedule-effects}
 \end{figure}
 
-% \subsection{Inter-Agent Trust Exploitation Evaluation}
-% This section is commented out because it is specific to the BIT-trained detector and has not been updated for the Injection-Aware MPNet model.
-% 
-% Recent research demonstrates that 82.4--100\% of LLMs are vulnerable to inter-agent trust exploitation, where models execute malicious commands from peer agents even when they resist identical direct prompts \citep{lee2025prompt}. To validate our multi-agent coordination layer's effectiveness, we conduct dedicated evaluations of agent-to-agent attack scenarios (see Figure 11 for network topology and Figure 12 for infection propagation dynamics). 
-% 
-% \textit{Experimental Setup:} We simulate attack sequences using distinct random seeds (Temperature=0.7) for generation. Reported metrics (Time to Detection, Isolation) are mean values over 50 independent trials. The Guard Agent utilizes our BIT-trained detector ($ \theta=0.764 $) for all experiments.
-% 
-% \subsubsection{Compromised Agent Attack Results}
-% 
-% We evaluate scenarios where one agent in the network is fully compromised (adversary-controlled). We construct a 5-agent test environment simulating a realistic multi-agent workflow (Orchestrator, Researcher, Coder, Reviewer, Guard) and test five attack vectors: Direct Peer Injection, Transitive Trust Exploitation, Whisper Field Manipulation, Role Impersonation, and Payload Fragmentation.
-% 
-% \input{tables/multi_agent_attacks.tex}
-% 
-% \textbf{Key Findings:}
-% \begin{itemize}
-%     \item \textbf{Without our Guard Agent:} LLMs exhibit strong peer-trust bias, executing 78--94\% of malicious peer commands that they would reject from users.
-%     \item \textbf{With Guard Agent:} Attack success rate drops to 0--8.7\% across all scenarios.
-%     \item \textbf{Whisper field protection:} OVON protocol validation completely blocks metadata-based attacks.
-% \end{itemize}
+\section{Discussion and Threats to Validity}
+\label{sec:limitations}
 
-% \subsubsection{Guard Agent Bypass Testing}
-% 
-% We specifically test whether attackers can bypass our Guard Agent through adversarial techniques:
-% 
-% \input{tables/guard_bypass_testing.tex}
-% 
-% \textbf{Analysis:}
-% \begin{itemize}
-%     \item \textbf{Agent spoofing is fully prevented} by cryptographic message signing in OVON protocol.
-%     \item \textbf{Multi-turn buildup} is the most effective bypass (8.5\%), indicating need for longer context windows.
-%     \item \textbf{Direct Guard injection} is extremely difficult (0.6\%) due to the Guard's minimal attack surface (no tool execution).
-% \end{itemize}
+\paragraph{Leakage and remediation status.}
+The original encoder loads evaluation-source text before pair construction,
+and its validation tail remains in the training pool. The classifier's
+separate training entry point also consumes local synthetic trigger text
+and deepset injections that are used for evaluation. A split applied only
+to classifier embeddings cannot undo prior encoder exposure.
 
-% \subsubsection{OVON Protocol Security Analysis}
-% 
-% We analyze the security properties of our OVON-based coordination layer. We verify message authenticity via cryptographic signing, integrity via HMAC, and proper whisper field isolation (preventing metadata injection). 
-% 
-% \input{tables/ovon_security.tex}
-% 
-% <quote>
-% \textbf{Note:} OVON is an open standard for voice interoperability. We adapt its envelope structure for agent-to-agent text messaging.
-% </quote>
+The later source change at commit \texttt{3d1bba8}, merged in
+\texttt{1be03c1}, subtracts a benchmark holdout from the encoder pools and
+splits internal validation before pair construction. This is a code change,
+not evidence of a retrained checkpoint. It also leaves the separate
+classifier training entry point unchanged, omits the local synthetic
+benchmark from the holdout, and splits row positions without enforcing
+unique normalized texts. Its verification script checks a reconstructed
+set after subtraction rather than the actual texts used by a trained model.
+A model-bound, independent verification remains necessary.
 
-% \subsubsection{Quarantine Protocol Effectiveness}
-% 
-% We evaluate whether our quarantine system can detect and isolate compromised agents before infection spreads (Table \ref{tab:quarantine}).
-% 
-% \input{tables/quarantine_effectiveness.tex}
-% 
-% The system demonstrates a \textbf{95\% reduction} in full network compromise rate (from 62\% to 3\%) compared to a system without quarantine.
-% 
-% \subsubsection{Comparison with PeerGuard}
-% 
-% We compare our Guard Agent approach against PeerGuard's mutual reasoning defense \citep{wang2024peerguard}.
-% 
-% \input{tables/peerguard_comparison.tex}
-% 
-% \textbf{Trade-off Analysis:}
-% \begin{itemize}
-%     \item \textbf{PeerGuard advantage:} Higher true positive rate (96\% vs 93.1\%) due to semantic reasoning.
-%     \item \textbf{Our advantage:} 400x lower latency (1.9ms vs 800ms), no additional LLM inference costs.
-%     \item \textbf{Recommendation:} A tiered approach where our Guard handles Tier 1 (real-time) and PeerGuard handles Tier 2 (escalated risk).
-% \end{itemize}
+\paragraph{Remaining re-evaluation requirements.}
+Section~\ref{sec:colab} provides a new checkpoint-bound experiment with
+shared, deduplicated splits and saved predictions for both training stages.
+The historical checkpoint and results remain contaminated; the new run does
+not retroactively validate them. Broader evidence still requires replication
+of the contrastive-pair comparison across encoder-training seeds, stronger
+provenance and semantic near-duplicate controls, complete
+benchmark coverage, and evaluation of operational or downstream security
+outcomes. The original local weight-file deletion has been preserved;
+new encoders are stored separately with the downloaded audit evidence.
 
-\subsection{Cross-Modality Generalization: BrowseSafe Evaluation}
-
-We evaluate our system on BrowseSafe \citep{perplexity2025browsesafe}, a benchmark of 14,719 HTML-embedded prompt injections designed for AI browser agents. BrowseSafe represents a fundamentally different modality from our text-based benchmarks, as attacks exploit HTML structure, CSS styling, and DOM features.
-
-\textbf{Results:}
-\begin{itemize}
-    \item Accuracy: \textbf{98.2\%}
-    \item Recall on attacks: \textbf{96.7\%}
-    \item FPR on benign HTML: \textbf{0.5\%}
-    \item F1 Score: \textbf{98.0\%}
-\end{itemize}
-
-\textbf{Analysis:}
-Despite BrowseSafe's HTML-embedded attack modality, our Injection-Aware MPNet model demonstrates strong generalization. The fine-tuned embeddings successfully capture malicious intent patterns even when attacks are embedded in HTML structures. This suggests that the semantic signatures of prompt injection attacks transfer across modalities when the underlying text content contains recognizable injection patterns. However, we note that attacks relying purely on HTML structural features (e.g., hidden text via CSS `display:none`) may still evade detection, representing an area for future work.
-
-
-% \subsection{Preliminary Adaptive Attack Analysis: GCG and AutoDAN}
-% This section is commented out because adaptive attack analysis for the Injection-Aware MPNet model is not available.
-% 
-% <quote>
-% \textbf{CAUTION:} Preliminary Results ($n=36$). 
-% </quote>
-% 
-% We observe:
-% \begin{itemize}
-%     \item GCG suffix attacks: 10\% ASR
-%     \item AutoDAN semantic attacks: \textbf{37.5\% ASR} [13.7--69.4\%]
-%     \item Overall: \textbf{27.8\% ASR} [15.9--44.0\%]
-% \end{itemize}
-
-\section{Discussion}
-
-\textbf{Latency \& Scalability:} P50 latency of 35.5ms is negligible for real-time applications.
-
-\subsection{Limitations}
-\begin{itemize}
-    \item \textbf{Adversarial Robustness:} TensorTrust evaluation shows 83.2\% accuracy, indicating susceptibility to adversarial attack variants designed to evade detection.
-    \item \textbf{Multi-Turn Attacks:} Independent message processing misses gradual intent shifts across conversation turns.
-    \item \textbf{Pure Structural Attacks:} HTML attacks relying solely on DOM/CSS features (e.g., hidden text) without textual injection patterns may evade detection.
-    \item \textbf{Evaluation Scope:} InjecAgent and AgentDojo benchmarks remain unevaluated due to framework integration complexity.
-\end{itemize}
-
-\subsubsection{Limited Effectiveness Over Long Workflows}
-Theoretical cumulative bypass rates indicate >99\% bypass probability over 50 messages. Assuming independent per-message bypass probability $p \approx 8.7\%$, the probability of at least one successful bypass over $n$ messages is $1 - (1-p)^n$. For $n=50$, this exceeds 99.9\%, suggesting the need for periodic re-authentication.
+\paragraph{Scope of security conclusions.}
+Single-text classification does not measure downstream attack success,
+agent task utility, authentication, quarantine effectiveness, or resistance
+to multi-turn and adaptive attacks. The 36-example GCG/AutoDAN-labelled
+record identifies an older BIT classifier and counts detector bypasses;
+it is not a matched adaptive attack evaluation for Injection-Aware MPNet.
+No traceable TensorTrust result for the claimed 83.2\% was located, so that
+number is withdrawn. AgentDojo artifacts exist, but a complete evaluation
+bound to this MPNet checkpoint is not established by their presence.
 
 \section{Conclusion}
-We present a multi-layer defense system for prompt injection detection in multi-agent LLM systems. Our Injection-Aware MPNet approach achieves:
-\begin{itemize}
-    \item \textbf{97.3\% overall accuracy} across 8 benchmark datasets
-    \item \textbf{0.0\% FPR} on the NotInject over-defense benchmark (both local and HuggingFace versions)
-    \item \textbf{100\% recall} on deepset and LLMail injection datasets
-    \item \textbf{98.2\% accuracy} on BrowseSafe HTML-embedded attacks (0.5\% FPR)
-    \item \textbf{P95 latency of 43.3ms} suitable for real-time applications
-\end{itemize}
-
-By fine-tuning sentence embeddings using contrastive learning on carefully balanced injection/benign pairs, we decouple malicious intent from keyword presence. This effectively mitigates the ``over-defense'' problem that plagues keyword-based systems. The optimized classification threshold ($\theta=0.764$) balances high recall (98.8\% on SaTML) with minimal false positives.
-
-Code and model weights are released upon publication.
+Injection-Aware MPNet implements a testable approach to prompt-injection
+detection: emphasize injection--benign-trigger sentence pairs during
+encoder training and classify the resulting embeddings. The available
+historical evidence does not establish held-out accuracy, a causal reduction
+in over-defense, state-of-the-art performance, or production latency.
+The new bounded experiment improves recall with doubled pairs at the cost
+of substantially more false positives, including on official NotInject.
+It does not support a general reduction in over-defense. The revised paper
+also records a controlled window-coverage follow-up: small AUC changes across
+three classifier seeds accompany substantially more false positives on a
+fresh BrowseSafe slice. A supervised raw-HTML encoder pilot improves two
+of three training seeds, but the third has worse AUC and exceeds its FPR
+budget on a fresh holdout. Extending supervised training to six epochs
+with a disclosed numerical repair improves recall across all three seeds
+on a separate 453-page holdout, reaching 66.36--69.12\% recall and
+2.54--4.66\% empirical FPR. Two seeds incur more false positives;
+population FPR below 5\%, broader generalization and the original
+contrastive over-defense claim remain unestablished. These experiments
+do not support standalone security-gate use. The revised paper
+records supported implementation details, historical counts, and the new
+checkpoint-bound measurements while making their limitations explicit. Repository materials are available at
+\url{https://github.com/goodwiins/prompt-injection-defense}; the new audit
+retains checkpoints, manifests, predictions, and a runnable verification
+command, while broader security conclusions remain unestablished.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

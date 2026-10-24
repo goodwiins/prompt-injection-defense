@@ -1,0 +1,15 @@
+{
+  "source": "completed/mpnet_span_t4",
+  "control": "no_span_t4_inputs",
+  "file_sha256": {
+    "base_train_features.pt": "903786fa2228a73c3fe6213065e24f7655d479a8dd54378b0f19fbd9ad602c94",
+    "base_validation_features.pt": "1231bc6b699362af12d518054255e2f86997648824b7c33e7e361dcf3164e05c"
+  },
+  "matched_input_sha256": {
+    "train.jsonl": "05f59fea6cbf5439b0401f7be7b3558e24d02a1ea61d5be428b1968b08c463d5",
+    "validation.jsonl": "f7419970fe5b7af62fae03fdcbd0532367f912c341bbb18afaded669df1c8894",
+    "supervised_pilot.py": "4a800179908d513bb12ef5a8cce6076562368b129f54d9e9b9cc83dca921a44a",
+    "inference_assets/tokenizer.json": "b8be2c30ba5dd723a6d5ee26d013da103d5408d92ddcb23747622f9e48f1d842"
+  },
+  "note": "Base encoder features are independent of the span auxiliary loss and were computed on the same T4 reference setup; imported only to avoid recomputing frozen base features after Colab preemption."
+}
