@@ -1,3 +1,5 @@
+> **Historical draft — superseded by [paper.tex](paper.tex).** The performance, latency, mechanism, and security claims below are not validated current results. See [the September 2026 claim audit](CLAIM_AUDIT.md) before citing them.
+
 # A Multi-Layer Defense System Against Prompt Injection in Multi-Agent LLMs
 
 **Abstract**

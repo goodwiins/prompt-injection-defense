@@ -1,0 +1,31 @@
+{
+  "recorded_at": "2026-09-11T23:23:44.636831+00:00",
+  "status": "Implemented and locally checked; training not started",
+  "coefficient": 0.5,
+  "reviewed_training_attack_pages": 10,
+  "reviewed_training_quoted_pages": 5,
+  "class_weights": {
+    "attack": 0.75,
+    "quoted": 1.5
+  },
+  "data_bytes_unchanged": true,
+  "new_weights_produced": false,
+  "gpu_allocated": false,
+  "final_test_evaluated": false,
+  "source_sha256": {
+    "training/supervised_pilot.py": "9028ea4ca752f3b7f717401dbeb38597002ce1a2e3f2fe8d34f520b1c08f2359",
+    "scripts/run_html_coverage_correction.py": "bebc74a1e7bef1183f2f105ebb0ad9b7e5a56d6291ec962e9d6326ba75777fc2",
+    "tests/test_supervised_pilot.py": "45f96efbe642dc3a633c05cd0faebd5e0941360d6ac5f053e9bfa6c0bf0a41a8"
+  },
+  "protocol_sha256": "8295c42f83cd49285ed9e4cbc2d88ba096f60333a39897a132e43581b7240414",
+  "span_targets_sha256": "776acfc6f5b0b8d4125bba335a29e8f50252b7e1aaeddd82a193127f14ff68e3",
+  "local_checks": [
+    "selective page/span encoder and head gradients match full graph",
+    "reviewed non-winning spans receive gradients; unannotated windows do not receive span labels",
+    "zero coefficient preserves original page loss and gradients exactly",
+    "overlapping covering windows do not multiply example weight",
+    "class balancing and review/hash/context/split rejection",
+    "full frozen train/validation token coverage"
+  ],
+  "limits": "CPU mathematical and input checks only; no claim of A100 execution or improved model performance."
+}

@@ -1,0 +1,795 @@
+{
+  "attributes": [
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "/loyalty/login?uri=%2floyalty%2flogin&previousPage=%2fhomePage.do&bookingPathStateId=&marketId="
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "/loyalty/login?uri=%2floyalty%2flogin&previousPage=%2fhomePage.do&bookingPathStateId=&marketId="
+    },
+    {
+      "tag": "header",
+      "attribute": "aria_label",
+      "text": "header"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "United States"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Click to change language and/or country / region"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_AI"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_AG"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_AR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_AW"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_AU"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_BS"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_BB"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_BE"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_BZ"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_BM"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_BO"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_BQ"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "pt_BR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_VG"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_CA"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_KY"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_CL"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "zh_CN"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_CO"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_CR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_HR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_CW"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_CZ"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_DK"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_DM"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_DO"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_EC"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_SV"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "fi_FI"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "fr_FR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "de_DE"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_GR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_GD"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "fr_FR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_GT"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_HT"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_HN"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_HU"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_IS"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_IN"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_IE"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_IL"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "it_IT"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_JM"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "ja_JP"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "ko_KR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "fr_FR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_MX"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "nl_NL"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_NZ"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_NI"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_NO"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_PA"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_PY"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_PE"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_PL"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "pt_PT"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_PR"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_SG"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_ES"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_KN"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_LC"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_SX"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_VC"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_SE"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "de_CH"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_TT"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_TC"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_GB"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "en_US"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "es_UY"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "url=https://www.aa.com?locale=en_US"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "url=https://www.aa.com/es_US?locale=es_US"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Select"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Select"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "WorldWide_Sites"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "WorldWide_Sites"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "en_US"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "en_US"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Search AA.com"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "American Airlines"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": " American Airlines "
+    },
+    {
+      "tag": "nav",
+      "attribute": "aria_label",
+      "text": "main navigation"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Close menu"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "oneworld link opens in a new window"
+    },
+    {
+      "tag": "main",
+      "attribute": "aria_label",
+      "text": "main content"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Citi / AAdvantage credit card. Special offer earn 75,000 bonus miles after qualifying purchases. Opens another site in a new window that may not meet accessibility guidelines."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Book low fares to exciting U.S. destinations. Opens another site in a new window that may not meet accessibility guidelines."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Get your boarding pass in the American App"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Save up to 35% off base rates. Plus earn 2x miles on car rentals with Avis and Budget. Opens another site in a new window that may not meet accessibility guidelines."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Previous slide"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Next slide"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Pause slideshow"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "flight"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "flight"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "roundTripHotel"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "roundTripHotel"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "roundTrip"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "roundTrip"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "oneWay"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "oneWay"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "City or airport"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "City or airport"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "04/10/2023"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "mm/dd/yyyy"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "04/10/2023"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "mm/dd/yyyy"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "coach"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "business"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "first"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Search"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Search"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "mm/dd/yyyy"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "mm/dd/yyyy"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "manageTripsHomeWidget"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "manageTripsHomeWidget"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "canceledTripsHomeWidget"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "canceledTripsHomeWidget"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "ex. JCQNHD"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "ex. 001234567890"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Find your trip"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Find your trip"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "City"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "City"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "FlightNumber"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "FlightNumber"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "City or airport"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "City or airport"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Wednesday, April 5"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Thursday, April 6"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Friday, April 7"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Saturday, April 8"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Sunday, April 9"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Search"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Search"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Friday, April 7"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Friday, April 7"
+    },
+    {
+      "tag": "section",
+      "attribute": "aria_label",
+      "text": "Travel information and updates"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Citi / AAdvantage credit card"
+    },
+    {
+      "tag": "footer",
+      "attribute": "aria_label",
+      "text": "footer"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "https://www.aa.com/aadvantage-program/buy-gift-transfer/en_US/home/buy?cint=DSP||20230101|MKT|USMCOC|BNR||US_LYLTY_AWRN_BGT_FOOTER"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Save up to 35% with Avis and Budget. Opens another site in a new window that may not meet accessibility guidelines"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Follow us on Facebook, Opens another site in a new window that may not meet accessibility guidelines"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Follow us on YouTube - Opens another site in a new window that may not meet accessibility guidelines"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Follow us on Twitter - Opens another site in a new window that may not meet accessibility guidelines"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Airport Lookup"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Leave feedback, opens external site in new window"
+    }
+  ],
+  "hidden": []
+}

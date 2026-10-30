@@ -1,0 +1,31 @@
+{
+  "raw": 6370,
+  "rejected": 1,
+  "retained": 5343,
+  "excluded": 1027,
+  "counts": {
+    "train:deepset/prompt-injections:safe": 196,
+    "validation:deepset/prompt-injections:safe": 72,
+    "train:deepset/prompt-injections:injection": 115,
+    "test:deepset/prompt-injections:safe": 130,
+    "test:deepset/prompt-injections:injection": 110,
+    "validation:deepset/prompt-injections:injection": 38,
+    "test:perplexity-ai/browsesafe-bench:safe": 492,
+    "train:perplexity-ai/browsesafe-bench:safe": 592,
+    "test:perplexity-ai/browsesafe-bench:injection": 493,
+    "validation:perplexity-ai/browsesafe-bench:injection": 202,
+    "train:perplexity-ai/browsesafe-bench:injection": 613,
+    "validation:perplexity-ai/browsesafe-bench:safe": 208,
+    "train:ethz-spylab/ctf-satml24:injection": 510,
+    "validation:ethz-spylab/ctf-satml24:injection": 154,
+    "test:ethz-spylab/ctf-satml24:injection": 140,
+    "test:tensortrust-local-cache:injection": 121,
+    "train:microsoft/llmail-inject-challenge:injection": 124,
+    "test:microsoft/llmail-inject-challenge:injection": 192,
+    "test:leolee99/NotInject:trigger": 339,
+    "test:local-synthetic-historical:trigger": 247,
+    "train:synthetic-additional-templates:trigger": 136,
+    "validation:synthetic-additional-templates:trigger": 68,
+    "test:synthetic-additional-templates:trigger": 51
+  }
+}

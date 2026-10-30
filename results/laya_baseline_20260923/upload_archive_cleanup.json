@@ -1,0 +1,6 @@
+{
+  "removed": "results/laya_baseline_20260923/input_bundle.tar.gz",
+  "bytes": 2677528,
+  "sha256": "e1f64317d1e36ec47f50fe9435bbc13fd653259c1b1fc7982136db95d8fd4524",
+  "reason": "Remote wrapper verified archive hash before extraction; all original inputs and scripts remain locally and remotely."
+}

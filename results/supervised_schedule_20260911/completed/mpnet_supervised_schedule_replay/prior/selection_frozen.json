@@ -1,0 +1,270 @@
+{
+  "frozen_at": "2026-09-11T06:21:11.300805+00:00",
+  "protocol_sha256": "a19cb52252412a7c4987d1f13060273e3913dfa35651b2ff7c1d6ca996df9075",
+  "selections": {
+    "frozen_17": {
+      "name": "frozen_17",
+      "seed": 17,
+      "arm": "frozen",
+      "epoch": 1,
+      "threshold": 0.5104188919067383,
+      "validation": {
+        "n": 192,
+        "tp": 7,
+        "tn": 92,
+        "fp": 4,
+        "fn": 89,
+        "accuracy": {
+          "value": 0.515625,
+          "nominal_wilson_95": [
+            0.44532500223818083,
+            0.5853120244472331
+          ]
+        },
+        "recall": {
+          "value": 0.07291666666666667,
+          "nominal_wilson_95": [
+            0.03576758131036273,
+            0.14293031665140193
+          ]
+        },
+        "fpr": {
+          "value": 0.041666666666666664,
+          "nominal_wilson_95": [
+            0.01632070753628833,
+            0.10228191466658104
+          ]
+        },
+        "threshold": 0.5104188919067383,
+        "roc_auc": 0.6131727430555556,
+        "average_precision": 0.5903354484069032,
+        "balanced_accuracy": 0.515625
+      },
+      "initial_head_sha256": "500be5e5a0cd9a7b5a399c3e7b5bfb9b10eb606d0d234728f36cfc5f5bcc7d86",
+      "final_head_sha256": "b21dc206aebb899b694092c4c426f504830e9495721e3ab0c687185ba96f830b",
+      "encoder_probe_max_change": 0.0,
+      "checkpoint_sha256": "19938cf287a5bad1bca54c024a880c027a87d8a33629ed1193e445ec3ea98df4",
+      "frozen_at": "2026-09-11T06:15:04.421766+00:00"
+    },
+    "finetuned_17": {
+      "name": "finetuned_17",
+      "seed": 17,
+      "arm": "finetuned",
+      "epoch": 2,
+      "threshold": 0.4809763729572296,
+      "validation": {
+        "n": 192,
+        "tp": 69,
+        "tn": 95,
+        "fp": 1,
+        "fn": 27,
+        "accuracy": {
+          "value": 0.8541666666666666,
+          "nominal_wilson_95": [
+            0.7973032959743978,
+            0.8971359755616515
+          ]
+        },
+        "recall": {
+          "value": 0.71875,
+          "nominal_wilson_95": [
+            0.6217410386959606,
+            0.7989258916163063
+          ]
+        },
+        "fpr": {
+          "value": 0.010416666666666666,
+          "nominal_wilson_95": [
+            0.0018411702168162486,
+            0.056666176227157854
+          ]
+        },
+        "threshold": 0.4809763729572296,
+        "roc_auc": 0.8637152777777779,
+        "average_precision": 0.9048347527016727,
+        "balanced_accuracy": 0.8541666666666666
+      },
+      "initial_head_sha256": "500be5e5a0cd9a7b5a399c3e7b5bfb9b10eb606d0d234728f36cfc5f5bcc7d86",
+      "final_head_sha256": "915446ece1851c6406d0b6d5c82b223daec13686db7cffb7aa4ecd8b2b32e845",
+      "encoder_probe_max_change": 0.000771012157201767,
+      "checkpoint_sha256": "b4bef211a401b701c91b660e72a8923719254ffe9fa6e785cb964a489e424b2c",
+      "frozen_at": "2026-09-11T06:17:06.738174+00:00"
+    },
+    "frozen_42": {
+      "name": "frozen_42",
+      "seed": 42,
+      "arm": "frozen",
+      "epoch": 2,
+      "threshold": 0.5151113271713257,
+      "validation": {
+        "n": 192,
+        "tp": 7,
+        "tn": 94,
+        "fp": 2,
+        "fn": 89,
+        "accuracy": {
+          "value": 0.5260416666666666,
+          "nominal_wilson_95": [
+            0.45559699344140986,
+            0.5954647177009467
+          ]
+        },
+        "recall": {
+          "value": 0.07291666666666667,
+          "nominal_wilson_95": [
+            0.03576758131036273,
+            0.14293031665140193
+          ]
+        },
+        "fpr": {
+          "value": 0.020833333333333332,
+          "nominal_wilson_95": [
+            0.005731969852430421,
+            0.07280713517784211
+          ]
+        },
+        "threshold": 0.5151113271713257,
+        "roc_auc": 0.5564236111111112,
+        "average_precision": 0.5518052396482687,
+        "balanced_accuracy": 0.5260416666666667
+      },
+      "initial_head_sha256": "e652c57611685b76827ec9e6dabd8948e316eb0c33d431e9dd83ce3b22fb68b4",
+      "final_head_sha256": "fa69093adf10fe32e6ae1dd3f399d3f82bfb8c2f33d18d69c9697e9ce8fac9c1",
+      "encoder_probe_max_change": 0.0,
+      "checkpoint_sha256": "8eda48f41d44bcd396e37198a80858ea4a28b9024bf67d8bdda5beac42927c20",
+      "frozen_at": "2026-09-11T06:17:07.752792+00:00"
+    },
+    "finetuned_42": {
+      "name": "finetuned_42",
+      "seed": 42,
+      "arm": "finetuned",
+      "epoch": 1,
+      "threshold": 0.5355667471885681,
+      "validation": {
+        "n": 192,
+        "tp": 7,
+        "tn": 92,
+        "fp": 4,
+        "fn": 89,
+        "accuracy": {
+          "value": 0.515625,
+          "nominal_wilson_95": [
+            0.44532500223818083,
+            0.5853120244472331
+          ]
+        },
+        "recall": {
+          "value": 0.07291666666666667,
+          "nominal_wilson_95": [
+            0.03576758131036273,
+            0.14293031665140193
+          ]
+        },
+        "fpr": {
+          "value": 0.041666666666666664,
+          "nominal_wilson_95": [
+            0.01632070753628833,
+            0.10228191466658104
+          ]
+        },
+        "threshold": 0.5355667471885681,
+        "roc_auc": 0.5742730034722222,
+        "average_precision": 0.5694422791582252,
+        "balanced_accuracy": 0.515625
+      },
+      "initial_head_sha256": "e652c57611685b76827ec9e6dabd8948e316eb0c33d431e9dd83ce3b22fb68b4",
+      "final_head_sha256": "447a098885412bcffb48aedb9aecebddcd5a415af01cf8f62cbdaaf93270e92f",
+      "encoder_probe_max_change": 0.00033739209175109863,
+      "checkpoint_sha256": "bfefdfec693b96403e1b118d3d7a17eb5938b7468893fdca44d2d2ed37f5f7da",
+      "frozen_at": "2026-09-11T06:19:07.803297+00:00"
+    },
+    "frozen_73": {
+      "name": "frozen_73",
+      "seed": 73,
+      "arm": "frozen",
+      "epoch": 1,
+      "threshold": 0.5127815008163452,
+      "validation": {
+        "n": 192,
+        "tp": 6,
+        "tn": 92,
+        "fp": 4,
+        "fn": 90,
+        "accuracy": {
+          "value": 0.5104166666666666,
+          "nominal_wilson_95": [
+            0.4402002012413536,
+            0.5802244832155888
+          ]
+        },
+        "recall": {
+          "value": 0.0625,
+          "nominal_wilson_95": [
+            0.028956674311051346,
+            0.12970946506441489
+          ]
+        },
+        "fpr": {
+          "value": 0.041666666666666664,
+          "nominal_wilson_95": [
+            0.01632070753628833,
+            0.10228191466658104
+          ]
+        },
+        "threshold": 0.5127815008163452,
+        "roc_auc": 0.5096571180555556,
+        "average_precision": 0.5194831576443082,
+        "balanced_accuracy": 0.5104166666666666
+      },
+      "initial_head_sha256": "a85d532e49b4ba15fe6a534f7b47093450a616c5ad0bf0fdb30d8190f059bcfb",
+      "final_head_sha256": "28b58e92c9f6986b782213cddae68e491dc83215d935e8675058e40f60ed2892",
+      "encoder_probe_max_change": 0.0,
+      "checkpoint_sha256": "d96f9f52471dd85a41a739cc12e0ccb3d80d67e357962e2cea5812bf0eba154a",
+      "frozen_at": "2026-09-11T06:19:08.730635+00:00"
+    },
+    "finetuned_73": {
+      "name": "finetuned_73",
+      "seed": 73,
+      "arm": "finetuned",
+      "epoch": 2,
+      "threshold": 0.5627574920654297,
+      "validation": {
+        "n": 192,
+        "tp": 44,
+        "tn": 93,
+        "fp": 3,
+        "fn": 52,
+        "accuracy": {
+          "value": 0.7135416666666666,
+          "nominal_wilson_95": [
+            0.6458953147975586,
+            0.7728107165697651
+          ]
+        },
+        "recall": {
+          "value": 0.4583333333333333,
+          "nominal_wilson_95": [
+            0.36218849483208426,
+            0.5576844708227221
+          ]
+        },
+        "fpr": {
+          "value": 0.03125,
+          "nominal_wilson_95": [
+            0.010684070371201164,
+            0.0878867932453698
+          ]
+        },
+        "threshold": 0.5627574920654297,
+        "roc_auc": 0.8393012152777778,
+        "average_precision": 0.8661599179422188,
+        "balanced_accuracy": 0.7135416666666666
+      },
+      "initial_head_sha256": "a85d532e49b4ba15fe6a534f7b47093450a616c5ad0bf0fdb30d8190f059bcfb",
+      "final_head_sha256": "5dfb789508b8c3baf6f8fb5d5fd87823ff3d24049795e371081677bfcd189b57",
+      "encoder_probe_max_change": 0.0007602162659168243,
+      "checkpoint_sha256": "3ddba511c746ba3fb0e6c2b6dcbe38ebcfd3f5da14ad08563cc83b45e9f121a7",
+      "frozen_at": "2026-09-11T06:21:10.960141+00:00"
+    }
+  }
+}

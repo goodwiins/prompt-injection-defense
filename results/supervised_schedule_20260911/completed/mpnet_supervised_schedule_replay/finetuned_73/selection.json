@@ -1,0 +1,44 @@
+{
+  "name": "finetuned_73",
+  "seed": 73,
+  "arm": "finetuned",
+  "epoch": 6,
+  "threshold": 0.8691009283065796,
+  "validation": {
+    "n": 192,
+    "tp": 70,
+    "tn": 92,
+    "fp": 4,
+    "fn": 26,
+    "accuracy": {
+      "value": 0.84375,
+      "nominal_wilson_95": [
+        0.7857096789622484,
+        0.8883049081168581
+      ]
+    },
+    "recall": {
+      "value": 0.7291666666666666,
+      "nominal_wilson_95": [
+        0.6327365269279848,
+        0.8079621619705808
+      ]
+    },
+    "fpr": {
+      "value": 0.041666666666666664,
+      "nominal_wilson_95": [
+        0.01632070753628833,
+        0.10228191466658104
+      ]
+    },
+    "threshold": 0.8691009283065796,
+    "roc_auc": 0.8748914930555556,
+    "average_precision": 0.9107919611596815,
+    "balanced_accuracy": 0.8437499999999999
+  },
+  "initial_head_sha256": "a85d532e49b4ba15fe6a534f7b47093450a616c5ad0bf0fdb30d8190f059bcfb",
+  "final_head_sha256": "632fbc024a7b93e5a5c5c076ea5a99b4d1c1cf2faefba4e051d783b15e409b7f",
+  "encoder_probe_max_change": 0.0012614056468009949,
+  "checkpoint_sha256": "76eb593feab6ed4b513a4664b8f35e998a2784a767e293cfdcb45b496ace3f26",
+  "frozen_at": "2026-09-11T09:43:35.991949+00:00"
+}

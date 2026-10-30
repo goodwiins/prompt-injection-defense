@@ -1,0 +1,19 @@
+{
+  "purpose": "T4 portable-package export and replay after frozen training; training inputs and checkpoint selection unchanged",
+  "parent_inference_sha256": "f9f3bcbb5b5fccd35ae88f87cab22070220f7642a6ee40781e95c913f69cbbec",
+  "t4_inference_sha256": "4f090ac94225ba3fe87b9884579001226f40490b53dadc1294865a970f5ab86b",
+  "changes": [
+    {
+      "from": "A100 CUDA float16 reference",
+      "to": "NVIDIA T4 CUDA float16 reference"
+    },
+    {
+      "from": "A100 command guidance",
+      "to": "T4 command guidance"
+    },
+    {
+      "from": "A100 replay GPU assertion",
+      "to": "T4 replay GPU assertion"
+    }
+  ]
+}

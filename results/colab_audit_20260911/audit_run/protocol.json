@@ -1,0 +1,33 @@
+{
+  "seed": 42,
+  "base_model": "sentence-transformers/all-mpnet-base-v2",
+  "base_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "max_seq_length": 384,
+  "epochs": 4,
+  "batch_size": 4,
+  "learning_rate": 5e-05,
+  "warmup_steps": 100,
+  "pairs_per_epoch": 14000,
+  "threshold_rule": "maximum validation balanced accuracy; highest threshold breaks ties",
+  "limitations": [
+    "one seed",
+    "capped source prefixes, not full benchmarks",
+    "no semantic near-duplicate or unknown-provenance guarantee",
+    "text-only detection, not downstream attack success"
+  ],
+  "sources": {
+    "deepset/prompt-injections": "4f61ecb038e9c3fb77e21034b22511b523772cdd",
+    "ethz-spylab/ctf-satml24": "11426babe61ee16b0efe7b55e0430359e0fc4235",
+    "microsoft/llmail-inject-challenge": "1063bdf01ec8762b812d5e06ee768a06faa5a6f7",
+    "perplexity-ai/browsesafe-bench": "b506fb5bc7fd4472c8738055a67a0ef6406afdc9",
+    "leolee99/NotInject": "847ae76cf8fea5ed325429e569ae8cfef022d2e0"
+  },
+  "supplement_provenance": {
+    "generator_sha256": "6ba1ec30553daccb8051531a3ab2056ae2958789fcb564781a44ea2848a2ee21",
+    "local_loader_sha256": "0beedb77ec766a0a814a05b6ed167f6f730980afafa275fb7ec333fa90bd8e66",
+    "tensortrust_cache_sha256": "72d56b99888415110125e1307e72bc460a66d5cb6ea7c8012796e18b52e69c4b",
+    "tensortrust_caveat": "existing 200-row cache; upstream revision and sampling provenance unknown; exploratory external slice only",
+    "template_split": "technical/recipe/manual train; education validation; daily test; all historical local templates test"
+  },
+  "script_sha256": "06c908c571486b62313af603406e2c3544184cc28f57e304e97d4491a06c9a07"
+}

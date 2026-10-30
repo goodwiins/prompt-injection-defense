@@ -1,0 +1,9 @@
+{
+  "changed_at": "2026-09-11T09:05:38.879198+00:00",
+  "file": "/Users/goodwiinz/.local/share/uv/tools/google-colab-cli/lib/python3.12/site-packages/colab_cli/auth.py",
+  "backup": "/tmp/colab-auth-before-scope-fix.py",
+  "reason": "Saved narrow Colab grant was overridden by PUBLIC_SCOPES, causing invalid_scope on keep-alive refresh",
+  "before_sha256": "a32d7c91fac00acc90b24b6c70ee80a2c9b8ac0e0a466832196402d97907c579",
+  "after_sha256": "47681c12999e26049675d8829f1b88f5b3960cf650e7170f0db13ddc4f203469",
+  "permission_change": "None; retain the scopes already granted in token.json"
+}

@@ -1,0 +1,296 @@
+{
+  "source": "results/html_coverage_correction_20260911/completed/mpnet_html_coverage_ai/verification.json",
+  "source_sha256": "2b2b85874abe8d5e5bb10372d32a643fd34a46d1ead3ec966b696899aed6ddbc",
+  "input_sha256": "f7419970fe5b7af62fae03fdcbd0532367f912c341bbb18afaded669df1c8894",
+  "models": {
+    "frozen_17": {
+      "all": {
+        "n": 207,
+        "tp": 10,
+        "tn": 101,
+        "fp": 5,
+        "fn": 91,
+        "accuracy": {
+          "value": 0.5362318840579711,
+          "nominal_wilson_95": [
+            0.4682558404258433,
+            0.6028876627727211
+          ]
+        },
+        "recall": {
+          "value": 0.09900990099009901,
+          "nominal_wilson_95": [
+            0.05467303296704735,
+            0.1727318418684808
+          ]
+        },
+        "fpr": {
+          "value": 0.04716981132075472,
+          "nominal_wilson_95": [
+            0.020314072962303892,
+            0.10569899140612377
+          ]
+        },
+        "threshold": 0.5070372223854065,
+        "roc_auc": 0.5825238184195779,
+        "average_precision": 0.5396617267200624,
+        "balanced_accuracy": 0.5259200448346721
+      },
+      "conditions": {
+        "original": {
+          "n": 5,
+          "flagged": 0
+        },
+        "direct": {
+          "n": 5,
+          "flagged": 0
+        },
+        "quoted": {
+          "n": 5,
+          "flagged": 0
+        }
+      }
+    },
+    "finetuned_17": {
+      "all": {
+        "n": 207,
+        "tp": 70,
+        "tn": 101,
+        "fp": 5,
+        "fn": 31,
+        "accuracy": {
+          "value": 0.8260869565217391,
+          "nominal_wilson_95": [
+            0.7686397795989356,
+            0.8716517491881425
+          ]
+        },
+        "recall": {
+          "value": 0.693069306930693,
+          "nominal_wilson_95": [
+            0.5974265174495047,
+            0.7745637280000558
+          ]
+        },
+        "fpr": {
+          "value": 0.04716981132075472,
+          "nominal_wilson_95": [
+            0.020314072962303892,
+            0.10569899140612377
+          ]
+        },
+        "threshold": 0.7724661231040955,
+        "roc_auc": 0.8250513730618344,
+        "average_precision": 0.8798620543914152,
+        "balanced_accuracy": 0.8229497478049691
+      },
+      "conditions": {
+        "original": {
+          "n": 5,
+          "flagged": 0
+        },
+        "direct": {
+          "n": 5,
+          "flagged": 0
+        },
+        "quoted": {
+          "n": 5,
+          "flagged": 0
+        }
+      }
+    },
+    "frozen_42": {
+      "all": {
+        "n": 207,
+        "tp": 7,
+        "tn": 101,
+        "fp": 5,
+        "fn": 94,
+        "accuracy": {
+          "value": 0.5217391304347826,
+          "nominal_wilson_95": [
+            0.45391560535668507,
+            0.5887704965624534
+          ]
+        },
+        "recall": {
+          "value": 0.06930693069306931,
+          "nominal_wilson_95": [
+            0.0339753277703107,
+            0.13620027853451583
+          ]
+        },
+        "fpr": {
+          "value": 0.04716981132075472,
+          "nominal_wilson_95": [
+            0.020314072962303892,
+            0.10569899140612377
+          ]
+        },
+        "threshold": 0.5110177993774414,
+        "roc_auc": 0.5569773958527928,
+        "average_precision": 0.5428960639835025,
+        "balanced_accuracy": 0.5110685596861573
+      },
+      "conditions": {
+        "original": {
+          "n": 5,
+          "flagged": 0
+        },
+        "direct": {
+          "n": 5,
+          "flagged": 0
+        },
+        "quoted": {
+          "n": 5,
+          "flagged": 0
+        }
+      }
+    },
+    "finetuned_42": {
+      "all": {
+        "n": 207,
+        "tp": 71,
+        "tn": 103,
+        "fp": 3,
+        "fn": 30,
+        "accuracy": {
+          "value": 0.8405797101449275,
+          "nominal_wilson_95": [
+            0.784574480592123,
+            0.8841744494743805
+          ]
+        },
+        "recall": {
+          "value": 0.7029702970297029,
+          "nominal_wilson_95": [
+            0.6077495802310494,
+            0.7833170880620782
+          ]
+        },
+        "fpr": {
+          "value": 0.02830188679245283,
+          "nominal_wilson_95": [
+            0.009671283865559842,
+            0.07992565818488565
+          ]
+        },
+        "threshold": 0.8815227150917053,
+        "roc_auc": 0.8506444984121052,
+        "average_precision": 0.8941394090106588,
+        "balanced_accuracy": 0.837334205118625
+      },
+      "conditions": {
+        "original": {
+          "n": 5,
+          "flagged": 0
+        },
+        "direct": {
+          "n": 5,
+          "flagged": 1
+        },
+        "quoted": {
+          "n": 5,
+          "flagged": 1
+        }
+      }
+    },
+    "frozen_73": {
+      "all": {
+        "n": 207,
+        "tp": 10,
+        "tn": 101,
+        "fp": 5,
+        "fn": 91,
+        "accuracy": {
+          "value": 0.5362318840579711,
+          "nominal_wilson_95": [
+            0.4682558404258433,
+            0.6028876627727211
+          ]
+        },
+        "recall": {
+          "value": 0.09900990099009901,
+          "nominal_wilson_95": [
+            0.05467303296704735,
+            0.1727318418684808
+          ]
+        },
+        "fpr": {
+          "value": 0.04716981132075472,
+          "nominal_wilson_95": [
+            0.020314072962303892,
+            0.10569899140612377
+          ]
+        },
+        "threshold": 0.5260414481163025,
+        "roc_auc": 0.6100317578927704,
+        "average_precision": 0.5822288744939303,
+        "balanced_accuracy": 0.5259200448346721
+      },
+      "conditions": {
+        "original": {
+          "n": 5,
+          "flagged": 0
+        },
+        "direct": {
+          "n": 5,
+          "flagged": 0
+        },
+        "quoted": {
+          "n": 5,
+          "flagged": 1
+        }
+      }
+    },
+    "finetuned_73": {
+      "all": {
+        "n": 207,
+        "tp": 70,
+        "tn": 102,
+        "fp": 4,
+        "fn": 31,
+        "accuracy": {
+          "value": 0.8309178743961353,
+          "nominal_wilson_95": [
+            0.7739368045047688,
+            0.8758405247087846
+          ]
+        },
+        "recall": {
+          "value": 0.693069306930693,
+          "nominal_wilson_95": [
+            0.5974265174495047,
+            0.7745637280000558
+          ]
+        },
+        "fpr": {
+          "value": 0.03773584905660377,
+          "nominal_wilson_95": [
+            0.014770847100615568,
+            0.09303415610882099
+          ]
+        },
+        "threshold": 0.24491514265537262,
+        "roc_auc": 0.8576966187184756,
+        "average_precision": 0.8945349249386356,
+        "balanced_accuracy": 0.8276667289370446
+      },
+      "conditions": {
+        "original": {
+          "n": 5,
+          "flagged": 0
+        },
+        "direct": {
+          "n": 5,
+          "flagged": 1
+        },
+        "quoted": {
+          "n": 5,
+          "flagged": 0
+        }
+      }
+    }
+  },
+  "note": "Saved MPNet results on identical validation bytes. MPNet fine-tuned arms used this validation for checkpoint and threshold selection; Laya uses no weight fitting."
+}

@@ -1,0 +1,44 @@
+{
+  "frozen_17": {
+    "epoch_score_max_absolute_errors": [
+      0.0,
+      0.0
+    ],
+    "same_decisions_and_page_orders": true
+  },
+  "finetuned_17": {
+    "epoch_score_max_absolute_errors": [
+      0.0,
+      0.0
+    ],
+    "same_decisions_and_page_orders": true
+  },
+  "frozen_42": {
+    "epoch_score_max_absolute_errors": [
+      0.0,
+      0.0
+    ],
+    "same_decisions_and_page_orders": true
+  },
+  "finetuned_42": {
+    "epoch_score_max_absolute_errors": [
+      0.0,
+      0.0
+    ],
+    "same_decisions_and_page_orders": true
+  },
+  "frozen_73": {
+    "epoch_score_max_absolute_errors": [
+      0.0,
+      0.0
+    ],
+    "same_decisions_and_page_orders": true
+  },
+  "finetuned_73": {
+    "epoch_score_max_absolute_errors": [
+      0.0,
+      0.0
+    ],
+    "same_decisions_and_page_orders": true
+  }
+}

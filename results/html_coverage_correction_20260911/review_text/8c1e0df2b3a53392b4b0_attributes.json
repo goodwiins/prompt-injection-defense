@@ -1,0 +1,540 @@
+{
+  "attributes": [
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "United logo link to homepage"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "United logo link to homepage"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Currently in English United States$ enter to change"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close Panel"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Search, opens in a new tab"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Sign in"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "View Cart, click to view list of recently searched saved trips."
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Main menu"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close Panel"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close Panel"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close Panel"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close Panel"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close Panel"
+    },
+    {
+      "tag": "li",
+      "attribute": "aria_label",
+      "text": "heading level 2 Book a flight or trip package"
+    },
+    {
+      "tag": "li",
+      "attribute": "aria_label",
+      "text": "heading level 2 Check flight status"
+    },
+    {
+      "tag": "li",
+      "attribute": "aria_label",
+      "text": "heading level 2 Check in a flight undefined"
+    },
+    {
+      "tag": "li",
+      "attribute": "aria_label",
+      "text": "heading level 2 View and manage current trips undefined"
+    },
+    {
+      "tag": "li",
+      "attribute": "aria_label",
+      "text": "heading level 3 Search and book a flight"
+    },
+    {
+      "tag": "li",
+      "attribute": "aria_label",
+      "text": "heading level 3 Search and book a hotel"
+    },
+    {
+      "tag": "li",
+      "attribute": "aria_label",
+      "text": "heading level 3 Search and reserve a car"
+    },
+    {
+      "tag": "li",
+      "attribute": "aria_label",
+      "text": "heading level 3 Search and book a United vacation."
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "heading level 3 Search and book a United cruise."
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Round Trip Flight search"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "One Way Flight search"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Book with miles"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Book with miles"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Flexible dates"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "From*"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Columbus CMH"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Columbus CMH"
+    },
+    {
+      "tag": "label",
+      "attribute": "aria_label",
+      "text": "Enter your departing city, airport name, or airport code."
+    },
+    {
+      "tag": "label",
+      "attribute": "aria_label",
+      "text": "Enter your destination city, airport name, or airport code."
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "reverse origin and destination"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Depart"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Depart"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Jun 09"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Jun 09"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "Return"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Return"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Jun 11"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Jun 11"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Clear Dates"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Add one more Adult"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "1 Adults, 18 to 64 years old, 1 of 9 passengers selected"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Substract one Adult"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Add one more Seniors"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "0 Seniors, More than 65 years old, 1 of 9 passengers selected"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Substract one Seniors"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Add one more Infant"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "0 Infants, Under 2 years, 1 of 9 passengers selected"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Substract one Infant"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Add one more Infant on lap"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "0 Infants on lap, Under 2 years, 1 of 9 passengers selected"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Substract one Infant on lap"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Add one more Child"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "0 Children, 15 to 17 years old, 1 of 9 passengers selected"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Substract one Child"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Add one more Child"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "0 Children, 12 to 14 years old, 1 of 9 passengers selected"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Substract one Child"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Add one more Child"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "0 Children, 5 to 11 years old, 1 of 9 passengers selected"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Substract one Child"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Add one more Child"
+    },
+    {
+      "tag": "input",
+      "attribute": "aria_label",
+      "text": "0 Children, 2 to 4 years old, 1 of 9 passengers selected"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Substract one Child"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Travel with a pet. This link would take you to the advance search page in the section to select the number of pets and flights."
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Clear all fields"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Economy"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Advanced search"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Bag rules"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "fees for optional services"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Find flights"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "You are navigating a sliding carousel, you are at slide 1 of 6 carousel."
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Offers up to 80,000 bonus miles., you will be redirect away from united.com homepage"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Learn more, you will be redirect away from united.com homepage"
+    },
+    {
+      "tag": "fieldset",
+      "attribute": "aria_label",
+      "text": "Carousel buttons"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Pause"
+    },
+    {
+      "tag": "button",
+      "attribute": "value",
+      "text": "Play"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Slide 1 of 6"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Slide 2 of 6"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Slide 3 of 6"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Slide 4 of 6"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Slide 5 of 6"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Slide 6 of 6"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Search United"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Wi-Fi, opens in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Change flight, opens in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "United Club, opens in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Traveling with pets, opens in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "MileagePlus, opens in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Baggage, opens in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Refund, opens in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Help Center, opens in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Important notices"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Currently in English United States$ enter to change"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close Panel"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Switch to Espaol"
+    },
+    {
+      "tag": "img",
+      "attribute": "aria_label",
+      "text": "This link is to an external site that may or may not meet accessibility guidelines."
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Mobile tools"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Open United's Tiktok feed in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Open United's Facebook page in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Open United's Twitter feed in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Open United's YouTube page in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Open United's Instagram feed in a new tab"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Open United's LinkedIn profile in a new tab"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "United is a proud member of Star Alliance"
+    }
+  ],
+  "hidden": []
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "Exact normalized phrase occurrence on all 448 train/validation inputs; absence does not establish semantic/template-family novelty",
+  "templates": [
+    {
+      "candidate_id": "49eebac55cfb03dc0211",
+      "attack_family": "Task Automation",
+      "exact_normalized_payload_matches_in_development": []
+    },
+    {
+      "candidate_id": "e90541be4b053ea908bb",
+      "attack_family": "Language Translation",
+      "exact_normalized_payload_matches_in_development": []
+    },
+    {
+      "candidate_id": "1874e45c7aa824ece6bf",
+      "attack_family": "Reverse Text",
+      "exact_normalized_payload_matches_in_development": []
+    }
+  ]
+}

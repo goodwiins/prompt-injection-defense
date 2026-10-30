@@ -1,0 +1,175 @@
+{
+  "attributes": [
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "CVS home page"
+    },
+    {
+      "tag": "nav",
+      "attribute": "aria_label",
+      "text": "main"
+    },
+    {
+      "tag": "form",
+      "attribute": "aria_label",
+      "text": "Search CVS"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Search products and services"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Clear Search"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Submit search"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "change store"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Cart, undefined items"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "CVS home page"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "change store"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Cart, undefined items"
+    },
+    {
+      "tag": "form",
+      "attribute": "aria_label",
+      "text": "Search CVS"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Search products and services"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Clear Search"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Submit search"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "A marbleized, abstract image of Earth within the CVS heart logo set against a light green background."
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Start of Slider"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next Card"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "A patient smiles after receiving his vaccination."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "A mother and son compare arms after coming home from getting their COVID-19 boosters."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "A mother cleans her daughter's nose with tissue paper."
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Start of Slider"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Next Card"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "carepass logo"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Care Pass members enjoy a $10 monthly promo reward and free shipping"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Here, healthier happens together."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Our Beauty Unaltered Beauty Mark appears on photos of models that have not been thinned, smoothed or digitally altered."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Tested to be Trusted is our commitment to have our vitamins and supplements tested to ensure they meet our high standards."
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Facebook"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Twitter"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "YouTube"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "NABP Accredited Digital Pharmacy"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "NABP logo"
+    },
+    {
+      "tag": "button",
+      "attribute": "alt",
+      "text": "Feedback"
+    }
+  ],
+  "hidden": []
+}

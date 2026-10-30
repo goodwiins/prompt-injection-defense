@@ -1,0 +1,13 @@
+{
+  "completed_at": "2026-09-11T20:34:19.128333+00:00",
+  "predictions": 36,
+  "files": {
+    "winning_embeddings.pt": "adf9cd1e2029b74618c13f9cf57193f147a53542bb580cfdf2d4b8cb079057f1",
+    "protocol.json": "8fcd3f2cc507822a25657baebd6bda431747d41bb27cba7c09d6a36359efe62d",
+    "window_ledger.jsonl": "f7a8884390732dd573efcd5cab792b6bab7d3bee1f1805b9b82cd6b98e151dc0",
+    "base_encoder_verified.json": "6d22cd09554749ae7a259283190352b679ead4d41b161c43eee7d9bc446a939e",
+    "coverage.jsonl": "aed6c926d416d23c7f921d5207d5bca6be59731c7d45a1bad566518c6c1e938b",
+    "environment.json": "9366aeb033993ce86cbe14516aa9724fbc2532be7351e3fa6d2e81182727c469",
+    "predictions.jsonl": "c388be089afcbd35afa05ed0dabd83d4e3fc9134e840fca6bfc1041d513ca90f"
+  }
+}

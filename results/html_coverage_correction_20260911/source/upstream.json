@@ -1,0 +1,12 @@
+{
+  "type": "file",
+  "oid": "da6dc7731b219f62d8d96d0d6518479c45feb2ca",
+  "size": 519944349,
+  "lfs": {
+    "oid": "49b2764d8ce2d902448d024de0a7e3943169c3c4209d2fc6ddedcc353c4b3296",
+    "size": 519944349,
+    "pointerSize": 134
+  },
+  "xetHash": "b6c18df06098ab59b78ca8a37cae779fc821e4f38418cf595e28eff00c9e7f72",
+  "path": "data/train/train_6.json"
+}

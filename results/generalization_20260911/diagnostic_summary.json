@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-09-11T20:35:07.258423+00:00",
+  "scope": "Exploratory AI-labeled six-page diagnostic",
+  "models": {
+    "frozen_17": {
+      "threshold": 0.5104188919067383,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3
+    },
+    "finetuned_17": {
+      "threshold": 0.6299245953559875,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3
+    },
+    "frozen_42": {
+      "threshold": 0.517436146736145,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3
+    },
+    "finetuned_42": {
+      "threshold": 0.6299117803573608,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3
+    },
+    "frozen_73": {
+      "threshold": 0.5127815008163452,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3
+    },
+    "finetuned_73": {
+      "threshold": 0.8691009283065796,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3
+    }
+  }
+}

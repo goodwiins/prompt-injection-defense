@@ -1,0 +1,10 @@
+{
+  "source_notebook_sha256": "d5e46069e2c69224383ec8d5e036393670db63446ff3c55d4fb11194d827c986",
+  "prior_checkpoints_verified": 6,
+  "known_new_checkpoints": {
+    "finetuned_17": "f921300f51fe3436be4b64bf2d0ebca1683d096dfa187d6b312e58becdae2f54",
+    "finetuned_42": "e2f987b76caabfab2e8429642f00bb66f78d68656871c96d217eedba3e6fe397"
+  },
+  "matched_validation_summaries": 36,
+  "limitation": "Seed 73 checkpoint bytes and complete holdout predictions were not retrieved before the runtime disappeared. Replay retains the already frozen algorithm and requires all captured validation summaries plus both saved new checkpoint hashes to match before evaluating."
+}

@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-09-11T20:33:39.851312+00:00",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "packages": {
+    "torch": "2.9.1",
+    "transformers": "4.57.3",
+    "sentence-transformers": "5.1.2",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.7.2"
+  },
+  "protocol_sha256": "8fcd3f2cc507822a25657baebd6bda431747d41bb27cba7c09d6a36359efe62d"
+}

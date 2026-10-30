@@ -1,0 +1,598 @@
+[
+  {
+    "path": "results/html_coverage_correction_20260911/source/mind2web_train_6.json",
+    "sha256": "49b2764d8ce2d902448d024de0a7e3943169c3c4209d2fc6ddedcc353c4b3296",
+    "bytes": 519944349,
+    "allocated_before": 519946240,
+    "allocated_after": 63815680,
+    "compressed": true
+  },
+  {
+    "path": "results/supervised_pilot_20260911/browsesafe_train_raw.jsonl",
+    "sha256": "9198b450af5251e6e94bf7a2505a2cca6a0bf60afc56b07824571047c3415c10",
+    "bytes": 116366214,
+    "allocated_before": 116367360,
+    "allocated_after": 20783104,
+    "compressed": true
+  },
+  {
+    "path": "results/supervised_pilot_20260911/browsesafe_test_raw.jsonl",
+    "sha256": "71b925e3577d6990b4b6dd2ae3051760676012601b359a69cefe9cb31c8f42ba",
+    "bytes": 120928544,
+    "allocated_before": 120930304,
+    "allocated_after": 21565440,
+    "compressed": true
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/prior/finetuned_73/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_73/checkpoint.pt",
+    "sha256": "3ddba511c746ba3fb0e6c2b6dcbe38ebcfd3f5da14ad08563cc83b45e9f121a7",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335861248,
+    "free_bytes_after": 1335828480
+  },
+  {
+    "path": "results/supervised_schedule_20260911/recovery/prior/finetuned_73/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_73/checkpoint.pt",
+    "sha256": "3ddba511c746ba3fb0e6c2b6dcbe38ebcfd3f5da14ad08563cc83b45e9f121a7",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335828480,
+    "free_bytes_after": 1335828480
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/prior/finetuned_73/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_73/checkpoint.pt",
+    "sha256": "3ddba511c746ba3fb0e6c2b6dcbe38ebcfd3f5da14ad08563cc83b45e9f121a7",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335828480,
+    "free_bytes_after": 1335685120
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/prior/finetuned_42/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_42/checkpoint.pt",
+    "sha256": "bfefdfec693b96403e1b118d3d7a17eb5938b7468893fdca44d2d2ed37f5f7da",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335685120,
+    "free_bytes_after": 1335779328
+  },
+  {
+    "path": "results/supervised_schedule_20260911/recovery/prior/finetuned_42/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_42/checkpoint.pt",
+    "sha256": "bfefdfec693b96403e1b118d3d7a17eb5938b7468893fdca44d2d2ed37f5f7da",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335779328,
+    "free_bytes_after": 1335758848
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/prior/finetuned_42/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_42/checkpoint.pt",
+    "sha256": "bfefdfec693b96403e1b118d3d7a17eb5938b7468893fdca44d2d2ed37f5f7da",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335758848,
+    "free_bytes_after": 1335746560
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/finetuned_17/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_17/checkpoint.pt",
+    "sha256": "b4bef211a401b701c91b660e72a8923719254ffe9fa6e785cb964a489e424b2c",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335746560,
+    "free_bytes_after": 1335726080
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/prior/finetuned_17/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_17/checkpoint.pt",
+    "sha256": "b4bef211a401b701c91b660e72a8923719254ffe9fa6e785cb964a489e424b2c",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335726080,
+    "free_bytes_after": 1335717888
+  },
+  {
+    "path": "results/supervised_schedule_20260911/recovery/prior/finetuned_17/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_17/checkpoint.pt",
+    "sha256": "b4bef211a401b701c91b660e72a8923719254ffe9fa6e785cb964a489e424b2c",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335717888,
+    "free_bytes_after": 1335705600
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/prior/finetuned_17/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/pilot/prior/finetuned_17/checkpoint.pt",
+    "sha256": "b4bef211a401b701c91b660e72a8923719254ffe9fa6e785cb964a489e424b2c",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335705600,
+    "free_bytes_after": 1335697408
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/finetuned_42/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/interrupted_recovery/mpnet_supervised_schedule_recovery/finetuned_42/checkpoint.pt",
+    "sha256": "e2f987b76caabfab2e8429642f00bb66f78d68656871c96d217eedba3e6fe397",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335697408,
+    "free_bytes_after": 1335672832
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/finetuned_17/checkpoint.pt",
+    "clone_source": "results/supervised_schedule_20260911/interrupted_recovery/mpnet_supervised_schedule_recovery/finetuned_17/checkpoint.pt",
+    "sha256": "f921300f51fe3436be4b64bf2d0ebca1683d096dfa187d6b312e58becdae2f54",
+    "bytes": 438015770,
+    "method": "APFS copy-on-write clone; paths and bytes preserved",
+    "free_bytes_before": 1335672832,
+    "free_bytes_after": 1335660544
+  },
+  {
+    "path": "results/window_followup_20260911/sealed_holdout.jsonl",
+    "sha256": "a19ed336bf3392ff19e9b9f9656e219dcabb8072b7d9b88ce4f93079699dd8b5",
+    "bytes": 11405487,
+    "allocated_before": 11407360,
+    "allocated_after": 5107712,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/window_followup_20260911/development.jsonl",
+    "sha256": "ac78a4d5cdeee801cd96cd511339235229dc7827ff4afb9b3f8904b3d70327e3",
+    "bytes": 22268340,
+    "allocated_before": 22269952,
+    "allocated_after": 9474048,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/validation_diagnosis_20260911/validation_details.jsonl",
+    "sha256": "02d56d2065f0165d0d7c762e1eefe4da9cba938871e14ebad339c1d5d87f3f56",
+    "bytes": 7000389,
+    "allocated_before": 7004160,
+    "allocated_after": 2760704,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/validation_diagnosis_20260911/validation_browsesafe_raw.json",
+    "sha256": "769357a373e157b61d13423d5f17a6c85f8016cc9ed5d936187b0af45ade19ba",
+    "bytes": 26117445,
+    "allocated_before": 26120192,
+    "allocated_after": 4710400,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_audit_20260911/audit_run/source_rows.jsonl",
+    "sha256": "6e63d66f8989893e6062d4f5928f7dbe4b989c4c59f5cf90393ab6a5dce24c7c",
+    "bytes": 36315648,
+    "allocated_before": 36319232,
+    "allocated_after": 15286272,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_audit_20260911/audit_run/manifest.jsonl",
+    "sha256": "c1ecc4cc779e620f6da9437b4fea4b5be1b47972055353eb077135d0dbcd81d4",
+    "bytes": 35989551,
+    "allocated_before": 35991552,
+    "allocated_after": 15269888,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_audit_20260911/audit_run/uniform/training_pairs.jsonl",
+    "sha256": "229ea9360ab32c31071f6c18d6cf22f2dc97fe41131905d1096c1a647ce11164",
+    "bytes": 2016268,
+    "allocated_before": 2019328,
+    "allocated_after": 237568,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_audit_20260911/audit_run/double/training_pairs.jsonl",
+    "sha256": "08fdfc0532bded1e65912b413608d54150fda28f44b445ff729fc7424f73ee42",
+    "bytes": 2020828,
+    "allocated_before": 2023424,
+    "allocated_after": 233472,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_audit_20260911/audit_run/base/classifier.json",
+    "sha256": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "bytes": 1273150,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/generalization_20260911/source/mind2web_train_10.json",
+    "sha256": "182542d7947b3fa9e90fc57a3d82d4d8f2997ca5a06664217720d7a78a956e33",
+    "bytes": 28366146,
+    "allocated_before": 28368896,
+    "allocated_after": 3837952,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/recovery/train.jsonl",
+    "sha256": "6d98699f22a72af7c2d85d5fad430b440a2c0688e1c70c669e0bcf7b57aa5b09",
+    "bytes": 16718381,
+    "allocated_before": 16719872,
+    "allocated_after": 3764224,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/recovery/validation.jsonl",
+    "sha256": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+    "bytes": 13777519,
+    "allocated_before": 13778944,
+    "allocated_after": 3108864,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/recovery/historical_classifier.json",
+    "sha256": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "bytes": 1273150,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/recovery/fresh_candidates.jsonl",
+    "sha256": "22d371cc68aca472a90009ba2cac273e78ada79fe1ed06ec07ab6e80bea993b2",
+    "bytes": 28191491,
+    "allocated_before": 28192768,
+    "allocated_after": 4919296,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/recovery/holdout.jsonl",
+    "sha256": "0005e0f704010b0c2a4227341c70e0ca558f3dc84a71acf62392a2434ce4c024",
+    "bytes": 30188507,
+    "allocated_before": 30191616,
+    "allocated_after": 6373376,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/pilot/train.jsonl",
+    "sha256": "6d98699f22a72af7c2d85d5fad430b440a2c0688e1c70c669e0bcf7b57aa5b09",
+    "bytes": 16718381,
+    "allocated_before": 16719872,
+    "allocated_after": 3764224,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/pilot/validation.jsonl",
+    "sha256": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+    "bytes": 13777519,
+    "allocated_before": 13778944,
+    "allocated_after": 3108864,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/pilot/historical_classifier.json",
+    "sha256": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "bytes": 1273150,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/pilot/fresh_candidates.jsonl",
+    "sha256": "22d371cc68aca472a90009ba2cac273e78ada79fe1ed06ec07ab6e80bea993b2",
+    "bytes": 28191491,
+    "allocated_before": 28192768,
+    "allocated_after": 4919296,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/pilot/holdout.jsonl",
+    "sha256": "0005e0f704010b0c2a4227341c70e0ca558f3dc84a71acf62392a2434ce4c024",
+    "bytes": 30188507,
+    "allocated_before": 30191616,
+    "allocated_after": 6373376,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/train.jsonl",
+    "sha256": "6d98699f22a72af7c2d85d5fad430b440a2c0688e1c70c669e0bcf7b57aa5b09",
+    "bytes": 16718381,
+    "allocated_before": 16719872,
+    "allocated_after": 3764224,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/train_windows.jsonl",
+    "sha256": "d7987de68c4296c9f9e95ffa63e99bc1200bf521737905b90785468dc7e2c5e9",
+    "bytes": 3029086,
+    "allocated_before": 3031040,
+    "allocated_after": 1241088,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/validation.jsonl",
+    "sha256": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+    "bytes": 13777519,
+    "allocated_before": 13778944,
+    "allocated_after": 3108864,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/validation_windows.jsonl",
+    "sha256": "b4e0b031b8657a76d46da77ca3f9fa0989ba2f23e0b4f9891937272c0daceb7a",
+    "bytes": 2440092,
+    "allocated_before": 2441216,
+    "allocated_after": 999424,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/historical_classifier.json",
+    "sha256": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "bytes": 1273150,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/fresh_candidates.jsonl",
+    "sha256": "22d371cc68aca472a90009ba2cac273e78ada79fe1ed06ec07ab6e80bea993b2",
+    "bytes": 28191491,
+    "allocated_before": 28192768,
+    "allocated_after": 4919296,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/failed/mpnet_supervised_schedule/holdout.jsonl",
+    "sha256": "0005e0f704010b0c2a4227341c70e0ca558f3dc84a71acf62392a2434ce4c024",
+    "bytes": 30188507,
+    "allocated_before": 30191616,
+    "allocated_after": 6373376,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/holdout_windows.jsonl",
+    "sha256": "731cec09c3b507d78634ea76e5fc979af9484b6b1cf3c3c578bc95b5939a9604",
+    "bytes": 5654301,
+    "allocated_before": 5656576,
+    "allocated_after": 2297856,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/train.jsonl",
+    "sha256": "6d98699f22a72af7c2d85d5fad430b440a2c0688e1c70c669e0bcf7b57aa5b09",
+    "bytes": 16718381,
+    "allocated_before": 16719872,
+    "allocated_after": 3764224,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/train_windows.jsonl",
+    "sha256": "d7987de68c4296c9f9e95ffa63e99bc1200bf521737905b90785468dc7e2c5e9",
+    "bytes": 3029086,
+    "allocated_before": 3031040,
+    "allocated_after": 1241088,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/validation.jsonl",
+    "sha256": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+    "bytes": 13777519,
+    "allocated_before": 13778944,
+    "allocated_after": 3108864,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/validation_windows.jsonl",
+    "sha256": "b4e0b031b8657a76d46da77ca3f9fa0989ba2f23e0b4f9891937272c0daceb7a",
+    "bytes": 2440092,
+    "allocated_before": 2441216,
+    "allocated_after": 999424,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/historical_classifier.json",
+    "sha256": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "bytes": 1273150,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/fresh_candidates.jsonl",
+    "sha256": "22d371cc68aca472a90009ba2cac273e78ada79fe1ed06ec07ab6e80bea993b2",
+    "bytes": 28191491,
+    "allocated_before": 28192768,
+    "allocated_after": 4919296,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_schedule_20260911/completed/mpnet_supervised_schedule_replay/holdout.jsonl",
+    "sha256": "0005e0f704010b0c2a4227341c70e0ca558f3dc84a71acf62392a2434ce4c024",
+    "bytes": 30188507,
+    "allocated_before": 30191616,
+    "allocated_after": 6373376,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/pilot_before_label_review/train.jsonl",
+    "sha256": "8e2e62a6f3547d371642456f239e30e5269e6ce2f76b83a419a26bea72393ff1",
+    "bytes": 16606220,
+    "allocated_before": 16609280,
+    "allocated_after": 3727360,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/pilot_before_label_review/validation.jsonl",
+    "sha256": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+    "bytes": 13777519,
+    "allocated_before": 13778944,
+    "allocated_after": 3108864,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/pilot_before_label_review/historical_classifier.json",
+    "sha256": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "bytes": 1273150,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/pilot_before_label_review/holdout.jsonl",
+    "sha256": "62b9c9a1932a118f81ad2a5885945ae4d96b8f550377b849f4cd16cb747886e4",
+    "bytes": 31493217,
+    "allocated_before": 31494144,
+    "allocated_after": 7081984,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/pilot/train.jsonl",
+    "sha256": "6d98699f22a72af7c2d85d5fad430b440a2c0688e1c70c669e0bcf7b57aa5b09",
+    "bytes": 16718381,
+    "allocated_before": 16719872,
+    "allocated_after": 3764224,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/pilot/validation.jsonl",
+    "sha256": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+    "bytes": 13777519,
+    "allocated_before": 13778944,
+    "allocated_after": 3108864,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/pilot/historical_classifier.json",
+    "sha256": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "bytes": 1273150,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/pilot/holdout.jsonl",
+    "sha256": "62b9c9a1932a118f81ad2a5885945ae4d96b8f550377b849f4cd16cb747886e4",
+    "bytes": 31493217,
+    "allocated_before": 31494144,
+    "allocated_after": 7081984,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/completed/mpnet_supervised_pilot/holdout_windows.jsonl",
+    "sha256": "238dede101e1c76f2cfa170a46afc209f65d4be2fd603c31295446187eb22e45",
+    "bytes": 5611973,
+    "allocated_before": 5615616,
+    "allocated_after": 2293760,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/completed/mpnet_supervised_pilot/train.jsonl",
+    "sha256": "6d98699f22a72af7c2d85d5fad430b440a2c0688e1c70c669e0bcf7b57aa5b09",
+    "bytes": 16718381,
+    "allocated_before": 16719872,
+    "allocated_after": 3764224,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/completed/mpnet_supervised_pilot/train_windows.jsonl",
+    "sha256": "d7987de68c4296c9f9e95ffa63e99bc1200bf521737905b90785468dc7e2c5e9",
+    "bytes": 3029086,
+    "allocated_before": 3031040,
+    "allocated_after": 1241088,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/completed/mpnet_supervised_pilot/validation.jsonl",
+    "sha256": "2e73240f1920f05d733a3f85914072322da177ac84de5c17c9a8fc22e614cfbf",
+    "bytes": 13777519,
+    "allocated_before": 13778944,
+    "allocated_after": 3108864,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/completed/mpnet_supervised_pilot/validation_windows.jsonl",
+    "sha256": "b4e0b031b8657a76d46da77ca3f9fa0989ba2f23e0b4f9891937272c0daceb7a",
+    "bytes": 2440092,
+    "allocated_before": 2441216,
+    "allocated_after": 999424,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/completed/mpnet_supervised_pilot/historical_classifier.json",
+    "sha256": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "bytes": 1273150,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/supervised_pilot_20260911/completed/mpnet_supervised_pilot/holdout.jsonl",
+    "sha256": "62b9c9a1932a118f81ad2a5885945ae4d96b8f550377b849f4cd16cb747886e4",
+    "bytes": 31493217,
+    "allocated_before": 31494144,
+    "allocated_after": 7081984,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_window_followup_20260911/window_followup/holdout_windows.jsonl",
+    "sha256": "889bceb9a73ff6127629f92463777aa76174aca7fe042ba69245293f199680e1",
+    "bytes": 2375423,
+    "allocated_before": 2375680,
+    "allocated_after": 827392,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_window_followup_20260911/window_followup/classifier_17.json",
+    "sha256": "2fd4986d83d85a881af462794df119418f49537ab81a4f2d326e56fe2a4cc046",
+    "bytes": 1271361,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_window_followup_20260911/window_followup/validation_windows.jsonl",
+    "sha256": "37e18a9d70bda67030d0a128787ac28aaca533cd358cf1e3faa55039b4f88f63",
+    "bytes": 1225390,
+    "allocated_before": 1228800,
+    "allocated_after": 430080,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_window_followup_20260911/window_followup/classifier_42.json",
+    "sha256": "7cad1c5a4114e537cbab8dfc8714e09bc6fa8561b14ecadda6c1b08298ddc9a5",
+    "bytes": 1273150,
+    "allocated_before": 1273856,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_window_followup_20260911/window_followup/sealed_holdout.jsonl",
+    "sha256": "a19ed336bf3392ff19e9b9f9656e219dcabb8072b7d9b88ce4f93079699dd8b5",
+    "bytes": 11405487,
+    "allocated_before": 11407360,
+    "allocated_after": 5107712,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_window_followup_20260911/window_followup/development.jsonl",
+    "sha256": "ac78a4d5cdeee801cd96cd511339235229dc7827ff4afb9b3f8904b3d70327e3",
+    "bytes": 22268340,
+    "allocated_before": 22269952,
+    "allocated_after": 9474048,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "results/colab_window_followup_20260911/window_followup/classifier_73.json",
+    "sha256": "0ad34500dbdc4096500dbce178f74d06392391bbb86e06a8fd22b6ad2dd85561",
+    "bytes": 1268873,
+    "allocated_before": 1269760,
+    "allocated_after": 528384,
+    "method": "native lossless filesystem compression"
+  },
+  {
+    "path": "notebooks/bit_demonstration from Colab.ipynb",
+    "sha256": "50af217567912172c06c2c6442459c1d05dcd70fbf31feb676b12199168e513e",
+    "bytes": 3510343,
+    "allocated_before": 3514368,
+    "allocated_after": 704512,
+    "method": "native lossless filesystem compression"
+  }
+]

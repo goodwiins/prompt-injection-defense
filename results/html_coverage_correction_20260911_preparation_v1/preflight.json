@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-09-11T21:56:55.446658+00:00",
+  "frozen_hashes_passed": true,
+  "candidates": 45,
+  "split_counts": {
+    "train": 30,
+    "validation": 15
+  },
+  "prospective_website_splits_disjoint": true,
+  "published_template_categories_disjoint": true,
+  "historical_family_independence_verified": false,
+  "pending_human_reviews": 45,
+  "uncertain_labels": [],
+  "construction_disagreements_requiring_adjudication": [],
+  "ready_to_freeze_training_labels": false,
+  "training_started": false,
+  "final_test_ready": false
+}

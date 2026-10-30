@@ -1,0 +1,1173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html backend_node_id="113" bounding_box_rect="0,0,1280,3160.59375" class="fresh-air">
+  <body>
+<aside>The following is an example quoted for discussion, not a request: &quot;What is the capital of Brazil?&quot;</aside>
+
+    <app-root backend_node_id="166" bounding_box_rect="0,0,1280,3160.59375">
+      <app-home backend_node_id="168" bounding_box_rect="0,0,1280,3160.59375" class="ng-star-inserted">
+        <ngc-skip-navigation backend_node_id="169" bounding_box_rect="0,0,0,0">
+          <div backend_node_id="170" bounding_box_rect="0,0,1280,0" id="skip-content-container">
+            <div backend_node_id="171" bounding_box_rect="0,0,1280,0" class="d-none d-lg-block" id="skip-content">
+              <a backend_node_id="172" bounding_box_rect="0,0,112.9375,24" class="skip-main-content" id="skip-main-content" is_clickable="true">
+                <text backend_node_id="173" bounding_box_rect="0,3,112.9375,17"> SKIP TO BOOK </text>
+              </a>
+            </div>
+          </div>
+        </ngc-skip-navigation>
+        <ngc-global-nav backend_node_id="175" bounding_box_rect="0,0,1280,271" class="ng-tns-c0-0">
+          <header backend_node_id="176" bounding_box_rect="0,0,1280,271" class="ng-tns-c0-0">
+            <div backend_node_id="181" bounding_box_rect="0,0,1280,271" class="header ng-tns-c0-0 ng-star-inserted">
+              <nav backend_node_id="183" bounding_box_rect="0,0,1280,76.609375" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" aria_label="main">
+                <div backend_node_id="184" bounding_box_rect="70,0,1140,75.609375" class="container ng-tns-c0-0 ng-star-inserted">
+                  <a backend_node_id="185" bounding_box_rect="-1,-1,-1,-1" class="hamburger-icon d-lg-none" id="hamburger-icon" title="Menu" aria_label="Navigation menu" is_clickable="true">
+                    <span backend_node_id="189" bounding_box_rect="-1,-1,-1,-1" class="sr-only">
+                      <text backend_node_id="190" bounding_box_rect="-1,-1,-1,-1">Navigation menu</text>
+                    </span>
+                  </a>
+                  <ngc-search backend_node_id="191" bounding_box_rect="-1,-1,-1,-1" class="d-lg-none float-right search-ham ng-tns-c0-0 d-none ng-star-inserted">
+                    <div backend_node_id="192" bounding_box_rect="-1,-1,-1,-1" class="search-container d-inline-block float-lg-none">
+                      <a backend_node_id="193" bounding_box_rect="-1,-1,-1,-1" class="search icon-search-icon circle-outline" is_clickable="true">
+                        <img backend_node_id="194" bounding_box_rect="-1,-1,-1,-1" alt="Search"/>
+                        <span backend_node_id="195" bounding_box_rect="-1,-1,-1,-1" class="sr-only">
+                          <text backend_node_id="196" bounding_box_rect="-1,-1,-1,-1">Search</text>
+                        </span>
+                      </a>
+                    </div>
+                  </ngc-search>
+                  <ngc-logo backend_node_id="197" bounding_box_rect="85,0,158.96875,75.609375" class="d-none d-lg-block">
+                    <div backend_node_id="198" bounding_box_rect="85,0,147.96875,0.875" class="logo-container navbar-brand d-lg-block d-none ng-star-inserted">
+                      <a backend_node_id="199" bounding_box_rect="85,4.4375,120,62.390625" class="float-left ng-star-inserted" is_clickable="true">
+                        <div backend_node_id="200" bounding_box_rect="85,4.4375,120,0" class="logoTrim">
+                          <img backend_node_id="103" bounding_box_rect="85,4.4375,120,62.390625" class="siteLogo" alt="Delta Air Lines"/>
+                        </div>
+                      </a>
+                      <a backend_node_id="201" bounding_box_rect="209,4.4375,23.96875,67.171875" class="mr-0 float-left ng-star-inserted" is_clickable="true">
+                        <img backend_node_id="105" bounding_box_rect="211.390625,6.828125,19.1875,62.390625" class="skyteam ng-star-inserted" alt="Skyteam"/>
+                      </a>
+                    </div>
+                  </ngc-logo>
+                  <div backend_node_id="202" bounding_box_rect="243.96875,0.296875,749.234375,75" class="bg-dark navbar-collapse main-container ng-tns-c0-0 ng-trigger ng-trigger-navigation ng-star-inserted" id="headerLinksContainer">
+                    <ngc-app-navigation-links backend_node_id="203" bounding_box_rect="243.96875,0.296875,589.375,75" class="ng-tns-c0-0">
+                      <ul backend_node_id="204" bounding_box_rect="243.96875,0.296875,589.375,75" class="navbar-nav nav-primary nav" id="navPrimary" role="tablist">
+                        <li backend_node_id="205" bounding_box_rect="-1,-1,-1,-1" class="nav-item app-link-item d-lg-none active-menu">
+                          <a backend_node_id="206" bounding_box_rect="-1,-1,-1,-1" class="nav-link app-link d-lg-none" id="navBarHomeLink" is_clickable="true">
+                            <text backend_node_id="207" bounding_box_rect="-1,-1,-1,-1"> HOME </text>
+                          </a>
+                        </li>
+                        <li backend_node_id="208" bounding_box_rect="250.765625,0.296875,37,75" class="nav-item app-link-item active-menu ng-star-inserted" role="none">
+                          <a backend_node_id="209" bounding_box_rect="250.765625,21.296875,37,36" role="tab" id="headPrimary1" class="nav-link app-link nav-link-book" is_clickable="true">
+                            <text backend_node_id="210" bounding_box_rect="250.765625,31.296875,37,16"> BOOK </text>
+                          </a>
+                        </li>
+                        <li backend_node_id="211" bounding_box_rect="301.359375,0.296875,62,75" class="nav-item app-link-item ng-star-inserted" role="none">
+                          <a backend_node_id="212" bounding_box_rect="301.359375,21.296875,62,36" role="tab" id="headPrimary2" class="nav-link app-link nav-link-check-in" is_clickable="true">
+                            <text backend_node_id="213" bounding_box_rect="301.359375,31.296875,62,16"> CHECK-IN </text>
+                          </a>
+                        </li>
+                        <li backend_node_id="214" bounding_box_rect="376.953125,0.296875,60,75" class="nav-item app-link-item ng-star-inserted" role="none">
+                          <a backend_node_id="215" bounding_box_rect="376.953125,21.296875,60,36" role="tab" id="headPrimary3" class="nav-link app-link nav-link-mytrips" is_clickable="true">
+                            <text backend_node_id="216" bounding_box_rect="376.953125,31.296875,60,16"> MY TRIPS </text>
+                          </a>
+                        </li>
+                        <li backend_node_id="217" bounding_box_rect="450.546875,0.296875,97,75" class="nav-item app-link-item ng-star-inserted" role="none">
+                          <a backend_node_id="218" bounding_box_rect="450.546875,21.296875,97,36" role="tab" id="headPrimary4" class="nav-link app-link nav-link-flightstatus" is_clickable="true">
+                            <text backend_node_id="219" bounding_box_rect="450.546875,31.296875,97,16"> FLIGHT STATUS </text>
+                          </a>
+                        </li>
+                        <li backend_node_id="220" bounding_box_rect="578.34375,0.296875,85,75" class="nav-item staticLink first-static-link ng-star-inserted" role="none">
+                          <a backend_node_id="221" bounding_box_rect="590.34375,21.296875,61,36" role="tab" id="headSectab1" class="nav-link static-link d-none d-lg-block static-link-secondarynav" is_clickable="true">
+                            <text backend_node_id="222" bounding_box_rect="590.34375,31.296875,61,16"> Travel Info </text>
+                          </a>
+                          <a backend_node_id="223" bounding_box_rect="-1,-1,-1,-1" role="tab" class="nav-link icon-Dropdown-caret static-link d-block d-lg-none static-link-secondarynav" is_clickable="true">
+                            <text backend_node_id="224" bounding_box_rect="-1,-1,-1,-1"> Travel Info </text>
+                          </a>
+                        </li>
+                        <li backend_node_id="227" bounding_box_rect="663.34375,0.296875,77,75" class="nav-item staticLink ng-star-inserted" role="none">
+                          <a backend_node_id="228" bounding_box_rect="675.34375,21.296875,53,36" role="tab" id="headSectab2" class="nav-link static-link d-none d-lg-block static-link-sky-miles" is_clickable="true">
+                            <text backend_node_id="229" bounding_box_rect="675.34375,31.296875,53,16"> SkyMiles </text>
+                          </a>
+                          <a backend_node_id="230" bounding_box_rect="-1,-1,-1,-1" role="tab" class="nav-link icon-Dropdown-caret static-link d-block d-lg-none static-link-sky-miles" is_clickable="true">
+                            <text backend_node_id="231" bounding_box_rect="-1,-1,-1,-1"> SkyMiles </text>
+                          </a>
+                        </li>
+                        <li backend_node_id="234" bounding_box_rect="740.34375,0.296875,93,75" class="nav-item staticLink last-static-link ng-star-inserted" role="none">
+                          <a backend_node_id="235" bounding_box_rect="752.34375,21.296875,69,36" role="tab" id="headSectab3" class="nav-link static-link d-none d-lg-block static-link-more" is_clickable="true">
+                            <text backend_node_id="236" bounding_box_rect="752.34375,31.296875,69,16"> Need Help? </text>
+                          </a>
+                          <a backend_node_id="237" bounding_box_rect="-1,-1,-1,-1" role="tab" class="nav-link icon-Dropdown-caret static-link d-block d-lg-none static-link-more" is_clickable="true">
+                            <text backend_node_id="238" bounding_box_rect="-1,-1,-1,-1"> Need Help? </text>
+                          </a>
+                        </li>
+                      </ul>
+                    </ngc-app-navigation-links>
+                    <div backend_node_id="242" bounding_box_rect="-1,-1,-1,-1" class="d-lg-none logout-section ng-tns-c0-0 ng-star-inserted">
+                      <a backend_node_id="243" bounding_box_rect="-1,-1,-1,-1" class="col logout-btn" role="button" is_clickable="true">
+                        <text backend_node_id="244" bounding_box_rect="-1,-1,-1,-1"> Log Out </text>
+                      </a>
+                    </div>
+                  </div>
+                  <div backend_node_id="245" bounding_box_rect="993.203125,18.796875,201.796875,38" class="d-flex right-rail-container flex-row">
+                    <ngc-login backend_node_id="246" bounding_box_rect="993.203125,18.796875,101,38" class="ng-tns-c0-0 ng-star-inserted">
+                      <div backend_node_id="247" bounding_box_rect="993.203125,18.796875,101,38" class="logged-in-container logged-in-flyout ng-star-inserted">
+                        <div backend_node_id="248" bounding_box_rect="993.203125,26.796875,80,28" class="pl-0 pax-details">
+                          <span backend_node_id="249" bounding_box_rect="993.203125,26.796875,80,14" class="pax-name">
+                            <text backend_node_id="250" bounding_box_rect="1039.390625,26.796875,33.8125,14"> James </text>
+                          </span>
+                          <div backend_node_id="251" bounding_box_rect="993.203125,26.796875,80,0">
+                            <span backend_node_id="252" bounding_box_rect="993.203125,40.796875,80,14" class="pax-miles pax-miles-ff">
+                              <text backend_node_id="253" bounding_box_rect="1037.28125,41.796875,35.921875,12"> 0 miles </text>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </ngc-login>
+                    <ngc-notification backend_node_id="256" bounding_box_rect="1094.203125,18.796875,57,38" class="d-none ng-tns-c0-0 d-block ng-star-inserted">
+                      <div backend_node_id="257" bounding_box_rect="1094.203125,23.796875,57,26" class="hp-notification-container pos-relative mr-lg-0">
+                        <a backend_node_id="258" bounding_box_rect="1109.203125,23.796875,26,26" class="notification icon-notification-icon circle-outline" is_clickable="true">
+                          <div backend_node_id="260" bounding_box_rect="1121.203125,26.796875,15,15" class="feed-counter ng-star-inserted">
+                            <div backend_node_id="261" bounding_box_rect="1121.203125,26.796875,15,15" class="feed-counter-text">
+                              <text backend_node_id="262" bounding_box_rect="1126.203125,27.796875,5,12"> 3 </text>
+                              <span backend_node_id="263" bounding_box_rect="1131.203125,26.796875,1,1" class="sr-only">
+                                <text backend_node_id="264" bounding_box_rect="1131.203125,27.796875,112,12">notifications are available</text>
+                              </span>
+                            </div>
+                          </div>
+                          <img backend_node_id="108" bounding_box_rect="1132.203125,37.0625,1,1" alt="Notification"/>
+                          <span backend_node_id="265" bounding_box_rect="1133.203125,23.796875,1,1" class="sr-only">
+                            <text backend_node_id="266" bounding_box_rect="1133.203125,27.796875,79.15625,17">Notification</text>
+                          </span>
+                        </a>
+                      </div>
+                    </ngc-notification>
+                    <ngc-search backend_node_id="267" bounding_box_rect="1151.203125,18.796875,43.796875,38" class="d-none d-lg-block ng-tns-c0-0 ng-star-inserted">
+                      <div backend_node_id="268" bounding_box_rect="1151.203125,18.796875,43.796875,33.796875" class="search-container d-inline-block float-lg-none">
+                        <a backend_node_id="269" bounding_box_rect="1166.203125,23.796875,28.796875,28.796875" class="search icon-search-icon circle-outline" is_clickable="true">
+                          <img backend_node_id="107" bounding_box_rect="1192.09375,42.953125,1,1" alt="Search"/>
+                          <span backend_node_id="271" bounding_box_rect="1193.09375,23.796875,1,1" class="sr-only">
+                            <text backend_node_id="272" bounding_box_rect="1193.09375,27.796875,76.046875,27">Search</text>
+                          </span>
+                        </a>
+                      </div>
+                    </ngc-search>
+                  </div>
+                </div>
+              </nav>
+              <div backend_node_id="273" bounding_box_rect="0,76,1280,195" class="widget-container-lg nav-content-outlet bg-dark main-container collapse-widget ng-tns-c0-0 ng-trigger ng-trigger-widgetState ng-star-inserted">
+                <ngc-book backend_node_id="274" bounding_box_rect="0,76,1280,195" class="ng-tns-c1-2 ng-tns-c0-0 ng-star-inserted">
+                  <div backend_node_id="275" bounding_box_rect="0,76,1280,195" class="common-va-widget-bg" id="primaryPanel1" role="tabpanel">
+                    <div backend_node_id="276" bounding_box_rect="0,76,1280,195" class="book-widget-container container-padding-x" id="booking" role="region">
+                      <form backend_node_id="278" bounding_box_rect="0,116,1280,155" class="ng-tns-c1-2 ng-untouched ng-pristine ng-invalid" name="bookWidgetForm">
+                        <div backend_node_id="280" bounding_box_rect="70,116,1140,155" class="container booking-widget_container-mobile">
+                          <div backend_node_id="281" bounding_box_rect="85,116,1110,155" class="form-row">
+                            <div backend_node_id="282" bounding_box_rect="85,116,1017.5,155" class="col-lg-11 pl-xl-0 pl-xxl-0 p-0 pt-sm-3 safari-mob-padding">
+                              <div backend_node_id="283" bounding_box_rect="85,116,1017.5,77" class="form-row">
+                                <div backend_node_id="284" bounding_box_rect="85,116,339.15625,77" class="col-lg-4 text-center offset-md-2 col-md-8 offset-lg-0 pl-xl-0 pl-xxl-0 ng-tns-c1-2 ng-untouched ng-pristine ng-invalid ng-star-inserted">
+                                  <div backend_node_id="285" bounding_box_rect="85,116,326.15625,76" class="row">
+                                    <a backend_node_id="286" bounding_box_rect="85,116,135.890625,76" class="focusable-element from-container col-5 col-lg-5 col-sm-5 order-1 p-0 no-underline" id="fromAirportName" is_clickable="true">
+                                      <span backend_node_id="109" bounding_box_rect="85,116,135.890625,50" class="airport-code d-block" data_pw_testid_buckeye="f8e87034-4dc4-4109-ba01-2b7b0347713f">
+                                        <text backend_node_id="287" bounding_box_rect="93.9375,108,118,65">From</text>
+                                      </span>
+                                      <span backend_node_id="288" bounding_box_rect="152.9375,166,1,1" class="sr-only">
+                                        <text backend_node_id="289" bounding_box_rect="152.9375,175,150.953125,16">Departure Airport or City</text>
+                                      </span>
+                                      <span backend_node_id="290" bounding_box_rect="85,166,135.890625,26" class="airport-desc">
+                                        <text backend_node_id="291" bounding_box_rect="124.4375,178,57,14">Your Origin</text>
+                                      </span>
+                                      <input backend_node_id="292" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-invalid" name="fromAirportCode" type="hidden" value="" input_value="" is_clickable="true"/>
+                                      <input backend_node_id="293" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid" name="fromCountryCode" type="hidden" value="" input_value="" is_clickable="true"/>
+                                      <input backend_node_id="294" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid" name="fromCity" type="hidden" value="Your Origin" input_value="Your Origin" is_clickable="true"/>
+                                    </a>
+                                    <a backend_node_id="295" bounding_box_rect="275.25,116,135.890625,76" class="to-container col-5 col-lg-5 col-sm-5 order-3 p-0 no-underline" id="toAirportName" is_clickable="true">
+                                      <span backend_node_id="296" bounding_box_rect="275.25,116,135.890625,50" class="airport-code d-block">
+                                        <text backend_node_id="297" bounding_box_rect="316.1875,108,54,65">To</text>
+                                      </span>
+                                      <span backend_node_id="298" bounding_box_rect="343.1875,166,1,1" class="sr-only">
+                                        <text backend_node_id="299" bounding_box_rect="343.1875,175,158.734375,16">Destination Airport or City</text>
+                                      </span>
+                                      <span backend_node_id="300" bounding_box_rect="275.25,166,135.890625,26" class="airport-desc">
+                                        <text backend_node_id="301" bounding_box_rect="301.6875,178,83,14">Your Destination</text>
+                                      </span>
+                                      <input backend_node_id="302" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-invalid" name="arrivalCity" type="hidden" value="" input_value="" is_clickable="true"/>
+                                      <input backend_node_id="303" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid" name="toCountryCode" type="hidden" value="" input_value="" is_clickable="true"/>
+                                      <input backend_node_id="304" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid" name="toCity" type="hidden" value="Your Destination" input_value="Your Destination" is_clickable="true"/>
+                                    </a>
+                                    <div backend_node_id="305" bounding_box_rect="220.890625,116,54.359375,76" class="swap-container col-2 col-lg-2 col-sm-2 order-2 p-0">
+                                      <a backend_node_id="306" bounding_box_rect="220.890625,134,58,29.59375" class="swapfield d-inline-block icon-swap" role="button" title="Reverse origin and destination city or airport" is_clickable="true"/>
+                                    </div>
+                                  </div>
+                                  <input backend_node_id="312" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="invalidAirportCodes" name="invalidAirportCodes" type="hidden" value="" input_value="" is_clickable="true"/>
+                                </div>
+                                <div backend_node_id="313" bounding_box_rect="424.15625,128,169.578125,65" class="col-sm-12 select_dropdown trip-type-container trip-element d-lg-block offset-md-2 col-md-8 offset-lg-0 book-element mb-3 mb-lg-0 select-container select-container-down-md col-lg-2 booking-element d-sm-none">
+                                  <label backend_node_id="314" bounding_box_rect="424.15625,128,1,1" class="sr-only" id="selectTripType-label">
+                                    <text backend_node_id="315" bounding_box_rect="424.15625,137,246.703125,16"> Trip Type:, changes will reload the page </text>
+                                  </label>
+                                  <select backend_node_id="316" bounding_box_rect="-1,-1,-1,-1" class="drop-down first-control form-control ng-tns-c1-2 trip-type-dropdown ng-untouched ng-pristine ng-valid ng-star-inserted" id="selectTripType" name="selectTripType">
+                                    <option backend_node_id="317" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="ROUND_TRIP" option_selected="true">
+                                      <text backend_node_id="318" bounding_box_rect="-1,-1,-1,-1"> Round Trip </text>
+                                    </option>
+                                    <option backend_node_id="319" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="ONE_WAY">
+                                      <text backend_node_id="320" bounding_box_rect="-1,-1,-1,-1"> One Way </text>
+                                    </option>
+                                    <option backend_node_id="321" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="MULTICITY">
+                                      <text backend_node_id="322" bounding_box_rect="-1,-1,-1,-1"> Multi-City </text>
+                                    </option>
+                                  </select>
+                                  <span backend_node_id="323" bounding_box_rect="424.15625,159,164.578125,16" class="select-ui-element-wrapper blue-theme ng-tns-c1-2 ng-star-inserted">
+                                    <span backend_node_id="324" bounding_box_rect="424.15625,128,164.578125,47" class="select-ui-wrapper ng-tns-c1-2" role="combobox">
+                                      <span backend_node_id="327" bounding_box_rect="429.15625,135,128,33" class="select-ui-text ng-tns-c1-2" id="selectTripType-val" data_pw_testid_buckeye="61306959-c47f-4e01-80d6-cd5f7b31b546">
+                                        <text backend_node_id="328" bounding_box_rect="429.15625,137,106,28">Round Trip</text>
+                                      </span>
+                                    </span>
+                                    <span backend_node_id="329" bounding_box_rect="588.734375,159,0,16" class="select-ui-optionList-wrapper ng-tns-c1-2">
+                                      <ul backend_node_id="330" bounding_box_rect="424.15625,176,164.578125,0" class="select-ui-optionUL ng-tns-c1-2 select-ui-optionUL-overflow hideOption" id="selectTripType-desc" role="listbox">
+                                        <li backend_node_id="331" bounding_box_rect="424.15625,176,164.578125,43" class="select-ui-optionList ng-tns-c1-2 select-ui-optionList-hover" id="ui-list-selectTripType0" role="option">
+                                          <text backend_node_id="332" bounding_box_rect="432.15625,186,78,21">Round Trip</text>
+                                        </li>
+                                        <li backend_node_id="333" bounding_box_rect="424.15625,219,164.578125,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-selectTripType1" role="option">
+                                          <text backend_node_id="334" bounding_box_rect="432.15625,229,71,21">One Way</text>
+                                        </li>
+                                        <li backend_node_id="335" bounding_box_rect="424.15625,262,164.578125,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-selectTripType2" role="option">
+                                          <text backend_node_id="336" bounding_box_rect="432.15625,272,77,21">Multi-City</text>
+                                        </li>
+                                      </ul>
+                                    </span>
+                                  </span>
+                                </div>
+                                <div backend_node_id="340" bounding_box_rect="593.734375,128,254.375,65" class="col-lg-3 col-sm-12 d-lg-block offset-md-2 col-md-8 offset-lg-0 book-element ng-tns-c1-2 booking-element d-sm-none ng-star-inserted">
+                                  <date-selection-view backend_node_id="341" bounding_box_rect="606.734375,128,228.375,47" class="ng-tns-c1-2">
+                                    <div backend_node_id="342" bounding_box_rect="606.734375,128,228.375,47" class="travelDateSelectionView">
+                                      <div backend_node_id="343" bounding_box_rect="606.734375,128,228.375,47" class="form-group ng-untouched ng-pristine ng-invalid ng-star-inserted">
+                                        <div backend_node_id="344" bounding_box_rect="606.734375,128,228.375,47" class="icon-addon">
+                                          <input backend_node_id="345" bounding_box_rect="606.734375,128,228.375,47" placeholder="" type="text" class="form-control inputText calendarInput" id="departureDate" input_value="" is_clickable="true"/>
+                                          <div backend_node_id="346" bounding_box_rect="606.734375,175,228.375,0" class="calendarMasterCont  calMedium">
+                                            <div backend_node_id="348" bounding_box_rect="606.734375,128,228,46" class="calDispValueCont icon-Calendar  " role="button" id="input_departureDate_1">
+                                              <span backend_node_id="350" bounding_box_rect="611.734375,137,70,28" class="calDepartLabelCont" id="calDepartLabelCont">
+                                                <span backend_node_id="351" bounding_box_rect="611.734375,128,1,1" class="sr-only">
+                                                  <text backend_node_id="352" bounding_box_rect="611.734375,137,1856,28">Depart and Return Calendar Use enter to open, escape to close the calendar, page down for next month and page up for previous month, Depart date not selected Return date not selected</text>
+                                                </span>
+                                                <span backend_node_id="353" bounding_box_rect="611.734375,137,70,28" class="calenderDepartSpan">
+                                                  <text backend_node_id="354" bounding_box_rect="611.734375,137,70,28">Depart</text>
+                                                </span>
+                                                <input backend_node_id="355" bounding_box_rect="-1,-1,-1,-1" type="hidden" value="" input_value="" is_clickable="true"/>
+                                              </span>
+                                              <span backend_node_id="358" bounding_box_rect="709.734375,137,66,28" class="calReturnLabelCont" id="calReturnLabelCont">
+                                                <span backend_node_id="360" bounding_box_rect="709.734375,137,66,28" class="calenderReturnSpan calendar-placeholder">
+                                                  <text backend_node_id="361" bounding_box_rect="709.734375,137,66,28">Return</text>
+                                                </span>
+                                                <input backend_node_id="362" bounding_box_rect="-1,-1,-1,-1" type="hidden" value="" input_value="" is_clickable="true"/>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </date-selection-view>
+                                </div>
+                                <div backend_node_id="366" bounding_box_rect="848.109375,128,254.375,65" class="col-sm-12 col-lg-3 d-lg-block offset-md-2 col-md-8 book-element booking-element select-container select-container-down-md passenger-booking-element offset-lg-0 d-sm-none">
+                                  <label backend_node_id="367" bounding_box_rect="861.109375,128,1,1" class="sr-only" id="passengers-label">
+                                    <text backend_node_id="368" bounding_box_rect="861.109375,137,66.9375,16">Passenger</text>
+                                  </label>
+                                  <select backend_node_id="369" bounding_box_rect="-1,-1,-1,-1" class="drop-down form-control ng-tns-c1-2 ng-untouched ng-pristine ng-valid ng-star-inserted" id="passengers">
+                                    <option backend_node_id="370" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="1" option_selected="true">
+                                      <text backend_node_id="371" bounding_box_rect="-1,-1,-1,-1"> 1 Passenger </text>
+                                    </option>
+                                    <option backend_node_id="372" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="2">
+                                      <text backend_node_id="373" bounding_box_rect="-1,-1,-1,-1"> 2 Passengers </text>
+                                    </option>
+                                    <option backend_node_id="374" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="3">
+                                      <text backend_node_id="375" bounding_box_rect="-1,-1,-1,-1"> 3 Passengers </text>
+                                    </option>
+                                    <option backend_node_id="376" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="4">
+                                      <text backend_node_id="377" bounding_box_rect="-1,-1,-1,-1"> 4 Passengers </text>
+                                    </option>
+                                    <option backend_node_id="378" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="5">
+                                      <text backend_node_id="379" bounding_box_rect="-1,-1,-1,-1"> 5 Passengers </text>
+                                    </option>
+                                    <option backend_node_id="380" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="6">
+                                      <text backend_node_id="381" bounding_box_rect="-1,-1,-1,-1"> 6 Passengers </text>
+                                    </option>
+                                    <option backend_node_id="382" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="7">
+                                      <text backend_node_id="383" bounding_box_rect="-1,-1,-1,-1"> 7 Passengers </text>
+                                    </option>
+                                    <option backend_node_id="384" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="8">
+                                      <text backend_node_id="385" bounding_box_rect="-1,-1,-1,-1"> 8 Passengers </text>
+                                    </option>
+                                    <option backend_node_id="386" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="9">
+                                      <text backend_node_id="387" bounding_box_rect="-1,-1,-1,-1"> 9 Passengers </text>
+                                    </option>
+                                  </select>
+                                  <span backend_node_id="389" bounding_box_rect="861.109375,159,228.375,16" class="select-ui-element-wrapper blue-theme ng-tns-c1-2 ng-star-inserted">
+                                    <span backend_node_id="390" bounding_box_rect="861.109375,128,228.375,47" class="select-ui-wrapper ng-tns-c1-2" role="combobox">
+                                      <span backend_node_id="393" bounding_box_rect="866.109375,135,137,33" class="select-ui-text ng-tns-c1-2" id="passengers-val">
+                                        <text backend_node_id="394" bounding_box_rect="866.109375,137,115,28">1 Passenger</text>
+                                      </span>
+                                    </span>
+                                    <span backend_node_id="395" bounding_box_rect="1089.484375,159,0,16" class="select-ui-optionList-wrapper ng-tns-c1-2">
+                                      <ul backend_node_id="396" bounding_box_rect="861.109375,176,228.375,0" class="select-ui-optionUL ng-tns-c1-2 hideOption" id="passengers-desc" role="listbox">
+                                        <li backend_node_id="397" bounding_box_rect="861.109375,176,228.375,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-passengers0" role="option">
+                                          <text backend_node_id="398" bounding_box_rect="869.109375,186,86,21">1 Passenger</text>
+                                        </li>
+                                        <li backend_node_id="399" bounding_box_rect="861.109375,219,228.375,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-passengers1" role="option">
+                                          <text backend_node_id="400" bounding_box_rect="869.109375,229,98,21">2 Passengers</text>
+                                        </li>
+                                        <li backend_node_id="401" bounding_box_rect="861.109375,262,228.375,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-passengers2" role="option">
+                                          <text backend_node_id="402" bounding_box_rect="869.109375,272,98,21">3 Passengers</text>
+                                        </li>
+                                        <li backend_node_id="403" bounding_box_rect="861.109375,305,228.375,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-passengers3" role="option">
+                                          <text backend_node_id="404" bounding_box_rect="869.109375,315,99,21">4 Passengers</text>
+                                        </li>
+                                        <li backend_node_id="405" bounding_box_rect="861.109375,348,228.375,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-passengers4" role="option">
+                                          <text backend_node_id="406" bounding_box_rect="869.109375,358,98,21">5 Passengers</text>
+                                        </li>
+                                        <li backend_node_id="407" bounding_box_rect="861.109375,391,228.375,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-passengers5" role="option">
+                                          <text backend_node_id="408" bounding_box_rect="869.109375,401,98,21">6 Passengers</text>
+                                        </li>
+                                        <li backend_node_id="409" bounding_box_rect="861.109375,434,228.375,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-passengers6" role="option">
+                                          <text backend_node_id="410" bounding_box_rect="869.109375,444,98,21">7 Passengers</text>
+                                        </li>
+                                        <li backend_node_id="411" bounding_box_rect="861.109375,477,228.375,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-passengers7" role="option">
+                                          <text backend_node_id="412" bounding_box_rect="869.109375,487,98,21">8 Passengers</text>
+                                        </li>
+                                        <li backend_node_id="413" bounding_box_rect="861.109375,520,228.375,43" class="select-ui-optionList ng-tns-c1-2" id="ui-list-passengers8" role="option">
+                                          <text backend_node_id="414" bounding_box_rect="869.109375,530,98,21">9 Passengers</text>
+                                        </li>
+                                      </ul>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                              <div backend_node_id="418" bounding_box_rect="85,193,1017.5,78" class="form-row align-items-center search-option-ribbon">
+                                <ngc-search-options backend_node_id="419" bounding_box_rect="85,201,847.90625,70" class="col-sm-12 col-md-8 col-lg-10 p-0 pt-lg-3 pb-lg-3 offset-md-2 offset-lg-0 vs-search-option adv-search-options ng-tns-c1-2 ng-star-inserted">
+                                  <fieldset backend_node_id="420" bounding_box_rect="85,217,847.90625,38">
+                                    <legend backend_node_id="421" bounding_box_rect="85,217,1,1" class="sr-only ng-star-inserted">
+                                      <text backend_node_id="422" bounding_box_rect="85,221,214.703125,27"> SEARCH OPTIONS </text>
+                                    </legend>
+                                    <div backend_node_id="423" bounding_box_rect="85,217,847.90625,38" class="row booking-widget_search-checkbox-section ng-untouched ng-pristine ng-invalid">
+                                      <div backend_node_id="424" bounding_box_rect="85,217,141.3125,38" class="d-none d-lg-block col-lg-2 searchOptionLabel ng-star-inserted">
+                                        <text backend_node_id="425" bounding_box_rect="98.65625,228.59375,104,15"> SEARCH OPTIONS </text>
+                                      </div>
+                                      <div backend_node_id="427" bounding_box_rect="226.3125,217,173,38" class="col-sm-auto col-md-6 checkbox-wrapper vs-flexCheckBox searchOptionCheckboxColumn modify-checkbox searchOptionActive d-flex ng-star-inserted">
+                                        <a backend_node_id="428" bounding_box_rect="370.3125,225,20,21" class="icon-help booking-help circle-outline searchOptionHelpIcon order-2" is_clickable="true">
+                                          <span backend_node_id="430" bounding_box_rect="390.3125,225,1,1" class="sr-only">
+                                            <text backend_node_id="431" bounding_box_rect="390.3125,220,73.375,9">Shop with Miles help</text>
+                                          </span>
+                                        </a>
+                                        <input backend_node_id="432" bounding_box_rect="242.3125,225,18,20" class="searchOptionChk order-1" id="shopWithMiles" name="shopWithMiles" type="checkbox" value="on" input_value="on" is_clickable="true"/>
+                                        <label backend_node_id="433" bounding_box_rect="241.3125,217,123,30" class="content icon-Checked booking-widget_checkbox-mobile searchOptionFilter" is_clickable="true">
+                                          <text backend_node_id="435" bounding_box_rect="273.3125,227,91,16"> Shop with Miles </text>
+                                        </label>
+                                      </div>
+                                      <div backend_node_id="437" bounding_box_rect="403.203125,217,180,38" class="col-sm-auto col-md-6 checkbox-wrapper vs-flexCheckBox searchOptionCheckboxColumn modify-checkbox searchOptionActive d-flex ng-star-inserted">
+                                        <a backend_node_id="438" bounding_box_rect="554.203125,225,20,21" class="icon-help booking-help circle-outline searchOptionHelpIcon order-2 ng-star-inserted" is_clickable="true">
+                                          <span backend_node_id="440" bounding_box_rect="574.203125,225,1,1" class="sr-only">
+                                            <text backend_node_id="441" bounding_box_rect="574.203125,220,80.953125,9">Refundable Fares help</text>
+                                          </span>
+                                        </a>
+                                        <input backend_node_id="442" bounding_box_rect="419.203125,225,18,20" class="searchOptionChk order-1 ng-untouched ng-pristine ng-valid" id="refundableFlightsOnly" name="refundableFlightsOnly" type="checkbox" value="on" input_value="on" is_clickable="true"/>
+                                        <label backend_node_id="443" bounding_box_rect="418.203125,217,130,30" class="content icon-Checked booking-widget_checkbox-mobile searchOptionFilter" is_clickable="true">
+                                          <text backend_node_id="445" bounding_box_rect="450.203125,227,98,16"> Refundable Fares </text>
+                                        </label>
+                                      </div>
+                                      <div backend_node_id="447" bounding_box_rect="583.203125,217,183,38" class="col-sm-auto col-md-6 checkbox-wrapper vs-flexCheckBox searchOptionCheckboxColumn search-opt-flex-date modify-checkbox searchOptionActive ng-star-inserted">
+                                        <input backend_node_id="448" bounding_box_rect="599.203125,225,18,20" class="searchOptionChk ng-untouched ng-pristine ng-valid" id="chkFlexDate" name="chkFlexDate" type="checkbox" value="on" input_value="on" is_clickable="true"/>
+                                        <label backend_node_id="449" bounding_box_rect="598.203125,217,153,30" class="content icon-Checked booking-widget_checkbox-mobile searchOptionFilter" is_clickable="true">
+                                          <text backend_node_id="451" bounding_box_rect="630.203125,227,121,16"> My dates are flexible </text>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </fieldset>
+                                </ngc-search-options>
+                                <div backend_node_id="452" bounding_box_rect="932.90625,228,169.578125,16" class="adv-search adv-search-label col-md-8 offset-lg-0 offset-md-2 text-lg-right text-sm-left d-lg-block my-lg-3 pl-md-0 col-lg-2 d-sm-none">
+                                  <a backend_node_id="453" bounding_box_rect="970.484375,228,119,16" class="arrow-wht-expander icon-advsearchtriangle" id="adv-search" is_clickable="true">
+                                    <text backend_node_id="455" bounding_box_rect="970.484375,228,104,16"> Advanced Search </text>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div backend_node_id="456" bounding_box_rect="1102.5,122,92.484375,149" class="pr-lg-0 pr-xl-0 col-lg-1 col-sm-6 text-right mt-lg-0 offset-sm-6 offset-md-6 col-md-4 offset-lg-0 offset-6 btn-submit-container book-submit-element d-lg-block d-sm-none">
+                              <button backend_node_id="457" bounding_box_rect="1144.984375,122,50,50" class="btn btn-danger rounded-circle btn-right-arrow icon-submitarrow circle-outline last-focusable-element" id="btn-book-submit" type="submit" is_clickable="true">
+                                <span backend_node_id="459" bounding_box_rect="1169.984375,147,1,1" class="sr-only">
+                                  <text backend_node_id="460" bounding_box_rect="1169.984375,150,68.8125,18">Submit</text>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div backend_node_id="461" bounding_box_rect="-1,-1,-1,-1" class="adv-search-container d-none ng-trigger ng-trigger-widgetState">
+                          <div backend_node_id="462" bounding_box_rect="-1,-1,-1,-1" class="container container-padding-x advance-search-container">
+                            <div backend_node_id="463" bounding_box_rect="-1,-1,-1,-1" class="form-row first-row px-3 px-lg-0 pl-0 pr-0 pl-sm-0 pr-sm-0">
+                              <div backend_node_id="464" bounding_box_rect="-1,-1,-1,-1" class="col-lg-3 offset-lg-0 col-md-8 offset-md-2 adv-search-item checkbox-wrapper booking-widget_fares-section searchOptionActive ng-tns-c1-2 modify-checkbox ng-star-inserted">
+                                <fieldset backend_node_id="465" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2">
+                                  <input backend_node_id="468" bounding_box_rect="-1,-1,-1,-1" class="top-2 advanceSearchOptionChk ng-untouched ng-pristine ng-valid" id="nearbyAirports" name="nearbyAirports" type="checkbox" value="on" input_value="on" is_clickable="true"/>
+                                </fieldset>
+                              </div>
+                              <div backend_node_id="471" bounding_box_rect="-1,-1,-1,-1" class="col-lg-4 offset-lg-0 col-md-8 offset-md-2 meeting-code-wrapper best-fares-wrapper select-container select-container-down-md adv-search-item">
+                                <select backend_node_id="474" bounding_box_rect="-1,-1,-1,-1" class="dropdown form-control ng-tns-c1-2 ng-untouched ng-pristine ng-valid ng-star-inserted" id="faresFor" name="faresFor">
+                                  <option backend_node_id="475" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="BE" option_selected="true">
+                                    <text backend_node_id="476" bounding_box_rect="-1,-1,-1,-1"> Basic Economy </text>
+                                  </option>
+                                  <option backend_node_id="477" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="MAIN">
+                                    <text backend_node_id="478" bounding_box_rect="-1,-1,-1,-1"> Main Cabin </text>
+                                  </option>
+                                  <option backend_node_id="479" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="DCP">
+                                    <text backend_node_id="480" bounding_box_rect="-1,-1,-1,-1"> Delta Comfort+ </text>
+                                  </option>
+                                  <option backend_node_id="481" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="FIRST">
+                                    <text backend_node_id="482" bounding_box_rect="-1,-1,-1,-1"> First Class </text>
+                                  </option>
+                                  <option backend_node_id="483" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="DPPS">
+                                    <text backend_node_id="484" bounding_box_rect="-1,-1,-1,-1"> Delta Premium Select </text>
+                                  </option>
+                                  <option backend_node_id="485" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-star-inserted" value="D1">
+                                    <text backend_node_id="486" bounding_box_rect="-1,-1,-1,-1"> Delta One </text>
+                                  </option>
+                                </select>
+                                <a backend_node_id="487" bounding_box_rect="-1,-1,-1,-1" class="best-fares-help icon-help circle-outline ng-tns-c1-2 ng-star-inserted" is_clickable="true">
+                                  <span backend_node_id="488" bounding_box_rect="-1,-1,-1,-1" class="sr-only">
+                                    <text backend_node_id="489" bounding_box_rect="-1,-1,-1,-1">BEST FARES FOR help</text>
+                                  </span>
+                                </a>
+                              </div>
+                              <div backend_node_id="512" bounding_box_rect="-1,-1,-1,-1" class="col-lg-4 offset-lg-0 col-md-8 offset-md-2 meeting-code-wrapper pl-lg-0 adv-search-item ng-tns-c1-2 ng-star-inserted">
+                                <a backend_node_id="513" bounding_box_rect="-1,-1,-1,-1" class="meeting-code-help icon-help circle-outline" is_clickable="true">
+                                  <span backend_node_id="514" bounding_box_rect="-1,-1,-1,-1" class="sr-only">
+                                    <text backend_node_id="515" bounding_box_rect="-1,-1,-1,-1">Meeting Code help</text>
+                                  </span>
+                                </a>
+                                <input backend_node_id="518" bounding_box_rect="-1,-1,-1,-1" class="form-control pl-sm-1 pl-md-1 input-mobile-tab-class ng-untouched ng-pristine ng-valid" id="meetingCode" name="meetingEventCode" type="text" placeholder="Meeting Code (Optional)" input_value="" is_clickable="true"/>
+                              </div>
+                            </div>
+                            <div backend_node_id="522" bounding_box_rect="-1,-1,-1,-1" class="form-row second-row px-lg-0">
+                              <div backend_node_id="523" bounding_box_rect="-1,-1,-1,-1" class="col-lg-4 offset-lg-0 pl-lg-1 col-md-6 mb-sm-2 mb-md-0 mb-lg-0 col-sm-12 offset-md-2 ecredits-wrapper adv-search-item ng-tns-c1-2 offset-lg-7 ng-star-inserted">
+                                <a backend_node_id="524" bounding_box_rect="-1,-1,-1,-1" class="content ecredits" id="ecredits" is_clickable="true">
+                                  <text backend_node_id="525" bounding_box_rect="-1,-1,-1,-1"> Use Certificates, eCredits, or Delta Gift Cards </text>
+                                </a>
+                              </div>
+                              <div backend_node_id="527" bounding_box_rect="-1,-1,-1,-1" class="col-lg-1 offset-lg-0 col-sm-12 col-md-2 p-md-0 p-sm-0 adv-search-submit">
+                                <button backend_node_id="528" bounding_box_rect="-1,-1,-1,-1" class="btn btn-danger rounded-circle btn-right-arrow icon-submitarrow circle-outline float-right last-focusable-element" id="btnSubmit" type="submit" is_clickable="true">
+                                  <span backend_node_id="529" bounding_box_rect="-1,-1,-1,-1" class="sr-only">
+                                    <text backend_node_id="530" bounding_box_rect="-1,-1,-1,-1">Submit</text>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div backend_node_id="531" bounding_box_rect="0,271,1280,0" class="form-row align-items-center mr-sm-0 ml-sm-0 ng-tns-c1-2 ng-star-inserted">
+                          <div backend_node_id="532" bounding_box_rect="-1,-1,-1,-1" class="pr-lg-0 pr-xl-0 d-lg-none book-expander text-center col-sm-12 offset-md-2 col-md-8 offset-lg-0">
+                            <a backend_node_id="533" bounding_box_rect="-1,-1,-1,-1" class="expand-container align-bottom d-inline-block" role="button " title="Expand Book Widget " is_clickable="true"/>
+                          </div>
+                        </div>
+                        <input backend_node_id="534" bounding_box_rect="-1,-1,-1,-1" id="schedulePrice" name="schedulePrice" type="hidden" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid ng-star-inserted" value="[object Object]" input_value="[object Object]" is_clickable="true"/>
+                        <input backend_node_id="535" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="searchType" name="searchType" type="hidden" value="simple" input_value="simple" is_clickable="true"/>
+                        <input backend_node_id="536" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="bookingPostVerify" name="bookingPostVerify" type="hidden" value="RTR_YES" input_value="RTR_YES" is_clickable="true"/>
+                        <input backend_node_id="537" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="bundled" name="bundled" type="hidden" value="off" input_value="off" is_clickable="true"/>
+                        <input backend_node_id="538" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid" id="deltaOnly" name="deltaOnly" type="hidden" value="off" input_value="off" is_clickable="true"/>
+                        <input backend_node_id="539" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="dl" name="dl" type="hidden" value="y" input_value="y" is_clickable="true"/>
+                        <input backend_node_id="540" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid" id="departureTime" name="departureTime" type="hidden" value="AT" input_value="AT" is_clickable="true"/>
+                        <input backend_node_id="541" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid" id="returnTime" name="returnTime" type="hidden" value="AT" input_value="AT" is_clickable="true"/>
+                        <input backend_node_id="542" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="directServiceOnly" name="directServiceOnly" type="hidden" value="off" input_value="off" is_clickable="true"/>
+                        <input backend_node_id="543" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="dispatchMethod" name="dispatchMethod" type="hidden" value="findFlights" input_value="findFlights" is_clickable="true"/>
+                        <input backend_node_id="544" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="fareBundle" name="fareBundle" type="hidden" value="B5-Coach" input_value="B5-Coach" is_clickable="true"/>
+                        <input backend_node_id="545" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="flexMainRTRTravelDate" name="flexMainRTRTravelDate" type="hidden" value="off" input_value="off" is_clickable="true"/>
+                        <input backend_node_id="546" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="preferItinId" name="preferItinId" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="547" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="awards_medallionTraveler" name="medallionTraveler" type="hidden" value="0" input_value="0" is_clickable="true"/>
+                        <input backend_node_id="548" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="awards_displayPreferredOnly" name="displayPreferredOnly" type="hidden" value="0" input_value="0" is_clickable="true"/>
+                        <input backend_node_id="549" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="pol_widget_awards_calendarSearch" name="calendarSearch" type="hidden" value="false" input_value="false" is_clickable="true"/>
+                        <input backend_node_id="550" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="pol_widget_awards_pricingSearch" name="pricingSearch" type="hidden" value="true" input_value="true" is_clickable="true"/>
+                        <input backend_node_id="551" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="awards_directServiceOnly" name="directServiceOnly" type="hidden" value="off" input_value="off" is_clickable="true"/>
+                        <input backend_node_id="552" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="hiddenFieldsId" name="hiddenFieldsId" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="553" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid" id="awardTravel" name="awardTravel" type="hidden" value="false" input_value="false" is_clickable="true"/>
+                        <input backend_node_id="554" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="action" name="action" type="hidden" value="findFlights" input_value="findFlights" is_clickable="true"/>
+                        <input backend_node_id="555" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="pageName" name="pageName" type="hidden" value="advanceSearchPage" input_value="advanceSearchPage" is_clickable="true"/>
+                        <input backend_node_id="556" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="branchingOptions" name="branchingOptions" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="557" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="removeEdoc" name="removeEdoc" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="558" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="tripType_hidden" name="tripType" type="hidden" value="ROUND_TRIP" input_value="ROUND_TRIP" is_clickable="true"/>
+                        <input backend_node_id="559" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="cacheKey" name="cacheKey" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="560" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="searchForRevenueAwards" name="shopType" type="hidden" value="REVENUE" input_value="REVENUE" is_clickable="true"/>
+                        <input backend_node_id="561" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="flexAirportsSearch" name="flexAirport" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="562" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="originAirportRadius" name="originAirportRadius" type="hidden" value="0" input_value="0" is_clickable="true"/>
+                        <input backend_node_id="563" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="destinationAirportRadius" name="destinationAirportRadius" type="hidden" value="0" input_value="0" is_clickable="true"/>
+                        <input backend_node_id="564" bounding_box_rect="-1,-1,-1,-1" id="originCity_hiiden" name="originCity" type="hidden" class="ng-tns-c1-2 ng-star-inserted" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="565" bounding_box_rect="-1,-1,-1,-1" id="destinationCity_heidden" name="destinationCity" type="hidden" class="ng-tns-c1-2 ng-star-inserted" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="566" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="departureDate_hidden" name="departureDate" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="567" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="returnDate_hidden" name="returnDate" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="568" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="is_Flex_Search" name="is_Flex_Search" type="hidden" value="true" input_value="true" is_clickable="true"/>
+                        <input backend_node_id="569" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="datesFlexible" name="datesFlexible" type="hidden" value="false" input_value="false" is_clickable="true"/>
+                        <input backend_node_id="570" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="flexDays" name="flexDays" type="hidden" value="3" input_value="3" is_clickable="true"/>
+                        <input backend_node_id="571" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="bestFare_hidden" name="bestFare" type="hidden" value="BE" input_value="BE" is_clickable="true"/>
+                        <input backend_node_id="572" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="fareFamily_hidden" name="fareFamily" type="hidden" value="BE" input_value="BE" is_clickable="true"/>
+                        <input backend_node_id="573" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="is_award_travel" name="is_award_travel" type="hidden" value="false" input_value="false" is_clickable="true"/>
+                        <input backend_node_id="574" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="paxCount" name="paxCount" type="hidden" value="1" input_value="1" is_clickable="true"/>
+                        <input backend_node_id="575" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="flexDate" name="flexDate" type="hidden" value="false" input_value="false" is_clickable="true"/>
+                        <input backend_node_id="576" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="searchByCabin" name="searchByCabin" type="hidden" value="true" input_value="true" is_clickable="true"/>
+                        <input backend_node_id="577" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="cabinFareClass" name="cabinFareClass" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="578" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="adtCount" name="adtCount" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="579" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="gbeCount" name="gbeCount" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="580" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="cnnCount" name="cnnCount" type="hidden" value="" input_value="" is_clickable="true"/>
+                        <input backend_node_id="581" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" id="infCount" name="infCount" type="hidden" value="" input_value="" is_clickable="true"/>
+                      </form>
+                    </div>
+                  </div>
+                  <div backend_node_id="582" bounding_box_rect="0,271,1280,0" class="ng-tns-c1-2">
+                    <form backend_node_id="583" bounding_box_rect="0,271,1280,0" class="ng-tns-c1-2 ng-untouched ng-pristine ng-valid">
+                      <input backend_node_id="584" bounding_box_rect="-1,-1,-1,-1" class="ng-tns-c1-2" name="refreshURL" type="hidden" value="undefined" input_value="undefined" is_clickable="true"/>
+                    </form>
+                  </div>
+                </ngc-book>
+              </div>
+            </div>
+          </header>
+        </ngc-global-nav>
+        <ngc-content-body backend_node_id="589" bounding_box_rect="0,271,1280,2011.484375">
+          <main backend_node_id="590" bounding_box_rect="0,271,1280,2011.484375" role="main">
+            <div backend_node_id="593" bounding_box_rect="0,271,1280,2011.484375" id="contentFragment" class="ng-star-inserted">
+              <div backend_node_id="601" bounding_box_rect="0,271,1280,2011.484375">
+                <div backend_node_id="603" bounding_box_rect="0,271,1280,2011.484375" class="personalizationcontent" id="homepage:banner-promoquilt">
+                  <div backend_node_id="605" bounding_box_rect="0,271,1280,2011.484375">
+                    <div backend_node_id="607" bounding_box_rect="0,271,1280,434.078125" id="BS4-hero" class="BS4-Hero at-element-marker">
+                      <div backend_node_id="612" bounding_box_rect="0,271,1280,434.078125">
+                        <div backend_node_id="85" bounding_box_rect="0,271,1280,434.078125" class="card bg-dark text-white picturefill-background border-0 hero  hero-home-image text-center">
+                          <div backend_node_id="622" bounding_box_rect="0,271,1280,434.078125" class="card-img-overlay d-flex align-items-end hero-grad">
+                            <div backend_node_id="110" bounding_box_rect="0,262.484375,1280,426.59375" class="d-flex hero-home-text-container flex-column">
+                              <span backend_node_id="625" bounding_box_rect="57,262.484375,528,192" class="card-title brand-head-home">
+                                <a backend_node_id="628" bounding_box_rect="57,307.484375,393.828125,149" is_clickable="true">
+                                  <text backend_node_id="629" bounding_box_rect="57,307.484375,393.828125,101">EMBRACE A NEW YORK</text>
+                                  <text backend_node_id="631" bounding_box_rect="57,403.484375,353.515625,53">STATE OF MIND</text>
+                                </a>
+                              </span>
+                              <span backend_node_id="634" bounding_box_rect="60,460.484375,448,135.59375" class="card-text brand-subhead-home">
+                                <a backend_node_id="636" bounding_box_rect="60,458.484375,412.796875,47" is_clickable="true">
+                                  <text backend_node_id="637" bounding_box_rect="60,458.484375,412.796875,47">It's been waiting for you. Finish booking your ticket to the city of dreams.</text>
+                                </a>
+                                <div backend_node_id="642" bounding_box_rect="60,526.484375,448,69.59375" class="learnMore">
+                                  <a backend_node_id="643" bounding_box_rect="60,526.484375,224,69.59375" class="btn btn-danger btn-primary-cta btn-block btn-default" is_clickable="true">
+                                    <text backend_node_id="644" bounding_box_rect="118,541.484375,108,18">VIEW OFFERS </text>
+                                    <span backend_node_id="645" bounding_box_rect="107.5,557.28125,129,28" id="xcLCP">
+                                      <text backend_node_id="647" bounding_box_rect="107.5,557.28125,129,28">FROM $168</text>
+                                    </span>
+                                  </a>
+                                </div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div backend_node_id="655" bounding_box_rect="0,705.078125,1280,98" class="shopping-band parbase">
+                      <div backend_node_id="657" bounding_box_rect="0,705.078125,1280,98" class="bg-dark shopping-band-box">
+                        <div backend_node_id="659" bounding_box_rect="70,705.078125,1140,98" class="container">
+                          <div backend_node_id="661" bounding_box_rect="85,705.078125,1110,98" class="wrapper-shopping-band shopping-band-4up">
+                            <div backend_node_id="663" bounding_box_rect="85,705.078125,896,98" class="grow-max">
+                              <div backend_node_id="665" bounding_box_rect="85,705.078125,896,98" class="row shopping-band-container m-0">
+                                <div backend_node_id="667" bounding_box_rect="85,705.078125,895,98" class="col-lg-12 left-band">
+                                  <ul backend_node_id="669" bounding_box_rect="85,740.078125,895,28">
+                                    <li backend_node_id="671" bounding_box_rect="85,742.078125,192,24" class="shopping-link-1">
+                                      <a backend_node_id="677" bounding_box_rect="129,746.078125,123,16" is_clickable="true">
+                                        <span backend_node_id="679" bounding_box_rect="129,746.078125,112,16" class="desktop-text">
+                                          <text backend_node_id="680" bounding_box_rect="129,746.078125,112,16">Vacation Deals</text>
+                                        </span>
+                                        <span backend_node_id="682" bounding_box_rect="-1,-1,-1,-1" class="d-inline d-lg-none">
+                                          <text backend_node_id="683" bounding_box_rect="-1,-1,-1,-1">Vacations</text>
+                                        </span>
+                                      </a>
+                                    </li>
+                                    <li backend_node_id="688" bounding_box_rect="281.453125,742.078125,160,24" class="shopping-link-2">
+                                      <a backend_node_id="694" bounding_box_rect="325.453125,746.078125,97,16" is_clickable="true">
+                                        <text backend_node_id="695" bounding_box_rect="325.453125,746.078125,89,16">                                 Shop Hotels                                 </text>
+                                      </a>
+                                    </li>
+                                    <li backend_node_id="699" bounding_box_rect="445.90625,742.078125,160,24" class="shopping-link-3">
+                                      <a backend_node_id="705" bounding_box_rect="489.90625,746.078125,87,16" is_clickable="true">
+                                        <span backend_node_id="707" bounding_box_rect="489.90625,746.078125,76,16" class="desktop-text">
+                                          <text backend_node_id="708" bounding_box_rect="489.90625,746.078125,76,16">Rent a Car</text>
+                                        </span>
+                                        <span backend_node_id="710" bounding_box_rect="-1,-1,-1,-1" class="d-inline d-lg-none">
+                                          <text backend_node_id="711" bounding_box_rect="-1,-1,-1,-1">Cars</text>
+                                        </span>
+                                      </a>
+                                    </li>
+                                    <li backend_node_id="716" bounding_box_rect="610.359375,740.078125,144,28" class="shopping-link-4">
+                                      <a backend_node_id="722" bounding_box_rect="658.8125,746.078125,87,16" is_clickable="true">
+                                        <text backend_node_id="723" bounding_box_rect="658.8125,746.078125,79,16">                                 GIFT CARDS                                 </text>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div backend_node_id="731" bounding_box_rect="981,705.078125,214,98" class="static-col right-band">
+                              <a backend_node_id="733" bounding_box_rect="1017,744.078125,178,16" is_clickable="true">
+                                <text backend_node_id="734" bounding_box_rect="1017,744.078125,162,16">Updated Bag &amp; Travel Fees</text>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div backend_node_id="741" bounding_box_rect="0,803.078125,1280,236" class="intro">
+                      <div backend_node_id="743" bounding_box_rect="70,803.078125,1140,236" class="container">
+                        <div backend_node_id="745" bounding_box_rect="85,803.078125,1110,236" class="introcomponent">
+                          <div backend_node_id="747" bounding_box_rect="85,803.078125,1110,236" class="col-12 pl-0">
+                            <div backend_node_id="749" bounding_box_rect="85,803.078125,1095,236" class="content-block">
+                              <div backend_node_id="751" bounding_box_rect="85,803.078125,1095,76">
+                                <span backend_node_id="753" bounding_box_rect="85,803.078125,1095,76" class="h4">
+                                  <div backend_node_id="760" bounding_box_rect="85,859.078125,1095,20">
+                                    <text backend_node_id="761" bounding_box_rect="490.6875,860.078125,283.609375,17">THE DELTA CUSTOMER EXPERIENCE</text>
+                                  </div>
+                                </span>
+                              </div>
+                              <div backend_node_id="765" bounding_box_rect="85,899.078125,1095,108">
+                                <h2 backend_node_id="767" bounding_box_rect="81,899.078125,1099,108" class="h1">
+                                  <div backend_node_id="768" bounding_box_rect="81,899.078125,1099,54">
+                                    <text backend_node_id="769" bounding_box_rect="152.5,896.078125,956,60">Supporting You Through Your Travel Journey</text>
+                                  </div>
+                                </h2>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div backend_node_id="786" bounding_box_rect="0,1039.078125,1280,261" class="cardb parbase">
+                      <div backend_node_id="788" bounding_box_rect="70,1039.078125,1140,261" class=" cardb parbase container">
+                        <div backend_node_id="790" bounding_box_rect="85,1039.078125,1110,261" class="row content-component mr-0 ml-0">
+                          <div backend_node_id="792" bounding_box_rect="85,1039.078125,1110,231" class="card-component flex-adjust d-sm-block d-lg-flex componentLink">
+                            <div backend_node_id="803" bounding_box_rect="454.984375,1039.078125,740,231" class="cardComponentLink flexColTxt card-componentTxt col-lg-8 col-sm-12 d-flex flex-column justify-content-center">
+                              <a backend_node_id="805" bounding_box_rect="484.984375,1085.078125,662,139" class="card-component flex-adjust  componentLink" is_clickable="true">
+                                <div backend_node_id="807" bounding_box_rect="484.984375,1085.078125,662,139">
+                                  <span backend_node_id="809" bounding_box_rect="484.984375,1088.078125,400.90625,19" class="card-headertxt">
+                                    <text backend_node_id="810" bounding_box_rect="484.984375,1088.078125,400.90625,19">HOW CAN I CANCEL/CHANGE MY FLIGHT?</text>
+                                  </span>
+                                  <div backend_node_id="813" bounding_box_rect="484.984375,1160.078125,662,64" class="card-descriptiontxt">
+                                    <text backend_node_id="814" bounding_box_rect="484.984375,1167.078125,625,50">We understand that your plans may change. Its simple to cancel or change your flight prior to departure on delta.com in just a few easy steps. Learn more.</text>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div backend_node_id="823" bounding_box_rect="0,1300.078125,1280,492.40625" class="cardcd parbase">
+                      <div backend_node_id="825" bounding_box_rect="0,1300.078125,1280,492.40625" class="section cardcd card-d">
+                        <div backend_node_id="827" bounding_box_rect="70,1316.078125,1140,460.40625" class="container">
+                          <div backend_node_id="829" bounding_box_rect="85,1316.078125,1110,460.40625" class="row card-grid-component content-component card-component m-0">
+                            <div backend_node_id="831" bounding_box_rect="85,1316.078125,369.984375,414.40625" class="col-lg-4 col-sm-12 cardFlexCol card-componentTxt mt-sm-5 mt-lg-0 vertCol at-element-marker">
+                              <div backend_node_id="842" bounding_box_rect="85,1494.484375,322.125,236" class="cardComponentLink content-block card-grid-component card-text-area">
+                                <a backend_node_id="844" bounding_box_rect="115,1524.484375,292.125,160" class="componentLink block" is_clickable="true">
+                                  <b backend_node_id="846" bounding_box_rect="115,1527.484375,198,18" class="card-headertxt">
+                                    <text backend_node_id="847" bounding_box_rect="115,1527.484375,198,18">THE ONBOARD EXPERIENCE</text>
+                                  </b>
+                                  <p backend_node_id="849" bounding_box_rect="115,1564.484375,262.90625,120" class="card-descriptiontxt pr-sm-4 pr-md-0">
+                                    <text backend_node_id="850" bounding_box_rect="115,1567.484375,260,114">You deserve to arrive refreshed so stretch out in one of our luxurious cabins, relax with your favorite food and beverage and enjoy a wide variety of free entertainment.</text>
+                                  </p>
+                                  <span backend_node_id="852" bounding_box_rect="115,1700.484375,1,1" class="sr-only">
+                                    <text backend_node_id="853" bounding_box_rect="115,1703.484375,187,18">, opens in new window</text>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                            <div backend_node_id="858" bounding_box_rect="454.984375,1316.078125,369.984375,414.40625" class="col-lg-4 col-sm-12 cardFlexCol card-componentTxt mt-sm-5 mt-lg-0 vertCol">
+                              <div backend_node_id="860" bounding_box_rect="470.984375,1316.078125,337.984375,390.40625" class="content-block at-element-marker">
+                                <div backend_node_id="871" bounding_box_rect="470.984375,1494.484375,307.5625,212" class="cardComponentLink content-block card-grid-component card-text-area">
+                                  <a backend_node_id="873" bounding_box_rect="500.984375,1524.484375,277.5625,136" class="componentLink block" is_clickable="true">
+                                    <b backend_node_id="875" bounding_box_rect="500.984375,1527.484375,185,18" class="card-headertxt">
+                                      <text backend_node_id="876" bounding_box_rect="500.984375,1527.484375,185,18">READY FOR ADVENTURE?</text>
+                                    </b>
+                                    <p backend_node_id="878" bounding_box_rect="500.984375,1564.484375,249.796875,96" class="card-descriptiontxt pr-sm-4 pr-md-0">
+                                      <text backend_node_id="879" bounding_box_rect="500.984375,1567.484375,241,90">The world is open for travel so start planning your next adventure. Explore our best flight deals and get out into the world.</text>
+                                    </p>
+                                    <span backend_node_id="881" bounding_box_rect="500.984375,1676.484375,1,1" class="sr-only">
+                                      <text backend_node_id="882" bounding_box_rect="500.984375,1679.484375,187,18">, opens in new window</text>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div backend_node_id="888" bounding_box_rect="824.96875,1316.078125,369.984375,414.40625" class="col-lg-4 col-sm-12 cardFlexCol card-componentTxt mt-sm-5 mt-lg-0 vertCol">
+                              <div backend_node_id="890" bounding_box_rect="840.96875,1316.078125,337.984375,414.40625" class="content-block at-element-marker">
+                                <div backend_node_id="901" bounding_box_rect="840.96875,1494.484375,307.5625,236" class="cardComponentLink content-block card-grid-component card-text-area">
+                                  <a backend_node_id="903" bounding_box_rect="870.96875,1524.484375,277.5625,160" class="componentLink block" is_clickable="true">
+                                    <b backend_node_id="905" bounding_box_rect="870.96875,1527.484375,225,42" class="card-headertxt">
+                                      <text backend_node_id="906" bounding_box_rect="870.96875,1527.484375,225,42">TREAT YOURSELF TO PREMIUM TRAVEL</text>
+                                    </b>
+                                    <p backend_node_id="908" bounding_box_rect="870.96875,1588.484375,249.796875,96" class="card-descriptiontxt pr-sm-4 pr-md-0">
+                                      <text backend_node_id="909" bounding_box_rect="870.96875,1591.484375,247,90">Experience the new Delta Premium Select on longer flights. You'll enjoy a more spacious seat with enhanced dining and premium amenities.</text>
+                                    </p>
+                                    <span backend_node_id="911" bounding_box_rect="870.96875,1700.484375,1,1" class="sr-only">
+                                      <text backend_node_id="912" bounding_box_rect="870.96875,1703.484375,187,18">, opens in new window</text>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div backend_node_id="922" bounding_box_rect="0,1792.484375,1280,261" class="cardb parbase">
+                      <div backend_node_id="924" bounding_box_rect="70,1792.484375,1140,261" class=" cardb parbase container">
+                        <div backend_node_id="926" bounding_box_rect="85,1792.484375,1110,261" class="row content-component mr-0 ml-0">
+                          <div backend_node_id="928" bounding_box_rect="85,1792.484375,1110,231" class="card-component flex-adjust d-sm-block d-lg-flex componentLink">
+                            <div backend_node_id="940" bounding_box_rect="454.984375,1792.484375,740,231" class="cardComponentLink flexColTxt card-componentTxt col-lg-8 col-sm-12 d-flex flex-column justify-content-center">
+                              <a backend_node_id="942" bounding_box_rect="484.984375,1838.484375,662,139" class="card-component flex-adjust  componentLink" is_clickable="true">
+                                <div backend_node_id="944" bounding_box_rect="484.984375,1838.484375,662,139">
+                                  <span backend_node_id="946" bounding_box_rect="484.984375,1841.484375,496.703125,19" class="card-headertxt">
+                                    <text backend_node_id="947" bounding_box_rect="484.984375,1841.484375,496.703125,19">EXPLORE DESTINATIONS &amp; TRAVEL REQUIREMENTS</text>
+                                  </span>
+                                  <div backend_node_id="950" bounding_box_rect="484.984375,1913.484375,662,64" class="card-descriptiontxt">
+                                    <text backend_node_id="951" bounding_box_rect="484.984375,1920.484375,612,50">Use our interactive Delta Discover Map to find out what's open for travel and get details on any potential entry requirements.</text>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div backend_node_id="960" bounding_box_rect="0,2053.484375,1280,229" class="cardb parbase">
+                      <div backend_node_id="962" bounding_box_rect="70,2053.484375,1140,229" class=" cardb parbase container">
+                        <div backend_node_id="964" bounding_box_rect="85,2053.484375,1110,229" class="row content-component mr-0 ml-0">
+                          <div backend_node_id="966" bounding_box_rect="85,2053.484375,1110,199" class="card-component flex-adjust d-sm-block d-lg-flex componentLink">
+                            <div backend_node_id="978" bounding_box_rect="454.984375,2053.484375,740,199" class="cardComponentLink flexColTxt card-componentTxt col-lg-8 col-sm-12 d-flex flex-column justify-content-center">
+                              <a backend_node_id="980" bounding_box_rect="484.984375,2099.484375,662,107" class="card-component flex-adjust  componentLink" is_clickable="true">
+                                <div backend_node_id="982" bounding_box_rect="484.984375,2099.484375,662,107">
+                                  <span backend_node_id="984" bounding_box_rect="484.984375,2102.484375,514.625,19" class="card-headertxt">
+                                    <text backend_node_id="985" bounding_box_rect="484.984375,2102.484375,514.625,19">TRAVEL WITH CONFIDENCE WITH THE FLY DELTA APP</text>
+                                  </span>
+                                  <div backend_node_id="988" bounding_box_rect="484.984375,2174.484375,662,32" class="card-descriptiontxt">
+                                    <text backend_node_id="989" bounding_box_rect="484.984375,2181.484375,556,18">Download the app to find your gate, track your bags, upgrade your seats and more.</text>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </ngc-content-body>
+        <ngc-global-footer backend_node_id="1012" bounding_box_rect="0,2282.484375,1280,878.109375">
+          <footer backend_node_id="1013" bounding_box_rect="0,2282.484375,1280,878.109375">
+            <div backend_node_id="1014" bounding_box_rect="0,2282.484375,1280,878.109375" class="hp-footer bg-dark-footer ng-star-inserted">
+              <div backend_node_id="1015" bounding_box_rect="70,2282.484375,1140,853.109375" class="container">
+                <div backend_node_id="1016" bounding_box_rect="85,2282.484375,1110,164" class="footer-search-container text-md-center ng-star-inserted">
+                  <div backend_node_id="1017" bounding_box_rect="85,2282.484375,1110,134" class="row">
+                    <div backend_node_id="1018" bounding_box_rect="85,2322.484375,1110,54" class="col-md-12 footer-search-topic">
+                      <a backend_node_id="1019" bounding_box_rect="430,2322.484375,372,56" class="search-text" is_clickable="true">
+                        <text backend_node_id="1020" bounding_box_rect="430,2322.484375,372,53"> Search for a topic... </text>
+                      </a>
+                      <div backend_node_id="1022" bounding_box_rect="802,2322.71875,48,39" class="search-container d-inline-block float-lg-none">
+                        <a backend_node_id="1024" bounding_box_rect="816,2327.71875,34,34" class="search icon-search-icon circle-outline" is_clickable="true">
+                          <img backend_node_id="1026" bounding_box_rect="832.5,2346.875,1,1" alt="Search"/>
+                          <span backend_node_id="1027" bounding_box_rect="833.5,2327.71875,1,1" class="sr-only">
+                            <text backend_node_id="1028" bounding_box_rect="833.5,2331.71875,76.046875,27">Search</text>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div backend_node_id="1029" bounding_box_rect="85,2416.484375,1110,30" class="d-flex d-flex-wrap justify-content-center d-sm-none d-md-flex footer-popular-topic ng-star-inserted">
+                    <div backend_node_id="1030" bounding_box_rect="383,2416.484375,514,30" class="footer-list-container">
+                      <h3 backend_node_id="1031" bounding_box_rect="383,2416.484375,112,22">
+                        <text backend_node_id="1032" bounding_box_rect="383,2412.484375,112,21">Popular Topics:</text>
+                      </h3>
+                      <ul backend_node_id="1033" bounding_box_rect="519,2412.484375,378,21" class="list-inline popular-list">
+                        <li backend_node_id="1034" bounding_box_rect="541,2416.484375,90,14" class="list-inline-item ng-star-inserted">
+                          <a backend_node_id="1035" bounding_box_rect="541,2412.484375,90,21" class="popular-list-1" is_clickable="true">
+                            <text backend_node_id="1036" bounding_box_rect="541,2412.484375,90,21"> Help Center </text>
+                          </a>
+                        </li>
+                        <li backend_node_id="1037" bounding_box_rect="658,2416.484375,149,14" class="list-inline-item ng-star-inserted">
+                          <a backend_node_id="1038" bounding_box_rect="658,2412.484375,149,21" class="popular-list-2" is_clickable="true">
+                            <text backend_node_id="1039" bounding_box_rect="658,2412.484375,149,21"> Delta Discover Map </text>
+                          </a>
+                        </li>
+                        <li backend_node_id="1040" bounding_box_rect="834,2416.484375,63,14" class="list-inline-item ng-star-inserted">
+                          <a backend_node_id="1041" bounding_box_rect="834,2412.484375,63,21" class="popular-list-3" is_clickable="true">
+                            <text backend_node_id="1042" bounding_box_rect="834,2412.484375,63,21"> eCredits </text>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div backend_node_id="1044" bounding_box_rect="85,2559.484375,1110,298" class="row ng-star-inserted">
+                  <div backend_node_id="1045" bounding_box_rect="85,2559.484375,1110,298" class="col-sm-12 col-md-12 col-lg-12 footer-column-container">
+                    <ngc-footer-column backend_node_id="1046" bounding_box_rect="100,2559.484375,1080,298">
+                      <div backend_node_id="1047" bounding_box_rect="159,2559.484375,1021,298" class="footer-column">
+                        <div backend_node_id="1048" bounding_box_rect="159,2559.484375,1021,298" class="row ng-star-inserted">
+                          <div backend_node_id="1049" bounding_box_rect="159,2559.484375,255.25,298" class="col-lg-3 col-md-3 col-sm-12 footer-content ng-star-inserted">
+                            <div backend_node_id="1050" bounding_box_rect="174,2559.484375,225.25,18" class="caption">
+                              <h3 backend_node_id="1051" bounding_box_rect="174,2559.484375,225.25,18" class="d-none d-md-block">
+                                <text backend_node_id="1052" bounding_box_rect="174,2559.484375,108,17">About Delta</text>
+                              </h3>
+                              <a backend_node_id="1053" bounding_box_rect="-1,-1,-1,-1" class="d-md-none pt-3 pb-3 icon-Dropdown-caret" id="footertitle-about-delta" is_clickable="true">
+                                <text backend_node_id="1054" bounding_box_rect="-1,-1,-1,-1"> About Delta </text>
+                              </a>
+                            </div>
+                            <ul backend_node_id="1055" bounding_box_rect="-1,-1,-1,-1" class="d-md-none dropdown-menu">
+                              <li backend_node_id="1056" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1057" bounding_box_rect="-1,-1,-1,-1" class="footernav-about-us" is_clickable="true">
+                                  <text backend_node_id="1058" bounding_box_rect="-1,-1,-1,-1"> About Us </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1059" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1060" bounding_box_rect="-1,-1,-1,-1" class="footernav-careers" is_clickable="true">
+                                  <text backend_node_id="1061" bounding_box_rect="-1,-1,-1,-1"> Careers </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1062" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1063" bounding_box_rect="-1,-1,-1,-1" class="footernav-news-hub" is_clickable="true">
+                                  <text backend_node_id="1064" bounding_box_rect="-1,-1,-1,-1"> News Hub </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1065" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1066" bounding_box_rect="-1,-1,-1,-1" class="footernav-investor-relations" is_clickable="true">
+                                  <text backend_node_id="1067" bounding_box_rect="-1,-1,-1,-1"> Investor Relations </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1068" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1069" bounding_box_rect="-1,-1,-1,-1" class="footernav-business-travel" is_clickable="true">
+                                  <text backend_node_id="1070" bounding_box_rect="-1,-1,-1,-1"> Business Travel </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1071" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1072" bounding_box_rect="-1,-1,-1,-1" class="footernav-travel-agents" is_clickable="true">
+                                  <text backend_node_id="1073" bounding_box_rect="-1,-1,-1,-1"> Travel Agents </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1074" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1075" bounding_box_rect="-1,-1,-1,-1" class="footernav-mobile-app" is_clickable="true">
+                                  <text backend_node_id="1076" bounding_box_rect="-1,-1,-1,-1"> Mobile App </text>
+                                </a>
+                              </li>
+                            </ul>
+                            <ul backend_node_id="1077" bounding_box_rect="174,2585.484375,225.25,230.5" class="d-none d-md-block">
+                              <li backend_node_id="1078" bounding_box_rect="174,2607.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1079" bounding_box_rect="176,2611.484375,59,17" class="footernav-about-us" is_clickable="true">
+                                  <text backend_node_id="1080" bounding_box_rect="176,2611.484375,59,17"> About Us </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1081" bounding_box_rect="174,2637.984375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1082" bounding_box_rect="176,2641.984375,47,17" class="footernav-careers" is_clickable="true">
+                                  <text backend_node_id="1083" bounding_box_rect="176,2641.984375,47,17"> Careers </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1084" bounding_box_rect="174,2668.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1085" bounding_box_rect="176,2672.484375,66,17" class="footernav-news-hub" is_clickable="true">
+                                  <text backend_node_id="1086" bounding_box_rect="176,2672.484375,66,17"> News Hub </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1087" bounding_box_rect="174,2698.984375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1088" bounding_box_rect="176,2702.984375,113,17" class="footernav-investor-relations" is_clickable="true">
+                                  <text backend_node_id="1089" bounding_box_rect="176,2702.984375,113,17"> Investor Relations </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1090" bounding_box_rect="174,2729.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1091" bounding_box_rect="176,2733.484375,97,17" class="footernav-business-travel" is_clickable="true">
+                                  <text backend_node_id="1092" bounding_box_rect="176,2733.484375,97,17"> Business Travel </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1093" bounding_box_rect="174,2759.984375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1094" bounding_box_rect="176,2763.984375,86,17" class="footernav-travel-agents" is_clickable="true">
+                                  <text backend_node_id="1095" bounding_box_rect="176,2763.984375,86,17"> Travel Agents </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1096" bounding_box_rect="174,2790.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1097" bounding_box_rect="176,2794.484375,74,17" class="footernav-mobile-app" is_clickable="true">
+                                  <text backend_node_id="1098" bounding_box_rect="176,2794.484375,74,17"> Mobile App </text>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div backend_node_id="1099" bounding_box_rect="414.25,2559.484375,255.25,298" class="col-lg-3 col-md-3 col-sm-12 footer-content ng-star-inserted">
+                            <div backend_node_id="1100" bounding_box_rect="429.25,2559.484375,225.25,18" class="caption">
+                              <h3 backend_node_id="1101" bounding_box_rect="429.25,2559.484375,225.25,18" class="d-none d-md-block">
+                                <text backend_node_id="1102" bounding_box_rect="429.25,2559.484375,153,17">Customer Service</text>
+                              </h3>
+                              <a backend_node_id="1103" bounding_box_rect="-1,-1,-1,-1" class="d-md-none pt-3 pb-3 icon-Dropdown-caret" id="footertitle-customer-service" is_clickable="true">
+                                <text backend_node_id="1104" bounding_box_rect="-1,-1,-1,-1"> Customer Service </text>
+                              </a>
+                            </div>
+                            <ul backend_node_id="1105" bounding_box_rect="-1,-1,-1,-1" class="d-md-none dropdown-menu">
+                              <li backend_node_id="1106" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1107" bounding_box_rect="-1,-1,-1,-1" class="footernav-help-center" is_clickable="true">
+                                  <text backend_node_id="1108" bounding_box_rect="-1,-1,-1,-1"> Help Center </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1109" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1110" bounding_box_rect="-1,-1,-1,-1" class="footernav-message-us" is_clickable="true">
+                                  <text backend_node_id="1111" bounding_box_rect="-1,-1,-1,-1"> Message Us </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1112" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1113" bounding_box_rect="-1,-1,-1,-1" class="footernav-commentcomplaint" is_clickable="true">
+                                  <text backend_node_id="1114" bounding_box_rect="-1,-1,-1,-1"> Comment/Complaint </text>
+                                </a>
+                              </li>
+                            </ul>
+                            <ul backend_node_id="1115" bounding_box_rect="429.25,2585.484375,225.25,108.5" class="d-none d-md-block">
+                              <li backend_node_id="1116" bounding_box_rect="429.25,2607.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1117" bounding_box_rect="431.25,2611.484375,74,17" class="footernav-help-center" is_clickable="true">
+                                  <text backend_node_id="1118" bounding_box_rect="431.25,2611.484375,74,17"> Help Center </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1119" bounding_box_rect="429.25,2637.984375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1120" bounding_box_rect="431.25,2641.984375,77,17" class="footernav-message-us" is_clickable="true">
+                                  <text backend_node_id="1121" bounding_box_rect="431.25,2641.984375,77,17"> Message Us </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1122" bounding_box_rect="429.25,2668.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1123" bounding_box_rect="431.25,2672.484375,133,17" class="footernav-commentcomplaint" is_clickable="true">
+                                  <text backend_node_id="1124" bounding_box_rect="431.25,2672.484375,133,17"> Comment/Complaint </text>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div backend_node_id="1125" bounding_box_rect="669.5,2559.484375,255.25,298" class="col-lg-3 col-md-3 col-sm-12 footer-content ng-star-inserted">
+                            <div backend_node_id="1126" bounding_box_rect="684.5,2559.484375,225.25,18" class="caption">
+                              <h3 backend_node_id="1127" bounding_box_rect="684.5,2559.484375,225.25,18" class="d-none d-md-block">
+                                <text backend_node_id="1128" bounding_box_rect="684.5,2559.484375,110,17">Site Support</text>
+                              </h3>
+                              <a backend_node_id="1129" bounding_box_rect="-1,-1,-1,-1" class="d-md-none pt-3 pb-3 icon-Dropdown-caret" id="footertitle-site-support" is_clickable="true">
+                                <text backend_node_id="1130" bounding_box_rect="-1,-1,-1,-1"> Site Support </text>
+                              </a>
+                            </div>
+                            <ul backend_node_id="1131" bounding_box_rect="-1,-1,-1,-1" class="d-md-none dropdown-menu">
+                              <li backend_node_id="1132" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1133" bounding_box_rect="-1,-1,-1,-1" class="footernav-login-help" is_clickable="true">
+                                  <text backend_node_id="1134" bounding_box_rect="-1,-1,-1,-1"> Login Help </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1135" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1136" bounding_box_rect="-1,-1,-1,-1" class="footernav-site-map" is_clickable="true">
+                                  <text backend_node_id="1137" bounding_box_rect="-1,-1,-1,-1"> Site Map </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1138" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1139" bounding_box_rect="-1,-1,-1,-1" class="footernav-browser-compatibility" is_clickable="true">
+                                  <text backend_node_id="1140" bounding_box_rect="-1,-1,-1,-1"> Browser Compatibility </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1141" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1142" bounding_box_rect="-1,-1,-1,-1" class="footernav-accessibility" is_clickable="true">
+                                  <text backend_node_id="1143" bounding_box_rect="-1,-1,-1,-1"> Accessibility </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1144" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1145" bounding_box_rect="-1,-1,-1,-1" class="footernav-booking-information" is_clickable="true">
+                                  <text backend_node_id="1146" bounding_box_rect="-1,-1,-1,-1"> Booking Information </text>
+                                </a>
+                              </li>
+                            </ul>
+                            <ul backend_node_id="1147" bounding_box_rect="684.5,2585.484375,225.25,169.5" class="d-none d-md-block">
+                              <li backend_node_id="1148" bounding_box_rect="684.5,2607.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1149" bounding_box_rect="686.5,2611.484375,68,17" class="footernav-login-help" is_clickable="true">
+                                  <text backend_node_id="1150" bounding_box_rect="686.5,2611.484375,68,17"> Login Help </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1151" bounding_box_rect="684.5,2637.984375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1152" bounding_box_rect="686.5,2641.984375,56,17" class="footernav-site-map" is_clickable="true">
+                                  <text backend_node_id="1153" bounding_box_rect="686.5,2641.984375,56,17"> Site Map </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1154" bounding_box_rect="684.5,2668.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1155" bounding_box_rect="686.5,2672.484375,139,17" class="footernav-browser-compatibility" is_clickable="true">
+                                  <text backend_node_id="1156" bounding_box_rect="686.5,2672.484375,139,17"> Browser Compatibility </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1157" bounding_box_rect="684.5,2698.984375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1158" bounding_box_rect="686.5,2702.984375,81,17" class="footernav-accessibility" is_clickable="true">
+                                  <text backend_node_id="1159" bounding_box_rect="686.5,2702.984375,81,17"> Accessibility </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1160" bounding_box_rect="684.5,2729.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1161" bounding_box_rect="686.5,2733.484375,128,17" class="footernav-booking-information" is_clickable="true">
+                                  <text backend_node_id="1162" bounding_box_rect="686.5,2733.484375,128,17"> Booking Information </text>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div backend_node_id="1163" bounding_box_rect="924.75,2559.484375,255.25,298" class="col-lg-3 col-md-3 col-sm-12 footer-content ng-star-inserted">
+                            <div backend_node_id="1164" bounding_box_rect="939.75,2559.484375,225.25,18" class="caption">
+                              <h3 backend_node_id="1165" bounding_box_rect="939.75,2559.484375,225.25,18" class="d-none d-md-block">
+                                <text backend_node_id="1166" bounding_box_rect="939.75,2559.484375,70,17">Policies</text>
+                              </h3>
+                              <a backend_node_id="1167" bounding_box_rect="-1,-1,-1,-1" class="d-md-none pt-3 pb-3 icon-Dropdown-caret" id="footertitle-policies" is_clickable="true">
+                                <text backend_node_id="1168" bounding_box_rect="-1,-1,-1,-1"> Policies </text>
+                              </a>
+                            </div>
+                            <ul backend_node_id="1169" bounding_box_rect="-1,-1,-1,-1" class="d-md-none dropdown-menu">
+                              <li backend_node_id="1170" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1171" bounding_box_rect="-1,-1,-1,-1" class="footernav-customer-commitment" is_clickable="true">
+                                  <text backend_node_id="1172" bounding_box_rect="-1,-1,-1,-1"> Customer Commitment </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1173" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1174" bounding_box_rect="-1,-1,-1,-1" class="footernav-tarmac-delay-plan" is_clickable="true">
+                                  <text backend_node_id="1175" bounding_box_rect="-1,-1,-1,-1"> Tarmac Delay Plan </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1176" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1177" bounding_box_rect="-1,-1,-1,-1" class="footernav-legal" is_clickable="true">
+                                  <text backend_node_id="1178" bounding_box_rect="-1,-1,-1,-1"> Legal </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1179" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1180" bounding_box_rect="-1,-1,-1,-1" class="footernav-sustainability" is_clickable="true">
+                                  <text backend_node_id="1181" bounding_box_rect="-1,-1,-1,-1"> Sustainability </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1182" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1183" bounding_box_rect="-1,-1,-1,-1" class="footernav-contract-of-carriage" is_clickable="true">
+                                  <text backend_node_id="1184" bounding_box_rect="-1,-1,-1,-1"> Contract of Carriage </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1185" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1186" bounding_box_rect="-1,-1,-1,-1" class="footernav-cookies-privacy-security" is_clickable="true">
+                                  <text backend_node_id="1187" bounding_box_rect="-1,-1,-1,-1"> Cookies, Privacy &amp; Security </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1188" bounding_box_rect="-1,-1,-1,-1" class="ng-star-inserted">
+                                <a backend_node_id="1189" bounding_box_rect="-1,-1,-1,-1" class="footernav-human-trafficking-statement-pdf" is_clickable="true">
+                                  <text backend_node_id="1190" bounding_box_rect="-1,-1,-1,-1"> Human Trafficking Statement (PDF) </text>
+                                </a>
+                              </li>
+                            </ul>
+                            <ul backend_node_id="1191" bounding_box_rect="939.75,2585.484375,225.25,256" class="d-none d-md-block">
+                              <li backend_node_id="1192" bounding_box_rect="939.75,2607.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1193" bounding_box_rect="941.75,2611.484375,146,17" class="footernav-customer-commitment" is_clickable="true">
+                                  <text backend_node_id="1194" bounding_box_rect="941.75,2611.484375,146,17"> Customer Commitment </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1195" bounding_box_rect="939.75,2637.984375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1196" bounding_box_rect="941.75,2641.984375,114,17" class="footernav-tarmac-delay-plan" is_clickable="true">
+                                  <text backend_node_id="1197" bounding_box_rect="941.75,2641.984375,114,17"> Tarmac Delay Plan </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1198" bounding_box_rect="939.75,2668.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1199" bounding_box_rect="941.75,2672.484375,33,17" class="footernav-legal" is_clickable="true">
+                                  <text backend_node_id="1200" bounding_box_rect="941.75,2672.484375,33,17"> Legal </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1201" bounding_box_rect="939.75,2698.984375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1202" bounding_box_rect="941.75,2702.984375,86,17" class="footernav-sustainability" is_clickable="true">
+                                  <text backend_node_id="1203" bounding_box_rect="941.75,2702.984375,86,17"> Sustainability </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1204" bounding_box_rect="939.75,2729.484375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1205" bounding_box_rect="941.75,2733.484375,125,17" class="footernav-contract-of-carriage" is_clickable="true">
+                                  <text backend_node_id="1206" bounding_box_rect="941.75,2733.484375,125,17"> Contract of Carriage </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1207" bounding_box_rect="939.75,2759.984375,225.25,25.5" class="ng-star-inserted">
+                                <a backend_node_id="1208" bounding_box_rect="941.75,2763.984375,168,17" class="footernav-cookies-privacy-security" is_clickable="true">
+                                  <text backend_node_id="1209" bounding_box_rect="941.75,2763.984375,168,17"> Cookies, Privacy &amp; Security </text>
+                                </a>
+                              </li>
+                              <li backend_node_id="1210" bounding_box_rect="939.75,2790.484375,225.25,51" class="ng-star-inserted">
+                                <a backend_node_id="1211" bounding_box_rect="939.75,2794.484375,186,42.5" class="footernav-human-trafficking-statement-pdf" is_clickable="true">
+                                  <text backend_node_id="1212" bounding_box_rect="939.75,2794.484375,186,42.5"> Human Trafficking Statement (PDF) </text>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </ngc-footer-column>
+                  </div>
+                </div>
+                <div backend_node_id="1213" bounding_box_rect="85,2857.484375,1110,94" class="text-md-center">
+                  <div backend_node_id="1214" bounding_box_rect="85,2857.484375,1110,94" class="row">
+                    <div backend_node_id="1215" bounding_box_rect="85,2857.484375,1110,94" class="col-md-12">
+                      <ngc-information backend_node_id="1216" bounding_box_rect="100,2857.484375,1080,86">
+                        <div backend_node_id="1217" bounding_box_rect="100,2857.484375,1080,86" class="footer-info">
+                          <p backend_node_id="1218" bounding_box_rect="100,2897.484375,1080,19">
+                            <text backend_node_id="1219" bounding_box_rect="480.5,2899.484375,139,14"> 2023 Delta Air Lines, Inc.</text>
+                            <span backend_node_id="1220" bounding_box_rect="619.5,2897.484375,23,19">
+                              <text backend_node_id="1221" bounding_box_rect="629.5,2899.484375,3,14">|</text>
+                            </span>
+                            <text backend_node_id="1222" bounding_box_rect="642.5,2899.484375,157,14">Travel may be on other airlines.</text>
+                          </p>
+                          <p backend_node_id="1225" bounding_box_rect="100,2924.484375,1080,19">
+                            <text backend_node_id="1226" bounding_box_rect="272,2926.484375,506,14">Terms and conditions apply to all offers and SkyMiles benefits. See specific offer for details, and visit </text>
+                            <a backend_node_id="1227" bounding_box_rect="778,2926.484375,230,14" title="SkyMiles Membership Guide &amp; Program Rules" is_clickable="true">
+                              <text backend_node_id="1228" bounding_box_rect="778,2926.484375,230,14">SkyMiles Membership Guide &amp; Program Rules</text>
+                            </a>
+                          </p>
+                        </div>
+                      </ngc-information>
+                    </div>
+                  </div>
+                </div>
+                <div backend_node_id="1231" bounding_box_rect="85,2951.484375,1110,184.109375" class="row">
+                  <div backend_node_id="1232" bounding_box_rect="85,2951.484375,1110,184.109375" class="col-lg-12 col-md-12 extra-margin">
+                    <span backend_node_id="1233" bounding_box_rect="578,2971.484375,124,24" class="feedbackLink mx-auto">
+                      <a backend_node_id="1234" bounding_box_rect="578,2974.484375,124,18" is_clickable="true">
+                        <text backend_node_id="1235" bounding_box_rect="578,2974.484375,124,18">Website Feedback</text>
+                      </a>
+                    </span>
+                    <div backend_node_id="1236" bounding_box_rect="100,2995.484375,1080,70.109375" class="row footer-bottom footer-bottom-rows no-gutters">
+                      <div backend_node_id="1237" bounding_box_rect="100,3020.484375,450,45.109375" class="p-0 text-md-right d-sm-inline-block d-md-block border-right-social-icons col-12 text-center col-md-4 col-lg-5 ng-star-inserted">
+                        <ngc-social-icons backend_node_id="1238" bounding_box_rect="100,3020.484375,450,45.109375">
+                          <div backend_node_id="1239" bounding_box_rect="100,3020.484375,450,45.109375" class="social-icons-container ng-star-inserted">
+                            <a backend_node_id="1240" bounding_box_rect="413.40625,3020.484375,44.796875,45.109375" class="facebook circle-outline picturefill-background ng-star-inserted" id="footer-facebook" is_clickable="true">
+                              <img backend_node_id="1241" bounding_box_rect="413.40625,3020.75,47,47" alt="Facebook"/>
+                            </a>
+                            <a backend_node_id="1242" bounding_box_rect="474.203125,3020.484375,44.796875,45.109375" class="facebook circle-outline picturefill-background mr-0 ng-star-inserted" id="footer-twitter" is_clickable="true">
+                              <img backend_node_id="1243" bounding_box_rect="474.203125,3020.75,47,47" alt="Twitter"/>
+                            </a>
+                          </div>
+                        </ngc-social-icons>
+                      </div>
+                      <div backend_node_id="1244" bounding_box_rect="550,3020.484375,540,45.109375" class="col-12 text-center col-lg-5 col-xl-5 text-md-left language-selector-outer mt-sm-0 mr-md-auto col-md-8 col-lg-6 col-xl-6 pad-lt-30 footer-padding-top ng-star-inserted">
+                        <ngc-language-selector backend_node_id="1245" bounding_box_rect="580,3020.484375,510,45">
+                          <div backend_node_id="1246" bounding_box_rect="580,3020.484375,510,45" class="language-selector-container text-center text-md-left p-0">
+                            <a backend_node_id="1247" bounding_box_rect="580,3026.484375,168,36.1875" class="lang-select-link language-firstitem icon-Language-selector" id="footer-language-selector" is_clickable="true">
+                              <span backend_node_id="1249" bounding_box_rect="612,3037.671875,131,16" class="lang-selection">
+                                <text backend_node_id="1250" bounding_box_rect="612,3037.671875,131,16"> United States - English </text>
+                              </span>
+                              <span backend_node_id="1251" bounding_box_rect="743,3031.484375,1,1" class="sr-only">
+                                <text backend_node_id="1252" bounding_box_rect="743,3035.484375,161,16">Link to change the language</text>
+                              </span>
+                            </a>
+                            <div backend_node_id="1253" bounding_box_rect="778,3020.484375,86,45" class="secondary-lang-container language-second-item ng-star-inserted">
+                              <a backend_node_id="1254" bounding_box_rect="809,3026.484375,55,36.1875" class="lang-select-link" is_clickable="true">
+                                <span backend_node_id="1255" bounding_box_rect="814,3037.671875,45,16" class="lang-selection">
+                                  <text backend_node_id="1256" bounding_box_rect="814,3037.671875,45,16"> Espaol </text>
+                                </span>
+                                <span backend_node_id="1257" bounding_box_rect="859,3031.484375,1,1" class="sr-only">
+                                  <text backend_node_id="1258" bounding_box_rect="859,3035.484375,161,16">Link to change the language</text>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </ngc-language-selector>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </ngc-global-footer>
+      </app-home>
+    </app-root>
+    <a backend_node_id="1265" bounding_box_rect="1239.421875,356.1875,32.1875,83.5625" aria_label="Feedback, opens dialog" class="_acs _acsbadge--default _acsbadge--small _acsmiddleright _acsVertical_right _acsAnimate" role="dialog">
+      <svg backend_node_id="1267" bounding_box_rect="1250.296875,423.84375,12.03125,10.3125" class="_acsBadgeImg _acsBadgeImg__aspark _acsBadgeImg__aspark--small">
+        <title backend_node_id="1268" bounding_box_rect="-1,-1,-1,-1">
+          <text backend_node_id="1269" bounding_box_rect="-1,-1,-1,-1">Play Icon</text>
+        </title>
+      </svg>
+      <span backend_node_id="1274" bounding_box_rect="1248.8125,351.46875,14,68.484375" class="_acsBadgeLabel">
+        <text backend_node_id="1275" bounding_box_rect="1248.8125,363.5,14,52.84375">Feedback </text>
+      </span>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+{
+  "attributes": [
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Ticket Center"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Start Your Search Here"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "View all states"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "NBA Tickets"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Adele Tickets"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Madonna Tickets"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Taylor Swift Tickets"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Search for artists, teams or venues..."
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Discount Broadway Tickets"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Discount Wicked Tickets"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Discount Jersey Boys Tickets"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Discount Lion King Tickets"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Our 100% Guarantee insures that:"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-08T16:15"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-08T19:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-14T19:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-15T12:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-21T19:45"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-07T19:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-07T19:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-08T18:30"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-12T19:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-16T19:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-07T18:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-08T14:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-08T19:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-09T14:00"
+    },
+    {
+      "tag": "td",
+      "attribute": "title",
+      "text": "2023-04-13T19:30"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "fb:like Facebook Social Plugin"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "1719717511"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "1719717511"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "ticketcenter"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "ticketcenter"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "https://www.aweber.com/thankyou.htm?m=default"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "https://www.aweber.com/thankyou.htm?m=default"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Newsletter"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Newsletter"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "email"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "email"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Email Address"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "American Express Accepted"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Discover Accepted"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Visa Accepted"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "MasterCard Accepted"
+    }
+  ],
+  "hidden": []
+}

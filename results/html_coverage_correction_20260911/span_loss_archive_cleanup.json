@@ -1,0 +1,37 @@
+[
+  {
+    "archive": "notebooks/html_coverage_ai_inputs.tar.gz",
+    "archive_sha256": "01b6d6730fe37359b73a0bb9e387c591252f2067662f29b7139e4d903f35545d",
+    "bytes": 6065067,
+    "verified_files": 18,
+    "preserved_extracted_root": "results/html_coverage_correction_20260911/ai_run"
+  },
+  {
+    "archive": "notebooks/supervised_pilot_inputs.tar.gz",
+    "archive_sha256": "7b5011d51c5532556efb9730289f8351602dcc7c5e035b825a27df644b647e65",
+    "bytes": 10888740,
+    "verified_files": 10,
+    "preserved_extracted_root": "results/supervised_pilot_20260911/pilot"
+  },
+  {
+    "archive": "notebooks/supervised_schedule_inputs.tar.gz",
+    "archive_sha256": "2c4ca910b17175bb70dff40719ac2ea7d49c900550918eb0682e678413c606bc",
+    "bytes": 14994952,
+    "verified_files": 80,
+    "preserved_extracted_root": "results/supervised_schedule_20260911/pilot"
+  },
+  {
+    "archive": "notebooks/supervised_schedule_recovery_inputs.tar.gz",
+    "archive_sha256": "2055e0ea584e861e48c065d40eb10099175331c89b8653e115f1cf223c694ffb",
+    "bytes": 14994215,
+    "verified_files": 80,
+    "preserved_extracted_root": "results/supervised_schedule_20260911/recovery"
+  },
+  {
+    "archive": "notebooks/window_followup_inputs.tar.gz",
+    "archive_sha256": "82a34ca52b073d54b7a62d40aed34adef40ea282c00b14b17983d2981f4d9d24",
+    "bytes": 11618185,
+    "verified_files": 6,
+    "preserved_extracted_root": "results/window_followup_20260911"
+  }
+]

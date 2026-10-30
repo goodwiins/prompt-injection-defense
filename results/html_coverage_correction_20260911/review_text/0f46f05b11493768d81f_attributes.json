@@ -1,0 +1,2545 @@
+{
+  "attributes": [
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Secondary"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Campgrounds"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "KOA Campgrounds"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "YouTube"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Facebook"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Twitter"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Pinterest"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Instagram"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Learn More about the KOA Newsletter"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "United States"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Canada"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Afghanistan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Aland Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Albania"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Algeria"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "American Samoa"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Andorra"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Angola"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Anguilla"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Antarctica"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Antigua & Barbuda"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Argentina"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Armenia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Aruba"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Australia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Austria"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Azerbaijan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bahamas"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bahrain"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bangladesh"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Barbados"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Belarus"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Belgium"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Belize"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Benin"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bermuda"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bhutan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bolivia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bonaire, Sint Eustatius And Saba"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bosnia-Hercegovina"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Botswana"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bouvet Island"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Brazil"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "British Indian Ocean"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Brunei"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Bulgaria"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Burkina Faso"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Burundi"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Cambodia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Cameroon"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Cape Verde"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Cayman Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Central African Rep"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Chad"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Chile"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "China"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Christmas Island"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Cocos (Keeling) Island"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Colombia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Comoros"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Congo"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Congo, Democratic Rep"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Cook Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Costa Rica"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Croatia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Cuba"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Curacao"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Cyprus"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Czech Republic"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Denmark"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Djibouti"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Dominica"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Dominican Republic"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Ecuador"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Egypt"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "El Salvador"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Equatorial Guinea"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Eritrea"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Estonia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Ethiopia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Falkland Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Faroe Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Fiji"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Finland"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "France"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "French Guiana"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "French Polynesia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "French Southern Territories"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Gabon"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Gambia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Georgia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Germany"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Ghana"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Gibraltar"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Greece"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Greenland"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Grenada"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Guadeloupe"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Guam"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Guatemala"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Guernsey"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Guinea"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Guinea-Bissau"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Guyana"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Haiti"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Heard And Mcdonald"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Honduras"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Hong Kong"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Hungary"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Iceland"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "India"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Indonesia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Iran"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Iraq"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Ireland"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Isle of Man"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Israel"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Italy"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Ivory Coast"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Jamaica"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Japan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Jersey"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Jordan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Kazakhstan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Kenya"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Kiribati"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Korea, Republic Of"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Kosovo"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Kuwait"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Kyrgyzstan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Laos"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Latvia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Lebanon"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Lesotho"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Liberia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Libya"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Liechtenstein"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Lithuania"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Luxembourg"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Macao (Macau)"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Macedonia (Skopje)"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Madagascar"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Malawi"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Malaysia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Maldives"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Mali"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Malta"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Marshall Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Martinique"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Mauritania"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Mauritius"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Mayotte"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Mexico"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Micronesia, Federated"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Moldova"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Monaco"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Mongolia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Montenegro"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Montserrat"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Morocco"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Mozambique"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Myanmar"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Namibia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Nauru"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Nepal"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Netherlands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Netherlands Antilles"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "New Caledonia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "New Zealand"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Nicaragua"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Niger"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Nigeria"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Niue"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Norfolk Island"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "North Korea"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Northern Mariana Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Norway"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Oman"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Pakistan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Palau"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Palestinian Territory, Occupied"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Panama"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Papua New Guinea"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Paraguay"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Peru"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Philippines"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Pitcairn Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Poland"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Portugal"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Puerto Rico"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Qatar"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Reunion"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Romania"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Russia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Rwanda"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Saint Barthelemy"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Saint Martin"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Samoa"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "San Marino"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Sao Tome And Principe"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Saudi Arabia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Senegal"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Serbia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Seychelles"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Sierra Leone"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Singapore"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Sint Maarten"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Slovakia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Slovenia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Solomon Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Somalia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "South Africa"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "South Georgia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "South Sudan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Spain"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Sri Lanka"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "St. Helena"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "St. Kitts-Nevis Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "St. Lucia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "St. Pierre And Miguel"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "St. Vincent And The Grenadines"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Sudan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Suriname"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Svalbard And Jan May"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Swaziland"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Sweden"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Switzerland"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Syria"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Taiwan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Tajikistan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Tanzania"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Thailand"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Timor-Leste"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Togo"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Tokelau"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Tonga"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Trinidad And Tobago"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Tunisia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Turkey"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Turkmenistan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Turks And Caicos Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Tuvalu"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Uganda"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Ukraine"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "United Arab Emirates"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "United Kingdom"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Uruguay"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "US Minor Outlying Islands"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Uzbekistan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Vanuatu"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Vatican CITY"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Venezuela"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Vietnam"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Virgin Islands, British"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Virgin Islands, US"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Wallis And Futuna"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Western Sahara"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Yemen"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Zambia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Zimbabwe"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Alabama"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Alaska"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Arizona"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Arkansas"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "California"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Colorado"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Connecticut"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Delaware"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "District of Columbia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Florida"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Georgia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Hawaii"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Idaho"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Illinois"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Indiana"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Iowa"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Kansas"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Kentucky"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Louisiana"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Maine"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Maryland"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Massachusetts"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Michigan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Minnesota"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Mississippi"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Missouri"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Montana"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Nebraska"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Nevada"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "New Hampshire"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "New Jersey"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "New Mexico"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "New York"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "North Carolina"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "North Dakota"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Ohio"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Oklahoma"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Oregon"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Pennsylvania"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Rhode Island"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "South Carolina"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "South Dakota"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Tennessee"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Texas"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Utah"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Vermont"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Virginia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Washington"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "West Virginia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Wisconsin"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Wyoming"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Alberta"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "British Columbia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Manitoba"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "New Brunswick"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Newfoundland and Labrador"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Nova Scotia"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Ontario"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Prince Edward Island"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Quebec"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Saskatchewan"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Northwest Territories"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Nunavut"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "Yukon"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Learn More about the KOA Camping App"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "App Store"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "App Store"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Google Play"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Google Play"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Buy A KOA"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "https://koa.com/"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "https://koa.com/"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Primary"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "KOA Home Page"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Logo"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Main Menu"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Login"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "KOAs in the US"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "KOAs in Canada"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Find by Region"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Find by State/Province"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "All Campgrounds"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Trip Planner"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Hot Deals"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Destination, city, or KOA campground"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Find Nearby KOAs: Enter Zip or City, State"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "https://koa.com/"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "https://koa.com/"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "KOA Journey Campgrounds"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Journey Campgrounds"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "KOA Journey Campgrounds"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "KOA Holiday Campgrounds"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Holiday Campgrounds"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "KOA Holiday Campgrounds"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "KOA Resort Campgrounds"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Resort Campgrounds"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "KOA Resort Campgrounds"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "3 Great Weekends to Save at KOA"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "2 Great Weekends to Save at KOA"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "2 Great Weekends to Save at KOA"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "RV Sites"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "RV Sites"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "RV Sites"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Cabins"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Cabins"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Cabins"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Tent Sites"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Tent Sites"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Tent Sites"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Unique Accomodations"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Unique Accomodations"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Unique Accomodations"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Rewards Program"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Progressive"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Progressive"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Progressive"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Essex Credit"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Essex Credit"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Essex Credit"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Camping Recipes"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Recipes"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Recipes"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "RV Services"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "RV Services"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "RV Services"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Work Camper"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Work Camper"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Work Camper"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Camping at KOA with Electric Vehicles (EV)"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "EV Charging"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "EV Charging"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "YouTube"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Facebook"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Twitter"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Pinterest"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Instagram"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Learn More about the KOA Newsletter"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "KOA Blog"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "App Store"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "App Store"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Google Play"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Google Play"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Own A KOA"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Shopping Cart"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA 60 Year Anniversary Logo"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Destination, City/State, or Campground Name"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Check In"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Check Out"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Advanced Search"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Logo"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Glamorous Plus Camping Equals Glamping"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "DISH Network"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "DISH Network"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Dish Outdoors Service"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Essex Credit"
+    },
+    {
+      "tag": "img",
+      "attribute": "title",
+      "text": "Essex Credit"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Essex Credit Service"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Journey Logo"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Find a KOA Journey Campground"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Holiday Logo"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Find a KOA Holiday Campground"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Resort Logo"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Find a KOA Resort Campground"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "KOA Family of Campgrounds"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Across North America"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "KOA Logo"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Privacy Policy"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Terms of Use"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Accessibility Statement"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "button",
+      "attribute": "alt",
+      "text": "Feedback"
+    }
+  ],
+  "hidden": []
+}

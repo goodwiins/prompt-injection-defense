@@ -1,0 +1,11 @@
+{
+  "completed_at": "2026-09-24T02:10:52.791023+00:00",
+  "predictions": 207,
+  "weights_unchanged": true,
+  "files": {
+    "predictions.jsonl": "7bdd1d5759af73aa17c82fe13419470050a45f9e678094536df0f2e9c5181f7c",
+    "protocol.json": "1b3bb8e2d03db71e03a2e08a81f1b564f6bfe34d28dbf10973220c6c80bbc858",
+    "environment.json": "3438cec84075160b3d436f67079b78098018376c1b109a5fc823ac722174c4f3",
+    "summary.json": "930e2f03b53e5a72c32ce3e0cb1d56b3f494a3a271a4c7b62e6679b2769b5a52"
+  }
+}

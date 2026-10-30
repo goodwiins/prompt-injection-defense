@@ -1,0 +1,315 @@
+{
+  "attributes": [
+    {
+      "tag": "nav",
+      "attribute": "aria_label",
+      "text": "main"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Menu"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Navigation menu"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Search"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Delta Air Lines"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Skyteam"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Notification"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Search"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Your Origin"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Your Origin"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "Your Destination"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "Your Destination"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Reverse origin and destination city or airport"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "ROUND_TRIP"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "ONE_WAY"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "MULTICITY"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "MAIN"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "FIRST"
+    },
+    {
+      "tag": "option",
+      "attribute": "value",
+      "text": "DPPS"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Meeting Code (Optional)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Expand Book Widget "
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "[object Object]"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "[object Object]"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "simple"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "simple"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "RTR_YES"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "RTR_YES"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "findFlights"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "findFlights"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "B5-Coach"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "B5-Coach"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "findFlights"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "findFlights"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "advanceSearchPage"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "advanceSearchPage"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "ROUND_TRIP"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "ROUND_TRIP"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "REVENUE"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "REVENUE"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "undefined"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "undefined"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Search"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "SkyMiles Membership Guide & Program Rules"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Facebook"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Twitter"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Feedback, opens dialog"
+    }
+  ],
+  "hidden": []
+}

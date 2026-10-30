@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-09-11T20:35:57.902546+00:00",
+  "frozen_input_hashes": 56,
+  "predictions": 36,
+  "independent_local_token_ledger_match": 2170,
+  "all_three_insertions_fully_covered": true,
+  "all_18_pair_score_changes": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "executed_notebook_code_cells": 3,
+  "executed_notebook_errors": 0,
+  "head_replay_max_error": 4.470348358154297e-08
+}

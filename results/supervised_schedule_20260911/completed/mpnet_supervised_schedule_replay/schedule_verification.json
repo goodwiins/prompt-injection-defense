@@ -1,0 +1,224 @@
+{
+  "verified_at": "2026-09-11T06:01:24.112188-04:00",
+  "recorded_hashes_verified": 238,
+  "prior_and_new_models": 12,
+  "gpu_package_replayed_predictions": 1152,
+  "same_first_two_epochs": true,
+  "diagnostics": {
+    "frozen_17": {
+      "optimizer_steps": 384,
+      "skipped_steps": 0,
+      "overflow_retried_batches": 0,
+      "overflow_skipped_attempts": 0,
+      "fraction_clipped": 0.0,
+      "epoch_losses": [
+        0.6939800400286913,
+        0.6893459986895323,
+        0.6867178408429027,
+        0.6826267447322607,
+        0.6786206820979714,
+        0.6750344252213836
+      ],
+      "selected_epoch": 1
+    },
+    "finetuned_17": {
+      "optimizer_steps": 384,
+      "skipped_steps": 0,
+      "overflow_retried_batches": 2,
+      "overflow_skipped_attempts": 2,
+      "fraction_clipped": 0.3567708333333333,
+      "epoch_losses": [
+        0.6961710518226027,
+        0.6371426484547555,
+        0.4466718891635537,
+        0.3620789379347116,
+        0.27075332251843065,
+        0.19136472820537165
+      ],
+      "selected_epoch": 6,
+      "median_training_logit_gaps": [
+        0.010094605386257172,
+        0.023433690890669823,
+        0.04830479621887207,
+        0.01815629005432129,
+        0.026413440704345703,
+        0.017281055450439453
+      ],
+      "winner_change_fraction": [
+        0.734375,
+        0.55859375,
+        0.4921875,
+        0.453125,
+        0.41796875
+      ]
+    },
+    "frozen_42": {
+      "optimizer_steps": 384,
+      "skipped_steps": 0,
+      "overflow_retried_batches": 0,
+      "overflow_skipped_attempts": 0,
+      "fraction_clipped": 0.0,
+      "epoch_losses": [
+        0.6956138974055648,
+        0.6925038220360875,
+        0.6896412177011371,
+        0.6847181357443333,
+        0.6813445007428527,
+        0.6781926034018397
+      ],
+      "selected_epoch": 3
+    },
+    "finetuned_42": {
+      "optimizer_steps": 384,
+      "skipped_steps": 0,
+      "overflow_retried_batches": 2,
+      "overflow_skipped_attempts": 4,
+      "fraction_clipped": 0.3177083333333333,
+      "epoch_losses": [
+        0.6946063116192818,
+        0.6972481822595,
+        0.6971955383196473,
+        0.6834280230104923,
+        0.6253781928680837,
+        0.42189344204962254
+      ],
+      "selected_epoch": 6,
+      "median_training_logit_gaps": [
+        0.0025012046098709106,
+        0.006552204489707947,
+        0.004859060049057007,
+        0.029780622571706772,
+        0.07422006130218506,
+        0.03599202632904053
+      ],
+      "winner_change_fraction": [
+        0.85546875,
+        0.76171875,
+        0.6875,
+        0.53515625,
+        0.609375
+      ]
+    },
+    "frozen_73": {
+      "optimizer_steps": 384,
+      "skipped_steps": 0,
+      "overflow_retried_batches": 0,
+      "overflow_skipped_attempts": 0,
+      "fraction_clipped": 0.0,
+      "epoch_losses": [
+        0.6951420279219747,
+        0.6925624711439013,
+        0.6889017634093761,
+        0.6851888606324792,
+        0.6814127769321203,
+        0.6775219533592463
+      ],
+      "selected_epoch": 1
+    },
+    "finetuned_73": {
+      "optimizer_steps": 384,
+      "skipped_steps": 0,
+      "overflow_retried_batches": 2,
+      "overflow_skipped_attempts": 2,
+      "fraction_clipped": 0.4453125,
+      "epoch_losses": [
+        0.6955406572669744,
+        0.6713869795203209,
+        0.5256126327440143,
+        0.3910598964430392,
+        0.31666990951634943,
+        0.20571575569920242
+      ],
+      "selected_epoch": 6,
+      "median_training_logit_gaps": [
+        0.005247637629508972,
+        0.017514333128929138,
+        0.056248921900987625,
+        0.02207469940185547,
+        0.031050562858581543,
+        0.044187307357788086
+      ],
+      "winner_change_fraction": [
+        0.8125,
+        0.59765625,
+        0.43359375,
+        0.49609375,
+        0.40234375
+      ]
+    }
+  },
+  "schedule_changes": {
+    "17": {
+      "recall_delta": 0.0967741935483871,
+      "fpr_delta": 0.0211864406779661,
+      "auc_delta": 0.021342654065453548
+    },
+    "42": {
+      "recall_delta": 0.6175115207373272,
+      "fpr_delta": -0.046610169491525424,
+      "auc_delta": 0.42003827227993434
+    },
+    "73": {
+      "recall_delta": 0.22580645161290322,
+      "fpr_delta": 0.025423728813559324,
+      "auc_delta": 0.02995391705069117
+    }
+  },
+  "paired_nominal_95_intervals": {
+    "17": {
+      "recall_delta": [
+        0.059907834101382486,
+        0.1382488479262673
+      ],
+      "fpr_delta": [
+        0.00423728813559322,
+        0.0423728813559322
+      ],
+      "auc_delta": [
+        -0.003050554557525389,
+        0.046699015855658686
+      ]
+    },
+    "42": {
+      "recall_delta": [
+        0.5391705069124424,
+        0.6866359447004609
+      ],
+      "fpr_delta": [
+        -0.09322033898305085,
+        0.0
+      ],
+      "auc_delta": [
+        0.35406740607670084,
+        0.48105937085058176
+      ]
+    },
+    "73": {
+      "recall_delta": [
+        0.16589861751152074,
+        0.2903225806451613
+      ],
+      "fpr_delta": [
+        0.00423728813559322,
+        0.05084745762711865
+      ],
+      "auc_delta": [
+        0.003699328282433937,
+        0.06108578067640405
+      ]
+    }
+  },
+  "declared_directional_criterion_passed": true,
+  "runtime_loss_replay": {
+    "source_notebook_sha256": "d5e46069e2c69224383ec8d5e036393670db63446ff3c55d4fb11194d827c986",
+    "prior_checkpoints_verified": 6,
+    "known_new_checkpoints": {
+      "finetuned_17": "f921300f51fe3436be4b64bf2d0ebca1683d096dfa187d6b312e58becdae2f54",
+      "finetuned_42": "e2f987b76caabfab2e8429642f00bb66f78d68656871c96d217eedba3e6fe397"
+    },
+    "matched_validation_summaries": 36,
+    "limitation": "Seed 73 checkpoint bytes and complete holdout predictions were not retrieved before the runtime disappeared. Replay retains the already frozen algorithm and requires all captured validation summaries plus both saved new checkpoint hashes to match before evaluating."
+  },
+  "scope": "All recorded hashes, prior and new saved-head replay, full token coverage, all model/threshold freezes, six-epoch histories, optimizer/window logs and recorded A100 package replays; full GPU encoder training not independently repeated",
+  "limitations": "Nominal paired document bootstrap omits website/template dependence, label uncertainty and broader seed variation. Prior fine-tuned head replay uses saved winning embeddings only."
+}

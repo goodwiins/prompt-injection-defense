@@ -1,0 +1,32 @@
+{"task_id": "c7058499-3dc9-4175-9142-d22416d25a1f", "reason": "Outside declared 4096-131072 token range", "tokens": 198748}
+{"task_id": "c50985ee-d4d0-4a9e-ac6f-97bede200abd", "reason": "Outside declared 4096-131072 token range", "tokens": 190597}
+{"task_id": "e6c7934b-6949-46ee-8f72-edb46abd3da7", "reason": "Outside declared 4096-131072 token range", "tokens": 270583}
+{"task_id": "0ad8d621-8f1a-4fc2-adf9-a78d363ebd3a", "reason": "Outside declared 4096-131072 token range", "tokens": 275928}
+{"task_id": "c254dcec-bd9b-4cf0-9225-9d2bf1345f38", "reason": "Outside declared 4096-131072 token range", "tokens": 269477}
+{"task_id": "14d4edf5-e5ca-40e8-8e5d-77068a22c32c", "reason": "Outside declared 4096-131072 token range", "tokens": 281730}
+{"task_id": "14f5587e-1353-419e-a381-f92d54ea2059", "reason": "Outside declared 4096-131072 token range", "tokens": 267493}
+{"task_id": "af97084c-5b72-4fec-be1e-dcab0980b335", "reason": "Outside declared 4096-131072 token range", "tokens": 270433}
+{"task_id": "84f19aba-ad0a-46db-84bb-c279b5353b8a", "reason": "Outside declared 4096-131072 token range", "tokens": 167864}
+{"task_id": "2e15efa0-f646-4dc4-9ce0-2e3d155c788b", "reason": "Outside declared 4096-131072 token range", "tokens": 168538}
+{"task_id": "8e200503-9b49-48aa-aaf6-3d6692b5cb50", "reason": "Outside declared 4096-131072 token range", "tokens": 161012}
+{"task_id": "02e7bae3-c67f-4227-b6ea-7b87d111202a", "reason": "Outside declared 4096-131072 token range", "tokens": 137405}
+{"task_id": "0dd0b532-7bac-4b3e-b5a4-2ca6b0897af6", "reason": "Outside declared 4096-131072 token range", "tokens": 138917}
+{"task_id": "f4623be1-31c6-4546-a567-92bfd1da9cd7", "reason": "Outside declared 4096-131072 token range", "tokens": 753295}
+{"task_id": "13d78369-994a-4202-a9ed-8361e1fdea9d", "reason": "Outside declared 4096-131072 token range", "tokens": 746054}
+{"task_id": "04ec089f-2ae1-4fa9-bfdf-4dff9ab710ad", "reason": "Duplicate or lexical cosine >=0.90", "duplicate": false, "prior_cosine": 0.9198623171510913, "new_parent_cosine": 0.8613610155513498}
+{"task_id": "19847108-680f-4021-83a9-2548fab75fac", "reason": "Duplicate or lexical cosine >=0.90", "duplicate": false, "prior_cosine": 0.9100808673857301, "new_parent_cosine": 0.8528380446719643}
+{"task_id": "87d1206c-a16b-4816-9c1e-6e1a04f30bf6", "reason": "Outside declared 4096-131072 token range", "tokens": 153223}
+{"task_id": "61c8e051-a847-4424-9d8b-b8bc2c134a35", "reason": "Outside declared 4096-131072 token range", "tokens": 171951}
+{"task_id": "e832e1f9-3a9d-440e-a96f-8cbbf241e4af", "reason": "Outside declared 4096-131072 token range", "tokens": 175241}
+{"task_id": "dd13bc51-f582-4004-8641-eb4e62cabfc7", "reason": "Outside declared 4096-131072 token range", "tokens": 167897}
+{"task_id": "2eaf60d5-d2af-4f50-a3ad-5cc9132a770a", "reason": "Outside declared 4096-131072 token range", "tokens": 319958}
+{"task_id": "486bdb13-16c5-4a53-8566-a60caaf94a73", "reason": "Outside declared 4096-131072 token range", "tokens": 327151}
+{"task_id": "6a7eaba3-f6ec-4eba-9e04-ff974b228ef4", "reason": "Outside declared 4096-131072 token range", "tokens": 376813}
+{"task_id": "e3016f6f-b0fe-46df-a5ae-d0ad80a6996c", "reason": "Outside declared 4096-131072 token range", "tokens": 431531}
+{"task_id": "7a632871-a6a8-40fd-b48f-6fea49cf48da", "reason": "Outside declared 4096-131072 token range", "tokens": 253567}
+{"task_id": "837989e0-7476-496a-be02-e4c69f1f989b", "reason": "Outside declared 4096-131072 token range", "tokens": 158450}
+{"task_id": "eee72e78-71bd-434b-ba74-33888ea5522d", "reason": "Outside declared 4096-131072 token range", "tokens": 150321}
+{"task_id": "82f654ab-fbfe-43f2-a2fe-0001b2ac853f", "reason": "Outside declared 4096-131072 token range", "tokens": 156601}
+{"task_id": "e9f5f0d0-7241-4a28-b387-c65a0ce52a61", "reason": "Outside declared 4096-131072 token range", "tokens": 149707}
+{"task_id": "39fd14c2-3bdd-4ca6-8a3a-1a6e7374c8e6", "reason": "Duplicate or lexical cosine >=0.90", "duplicate": false, "prior_cosine": 0.9463052059746606, "new_parent_cosine": 0.8908123870848508}
+{"task_id": "2bc47bba-32d7-406b-bb39-c6f2b2f2039a", "reason": "Duplicate or lexical cosine >=0.90", "duplicate": false, "prior_cosine": 0.9486958117836953, "new_parent_cosine": 0.8938135037008671}

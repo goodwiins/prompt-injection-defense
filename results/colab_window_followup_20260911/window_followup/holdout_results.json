@@ -1,0 +1,213 @@
+{
+  "completed_at": "2026-09-11T05:23:11.455448+00:00",
+  "summaries": {
+    "base_17": {
+      "n": 919,
+      "tp": 76,
+      "tn": 416,
+      "fp": 58,
+      "fn": 369,
+      "accuracy": {
+        "value": 0.5353645266594124,
+        "nominal_wilson_95": [
+          0.5030385004823132,
+          0.5673961330928448
+        ]
+      },
+      "recall": {
+        "value": 0.1707865168539326,
+        "nominal_wilson_95": [
+          0.138675682121068,
+          0.2085325709448561
+        ]
+      },
+      "fpr": {
+        "value": 0.12236286919831224,
+        "nominal_wilson_95": [
+          0.09585985981891326,
+          0.1549376727276789
+        ]
+      },
+      "roc_auc": 0.5397762290807376,
+      "average_precision": 0.5407858747095826,
+      "balanced_accuracy": 0.5242118238278102,
+      "threshold": 0.8157064318656921
+    },
+    "windowed_17": {
+      "n": 919,
+      "tp": 228,
+      "tn": 256,
+      "fp": 218,
+      "fn": 217,
+      "accuracy": {
+        "value": 0.5266594124047879,
+        "nominal_wilson_95": [
+          0.49433486434453333,
+          0.5587620132736628
+        ]
+      },
+      "recall": {
+        "value": 0.5123595505617977,
+        "nominal_wilson_95": [
+          0.4660114064018151,
+          0.558496133585471
+        ]
+      },
+      "fpr": {
+        "value": 0.459915611814346,
+        "nominal_wilson_95": [
+          0.41555022434037175,
+          0.5049254914047973
+        ]
+      },
+      "roc_auc": 0.5471104157777462,
+      "average_precision": 0.5385543578709586,
+      "balanced_accuracy": 0.5262219693737258,
+      "threshold": 0.8367138504981995
+    },
+    "base_42": {
+      "n": 919,
+      "tp": 50,
+      "tn": 441,
+      "fp": 33,
+      "fn": 395,
+      "accuracy": {
+        "value": 0.5342763873775843,
+        "nominal_wilson_95": [
+          0.5019500101322951,
+          0.5663174039482428
+        ]
+      },
+      "recall": {
+        "value": 0.11235955056179775,
+        "nominal_wilson_95": [
+          0.08627315275033347,
+          0.1450812749211471
+        ]
+      },
+      "fpr": {
+        "value": 0.06962025316455696,
+        "nominal_wilson_95": [
+          0.04999995740407154,
+          0.09616035901774303
+        ]
+      },
+      "roc_auc": 0.5329967287725785,
+      "average_precision": 0.5311318059471294,
+      "balanced_accuracy": 0.5213696486986203,
+      "threshold": 0.8808263540267944
+    },
+    "windowed_42": {
+      "n": 919,
+      "tp": 192,
+      "tn": 303,
+      "fp": 171,
+      "fn": 253,
+      "accuracy": {
+        "value": 0.5386289445048966,
+        "nominal_wilson_95": [
+          0.5063048915880488,
+          0.57063140047097
+        ]
+      },
+      "recall": {
+        "value": 0.4314606741573034,
+        "nominal_wilson_95": [
+          0.386223796327184,
+          0.4778707546524112
+        ]
+      },
+      "fpr": {
+        "value": 0.36075949367088606,
+        "nominal_wilson_95": [
+          0.31880698579919076,
+          0.40495076363139626
+        ]
+      },
+      "roc_auc": 0.5429905655904802,
+      "average_precision": 0.5411005681406222,
+      "balanced_accuracy": 0.5353505902432086,
+      "threshold": 0.8808263540267944
+    },
+    "base_73": {
+      "n": 919,
+      "tp": 134,
+      "tn": 366,
+      "fp": 108,
+      "fn": 311,
+      "accuracy": {
+        "value": 0.544069640914037,
+        "nominal_wilson_95": [
+          0.5117519482038726,
+          0.5760204413282475
+        ]
+      },
+      "recall": {
+        "value": 0.30112359550561796,
+        "nominal_wilson_95": [
+          0.26035169788702717,
+          0.3452997041357324
+        ]
+      },
+      "fpr": {
+        "value": 0.22784810126582278,
+        "nominal_wilson_95": [
+          0.19236439358396726,
+          0.26770757121218014
+        ]
+      },
+      "roc_auc": 0.5331342151424643,
+      "average_precision": 0.5310804635430484,
+      "balanced_accuracy": 0.5366377471198975,
+      "threshold": 0.7231614589691162
+    },
+    "windowed_73": {
+      "n": 919,
+      "tp": 291,
+      "tn": 188,
+      "fp": 286,
+      "fn": 154,
+      "accuracy": {
+        "value": 0.5212187159956474,
+        "nominal_wilson_95": [
+          0.4889000597253413,
+          0.5533607204197535
+        ]
+      },
+      "recall": {
+        "value": 0.6539325842696629,
+        "nominal_wilson_95": [
+          0.6085857161200777,
+          0.6966445546306678
+        ]
+      },
+      "fpr": {
+        "value": 0.6033755274261603,
+        "nominal_wilson_95": [
+          0.5586744635473465,
+          0.6464144800572175
+        ]
+      },
+      "roc_auc": 0.5411747973261272,
+      "average_precision": 0.5210448675830903,
+      "balanced_accuracy": 0.5252785284217513,
+      "threshold": 0.7730170488357544
+    }
+  },
+  "paired_auc_deltas": {
+    "17": 0.007334186697008582,
+    "42": 0.009993836817901669,
+    "73": 0.008040582183662881
+  },
+  "positive_auc_delta_all_seeds": true,
+  "limitations": [
+    "HTML extraction remains unchanged and can remove hidden payloads",
+    "document labels are not verified span labels; no automatic relabeling",
+    "training source imbalance and synthetic template quality remain unchanged",
+    "fresh means unused by this experiment, not unknown to model pretraining or globally unpublished",
+    "character similarity filtering does not guarantee semantic or website independence",
+    "fresh holdout covers BrowseSafe only, not NotInject or downstream attack success",
+    "three classifier seeds do not measure encoder-training seed robustness",
+    "research detector; not a standalone security gate"
+  ]
+}

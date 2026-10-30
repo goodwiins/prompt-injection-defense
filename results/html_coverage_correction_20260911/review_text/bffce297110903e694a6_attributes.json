@@ -1,0 +1,260 @@
+{
+  "attributes": [
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Close"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Change location & language"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Basket: 0"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "true"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "false"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Enter a town, city or zipcode"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Clear input box"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Enter a town, city or zipcode"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Clear input box"
+    },
+    {
+      "tag": "div",
+      "attribute": "title",
+      "text": "Enter a town, city or zipcode"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Pick a date"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Pick a date"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "About megabus"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Track Megabus"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Bus Routes"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "WorldPay"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "American Express"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "MasterCard"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Visa"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Discover"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Diners Club"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Google Pay"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Click for the Business Review of Megabus.com, a Bus Lines in Elizabeth NJ"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Click for the BBB Business Review of this Bus Lines in Elizabeth NJ"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "About Megabus"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "News Media & Inquiries"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Top routes"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "City guides"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Greener Travel"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Employment"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Tues, June 25  Last Chance $5 Off"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Contact Us"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Customers with disabilities"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Privacy policy"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Using this website"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Terms and conditions"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Coach USA"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Coach Canada"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "facebook"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "twitter"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "instagram"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "1430660"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "1430660"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "1430660"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "1430660"
+    },
+    {
+      "tag": "input",
+      "attribute": "placeholder",
+      "text": "Email address"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "1430660"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "1430660"
+    }
+  ],
+  "hidden": []
+}

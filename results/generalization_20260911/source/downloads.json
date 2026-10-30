@@ -1,0 +1,14 @@
+[
+  {
+    "path": "mind2web_train_10.json",
+    "url": "https://huggingface.co/datasets/osunlp/Mind2Web/resolve/17ece8eb89862368edc0cc806acee6fca5163474/data/train/train_10.json",
+    "sha256": "182542d7947b3fa9e90fc57a3d82d4d8f2997ca5a06664217720d7a78a956e33",
+    "bytes": 28366146
+  },
+  {
+    "path": "bipia_text_attack_test.json",
+    "url": "https://raw.githubusercontent.com/microsoft/BIPIA/a004b69ec0dd446e0afd461d98cb5e96e120a5d0/benchmark/text_attack_test.json",
+    "sha256": "75750e7b4e8b34e8f9d88d89b357aeaaf02bd07f9e493ccd37eda74a0cd7c7f8",
+    "bytes": 6322
+  }
+]

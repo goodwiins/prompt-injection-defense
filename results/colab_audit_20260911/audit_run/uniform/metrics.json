@@ -1,0 +1,236 @@
+{
+  "variant": "uniform",
+  "threshold": 0.7721232771873474,
+  "pooled": {
+    "n": 2315,
+    "tp": 510,
+    "tn": 938,
+    "fp": 321,
+    "fn": 546,
+    "accuracy": {
+      "value": 0.6254859611231102,
+      "nominal_wilson_95": [
+        0.6055774718779467,
+        0.6449786831320996
+      ]
+    },
+    "recall": {
+      "value": 0.48295454545454547,
+      "nominal_wilson_95": [
+        0.45293160273412003,
+        0.5131010527160095
+      ]
+    },
+    "fpr": {
+      "value": 0.2549642573471009,
+      "nominal_wilson_95": [
+        0.23165988563925954,
+        0.27975938580579884
+      ]
+    }
+  },
+  "per_source": {
+    "deepset/prompt-injections": {
+      "n": 240,
+      "tp": 59,
+      "tn": 124,
+      "fp": 6,
+      "fn": 51,
+      "accuracy": {
+        "value": 0.7625,
+        "nominal_wilson_95": [
+          0.7047918603605975,
+          0.8119373316700841
+        ]
+      },
+      "recall": {
+        "value": 0.5363636363636364,
+        "nominal_wilson_95": [
+          0.44352397913274194,
+          0.6267491892092099
+        ]
+      },
+      "fpr": {
+        "value": 0.046153846153846156,
+        "nominal_wilson_95": [
+          0.021321953068066113,
+          0.09703792555457165
+        ]
+      }
+    },
+    "ethz-spylab/ctf-satml24": {
+      "n": 140,
+      "tp": 132,
+      "tn": 0,
+      "fp": 0,
+      "fn": 8,
+      "accuracy": {
+        "value": 0.9428571428571428,
+        "nominal_wilson_95": [
+          0.8912967078209393,
+          0.9707635147090092
+        ]
+      },
+      "recall": {
+        "value": 0.9428571428571428,
+        "nominal_wilson_95": [
+          0.8912967078209393,
+          0.9707635147090092
+        ]
+      },
+      "fpr": null
+    },
+    "leolee99/NotInject": {
+      "n": 339,
+      "tp": 0,
+      "tn": 143,
+      "fp": 196,
+      "fn": 0,
+      "accuracy": {
+        "value": 0.4218289085545723,
+        "nominal_wilson_95": [
+          0.3704220100954661,
+          0.4749875848166855
+        ]
+      },
+      "recall": null,
+      "fpr": {
+        "value": 0.5781710914454278,
+        "nominal_wilson_95": [
+          0.5250124151833144,
+          0.629577989904534
+        ]
+      }
+    },
+    "local-synthetic-historical": {
+      "n": 247,
+      "tp": 0,
+      "tn": 168,
+      "fp": 79,
+      "fn": 0,
+      "accuracy": {
+        "value": 0.680161943319838,
+        "nominal_wilson_95": [
+          0.619617870244428,
+          0.735187911935378
+        ]
+      },
+      "recall": null,
+      "fpr": {
+        "value": 0.31983805668016196,
+        "nominal_wilson_95": [
+          0.264812088064622,
+          0.38038212975557195
+        ]
+      }
+    },
+    "microsoft/llmail-inject-challenge": {
+      "n": 192,
+      "tp": 176,
+      "tn": 0,
+      "fp": 0,
+      "fn": 16,
+      "accuracy": {
+        "value": 0.9166666666666666,
+        "nominal_wilson_95": [
+          0.868931374051098,
+          0.9480560042266069
+        ]
+      },
+      "recall": {
+        "value": 0.9166666666666666,
+        "nominal_wilson_95": [
+          0.868931374051098,
+          0.9480560042266069
+        ]
+      },
+      "fpr": null
+    },
+    "perplexity-ai/browsesafe-bench": {
+      "n": 985,
+      "tp": 40,
+      "tn": 452,
+      "fp": 40,
+      "fn": 453,
+      "accuracy": {
+        "value": 0.49949238578680205,
+        "nominal_wilson_95": [
+          0.4683302613697305,
+          0.5306584541709864
+        ]
+      },
+      "recall": {
+        "value": 0.08113590263691683,
+        "nominal_wilson_95": [
+          0.060148169449231535,
+          0.10860074900797756
+        ]
+      },
+      "fpr": {
+        "value": 0.08130081300813008,
+        "nominal_wilson_95": [
+          0.06027159767219042,
+          0.10881764916106565
+        ]
+      }
+    },
+    "synthetic-additional-templates": {
+      "n": 51,
+      "tp": 0,
+      "tn": 51,
+      "fp": 0,
+      "fn": 0,
+      "accuracy": {
+        "value": 1.0,
+        "nominal_wilson_95": [
+          0.9299533801014687,
+          1.0
+        ]
+      },
+      "recall": null,
+      "fpr": {
+        "value": 0.0,
+        "nominal_wilson_95": [
+          0.0,
+          0.07004661989853143
+        ]
+      }
+    },
+    "tensortrust-local-cache": {
+      "n": 121,
+      "tp": 103,
+      "tn": 0,
+      "fp": 0,
+      "fn": 18,
+      "accuracy": {
+        "value": 0.8512396694214877,
+        "nominal_wilson_95": [
+          0.7770809679977386,
+          0.9037825912953552
+        ]
+      },
+      "recall": {
+        "value": 0.8512396694214877,
+        "nominal_wilson_95": [
+          0.7770809679977386,
+          0.9037825912953552
+        ]
+      },
+      "fpr": null
+    }
+  },
+  "latency": {
+    "n": 150,
+    "p50_ms": 20.90231,
+    "p95_ms": 49.438328049999996,
+    "scope": "one input: tokenization + GPU encoder + CPU XGBoost; excludes prior HTML preprocessing"
+  },
+  "centroid_ratio_trigger_safe_over_trigger_injection": 11.672399484331397,
+  "limitations": [
+    "one seed",
+    "capped source prefixes, not full benchmarks",
+    "no semantic near-duplicate or unknown-provenance guarantee",
+    "text-only detection, not downstream attack success",
+    "Wilson intervals are nominal; related inputs are not independent"
+  ]
+}

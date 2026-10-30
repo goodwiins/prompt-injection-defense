@@ -1,0 +1,19 @@
+{
+  "status": "blocked_by_colab_gpu_usage_limits",
+  "control_protocol_sha256": "0272be71356729ac6999ecc94ea7fae620db39ec560516e71ee5b989c62b9e2d",
+  "span_protocol_sha256": "60b5d2202a191887ee626f4d6b79ae2602549c6caf2ca19022d87d9ce5324b14",
+  "frozen_input_files_matched": 18,
+  "gpu": "Tesla T4",
+  "first_runtime": "mpnet-no-span-t4",
+  "runtime_terminated_at_utc": "2026-09-24 15:22:26 UTC",
+  "last_remote_log_snapshot": "2026-09-24 15:21:07 UTC",
+  "last_remote_log_sha256": "3e97a53b1b6a556af7d5cac41c6831456224823b22b93b7de0a8d46ebf313048",
+  "last_confirmed_stage": "frozen seed 17 completed six epochs; fine-tuned seed 17 completed two epochs and had begun epoch three",
+  "selected_control_results_available": false,
+  "portable_package_replays_available": false,
+  "final_holdout_evaluated": false,
+  "retry": "Colab T4 assignment returned Service Unavailable; the browser showed: You cannot currently connect to a GPU due to usage limits in Colab.",
+  "subsequent_retry": "2026-09-24 19:57 UTC: Colab T4 assignment again returned Service Unavailable; no new runtime or control result was created.",
+  "base_feature_cache_provenance": "no_span_t4_cache_provenance.json",
+  "interpretation": "Partial epoch metrics are not a matched control result and cannot isolate the span-loss effect."
+}

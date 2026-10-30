@@ -1,0 +1,9 @@
+{
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "filename": "model.safetensors",
+  "sha256": "78c0197b6159d92658e319bc1d72e4c73a9a03dd03815e70e555c5ef05615658",
+  "bytes": 437971872,
+  "verification": "Pinned upstream LFS SHA256; verify downloaded bytes before evaluation",
+  "verified_at": "2026-09-11T20:33:41.099493+00:00"
+}

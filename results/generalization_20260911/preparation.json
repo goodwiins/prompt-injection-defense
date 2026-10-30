@@ -1,0 +1,46 @@
+{
+  "prepared_at": "2026-09-11T19:43:26.827719+00:00",
+  "status": "awaiting_human_labels_and_family_provenance",
+  "candidate_count": 6,
+  "website_count": 3,
+  "counts_by_website": {
+    "sports.yahoo": 2,
+    "travelzoo": 2,
+    "kohls": 2
+  },
+  "prior_inputs_screened": 8370,
+  "training_and_validation_pages": 448,
+  "source_website_ids": 0,
+  "source_template_ids": 0,
+  "canonical_urls": 0,
+  "og_urls": 0,
+  "unseen_families_verified": false,
+  "human_review_completed": false,
+  "evaluation_started": false,
+  "model_selection": "Frozen models and thresholds; all three seeds; no model inference or test-based selection",
+  "sampling": "Workflow sample only: smallest released Mind2Web shard train_10; one hash-selected task per website, first action; pair with original text plus one published BIPIA template. No claim of representative final evaluation.",
+  "primary_comparison": "Each fixed fine-tuned seed against its matching frozen-encoder head; historical XGBoost is contextual",
+  "final_evaluation_requirements": [
+    "Actual human label review",
+    "Evidence for family separation against development inputs",
+    "Freeze a sufficiently broad final sampling frame before any scoring",
+    "Report each seed and uncertainty with paired website/page groups; do not treat inserted/original pairs as independent"
+  ],
+  "files": {
+    "models_frozen.json": "73c1cec47324d231c4f0c0402612cb629c428e1dac9a2b345a7e8591201aeb2d",
+    "construction_reference.jsonl": "2f3bd18789bb415f427c9a0a3b3f789e70fdcad623bf29b867b0c05281b68617",
+    "candidates.jsonl": "4fda7c8ed368da9ea550406ebeaa5d18b9c73fbb1e42609099333f4e49dd2147",
+    "REVIEW.md": "6dc9dfc16d8a58568357b201cc848c2b3245940e809b4d702cf32ceac79ad3a6",
+    "exclusions.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "training_provenance.jsonl": "2823a36f51780c9863525cdb0799a0fa01a8ed0d71863d79daa0d452ee13e47e",
+    "source/mind2web_train_10.json": "182542d7947b3fa9e90fc57a3d82d4d8f2997ca5a06664217720d7a78a956e33",
+    "source/downloads.json": "44d6e09c5487c6b2b82b42b4c8fc31e370fdef3403ebc891d297d93bfe937162",
+    "source/bipia_text_attack_test.json": "75750e7b4e8b34e8f9d88d89b357aeaaf02bd07f9e493ccd37eda74a0cd7c7f8",
+    "pages/323024a2dffc2fbbf6b4.txt": "18def075161dd05dd9f5561850ccb9551060e8e78641e2de14a725111ac46b8a",
+    "pages/e90541be4b053ea908bb.txt": "d9df9a9af9c718476444a4dc11c3e4b7f348a38efd0cc0aebe525b4110a8343a",
+    "pages/ee1ed93ebb8a69d23d4c.txt": "5be1eca224dabc9bdfa162e1ff43eea1e181cf43da771afe147925209248e97d",
+    "pages/49eebac55cfb03dc0211.txt": "8e64312e00f870f76e06f43a427caad1766907d3baa98c6e6422f0a804e244a2",
+    "pages/213b3ce97f4df825eb40.txt": "d52e53185275d5bbf24aebdb34963ab09da68a537b1be647c2bd5c8232eca6a5",
+    "pages/1874e45c7aa824ece6bf.txt": "9e07c5a401436e9613e2e3f699e72f0a54814a206a96b8357a247fd705de8c14"
+  }
+}

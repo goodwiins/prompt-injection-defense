@@ -1,0 +1,23 @@
+{
+  "reason": "Remove local transfer and partial-checkpoint duplicates after verified extraction",
+  "removed": [
+    {
+      "file": "partial_finetuned_17_checkpoint.pt",
+      "bytes": 438015770,
+      "sha256": "fd74ca9579a460921946cd3fce3c910af5900c602f821f45fd080caa8c2f0c7c",
+      "preserved_as": "completed/mpnet_span_t4/finetuned_17/checkpoint.pt"
+    },
+    {
+      "file": "partial_finetuned_42_checkpoint.pt",
+      "bytes": 438015770,
+      "sha256": "a7c3786b6c6bb9a9e5a80c8a66a831c6093f76a893229e43dc7a8cc60e2dc3de",
+      "preserved_as": "completed/mpnet_span_t4/finetuned_42/checkpoint.pt"
+    },
+    {
+      "file": "completed/mpnet_span_t4.tar",
+      "bytes": 1847521280,
+      "sha256": "c7f9e55fe0c70ddb7083fd0b8d649241e4347e30293ffde42cd9e5fc2f9bbeec",
+      "preserved_as": "completed/mpnet_span_t4"
+    }
+  ]
+}

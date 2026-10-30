@@ -1,0 +1,970 @@
+{
+  "attributes": [
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Toggle Sidebar"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Skip to content"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Home"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Search"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Reviews"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "News"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Guides"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Discover"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Store"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Rewards"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Videos"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "More"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Add to Library"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "Add to Library"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Browse Playlist"
+    },
+    {
+      "tag": "span",
+      "attribute": "title",
+      "text": "Backlog"
+    },
+    {
+      "tag": "span",
+      "attribute": "title",
+      "text": "Playing"
+    },
+    {
+      "tag": "span",
+      "attribute": "title",
+      "text": "Paused"
+    },
+    {
+      "tag": "span",
+      "attribute": "title",
+      "text": "Beat"
+    },
+    {
+      "tag": "span",
+      "attribute": "title",
+      "text": "Quit"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "More"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "light"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "light"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "dark"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "dark"
+    },
+    {
+      "tag": "input",
+      "attribute": "value",
+      "text": "system"
+    },
+    {
+      "tag": "input",
+      "attribute": "input_value",
+      "text": "system"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "More"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Africa (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Adria"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Australia (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Benelux (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Brazil (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Canada (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "China (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Czech / Slovakia (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "France (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Germany (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Greece (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Hungary (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "India (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Ireland (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Israel (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Italy (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Japan (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Latin America"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Middle East - English"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Middle East - Arabic"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Nordic"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Pakistan (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Poland (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Portugal (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Romania (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Southeast Asia"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Spain (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Turkey (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "United Kingdom (opens in a new window)"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "United States (opens in a new window)"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Home"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "FollowUs"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Site Themes"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Change Region"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Corporate"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Accessibility"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "[object Object]"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "PrivacyPolicy"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "TermsofUse"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Standards"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "CCPA"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "SiteMap"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Boards"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "ContactSupport"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Home"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "All News"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Columns"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "PlayStation"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Xbox"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Nintendo"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Mobile"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Movies"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Television"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Comics"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Tech"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Home"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "All Reviews"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Editor's Choice"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Game Reviews"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Movie Reviews"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "TV Show Reviews"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Tech Reviews"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Home"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Home"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Original Shows"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Popular"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Trailers"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Gameplay"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "All Videos"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Home"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Settings"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Security"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Subscription"
+    },
+    {
+      "tag": "a",
+      "attribute": "title",
+      "text": "Email Preferences"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Register / Login"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Collapse Sidebar"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "The Last of Us: Predicting Season 2"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Quentin Tarantino's Final Movie Revealed in New Report"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "John Wick: Chapter 4 Review"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Dungeons & Dragons: Honor Among Thieves Review"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "3rd party ad content"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "aria_label",
+      "text": "Advertisement"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Scroll Right"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Marvel Is Chasing Down an Ant-Man and the Wasp: Quantumania Leaker"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Marvel Is Chasing Down an Ant-Man and the Wasp: Quantumania Leaker"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Only One Copy Will Be Printed of Special Lord of the Rings Magic: The Gathering Card"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Only One Copy Will Be Printed of Special Lord of the Rings Magic: The Gathering Card"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Bayonetta Origins: Cereza and the Lost Demon Review"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Bayonetta Origins: Cereza and the Lost Demon Review"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "The CW's Gotham Knights: Season 1, Episodes 1-6 Review"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "The CW's Gotham Knights: Season 1, Episodes 1-6 Review"
+    },
+    {
+      "tag": "div",
+      "attribute": "aria_label",
+      "text": "Filters"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Zack Snyder Teases 'Full Circle' Darkseid Announcement"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Zack Snyder Teases 'Full Circle' Darkseid Announcement"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Author Link"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "The Mandalorian Season 3, Episode 3 Review"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "The Mandalorian Season 3, Episode 3 Review"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Author Link"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "play pause"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "fullscreen"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "How The Last of Us Could Adapt Part 2"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "How The Last of Us Could Adapt Part 2"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Author Link"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Atlas Fallen - Official 'Rise from Dust' Gameplay Reveal Trailer"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Atlas Fallen - Official 'Rise from Dust' Gameplay Reveal Trailer"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Meet Off the Grid's Delia in this Exclusive First Episode"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Meet Off the Grid's Delia in this Exclusive First Episode"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "The Last of Us Season 1 is Getting a Blu-ray Release This Summer"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "The Last of Us Season 1 is Getting a Blu-ray Release This Summer"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Author Link"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "3rd party ad content"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "aria_label",
+      "text": "Advertisement"
+    },
+    {
+      "tag": "button",
+      "attribute": "title",
+      "text": "Scroll Right"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Lord of the Rings MTG Crossover Officially Revealed"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Lord of the Rings MTG Crossover Officially Revealed"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Why Can't Anyone Stay Dead in Star Wars?"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Why Can't Anyone Stay Dead in Star Wars?"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Transformers: Rise of the Beasts Reveals New Character Posters"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Transformers: Rise of the Beasts Reveals New Character Posters"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Scream 6 Ending Explained  Ghostface: Hunter or Hunted?"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Scream 6 Ending Explained  Ghostface: Hunter or Hunted?"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Did HBO's The Last of Us Just Reveal Its Most Terrifying Monster Yet?"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Did HBO's The Last of Us Just Reveal Its Most Terrifying Monster Yet?"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Ayaneo 2 Review"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Ayaneo 2 Review"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "3rd party ad content"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "aria_label",
+      "text": "Advertisement"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "How Resident Evil 4 Revolutionised Survival Horror"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "How Resident Evil 4 Revolutionised Survival Horror"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Resident Evil 4 Remake Demo: How to Unlock the Secret Hard Mode"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Resident Evil 4 Remake Demo: How to Unlock the Secret Hard Mode"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Ted Lasso Season 3 Premiere Review"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Ted Lasso Season 3 Premiere Review"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Author Link"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "10 Movies to Watch If You Like Harry Potter"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "10 Movies to Watch If You Like Harry Potter"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Author Link"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "Grab a Physical Copy of Prime Remastered Right Now"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Grab a Physical Copy of Prime Remastered Right Now"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Author Link"
+    },
+    {
+      "tag": "a",
+      "attribute": "aria_label",
+      "text": "The New Dead Space Remake Is on Sale on Console for the First Time"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "The New Dead Space Remake Is on Sale on Console for the First Time"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Related Content Link"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Author Link"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "title",
+      "text": "3rd party ad content"
+    },
+    {
+      "tag": "iframe",
+      "attribute": "aria_label",
+      "text": "Advertisement"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Dead By Daylight Mobile"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Flooded"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Wolcen: Lords of Mayhem"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Anno 1800 Console Edition"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Defend the Rook"
+    },
+    {
+      "tag": "img",
+      "attribute": "alt",
+      "text": "Cheez-It logo"
+    },
+    {
+      "tag": "object",
+      "attribute": "title",
+      "text": "Sponsored"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "play pause"
+    },
+    {
+      "tag": "button",
+      "attribute": "aria_label",
+      "text": "fullscreen"
+    }
+  ],
+  "hidden": []
+}

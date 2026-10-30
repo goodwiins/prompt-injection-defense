@@ -1,0 +1,62 @@
+{
+  "seeds": [
+    17,
+    42,
+    73
+  ],
+  "seed_scope": "XGBoost subsampling only; encoder frozen for every run",
+  "intervention": "inference token coverage only: first window versus maximum score over all windows",
+  "max_seq_length": 384,
+  "content_tokens": 382,
+  "overlap_tokens": 96,
+  "stride": 286,
+  "classifier_training": "original train split, first 384 tokens, unchanged labels and XGBoost parameters",
+  "threshold_rule": "maximum validation balanced accuracy; highest threshold breaks ties",
+  "fresh_holdout": {
+    "source": "perplexity-ai/browsesafe-bench",
+    "revision": "b506fb5bc7fd4472c8738055a67a0ef6406afdc9",
+    "split": "test",
+    "start": 600,
+    "stop": 1600,
+    "selection": "all eligible rows in fixed index interval; no label balancing or outcome selection",
+    "exclusions": "prior source IDs, normalized full text, first-window token hash, or character TF-IDF cosine >=0.90 against every prior raw input; same checks within fresh holdout"
+  },
+  "primary_endpoint": "paired ROC-AUC delta on fresh BrowseSafe holdout for each seed",
+  "secondary_endpoints": [
+    "recall",
+    "false-positive rate",
+    "balanced accuracy",
+    "average precision"
+  ],
+  "success_rule": "positive holdout ROC-AUC delta for all three seeds; report each FPR and recall tradeoff without selecting a winning seed",
+  "selection_policy": "no search or seed selection; validation thresholds only; evaluate both frozen methods once even if validation fails",
+  "limitations": [
+    "HTML extraction remains unchanged and can remove hidden payloads",
+    "document labels are not verified span labels; no automatic relabeling",
+    "training source imbalance and synthetic template quality remain unchanged",
+    "fresh means unused by this experiment, not unknown to model pretraining or globally unpublished",
+    "character similarity filtering does not guarantee semantic or website independence",
+    "fresh holdout covers BrowseSafe only, not NotInject or downstream attack success",
+    "three classifier seeds do not measure encoder-training seed robustness",
+    "research detector; not a standalone security gate"
+  ],
+  "frozen_at": "2026-09-11T05:08:54.871070+00:00",
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "model_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "old_manifest_sha256": "c1ecc4cc779e620f6da9437b4fea4b5be1b47972055353eb077135d0dbcd81d4",
+  "old_raw_sha256": "6e63d66f8989893e6062d4f5928f7dbe4b989c4c59f5cf90393ab6a5dce24c7c",
+  "script_sha256": "163d0f6ed0e56ae9ddab9873a68fa1374351466c8cfa7200d7ea676c03e288ed",
+  "development_sha256": "ac78a4d5cdeee801cd96cd511339235229dc7827ff4afb9b3f8904b3d70327e3",
+  "holdout_sha256": "a19ed336bf3392ff19e9b9f9656e219dcabb8072b7d9b88ce4f93079699dd8b5",
+  "exclusion_sha256": "591df55f2338aeacec10390b7caa379568c6b5911bb2db340a987ef399d36b0c",
+  "counts": {
+    "train": 2286,
+    "validation": 742,
+    "fresh_holdout": 919,
+    "holdout_labels": {
+      "1": 445,
+      "0": 474
+    },
+    "excluded": 81
+  }
+}
