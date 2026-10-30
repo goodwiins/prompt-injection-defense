@@ -1,3 +1,16 @@
+# October 30: Hugging Face model card claims are unverifiable from this repository
+
+The published model `goodwiinz/injection-aware-mpnet-v2` (HF repo created and last modified 2026-07-20) was checked against this repository. Its card describes a two-stage window-level detector ("v3": fine-tuned MPNet encoder + XGBoost on 768-d window embeddings, window 256 / stride 192, θ=0.45, 11,244 training windows, `scale_pos_weight=3.44`) and reports SaTML 96.4% recall (n=1000), LLMail 100% (n=1000), deepset 71.4% recall / 16.9% FPR (n=146), BrowseSafe 51.3% / 23.6% (n=615), NotInject-local 2.8% FPR (n=247), NotInject-HF 0.0% FPR (n=79), labelled `"leakage_free": true`.
+
+The table matches the shipped `v3/results.json` exactly and all confusion-matrix arithmetic replays correctly. However, the claims cannot be verified from this repository:
+
+- **No provenance.** No commit exists in any branch between 2026-05-29 (leakage fix, PR #15) and 2026-09-02. No training script, evaluation script, manifest, or result file in the repository or its git history mentions `injection_aware_mpnet_v3`/`v2` or reproduces the v3 configuration. `training/windowed_followup.py` is a different pipeline (frozen encoder, window 384 / stride 286). Only the Stage-1 claim of 14,000 contrastive pairs traces to repository code (`training/finetune_mpnet_embeddings.py`; see CRITIQUE.md). The only evidence for the card's table is the results file uploaded alongside the model.
+- **"Leakage-free" is self-asserted.** The card's split method — "disjoint by dataset index range" — is the pattern CLAIM_AUDIT.md found inadequate: local pools are template-generated with heavy duplication, so index-disjoint slices still share templates. The model also trains on all five sources it evaluates on, including NotInject, so the over-defense FPRs are measured on a tuned-toward distribution.
+- **NotInject-HF n=79** is a slice, not the official 339-prompt benchmark (same over-claim pattern as FIX_PLAN.md P1-5).
+- **It is not the paper's model.** The re-scoped paper describes a document-level detector (θ=0.764, corpus 2,667/570/413). Do not cite the HF card as evidence for the paper's claims or vice versa.
+
+Open decision: publish the v3 training/evaluation code and manifests to the HF repo, or add a caveat to the model card withdrawing the "leakage-free" characterization. Until then, treat the card's numbers as unverified self-reports under the same standard this audit applies to the paper.
+
 # September 24: MPNet research decision
 
 The T4 reviewed-span run completed and verified all six trials and three portable package replays. Fine-tuned seeds 17/42/73 scored 74/4, 4/2 and 71/5 TP/FP on the 207-page validation set; all three missed all five direct new-HTML attacks. Retain the verified A100 no-span HTML-correction run as the research comparison reference; do not promote the span-loss packages or claim a security gate. No application model pointer, deployment, or final holdout was changed. See `results/span_supervision_20260911/README.md` and `review_packet_20260924.md`.
