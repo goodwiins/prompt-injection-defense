@@ -1,3 +1,11 @@
+# October 30: final holdout frozen before retraining
+
+A new final holdout is frozen at `results/final_holdout_20261030/` (see its README). It has 1,777 rows and nothing has been scored on it: BrowseSafe test rows 2,600–3,679 (497 injections and 473 benign), 503 SaTML attacks from 11 reserved teams, 188 LLMail Phase 2 attacks that actually made the tool call, from 12 reserved teams, and 116 benign LLMail false-positive-test emails. Rows were screened against all 10,966 inputs earlier experiments used. `scripts/freeze_final_holdout.py check` re-verifies the hashes.
+
+Every future training, validation or threshold-selection row must pass `Guard.reason()` from that script. It blocks the BrowseSafe test split, all rows from reserved teams in any phase, holdout text and token duplicates, and near-duplicates at cosine 0.90 or more. It rejects SaTML and LLMail rows that carry no team. A smoke test covered seven allow/block cases and the missing-team error.
+
+Gaps: the holdout has no benign trigger-word (over-defense) slice, because NotInject is used up, so it cannot test the paper's over-defense claim. Attack rows are concentrated in a few teams, so report per-team and macro-averaged recall. Next step: validate JEV-9B as a window labeler on the 15 reviewed HTML insertions with known spans, before any training.
+
 # October 30: Hugging Face model card claims are unverifiable from this repository
 
 The published model `goodwiinz/injection-aware-mpnet-v2` (HF repo created and last modified 2026-07-20) was checked against this repository. Its card describes a two-stage window-level detector ("v3": fine-tuned MPNet encoder + XGBoost on 768-d window embeddings, window 256 / stride 192, θ=0.45, 11,244 training windows, `scale_pos_weight=3.44`) and reports SaTML 96.4% recall (n=1000), LLMail 100% (n=1000), deepset 71.4% recall / 16.9% FPR (n=146), BrowseSafe 51.3% / 23.6% (n=615), NotInject-local 2.8% FPR (n=247), NotInject-HF 0.0% FPR (n=79), labelled `"leakage_free": true`.

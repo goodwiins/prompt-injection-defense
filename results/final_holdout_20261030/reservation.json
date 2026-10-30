@@ -1,0 +1,31 @@
+{
+  "groups": [
+    "satml-team:giftofthegab",
+    "satml-team:Crawlers",
+    "satml-team:One Hat Army",
+    "satml-team:Hao",
+    "satml-team:delphi",
+    "satml-team:RSLLM",
+    "satml-team:DN",
+    "satml-team:Hestia",
+    "satml-team:inception",
+    "satml-team:Beimnet & Lovisa",
+    "satml-team:teamlr",
+    "llmail-team:53ccb240-03f0-4f2b-96f7-a2859351b39d",
+    "llmail-team:96ea4373-bc1c-4a54-af8e-ef1b5b87aa5b",
+    "llmail-team:ab2403d0-34cd-4a8a-8bf5-6148d10b3f72",
+    "llmail-team:6b10c6d7-9767-46a3-9b64-1d06ac294e80",
+    "llmail-team:dec505ad-4ecb-4b43-b8a0-515634437ac4",
+    "llmail-team:edd50ba4-65f4-4180-8038-101b7f67552a",
+    "llmail-team:ec6f8e26-cbe3-4d7a-adfb-dfe2361f0eb6",
+    "llmail-team:2a7175a2-68ec-46d5-96fb-a54ee914a8cd",
+    "llmail-team:50b234a6-0f30-4367-a093-ec9b602319cc",
+    "llmail-team:46dfe98d-729c-484e-a73d-16d7543ec985",
+    "llmail-team:45ca575e-b6d9-41cd-a2af-25bae0a860dc",
+    "llmail-team:7ca9eee7-1116-41a4-819d-7094b2ccd935"
+  ],
+  "eligible_teams": {
+    "ethz-spylab/ctf-satml24": 44,
+    "microsoft/llmail-inject-challenge": 47
+  }
+}

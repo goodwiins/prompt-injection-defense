@@ -1,0 +1,71 @@
+{
+  "seed": 20261030,
+  "base_model": "sentence-transformers/all-mpnet-base-v2",
+  "base_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "source_revisions": {
+    "perplexity-ai/browsesafe-bench": "b506fb5bc7fd4472c8738055a67a0ef6406afdc9",
+    "ethz-spylab/ctf-satml24": "11426babe61ee16b0efe7b55e0430359e0fc4235",
+    "microsoft/llmail-inject-challenge": "1063bdf01ec8762b812d5e06ee768a06faa5a6f7"
+  },
+  "browsesafe_test_interval": [
+    2600,
+    3680
+  ],
+  "satml_prior_accepted": 1500,
+  "llmail_prior_phase1_rows": 500,
+  "team_fraction": 0.25,
+  "per_team_cap": 100,
+  "per_source_target": 1000,
+  "cosine_threshold": 0.9,
+  "llmail_text_format": "Subject of the email: {subject}.   Body: {body}",
+  "labels": {
+    "perplexity-ai/browsesafe-bench": "source page label (yes/no)",
+    "ethz-spylab/ctf-satml24": "1: first user message of an attack chat",
+    "microsoft/llmail-inject-challenge/Phase2": "1: unique submission with attack_attempt True and reason 'api_triggered' (the attack made the tool call); judge-only, Unclear and False rows are not tested",
+    "microsoft/llmail-inject-challenge/emails_for_fp_tests": "0: challenge-authored benign email"
+  },
+  "exclusion_rules": [
+    "prior row ID, normalized text (raw or extracted) or first-window token hash",
+    "character TF-IDF cosine >= 0.90 with any prior input",
+    "character TF-IDF cosine >= 0.90 with an already-accepted holdout row"
+  ],
+  "training_rules": [
+    "never train, validate, or select thresholds on the BrowseSafe test split",
+    "never use any row, from any phase or split, of a reserved SaTML or LLMail team",
+    "drop any row matching a holdout ID, normalized text or first-window token hash",
+    "drop any row with character TF-IDF cosine >= 0.90 to a holdout row",
+    "SaTML and LLMail training rows must carry their team; rows without one are rejected"
+  ],
+  "limitations": [
+    "no benign trigger-word (over-defense) rows: NotInject is consumed and no human-reviewed replacement exists",
+    "SaTML and LLMail are injection-only; their FPR comes from the 203 LLMail emails and BrowseSafe pages",
+    "fresh means unused by this repository, not unknown to model pretraining",
+    "lexical filtering does not prove semantic or website independence"
+  ],
+  "created": "2026-10-30T06:34:06.303728+00:00",
+  "prior_inputs_screened": 10966,
+  "counts": {
+    "ethz-spylab/ctf-satml24/attack:1": 503,
+    "microsoft/llmail-inject-challenge/Phase2:1": 188,
+    "microsoft/llmail-inject-challenge/emails_for_fp_tests:0": 116,
+    "perplexity-ai/browsesafe-bench/test:0": 473,
+    "perplexity-ai/browsesafe-bench/test:1": 497
+  },
+  "exclusion_reasons": {
+    "lexical cosine >=0.90 with prior input": 199,
+    "lexical cosine >=0.90 within holdout": 2125,
+    "prior or within-holdout ID/text/first-window duplicate": 678
+  },
+  "reserved_groups": 23,
+  "llmail_phase2_label_join": "89778/90916",
+  "source_files": {
+    "data/emails_for_fp_tests.json": "4ddd950b5dbaa8548f5597c886d8e09a051ba07f80a9291fdcca9c2397d22abe",
+    "data/labelled_unique_submissions_phase2.json": "f89af984e345430c3b357903890e30867bf4676f4ef10c138cc7bad218e890b8"
+  },
+  "files": {
+    "holdout.jsonl": "e4db6eb98244c158a9dc7b87d9f9f38f70fee147eafbd103433347a17440e2da",
+    "exclusions.jsonl": "7093bddec7c699928ff2f82388095f393abb1c3b461dcc230175a3fcc62452c9",
+    "reservation.json": "3f676ebb0c56852f0ff5cddb6eeb21a4b14b80314c02dcfb182cac52913478b1",
+    "freeze_final_holdout.py": "488ead3ae4fb09a16d1d8141cd82d2d850548f8b789714f8fde4eda3304a42a4"
+  }
+}
